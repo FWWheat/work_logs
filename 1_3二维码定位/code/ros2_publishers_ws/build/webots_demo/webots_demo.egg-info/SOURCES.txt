@@ -12,4 +12,5 @@ resource/webots_demo
 webots_demo/__init__.py
 webots_demo/camera_xyz.py
 webots_demo/camera_xyz2.py
+webots_demo/identify_qr_code.py
 webots_demo/random_walk.py
