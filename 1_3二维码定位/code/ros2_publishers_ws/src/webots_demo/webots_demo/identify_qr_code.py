@@ -32,7 +32,7 @@ class QrcodePosePublisher(Node):
 
 
     def publish_pose(self):
-        image_path='/home/ljl/Documents/工作目录/work_logs/1_3二维码定位/img/test2.png'
+        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test2.png'
         try:
             pil_img = Image.open(image_path)  # 获取PIL图像
             cv_img = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)  # 转换为OpenCV格式
