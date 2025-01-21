@@ -1,0 +1,9 @@
+### 参考官方教程：https://isaac-sim.github.io/IsaacLab/main/source/tutorials/index.html
+
+#### 0. isaac sim UI 和工作流程
+- 参考：https://docs.omniverse.nvidia.com/isaacsim/latest/introductory_tutorials/tutorial_intro_interface.html#isaac-sim-app-tutorial-intro-interface
+
+
+#### 1. 创建新场景
+- 运行代码：进入isaaclab下载目录`/home/dsh/Documents/isaac/IsaacLab`，运行命令`./isaaclab.sh -p source/standalone/tutorials/00_sim/create_empty.py`
+- 代码解析：code/tutorials/00_sim/create_empty.py
