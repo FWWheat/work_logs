@@ -4,6 +4,14 @@
 - 参考：https://docs.omniverse.nvidia.com/isaacsim/latest/introductory_tutorials/tutorial_intro_interface.html#isaac-sim-app-tutorial-intro-interface
 
 
-#### 1. 创建新场景
+#### 1. 创建空场景
 - 运行代码：进入isaaclab下载目录`/home/dsh/Documents/isaac/IsaacLab`，运行命令`./isaaclab.sh -p source/standalone/tutorials/00_sim/create_empty.py`
 - 代码解析：code/tutorials/00_sim/create_empty.py
+
+
+#### 2. 创建图元
+- 进入conda `conda activate isaaclab`
+- 文件位置：/home/dsh/Documents/isaac/IsaacLab
+- 运行：`./isaaclab.sh -p source/standalone/tutorials/00_sim/spawn_prims.py`
+- 代码解析：code/tutorials/00_sim/spawn_prims.py
+- 运行结果：![创建图元](img/spawn_prims运行结果.png)

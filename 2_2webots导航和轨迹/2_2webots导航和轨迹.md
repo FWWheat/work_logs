@@ -17,7 +17,7 @@
     - 参考：https://docs.ros.org/en/galactic/Tutorials/Advanced/Simulators/Webots.html
 
 ### 运行
-- 运行` ros2 launch webots_ros2_epuck robot_launch.py rviz:=true`
+- 运行` ros2 launch webots_ros2_epuck robot_launch.py rviz:=true nav:=true`
     1. 出现错误1：![导入rclpy库](img/系统上导入失败.png)
         - 解决参考：https://docs.ros.org/en/humble/How-To-Guides/Installation-Troubleshooting.html
         - 解决方案：将python版本改为python10，如果修改失败了，检查退出conda
@@ -27,3 +27,4 @@
         - 解决参考：https://github.com/eProsima/Fast-DDS/issues/2790
     4. 出现错误4： Navigation2 is not installed, navigation functionality is disabled（运行结果见log.txt）
         - 问题：没下载navigation模块
+        - `sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup`
