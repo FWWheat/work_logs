@@ -32,6 +32,7 @@ cat ~/.ssh/id_rsa.pub
 
 - 登录到 [GitHub](https://github.com)。
 - 进入 **Settings** > **SSH and GPG keys**。
+
 - 点击 **New SSH key**，将复制的公钥粘贴到 **Key** 字段中，并为这个密钥命名（例如：`My Laptop`）。
 
 #### 1.4. 测试 SSH 连接
