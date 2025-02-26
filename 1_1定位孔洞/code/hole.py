@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # 读取图像
-image = cv2.imread('../img/image2.jpeg', cv2.IMREAD_GRAYSCALE)
+image = cv2.imread('../img/image.jpeg', cv2.IMREAD_GRAYSCALE)
 
 # 如果图像读取失败，退出
 if image is None:

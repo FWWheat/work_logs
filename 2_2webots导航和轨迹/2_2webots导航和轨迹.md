@@ -25,6 +25,7 @@
         - 解决参考：https://github.com/cyberbotics/webots_ros2/issues/1015
     3. 出现错误3：![DDS清理共享内存](img/RTPS_TRANSPORT_SHM.png)
         - 解决参考：https://github.com/eProsima/Fast-DDS/issues/2790
+        - `fastdds shm clean`
     4. 出现错误4： Navigation2 is not installed, navigation functionality is disabled（运行结果见log.txt）
         - 问题：没下载navigation模块
         - `sudo apt install ros-humble-navigation2 ros-humble-nav2-bringup`

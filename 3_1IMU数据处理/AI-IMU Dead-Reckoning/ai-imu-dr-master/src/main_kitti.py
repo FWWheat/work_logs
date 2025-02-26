@@ -1,6 +1,7 @@
 import os  # 导入操作系统相关的模块
 import shutil  # 导入文件操作相关的模块
 import numpy as np  # 导入NumPy库，用于数组和数学运算
+import csv
 from collections import namedtuple  # 从collections模块导入namedtuple，用于创建命名元组
 import glob  # 导入glob模块，用于文件路径匹配
 import time  # 导入时间模块
@@ -171,7 +172,9 @@ class KITTIDataset(BaseDataset):
                 if not os.path.isdir(path2):  # 如果路径不是目录，跳过
                     continue
                 # 读取数据
+                # 获取指定路径下的所有oxts数据文件，文件格式为.txt，并按字母顺序排序
                 oxts_files = sorted(glob.glob(os.path.join(path2, 'oxts', 'data', '*.txt')))  # 获取oxts数据文件
+                # 示例文件名：'2011_09_30_drive_0028_extract_oxts_data_000000.txt'
                 oxts = KITTIDataset.load_oxts_packets_and_poses(oxts_files)  # 加载oxts数据包和位姿
 
                 print("\n Sequence name : " + date_dir2)  # 打印序列名称
@@ -264,7 +267,7 @@ class KITTIDataset(BaseDataset):
                     't': t, 'p_gt': p_gt, 'ang_gt': ang_gt, 'v_gt': v_gt,
                     'u': u, 'name': date_dir2, 't0': t0
                 }
-
+                
                 t_tot += t[-1] - t[0]  # 累加总时间
                 KITTIDataset.dump(mondict, args.path_data_save, date_dir2)  # 保存数据
         print("\n Total dataset duration : {:.2f} s".format(t_tot))  # 打印总数据集持续时间
@@ -458,6 +461,21 @@ def test_filter(args, dataset):
             'Rot_c_i': Rot_c_i, 't_c_i': t_c_i,
             'measurements_covs': measurements_covs,
         }
+        with open(os.path.join(args.path_temp, dataset_name + "_filter.txt"), 'w') as f:
+            for key, value in mondict.items():
+                f.write(f"{key}: {value}\n")
+
+        csv_file_path = os.path.join(args.path_temp, dataset_name + "_positions.csv")
+        # 打开文件并写入 CSV
+        with open(csv_file_path, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            # 写入 CSV 文件的标题
+            writer.writerow(['x', 'y', 'z'])
+            # 写入每个位置的数据
+            for position in p:
+                writer.writerow(position)       
+        print(f"Positions saved to {csv_file_path}")
+
         dataset.dump(mondict, args.path_results, dataset_name + "_filter.p")  # 保存结果
 
 
@@ -479,7 +497,7 @@ class KITTIArgs():
     continue_training = True  # 是否继续训练
 
     # 选择要执行的操作
-    read_data = 0  # 读取数据
+    read_data = 1  # 读取数据
     train_filter = 0  # 训练滤波器
     test_filter = 1  # 测试滤波器
     results_filter = 1  # 处理结果
