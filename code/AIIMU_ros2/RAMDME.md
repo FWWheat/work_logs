@@ -1,5 +1,6 @@
 ### 代码模块
 - webots_epuck_ws：启动webots中的epuck
+    - 修改场景
 - ros2_publishers_ws：
     - random_walk：随机行走
     - location_path_rviz：根据位置信息，给出/path话题，rviz接收path信息，绘制轨迹

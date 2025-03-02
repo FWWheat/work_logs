@@ -35,6 +35,9 @@ class RandomWalkNode(Node):
         # 定时器用于持续调用 move_robot 函数
         self.timer = self.create_timer(2, self.check_obstacle)
 
+        # 添加新的定时器，每3到10秒将obstacle_detected设置为True
+        self.obstacle_timer = self.create_timer(random.uniform(5.0, 8.0), self.set_time_turn)
+        self.time_turn=False
 
         self.ps0_value = 0
 
@@ -65,9 +68,11 @@ class RandomWalkNode(Node):
                 
         self.move_robot()
         
+    def set_time_turn(self):
+        self.time_turn = not self.time_turn
 
     def check_obstacle(self):
-        if self.obstacle_detected: 
+        if self.obstacle_detected or self.time_turn: 
             self.walk_or_rotate = False
         else:
             self.walk_or_rotate = True

@@ -17,6 +17,7 @@
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/worlds/.epuck_world.wbproj
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/worlds/rats_life_benchmark.wbt
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/worlds/.rats_life_benchmark.wbproj
+/home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/worlds/raw_epuck_world.wbt
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/protos/LegoTallInterval.proto
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/protos/LegoTallWall.proto
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/all.rviz
@@ -25,8 +26,8 @@
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/map_rats_life.pgm
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/map_rats_life.yaml
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/nav2_rats_life_waypoints.yaml
-/home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/epuck_world_map.pgm
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/epuck_world_map.yaml
+/home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/epuck_world_map.pgm
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/epuck_webots.urdf
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/resource/ros2_control.yml
 /home/dsh/Documents/work_logs/code/AIIMU_ros2/webots_epuck_ws/install/webots_epuck/share/webots_epuck/package.xml

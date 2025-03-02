@@ -6,18 +6,18 @@ Panels:
       Expanded:
         - /Odometry1/Shape1
         - /Odometry1/Covariance1
-        - /Camera1/Topic1
         - /LaserScan1/Topic1
-        - /Map1/Status1
+        - /Map1
         - /Map1/Topic1
         - /Odometry2/Shape1
-        - /TF1/Status1
         - /TF1/Frames1
+        - /Path1
+        - /Path2
         - /Map2/Topic1
         - /Map3
         - /Map3/Topic1
       Splitter Ratio: 0.6552706360816956
-    Tree Height: 767
+    Tree Height: 878
   - Class: rviz_common/Selection
     Name: Selection
   - Class: rviz_common/Tool Properties
@@ -40,7 +40,7 @@ Visualization Manager:
       Cell Size: 0.10000000149011612
       Class: rviz_default_plugins/Grid
       Color: 160; 160; 164
-      Enabled: true
+      Enabled: false
       Line Style:
         Line Width: 0.029999999329447746
         Value: Lines
@@ -53,7 +53,7 @@ Visualization Manager:
       Plane: XY
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
-      Value: true
+      Value: false
     - Angle Tolerance: 0.05000000074505806
       Class: rviz_default_plugins/Odometry
       Covariance:
@@ -71,7 +71,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 1
       Name: Odometry
       Position Tolerance: 0.0010000000474974513
@@ -88,10 +88,11 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom
-      Value: true
+      Value: false
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -104,7 +105,7 @@ Visualization Manager:
       Color: 255; 255; 255
       Color Transformer: Intensity
       Decay Time: 0
-      Enabled: true
+      Enabled: false
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4096
@@ -119,12 +120,13 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /scan
       Use Fixed Frame: true
       Use rainbow: true
-      Value: true
+      Value: false
     - Alpha: 0.699999988079071
       Class: rviz_default_plugins/Map
       Color Scheme: map
@@ -134,15 +136,16 @@ Visualization Manager:
       Topic:
         Depth: 1
         Durability Policy: Transient Local
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: map
+        Value: /global_costmap/costmap
       Update Topic:
         Depth: 5
         Durability Policy: Volatile
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: map_updates
+        Value: /global_costmap/costmap_updates
       Use Timestamp: false
       Value: true
     - Angle Tolerance: 0.10000000149011612
@@ -162,7 +165,7 @@ Visualization Manager:
           Scale: 1
           Value: true
         Value: true
-      Enabled: true
+      Enabled: false
       Keep: 200
       Name: Odometry
       Position Tolerance: 0.004999999888241291
@@ -179,10 +182,11 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /odom
-      Value: true
+      Value: false
     - Alpha: 0.5
       Buffer Length: 1
       Class: rviz_default_plugins/Range
@@ -192,6 +196,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps0
@@ -205,6 +210,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps1
@@ -218,6 +224,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps2
@@ -231,6 +238,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps3
@@ -244,6 +252,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps4
@@ -257,6 +266,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps5
@@ -270,6 +280,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps6
@@ -283,6 +294,7 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /ps7
@@ -296,191 +308,57 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
         Value: /tof
       Value: false
     - Class: rviz_default_plugins/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        base_footprint:
-          Value: true
-        base_link:
-          Value: true
-        camera:
-          Value: true
-        cap screw(0)_999:
-          Value: true
-        cap screw(1)_1034:
-          Value: true
-        cap screw_964:
-          Value: true
-        laser_scanner:
-          Value: true
-        led0:
-          Value: false
-        led1:
-          Value: false
-        led2:
-          Value: false
-        led3:
-          Value: false
-        led4:
-          Value: false
-        led5:
-          Value: false
-        led6:
-          Value: false
-        led7:
-          Value: false
-        led8:
-          Value: false
-        led9:
-          Value: false
-        left wheel:
-          Value: true
-        map:
-          Value: true
-        odom:
-          Value: true
-        pi-puck led 0:
-          Value: false
-        pi-puck led 1:
-          Value: false
-        pi-puck led 2:
-          Value: false
-        pi-puck_894:
-          Value: true
-        pipe:
-          Value: false
-        ps0:
-          Value: true
-        ps0_533:
-          Value: true
-        ps1:
-          Value: true
-        ps1_542:
-          Value: true
-        ps2:
-          Value: true
-        ps2_551:
-          Value: true
-        ps3:
-          Value: true
-        ps3_560:
-          Value: true
-        ps4:
-          Value: true
-        ps4_569:
-          Value: true
-        ps5:
-          Value: true
-        ps5_578:
-          Value: true
-        ps6:
-          Value: true
-        ps6_587:
-          Value: true
-        ps7:
-          Value: true
-        ps7_596:
-          Value: true
-        right wheel:
-          Value: true
-        solid_924:
-          Value: true
-        tof:
-          Value: true
       Marker Scale: 0.10000000149011612
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: false
       Tree:
-        map:
-          odom:
-            base_link:
-              base_footprint:
-                {}
-              camera:
-                {}
-              laser_scanner:
-                {}
-              led0:
-                {}
-              led1:
-                {}
-              led2:
-                {}
-              led3:
-                {}
-              led4:
-                {}
-              led5:
-                {}
-              led6:
-                {}
-              led7:
-                {}
-              led8:
-                {}
-              led9:
-                {}
-              left wheel:
-                {}
-              pi-puck_894:
-                cap screw(0)_999:
-                  {}
-                cap screw(1)_1034:
-                  {}
-                cap screw_964:
-                  {}
-                pi-puck led 0:
-                  {}
-                pi-puck led 1:
-                  {}
-                pi-puck led 2:
-                  {}
-                solid_924:
-                  {}
-              pipe:
-                {}
-              ps0_533:
-                ps0:
-                  {}
-              ps1_542:
-                ps1:
-                  {}
-              ps2_551:
-                ps2:
-                  {}
-              ps3_560:
-                ps3:
-                  {}
-              ps4_569:
-                ps4:
-                  {}
-              ps5_578:
-                ps5:
-                  {}
-              ps6_587:
-                ps6:
-                  {}
-              ps7_596:
-                ps7:
-                  {}
-              right wheel:
-                {}
-              tof:
-                {}
+        {}
       Update Interval: 0
+      Value: false
+    - Alpha: 1
+      Buffer Length: 1
+      Class: rviz_default_plugins/Path
+      Color: 192; 28; 40
+      Enabled: true
+      Head Diameter: 0.30000001192092896
+      Head Length: 0.20000000298023224
+      Length: 0.30000001192092896
+      Line Style: Lines
+      Line Width: 0.029999999329447746
+      Name: Path
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Pose Color: 255; 85; 255
+      Pose Style: None
+      Radius: 0.029999999329447746
+      Shaft Diameter: 0.10000000149011612
+      Shaft Length: 0.10000000149011612
+      Topic:
+        Depth: 5
+        Durability Policy: Volatile
+        Filter size: 10
+        History Policy: Keep Last
+        Reliability Policy: Reliable
+        Value: /path1
       Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz_default_plugins/Path
-      Color: 25; 255; 0
+      Color: 26; 95; 180
       Enabled: true
       Head Diameter: 0.30000001192092896
       Head Length: 0.20000000298023224
@@ -500,46 +378,21 @@ Visualization Manager:
       Topic:
         Depth: 5
         Durability Policy: Volatile
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Reliable
-        Value: /received_global_plan
-      Value: false
-    - Alpha: 1
-      Buffer Length: 1
-      Class: rviz_default_plugins/Path
-      Color: 25; 255; 0
-      Enabled: false
-      Head Diameter: 0.30000001192092896
-      Head Length: 0.20000000298023224
-      Length: 0.30000001192092896
-      Line Style: Lines
-      Line Width: 0.029999999329447746
-      Name: Path
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Pose Color: 255; 85; 255
-      Pose Style: None
-      Radius: 0.029999999329447746
-      Shaft Diameter: 0.10000000149011612
-      Shaft Length: 0.10000000149011612
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /plan
-      Value: false
+        Value: /path
+      Value: true
     - Alpha: 0.699999988079071
       Class: rviz_default_plugins/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic:
         Depth: 5
         Durability Policy: Transient Local
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Best Effort
         Value: /global_costmap/costmap
@@ -550,16 +403,17 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /global_costmap/costmap_updates
       Use Timestamp: false
-      Value: true
+      Value: false
     - Alpha: 0.699999988079071
       Class: rviz_default_plugins/Map
       Color Scheme: map
       Draw Behind: false
-      Enabled: true
+      Enabled: false
       Name: Map
       Topic:
         Depth: 5
         Durability Policy: Transient Local
+        Filter size: 10
         History Policy: Keep Last
         Reliability Policy: Best Effort
         Value: /local_costmap/costmap
@@ -570,7 +424,7 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /local_costmap/costmap_updates
       Use Timestamp: false
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -588,6 +442,9 @@ Visualization Manager:
         Reliability Policy: Reliable
         Value: /goal_pose
     - Class: rviz_default_plugins/SetInitialPose
+      Covariance x: 0.25
+      Covariance y: 0.25
+      Covariance yaw: 0.06853891909122467
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -601,41 +458,39 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 4.582430839538574
+      Distance: 4.277528762817383
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.7422745823860168
-        Y: -0.36026376485824585
-        Z: -0.8088818192481995
+        X: -0.47830766439437866
+        Y: -0.3365781903266907
+        Z: -0.8007259368896484
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 1.0447968244552612
+      Pitch: 1.5297963619232178
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 3.235412836074829
+      Yaw: 1.562235713005066
     Saved: ~
 Window Geometry:
-  Camera:
-    collapsed: false
   Displays:
     collapsed: false
-  Height: 1025
+  Height: 1136
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd0000000400000000000001be000003a7fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc0000003d000003a7000000e60100001cfa000000010100000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000009d00fffffffb000000100044006900730070006c0061007900730100000000000002d30000015600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d006500720061000000033e000000a60000002800fffffffb0000000a0049006d0061006700650100000319000000cb0000000000000000fb0000000c00430061006d0065007200610100000319000000cb0000000000000000000000010000010f000003a7fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d000003a7000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d0065010000000000000450000000000000000000000591000003a700000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001be00000416fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afc0000003d00000416000000e60100001cfa000000010100000002fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000000ffffffff0000009d00fffffffb000000100044006900730070006c0061007900730100000000000002d30000015600fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb0000000c00430061006d006500720061000000033e000000a60000000000000000fb0000000a0049006d0061006700650100000319000000cb0000000000000000fb0000000c00430061006d0065007200610100000319000000cb0000000000000000000000010000010f000003a7fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073000000003d000003a7000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004420000003efc0100000002fb0000000800540069006d00650100000000000004420000000000000000fb0000000800540069006d00650100000000000004500000000000000000000005760000041600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Tool Properties:
     collapsed: false
   Views:
     collapsed: true
-  Width: 1877
-  X: 43
+  Width: 1850
+  X: 70
   Y: 27

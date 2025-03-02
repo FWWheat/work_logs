@@ -38,3 +38,4 @@ worlds/.epuck_world.wbproj
 worlds/.rats_life_benchmark.wbproj
 worlds/epuck_world.wbt
 worlds/rats_life_benchmark.wbt
+worlds/raw_epuck_world.wbt

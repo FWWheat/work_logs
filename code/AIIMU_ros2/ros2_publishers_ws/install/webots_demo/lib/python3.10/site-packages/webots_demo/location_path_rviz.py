@@ -17,7 +17,7 @@ class PathPublisher(Node):
         self.path = Path()
         self.path.header.frame_id = 'map'  # 你可以选择其他坐标系，如 'odom'
 
-        self.positions = self.load_positions("/home/dsh/Documents/work_logs/code/AIIMU_ros2/ai-imu-dr/temp/raw_temp/2011_09_30_drive_0028_extract_p_gt.csv")  # 从文件加载位置或其他方式
+        self.positions = self.load_positions("/home/dsh/Documents/work_logs/code/AIIMU_ros2/ai-imu-dr/temp/raw_temp/2011_09_30_drive_0027_extract_p_gt.csv")  # 从文件加载位置或其他方式
 
         self.index = 0  # 用于遍历真实位置数据
 
@@ -36,6 +36,11 @@ class PathPublisher(Node):
             for row in reader:
                 if row:  # 确保行不为空
                     x, y, z = map(float, row)  # 将每一列转换为浮动数
+                    x_new = -0.015 * x * (0.866) + -0.012 * y * (-0.5)    # 0.866约等于√3/2
+                    y_new = -0.015 * x * (0.5) + -0.015 * y * (0.866)
+                    x = x_new
+                    y = y_new
+                    z=0.001*z
                     positions.append((x, y, z))  # 将位置添加到列表中
 
         return positions

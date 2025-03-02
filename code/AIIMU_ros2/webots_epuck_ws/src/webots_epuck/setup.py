@@ -18,7 +18,8 @@ data_files.append(('share/' + package_name + '/worlds', [
     'worlds/epuck_world.wbt',
     'worlds/.epuck_world.wbproj',
     'worlds/rats_life_benchmark.wbt',
-    'worlds/.rats_life_benchmark.wbproj'
+    'worlds/.rats_life_benchmark.wbproj',
+    'worlds/raw_epuck_world.wbt',
 ]))
 data_files.append(('share/' + package_name + '/protos', [
     'protos/LegoTallInterval.proto',
@@ -31,8 +32,8 @@ data_files.append(('share/' + package_name + '/resource', [
     'resource/map_rats_life.pgm',
     'resource/map_rats_life.yaml',
     'resource/nav2_rats_life_waypoints.yaml',
-    'resource/epuck_world_map.pgm',
     'resource/epuck_world_map.yaml',
+    'resource/epuck_world_map.pgm',
     'resource/epuck_webots.urdf',
     'resource/ros2_control.yml',
 ]))
