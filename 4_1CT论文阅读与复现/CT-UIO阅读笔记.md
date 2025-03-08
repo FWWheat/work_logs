@@ -24,7 +24,7 @@
     4. 提出基于多个假设(hypotheses)的Virtual Anchor(VA,虚拟锚点)生成方法，实现少锚点条件下的**完全可观测的**UWB定位系统
         - 给了一个虚拟锚点生成方法，但要满足很多假设
     5. 提出一个**基于自适应滑动窗口的CT-UIO因子图**，用于全局轨迹估计
-        - 输入什么，输出轨迹坐标
+  
     - 使用的数据集：corridor , exhibition hall
 
 ## 1.介绍
@@ -95,22 +95,25 @@
 ### A.预处理
 1. IMU/里程计融合模型
     - 1)计算时间间隔的相对运动位置
-        - 原始IMU数据：角速度和局部线加速度![alt text](image-1.png)
-        - IMU计算采样时间间隔的相对运动位置![alt text](image-3.png)
-        - 对轮式里程计测量数据进行积分，里程计计算相对运动位置![alt text](image-2.png)
+        - 原始IMU数据：角速度和局部线加速度
+            - ![alt text](image-1.png)
+        - IMU计算采样时间间隔的相对运动位置
+            - ![alt text](image-3.png)
+        - 对轮式里程计测量数据进行积分，里程计计算相对运动位置
+            - ![alt text](image-2.png)
     - 2)更新姿态
-        ![alt text](image-4.png)
+        - ![alt text](image-4.png)
     - 3)创新扩展卡尔曼滤波
         - 构造包含IMU和里程计位姿的观测向量
         - 创新项；创新协方差矩阵定义
-        ![alt text](image-6.png)
+        - ![alt text](image-6.png)
     - 4)评估IMU测量数据的可靠性
         - E(k)超过阈值thr时，舍弃该IMU数据
-        ![alt text](image-7.png)
-        ![alt text](image-8.png)
+        - ![alt text](image-7.png)
+        - ![alt text](image-8.png)
 2. UWB测距异常值剔除
     - 利用IMU/里程计融合模型估计的位置d和速度v
-    ![alt text](image-9.png)
+        - ![alt text](image-9.png)
 
 ### B.轨迹表示
 1. 非均匀连续时间轨迹表示
@@ -119,12 +122,12 @@
 2. 自适应节点间距调整
     - 说明：机器人运动速度稳定时，减少冗余控制点；机器人速度剧烈波动时，增加控制点
     - 定义**关键姿态(KP)**：某个时间窗口，线速度或角速度变化超过阈值，该时间段对应的姿态被注册为KP
-    ![alt text](image-10.png)
+        - ![alt text](image-10.png)
     - 定义控制点数量：与变化大小有关
-    ![alt text](image-11.png)
+        - ![alt text](image-11.png)
     - 节点间距：![alt text](image-12.png)
 3. 额外说明：
-    ![alt text](image-13.png)
+    - ![alt text](image-13.png)
 
 ### C.UWB-惯性-里程计因子图框架
 1. 虚拟UWB锚点测距因子
@@ -140,10 +143,10 @@
 2. IMU因子
     - 两个连续UWB测距时刻之间，进行IMU预积分
     - IMU观测值可以由基于B-样条的连续时间模型计算得到，获取IMU轨迹
-    ![alt text](image-14.png)
+        - ![alt text](image-14.png)
 3. 里程计因子
     - 可以直接获取里程计轨迹
-    ![alt text](image-15.png)
+        - ![alt text](image-15.png)
 
 ### D.轨迹优化
 - ![alt text](image-16.png)
