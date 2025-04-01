@@ -1,0 +1,1077 @@
+[0.000000] (-) TimerEvent: {}
+[0.000451] (-) JobUnselected: {'identifier': 'cf_msgs'}
+[0.000752] (-) JobUnselected: {'identifier': 'isas_msgs'}
+[0.001080] (-) JobUnselected: {'identifier': 'sfuise_msgs'}
+[0.001266] (sfuise) JobQueued: {'identifier': 'sfuise', 'dependencies': OrderedDict([('cf_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs'), ('isas_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs'), ('sfuise_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs')])}
+[0.001417] (sfuise) JobStarted: {'identifier': 'sfuise'}
+[0.021939] (sfuise) JobProgress: {'identifier': 'sfuise', 'progress': 'cmake'}
+[0.022753] (sfuise) JobProgress: {'identifier': 'sfuise', 'progress': 'build'}
+[0.023831] (sfuise) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', '--', '-j20', '-l20'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1966'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=1f4d29038b845efc5c5d373667eb7984'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/1966,unix/dsh-Precision-5680:/tmp/.ICE-unix/1966'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/7c38b6e3_e6b0_47f6_a746_dfc07f3f32c2'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US_UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.633'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=1f4d29038b845efc5c5d373667eb7984'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.099719] (-) TimerEvent: {}
+[0.112796] (sfuise) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o\x1b[0m\n'}
+[0.113383] (sfuise) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o\x1b[0m\n'}
+[0.199922] (-) TimerEvent: {}
+[0.300574] (-) TimerEvent: {}
+[0.401237] (-) TimerEvent: {}
+[0.501913] (-) TimerEvent: {}
+[0.602536] (-) TimerEvent: {}
+[0.703109] (-) TimerEvent: {}
+[0.803812] (-) TimerEvent: {}
+[0.904374] (-) TimerEvent: {}
+[1.004900] (-) TimerEvent: {}
+[1.044159] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:4\x1b[m\x1b[K:\n'}
+[1.044587] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/PoseVisualization.h:5:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvisualization_msgs/msg/marker.hpp: No such file or directory\n'}
+[1.044750] (sfuise) StderrLine: {'line': b'    5 | #include \x1b[01;31m\x1b[K<visualization_msgs/msg/marker.hpp>\x1b[m\x1b[K\n'}
+[1.044896] (sfuise) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.045055] (sfuise) StderrLine: {'line': b'compilation terminated.\n'}
+[1.055696] (sfuise) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/EstimationInterface.dir/build.make:76: CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o] Error 1\n'}
+[1.056261] (sfuise) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/EstimationInterface.dir/all] Error 2\n'}
+[1.056495] (sfuise) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[1.105189] (-) TimerEvent: {}
+[1.205846] (-) TimerEvent: {}
+[1.306502] (-) TimerEvent: {}
+[1.407108] (-) TimerEvent: {}
+[1.507744] (-) TimerEvent: {}
+[1.608376] (-) TimerEvent: {}
+[1.709001] (-) TimerEvent: {}
+[1.809626] (-) TimerEvent: {}
+[1.910271] (-) TimerEvent: {}
+[2.010840] (-) TimerEvent: {}
+[2.111361] (-) TimerEvent: {}
+[2.211880] (-) TimerEvent: {}
+[2.312480] (-) TimerEvent: {}
+[2.413021] (-) TimerEvent: {}
+[2.513643] (-) TimerEvent: {}
+[2.614208] (-) TimerEvent: {}
+[2.714759] (-) TimerEvent: {}
+[2.815374] (-) TimerEvent: {}
+[2.916026] (-) TimerEvent: {}
+[3.016547] (-) TimerEvent: {}
+[3.117085] (-) TimerEvent: {}
+[3.217586] (-) TimerEvent: {}
+[3.318126] (-) TimerEvent: {}
+[3.418628] (-) TimerEvent: {}
+[3.519080] (-) TimerEvent: {}
+[3.619524] (-) TimerEvent: {}
+[3.720101] (-) TimerEvent: {}
+[3.820564] (-) TimerEvent: {}
+[3.921103] (-) TimerEvent: {}
+[4.021558] (-) TimerEvent: {}
+[4.122084] (-) TimerEvent: {}
+[4.222484] (-) TimerEvent: {}
+[4.323019] (-) TimerEvent: {}
+[4.423506] (-) TimerEvent: {}
+[4.524013] (-) TimerEvent: {}
+[4.624525] (-) TimerEvent: {}
+[4.725088] (-) TimerEvent: {}
+[4.825643] (-) TimerEvent: {}
+[4.926208] (-) TimerEvent: {}
+[5.026766] (-) TimerEvent: {}
+[5.127377] (-) TimerEvent: {}
+[5.227838] (-) TimerEvent: {}
+[5.328326] (-) TimerEvent: {}
+[5.428816] (-) TimerEvent: {}
+[5.473177] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6\x1b[m\x1b[K,\n'}
+[5.473477] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[5.473613] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:387:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs::Spline\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[5.473745] (sfuise) StderrLine: {'line': b'  387 |     void getSplineMsg(\x1b[01;31m\x1b[Ksfuise_msgs\x1b[m\x1b[K::Spline& spline_msg)\n'}
+[5.473869] (sfuise) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.529121] (-) TimerEvent: {}
+[5.629559] (-) TimerEvent: {}
+[5.730018] (-) TimerEvent: {}
+[5.776648] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineState::getSplineMsg(int&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.777130] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:389:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kdt\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kspline_msg\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.777227] (sfuise) StderrLine: {'line': b'  389 |         spline_msg.\x1b[01;31m\x1b[Kdt\x1b[m\x1b[K = dt_ns;\n'}
+[5.777293] (sfuise) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[5.777353] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:390:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kstart_t\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kspline_msg\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.777414] (sfuise) StderrLine: {'line': b'  390 |         spline_msg.\x1b[01;31m\x1b[Kstart_t\x1b[m\x1b[K = start_t_ns;\n'}
+[5.777472] (sfuise) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[5.777537] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:391:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kstart_idx\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kspline_msg\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.777614] (sfuise) StderrLine: {'line': b'  391 |         spline_msg.\x1b[01;31m\x1b[Kstart_idx\x1b[m\x1b[K = start_i;\n'}
+[5.777869] (sfuise) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[5.778017] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:393:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KKnot\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs::msg::Knot\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.778095] (sfuise) StderrLine: {'line': b'  393 |             sfuise_msgs::\x1b[01;31m\x1b[KKnot\x1b[m\x1b[K knot_msg;\n'}
+[5.778155] (sfuise) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[5.778213] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp:21\x1b[m\x1b[K,\n'}
+[5.778274] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp:7\x1b[m\x1b[K,\n'}
+[5.778337] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:5\x1b[m\x1b[K,\n'}
+[5.778394] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6\x1b[m\x1b[K,\n'}
+[5.778447] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[5.778502] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp:165:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs::msg::Knot\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[5.778573] (sfuise) StderrLine: {'line': b'  165 | using \x1b[01;36m\x1b[KKnot\x1b[m\x1b[K =\n'}
+[5.778632] (sfuise) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[5.791336] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6\x1b[m\x1b[K,\n'}
+[5.791527] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[5.791608] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:394:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kknot_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.791678] (sfuise) StderrLine: {'line': b'  394 |             \x1b[01;31m\x1b[Kknot_msg\x1b[m\x1b[K.position.x = t_knots[i].x();\n'}
+[5.791914] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.792087] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:408:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kknots\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kspline_msg\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.792180] (sfuise) StderrLine: {'line': b'  408 |             spline_msg.\x1b[01;31m\x1b[Kknots\x1b[m\x1b[K.push_back(knot_msg);\n'}
+[5.792247] (sfuise) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.792618] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:411:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KKnot\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs::msg::Knot\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[5.792788] (sfuise) StderrLine: {'line': b'  411 |             sfuise_msgs::\x1b[01;31m\x1b[KKnot\x1b[m\x1b[K idle_msg;\n'}
+[5.792868] (sfuise) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[5.792945] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp:21\x1b[m\x1b[K,\n'}
+[5.793021] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp:7\x1b[m\x1b[K,\n'}
+[5.793087] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:5\x1b[m\x1b[K,\n'}
+[5.793149] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6\x1b[m\x1b[K,\n'}
+[5.793217] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[5.793315] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp:165:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksfuise_msgs::msg::Knot\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[5.793391] (sfuise) StderrLine: {'line': b'  165 | using \x1b[01;36m\x1b[KKnot\x1b[m\x1b[K =\n'}
+[5.793482] (sfuise) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[5.805020] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6\x1b[m\x1b[K,\n'}
+[5.805209] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[5.805293] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:412:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kidle_msg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[5.805369] (sfuise) StderrLine: {'line': b'  412 |             \x1b[01;31m\x1b[Kidle_msg\x1b[m\x1b[K.position.x = t_idle[i].x();\n'}
+[5.805443] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[5.805660] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:426:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Krequest for member \xe2\x80\x98\x1b[01m\x1b[Kidles\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kspline_msg\x1b[m\x1b[K\xe2\x80\x99, which is of non-class type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99\n'}
+[5.805842] (sfuise) StderrLine: {'line': b'  426 |             spline_msg.\x1b[01;31m\x1b[Kidles\x1b[m\x1b[K.push_back(idle_msg);\n'}
+[5.805922] (sfuise) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[5.830228] (-) TimerEvent: {}
+[5.930606] (-) TimerEvent: {}
+[6.031017] (-) TimerEvent: {}
+[6.131349] (-) TimerEvent: {}
+[6.231670] (-) TimerEvent: {}
+[6.332089] (-) TimerEvent: {}
+[6.432537] (-) TimerEvent: {}
+[6.532956] (-) TimerEvent: {}
+[6.633258] (-) TimerEvent: {}
+[6.733686] (-) TimerEvent: {}
+[6.819308] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KSplineFusion::SplineFusion(std::shared_ptr<rclcpp::Node>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.819536] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:26:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.819608] (sfuise) StderrLine: {'line': b'   26 |         \x1b[01;31m\x1b[Kif_anchor_ini\x1b[m\x1b[K = false;  // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe9\x94\x9a\xe7\x82\xb9\xe6\xa0\x87\xe5\xbf\x97\n'}
+[6.819665] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.819733] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\n'}
+[6.827180] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:27:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaverage_runtime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kaverage_runtime_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.827356] (sfuise) StderrLine: {'line': b'   27 |         \x1b[01;31m\x1b[Kaverage_runtime\x1b[m\x1b[K = 0;  // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe5\xb9\xb3\xe5\x9d\x87\xe8\xbf\x90\xe8\xa1\x8c\xe6\x97\xb6\xe9\x97\xb4\n'}
+[6.827435] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.827491] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kaverage_runtime_\x1b[m\x1b[K\n'}
+[6.833870] (-) TimerEvent: {}
+[6.834208] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:28:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_count\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_count_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.834364] (sfuise) StderrLine: {'line': b'   28 |         \x1b[01;31m\x1b[Kwindow_count\x1b[m\x1b[K = 0;  // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\n'}
+[6.834433] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.834490] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kwindow_count_\x1b[m\x1b[K\n'}
+[6.841423] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:29:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksolver_flag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksolver_flag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.841577] (sfuise) StderrLine: {'line': b'   29 |         \x1b[01;31m\x1b[Ksolver_flag\x1b[m\x1b[K = INITIAL;  // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xb1\x82\xe8\xa7\xa3\xe5\x99\xa8\xe6\xa0\x87\xe5\xbf\x97\n'}
+[6.841655] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.841713] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ksolver_flag_\x1b[m\x1b[K\n'}
+[6.850125] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:29:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KINITIAL\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[6.850280] (sfuise) StderrLine: {'line': b'   29 |         solver_flag = \x1b[01;31m\x1b[KINITIAL\x1b[m\x1b[K;  // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xb1\x82\xe8\xa7\xa3\xe5\x99\xa8\xe6\xa0\x87\xe5\xbf\x97\n'}
+[6.850346] (sfuise) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.857817] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:33:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_imu\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksub_imu_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.857982] (sfuise) StderrLine: {'line': b'   33 |         \x1b[01;31m\x1b[Ksub_imu\x1b[m\x1b[K = node->create_subscription<sensor_msgs::msg::Imu>(\n'}
+[6.858053] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.858110] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ksub_imu_\x1b[m\x1b[K\n'}
+[6.875311] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:36:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_anchor\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksub_anchor_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.875531] (sfuise) StderrLine: {'line': b'   36 |         \x1b[01;31m\x1b[Ksub_anchor\x1b[m\x1b[K = node->create_subscription<isas_msgs::msg::Anchorlist>(\n'}
+[6.875600] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.875658] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ksub_anchor_\x1b[m\x1b[K\n'}
+[6.885255] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:40:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_tdoa\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_tdoa_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.885433] (sfuise) StderrLine: {'line': b'   40 |         if (\x1b[01;31m\x1b[Kif_tdoa\x1b[m\x1b[K) {\n'}
+[6.885504] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.885563] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kif_tdoa_\x1b[m\x1b[K\n'}
+[6.892335] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:41:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_uwb\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksub_uwb_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.892492] (sfuise) StderrLine: {'line': b'   41 |             \x1b[01;31m\x1b[Ksub_uwb\x1b[m\x1b[K = node->create_subscription<cf_msgs::msg::Tdoa>(\n'}
+[6.892561] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.892618] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ksub_uwb_\x1b[m\x1b[K\n'}
+[6.901368] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksub_uwb\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksub_uwb_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.901529] (sfuise) StderrLine: {'line': b'   44 |             \x1b[01;31m\x1b[Ksub_uwb\x1b[m\x1b[K = node->create_subscription<cf_msgs::msg::Toa>(\n'}
+[6.901597] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.901654] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ksub_uwb_\x1b[m\x1b[K\n'}
+[6.901708] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KToa\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kcf_msgs::msg\x1b[m\x1b[K\xe2\x80\x99; did you mean \xe2\x80\x98\x1b[01m\x1b[KTdoa\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.901787] (sfuise) StderrLine: {'line': b'   44 |             sub_uwb = node->create_subscription<cf_msgs::msg::\x1b[01;31m\x1b[KToa\x1b[m\x1b[K>(\n'}
+[6.901842] (sfuise) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[6.901899] (sfuise) StderrLine: {'line': b'      |                                                               \x1b[32m\x1b[KTdoa\x1b[m\x1b[K\n'}
+[6.903321] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::create_subscription<<expression error> >(const char [28], rclcpp::QoS, std::_Bind_helper<false, void (SplineFusion::*)(std::shared_ptr<isas_msgs::msg::RTLSStick_<std::allocator<void> > >), SplineFusion*, const std::_Placeholder<1>&>::type)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.903484] (sfuise) StderrLine: {'line': b'   44 |             sub_uwb = \x1b[01;31m\x1b[Knode->create_subscription<cf_msgs::msg::Toa>(\x1b[m\x1b[K\n'}
+[6.903557] (sfuise) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[6.903614] (sfuise) StderrLine: {'line': b'   45 | \x1b[01;31m\x1b[K                "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1))\x1b[m\x1b[K;\n'}
+[6.903673] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.903729] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321\x1b[m\x1b[K,\n'}
+[6.903780] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[6.903833] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[6.903883] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[6.903941] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1\x1b[m\x1b[K:\n'}
+[6.903998] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[6.904071] (sfuise) StderrLine: {'line': b'   92 | \x1b[01;36m\x1b[KNode\x1b[m\x1b[K::create_subscription(\n'}
+[6.904125] (sfuise) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[6.904181] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[6.904236] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:67:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[6.904291] (sfuise) StderrLine: {'line': b'   44 |             sub_uwb = \x1b[01;31m\x1b[Knode->create_subscription<cf_msgs::msg::Toa>(\x1b[m\x1b[K\n'}
+[6.904349] (sfuise) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^\x1b[m\x1b[K\n'}
+[6.904401] (sfuise) StderrLine: {'line': b'   45 | \x1b[01;31m\x1b[K                "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1))\x1b[m\x1b[K;\n'}
+[6.904454] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.912174] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:49:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_knots_active\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_knots_active_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.912345] (sfuise) StderrLine: {'line': b'   49 |         \x1b[01;31m\x1b[Kpub_knots_active\x1b[m\x1b[K = node->create_publisher<sensor_msgs::msg::PointCloud>(\n'}
+[6.912422] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.912484] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_knots_active_\x1b[m\x1b[K\n'}
+[6.921523] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:52:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_knots_inactive\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_knots_inactive_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.921756] (sfuise) StderrLine: {'line': b'   52 |         \x1b[01;31m\x1b[Kpub_knots_inactive\x1b[m\x1b[K = node->create_publisher<sensor_msgs::msg::PointCloud>(\n'}
+[6.921838] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.921905] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_knots_inactive_\x1b[m\x1b[K\n'}
+[6.930423] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:55:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_calib\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_calib_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.930664] (sfuise) StderrLine: {'line': b'   55 |         \x1b[01;31m\x1b[Kpub_calib\x1b[m\x1b[K = node->create_publisher<sfuise_msgs::msg::Calib>(\n'}
+[6.930762] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[6.930829] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_calib_\x1b[m\x1b[K\n'}
+[6.934085] (-) TimerEvent: {}
+[6.939342] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:58:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_est\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_est_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.939573] (sfuise) StderrLine: {'line': b'   58 |         \x1b[01;31m\x1b[Kpub_est\x1b[m\x1b[K = node->create_publisher<sfuise_msgs::msg::Estimate>(\n'}
+[6.939659] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[6.939728] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_est_\x1b[m\x1b[K\n'}
+[6.949109] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:61:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.949331] (sfuise) StderrLine: {'line': b'   61 |         \x1b[01;31m\x1b[Kpub_start_time\x1b[m\x1b[K = node->create_publisher<std_msgs::msg::Int64>(\n'}
+[6.949430] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.949501] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_start_time_\x1b[m\x1b[K\n'}
+[6.958665] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::run()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[6.958862] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:68:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knode_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmode_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.958968] (sfuise) StderrLine: {'line': b'   68 |         rclcpp::Time t_window_start = \x1b[01;31m\x1b[Knode_\x1b[m\x1b[K->get_clock()->now();  // \xe8\x8e\xb7\xe5\x8f\x96\xe5\xbd\x93\xe5\x89\x8d\xe6\x97\xb6\xe9\x97\xb4\n'}
+[6.959063] (sfuise) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[6.959134] (sfuise) StderrLine: {'line': b'      |                                       \x1b[32m\x1b[Kmode_t\x1b[m\x1b[K\n'}
+[6.968800] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:75:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaverage_runtime\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kaverage_runtime_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.969020] (sfuise) StderrLine: {'line': b'   75 |             \x1b[01;31m\x1b[Kaverage_runtime\x1b[m\x1b[K = (t_consum + double(num_window) * average_runtime) / double(num_window + 1);  // \xe6\x9b\xb4\xe6\x96\xb0\xe5\xb9\xb3\xe5\x9d\x87\xe8\xbf\x90\xe8\xa1\x8c\xe6\x97\xb6\xe9\x97\xb4\n'}
+[6.969108] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.969181] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kaverage_runtime_\x1b[m\x1b[K\n'}
+[6.977093] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:78:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_count\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_count_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.977275] (sfuise) StderrLine: {'line': b'   78 |             if ((int)\x1b[01;31m\x1b[Kwindow_count\x1b[m\x1b[K <= n_window_calib) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\xe5\xb0\x8f\xe4\xba\x8e\xe7\xad\x89\xe4\xba\x8e\xe6\xa0\xa1\xe5\x87\x86\xe7\xaa\x97\xe5\x8f\xa3\xe6\x95\xb0\n'}
+[6.977352] (sfuise) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.977411] (sfuise) StderrLine: {'line': b'      |                      \x1b[32m\x1b[Kwindow_count_\x1b[m\x1b[K\n'}
+[6.985456] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:78:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kn_window_calib\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kn_window_calib_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.985640] (sfuise) StderrLine: {'line': b'   78 |             if ((int)window_count <= \x1b[01;31m\x1b[Kn_window_calib\x1b[m\x1b[K) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\xe5\xb0\x8f\xe4\xba\x8e\xe7\xad\x89\xe4\xba\x8e\xe6\xa0\xa1\xe5\x87\x86\xe7\xaa\x97\xe5\x8f\xa3\xe6\x95\xb0\n'}
+[6.985716] (sfuise) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.985781] (sfuise) StderrLine: {'line': b'      |                                      \x1b[32m\x1b[Kn_window_calib_\x1b[m\x1b[K\n'}
+[6.993108] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:81:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.993304] (sfuise) StderrLine: {'line': b'   81 |                 calib_msg.q_nav_uwb.w = \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.q_nav_uwb.w();\n'}
+[6.993378] (sfuise) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.993454] (sfuise) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.000844] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:98:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.001088] (sfuise) StderrLine: {'line': b'   98 |             if (\x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.numKnots() >= (size_t)window_size) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe6\xa0\xb7\xe6\x9d\xa1\xe8\x8a\x82\xe7\x82\xb9\xe6\x95\xb0\xe8\xbe\xbe\xe5\x88\xb0\xe7\xaa\x97\xe5\x8f\xa3\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[7.001160] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.001217] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.008335] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:98:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.008499] (sfuise) StderrLine: {'line': b'   98 |             if (spline_local.numKnots() >= (size_t)\x1b[01;31m\x1b[Kwindow_size\x1b[m\x1b[K) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe6\xa0\xb7\xe6\x9d\xa1\xe8\x8a\x82\xe7\x82\xb9\xe6\x95\xb0\xe8\xbe\xbe\xe5\x88\xb0\xe7\xaa\x97\xe5\x8f\xa3\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[7.008569] (sfuise) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.008628] (sfuise) StderrLine: {'line': b'      |                                                    \x1b[32m\x1b[Kwindow_size_\x1b[m\x1b[K\n'}
+[7.015603] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:99:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_count\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_count_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.015765] (sfuise) StderrLine: {'line': b'   99 |                 \x1b[01;31m\x1b[Kwindow_count\x1b[m\x1b[K++;  // \xe5\xa2\x9e\xe5\x8a\xa0\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\n'}
+[7.015838] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.015894] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kwindow_count_\x1b[m\x1b[K\n'}
+[7.023019] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:100:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksolver_flag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksolver_flag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.023234] (sfuise) StderrLine: {'line': b'  100 |                 if (\x1b[01;31m\x1b[Ksolver_flag\x1b[m\x1b[K == INITIAL) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe6\xb1\x82\xe8\xa7\xa3\xe5\x99\xa8\xe6\xa0\x87\xe5\xbf\x97\xe4\xb8\xba\xe5\x88\x9d\xe5\xa7\x8b\xe7\x8a\xb6\xe6\x80\x81\n'}
+[7.023308] (sfuise) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.023366] (sfuise) StderrLine: {'line': b'      |                     \x1b[32m\x1b[Ksolver_flag_\x1b[m\x1b[K\n'}
+[7.031760] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:100:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KINITIAL\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.031912] (sfuise) StderrLine: {'line': b'  100 |                 if (solver_flag == \x1b[01;31m\x1b[KINITIAL\x1b[m\x1b[K) {  // \xe5\xa6\x82\xe6\x9e\x9c\xe6\xb1\x82\xe8\xa7\xa3\xe5\x99\xa8\xe6\xa0\x87\xe5\xbf\x97\xe4\xb8\xba\xe5\x88\x9d\xe5\xa7\x8b\xe7\x8a\xb6\xe6\x80\x81\n'}
+[7.031989] (sfuise) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.034164] (-) TimerEvent: {}
+[7.040895] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:101:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KFULLSIZE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.041044] (sfuise) StderrLine: {'line': b'  101 |                     solver_flag = \x1b[01;31m\x1b[KFULLSIZE\x1b[m\x1b[K;  // \xe8\xae\xbe\xe7\xbd\xae\xe4\xb8\xba\xe5\x85\xa8\xe5\xb0\xba\xe5\xaf\xb8\xe7\x8a\xb6\xe6\x80\x81\n'}
+[7.041107] (sfuise) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.047436] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:106:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.047576] (sfuise) StderrLine: {'line': b'  106 |             \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.getSplineMsg(spline_msg);  // \xe8\x8e\xb7\xe5\x8f\x96\xe6\xa0\xb7\xe6\x9d\xa1\xe6\xb6\x88\xe6\x81\xaf\n'}
+[7.047648] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.047702] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.054419] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:110:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksolver_flag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksolver_flag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.054580] (sfuise) StderrLine: {'line': b'  110 |             est_msg.if_full_window.data = (\x1b[01;31m\x1b[Ksolver_flag\x1b[m\x1b[K != INITIAL);  // \xe8\xae\xbe\xe7\xbd\xae\xe6\x98\xaf\xe5\x90\xa6\xe4\xb8\xba\xe5\x85\xa8\xe7\xaa\x97\xe5\x8f\xa3\n'}
+[7.054647] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.054704] (sfuise) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Ksolver_flag_\x1b[m\x1b[K\n'}
+[7.062743] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:110:59:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KINITIAL\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.062885] (sfuise) StderrLine: {'line': b'  110 |             est_msg.if_full_window.data = (solver_flag != \x1b[01;31m\x1b[KINITIAL\x1b[m\x1b[K);  // \xe8\xae\xbe\xe7\xbd\xae\xe6\x98\xaf\xe5\x90\xa6\xe4\xb8\xba\xe5\x85\xa8\xe7\xaa\x97\xe5\x8f\xa3\n'}
+[7.062960] (sfuise) StderrLine: {'line': b'      |                                                           \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.072815] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:116:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KFULLSIZE\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.073004] (sfuise) StderrLine: {'line': b'  116 |             if (solver_flag == \x1b[01;31m\x1b[KFULLSIZE\x1b[m\x1b[K) {\n'}
+[7.073071] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.080135] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::readParameters(rclcpp::Node::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.080298] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:182:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.080384] (sfuise) StderrLine: {'line': b'  182 |             \x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K = true; // \xe5\xa6\x82\xe6\x9e\x9c\xe7\xb3\xbb\xe6\x95\xb0\xe4\xb8\xba0\xef\xbc\x8c\xe5\x88\x99\xe4\xbb\x85\xe4\xbd\xbf\xe7\x94\xa8UWB\n'}
+[7.080443] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.080498] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.087498] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:184:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.087695] (sfuise) StderrLine: {'line': b'  184 |             \x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K = false; // \xe5\x90\xa6\xe5\x88\x99\xe4\xb8\x8d\xe5\x8f\xaa\xe4\xbd\xbf\xe7\x94\xa8UWB\n'}
+[7.087771] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.087834] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.094649] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:187:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.094874] (sfuise) StderrLine: {'line': b'  187 |         \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_opt_g = true; // \xe8\xae\xbe\xe7\xbd\xae\xe4\xbc\x98\xe5\x8c\x96\xe9\x87\x8d\xe5\x8a\x9b\xe6\xa0\x87\xe5\xbf\x97\n'}
+[7.094968] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.095036] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.103219] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:190:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmax_iter\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmax_iter_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.103429] (sfuise) StderrLine: {'line': b'  190 |         \x1b[01;31m\x1b[Kmax_iter\x1b[m\x1b[K = CommonUtils::readParam<int>(node, "max_iter"); // \xe8\xaf\xbb\xe5\x8f\x96\xe6\x9c\x80\xe5\xa4\xa7\xe8\xbf\xad\xe4\xbb\xa3\xe6\xac\xa1\xe6\x95\xb0\n'}
+[7.103511] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.103578] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kmax_iter_\x1b[m\x1b[K\n'}
+[7.111484] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:191:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdt_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kdt_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.111683] (sfuise) StderrLine: {'line': b'  191 |         \x1b[01;31m\x1b[Kdt_ns\x1b[m\x1b[K = 1e9 / CommonUtils::readParam<int>(node, "control_point_fps"); // \xe8\xae\xa1\xe7\xae\x97\xe6\x97\xb6\xe9\x97\xb4\xe9\x97\xb4\xe9\x9a\x94\n'}
+[7.111766] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.111833] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kdt_ns_\x1b[m\x1b[K\n'}
+[7.119840] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:192:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_tdoa\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_tdoa_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.120040] (sfuise) StderrLine: {'line': b'  192 |         \x1b[01;31m\x1b[Kif_tdoa\x1b[m\x1b[K = CommonUtils::readParam<bool>(node, "if_tdoa"); // \xe8\xaf\xbb\xe5\x8f\x96\xe6\x98\xaf\xe5\x90\xa6\xe4\xbd\xbf\xe7\x94\xa8TDOA\xe6\xa0\x87\xe5\xbf\x97\n'}
+[7.120121] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.120187] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kif_tdoa_\x1b[m\x1b[K\n'}
+[7.128272] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:193:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.128445] (sfuise) StderrLine: {'line': b'  193 |         \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K = 0; // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.128517] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.128578] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.134360] (-) TimerEvent: {}
+[7.136046] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:194:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kn_window_calib\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kn_window_calib_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.136216] (sfuise) StderrLine: {'line': b'  194 |         \x1b[01;31m\x1b[Kn_window_calib\x1b[m\x1b[K = CommonUtils::readParam<int>(node, "n_window_calib"); // \xe8\xaf\xbb\xe5\x8f\x96\xe6\xa0\xa1\xe5\x87\x86\xe7\xaa\x97\xe5\x8f\xa3\xe6\x95\xb0\n'}
+[7.136288] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.136350] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kn_window_calib_\x1b[m\x1b[K\n'}
+[7.143483] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:195:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.143642] (sfuise) StderrLine: {'line': b'  195 |         \x1b[01;31m\x1b[Kwindow_size\x1b[m\x1b[K = CommonUtils::readParam<int>(node, "window_size"); // \xe8\xaf\xbb\xe5\x8f\x96\xe7\xaa\x97\xe5\x8f\xa3\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[7.143712] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.143769] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kwindow_size_\x1b[m\x1b[K\n'}
+[7.152208] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:232:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.152397] (sfuise) StderrLine: {'line': b'  232 |         \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.offset = Eigen::Vector3d(v_offset.at(0), v_offset.at(1), v_offset.at(2)); // \xe8\xae\xbe\xe7\xbd\xae\xe6\xa0\xa1\xe5\x87\x86\xe5\x81\x8f\xe7\xa7\xbb\n'}
+[7.152468] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.152534] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.159687] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:235:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kv_toa_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kv_toa_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.159850] (sfuise) StderrLine: {'line': b'  235 |             \x1b[01;31m\x1b[Kv_toa_offset\x1b[m\x1b[K = CommonUtils::readParam<std::vector<double>>(node, "toa_offset"); // \xe8\xaf\xbb\xe5\x8f\x96TOA\xe5\x81\x8f\xe7\xa7\xbb\xe9\x87\x8f\n'}
+[7.159940] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.160004] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kv_toa_offset_\x1b[m\x1b[K\n'}
+[7.171381] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::getImuCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.171608] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:246:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.171688] (sfuise) StderrLine: {'line': b'  246 |         \x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.push_back(imu); // \xe5\xb0\x86IMU\xe6\x95\xb0\xe6\x8d\xae\xe6\xb7\xbb\xe5\x8a\xa0\xe5\x88\xb0\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\n'}
+[7.171753] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.171814] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.174124] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::getTdoaCallback(cf_msgs::msg::Tdoa_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.174296] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:252:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct cf_msgs::msg::Tdoa_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct cf_msgs::msg::Tdoa_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KidA\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.174378] (sfuise) StderrLine: {'line': b'  252 |         TDOAData uwb(msg->header.stamp.nanosec, msg->\x1b[01;31m\x1b[KidA\x1b[m\x1b[K, msg->idB, msg->data); // \xe5\x88\x9b\xe5\xbb\xbaTDOA\xe6\x95\xb0\xe6\x8d\xae\xe5\xaf\xb9\xe8\xb1\xa1\n'}
+[7.174442] (sfuise) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[7.174504] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:252:64:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kusing element_type = struct cf_msgs::msg::Tdoa_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstruct cf_msgs::msg::Tdoa_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99} has no member named \xe2\x80\x98\x1b[01m\x1b[KidB\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.174589] (sfuise) StderrLine: {'line': b'  252 |         TDOAData uwb(msg->header.stamp.nanosec, msg->idA, msg->\x1b[01;31m\x1b[KidB\x1b[m\x1b[K, msg->data); // \xe5\x88\x9b\xe5\xbb\xbaTDOA\xe6\x95\xb0\xe6\x8d\xae\xe5\xaf\xb9\xe8\xb1\xa1\n'}
+[7.174646] (sfuise) StderrLine: {'line': b'      |                                                                \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[7.182549] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:253:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.182851] (sfuise) StderrLine: {'line': b'  253 |         \x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K.push_back(uwb); // \xe5\xb0\x86TDOA\xe6\x95\xb0\xe6\x8d\xae\xe6\xb7\xbb\xe5\x8a\xa0\xe5\x88\xb0\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\n'}
+[7.182986] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.183058] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.195612] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::getToaCallback(isas_msgs::msg::RTLSStick_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.195796] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:263:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.195873] (sfuise) StderrLine: {'line': b'  263 |             \x1b[01;31m\x1b[Ktoa_buff\x1b[m\x1b[K.push_back(uwb); // \xe5\xb0\x86TOA\xe6\x95\xb0\xe6\x8d\xae\xe6\xb7\xbb\xe5\x8a\xa0\xe5\x88\xb0\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\n'}
+[7.195953] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.196018] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ktoa_buff_\x1b[m\x1b[K\n'}
+[7.208566] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::getAnchorCallback(isas_msgs::msg::Anchorlist_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.208816] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:270:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.208915] (sfuise) StderrLine: {'line': b'  270 |         if (\x1b[01;31m\x1b[Kif_anchor_ini\x1b[m\x1b[K) return; // \xe5\xa6\x82\xe6\x9e\x9c\xe9\x94\x9a\xe7\x82\xb9\xe5\xb7\xb2\xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xef\xbc\x8c\xe8\xbf\x94\xe5\x9b\x9e\n'}
+[7.209006] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.209072] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\n'}
+[7.216986] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:272:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.217188] (sfuise) StderrLine: {'line': b'  272 |             \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.anchor_list[anchor.id] = Eigen::Vector3d(anchor.position.x, anchor.position.y, anchor.position.z); // \xe6\xb7\xbb\xe5\x8a\xa0\xe9\x94\x9a\xe7\x82\xb9\xe5\x88\xb0\xe5\x88\x97\xe8\xa1\xa8\n'}
+[7.217264] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.217325] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.225686] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:274:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.225860] (sfuise) StderrLine: {'line': b'  274 |         \x1b[01;31m\x1b[Kif_anchor_ini\x1b[m\x1b[K = true; // \xe8\xae\xbe\xe7\xbd\xae\xe9\x94\x9a\xe7\x82\xb9\xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xa0\x87\xe5\xbf\x97\n'}
+[7.225944] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.226006] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\n'}
+[7.232739] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:275:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_tdoa\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_tdoa_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.232948] (sfuise) StderrLine: {'line': b'  275 |         if (!\x1b[01;31m\x1b[Kif_tdoa\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe4\xb8\x8d\xe4\xbd\xbf\xe7\x94\xa8TDOA\n'}
+[7.233025] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.233085] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kif_tdoa_\x1b[m\x1b[K\n'}
+[7.234453] (-) TimerEvent: {}
+[7.240610] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:277:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.240790] (sfuise) StderrLine: {'line': b'  277 |             for (auto it = \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.anchor_list.begin(); it != param.anchor_list.end(); it++) { // \xe9\x81\x8d\xe5\x8e\x86\xe9\x94\x9a\xe7\x82\xb9\xe5\x88\x97\xe8\xa1\xa8\n'}
+[7.240866] (sfuise) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.240940] (sfuise) StderrLine: {'line': b'      |                            \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.249308] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:278:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kv_toa_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kv_toa_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.249539] (sfuise) StderrLine: {'line': b'  278 |                 param.toa_offset[it->first] = \x1b[01;31m\x1b[Kv_toa_offset\x1b[m\x1b[K[i]; // \xe8\xae\xbe\xe7\xbd\xaeTOA\xe5\x81\x8f\xe7\xa7\xbb\n'}
+[7.249620] (sfuise) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.249692] (sfuise) StderrLine: {'line': b'      |                                               \x1b[32m\x1b[Kv_toa_offset_\x1b[m\x1b[K\n'}
+[7.258203] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::updateMeasurements(Eigen::aligned_deque<_KnotT>&, Eigen::aligned_deque<_KnotT>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.258440] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:288:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.258515] (sfuise) StderrLine: {'line': b'  288 |         int64_t t_window_l = \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.minTimeNs(); // \xe8\x8e\xb7\xe5\x8f\x96\xe7\xaa\x97\xe5\x8f\xa3\xe5\xb7\xa6\xe8\xbe\xb9\xe7\x95\x8c\n'}
+[7.258577] (sfuise) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.258634] (sfuise) StderrLine: {'line': b'      |                              \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.265854] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::initialization()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.266070] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:315:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.266153] (sfuise) StderrLine: {'line': b'  315 |             if (!\x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.empty()) min_time = imu_buff.back().time_ns; // \xe8\x8e\xb7\xe5\x8f\x96IMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe7\x9a\x84\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.266223] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.266294] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.274531] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:316:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.274726] (sfuise) StderrLine: {'line': b'  316 |             if (!\x1b[01;31m\x1b[Ktoa_buff\x1b[m\x1b[K.empty()) min_time = std::min(toa_buff.back().time_ns, min_time); // \xe8\x8e\xb7\xe5\x8f\x96TOA\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe7\x9a\x84\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.274806] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.274870] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Ktoa_buff_\x1b[m\x1b[K\n'}
+[7.282515] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:317:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.282688] (sfuise) StderrLine: {'line': b'  317 |             if (!\x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K.empty()) min_time = std::min(tdoa_buff.back().time_ns, min_time); // \xe8\x8e\xb7\xe5\x8f\x96TDOA\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe7\x9a\x84\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.282764] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.282827] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.290503] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:318:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.290677] (sfuise) StderrLine: {'line': b'  318 |             if (min_time > \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.nextMaxTimeNs()) { // \xe5\xa6\x82\xe6\x9e\x9c\xe6\x9c\x80\xe5\xb0\x8f\xe6\x97\xb6\xe9\x97\xb4\xe5\xa4\xa7\xe4\xba\x8e\xe6\xa0\xb7\xe6\x9d\xa1\xe7\x9a\x84\xe6\x9c\x80\xe5\xa4\xa7\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.290747] (sfuise) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.290815] (sfuise) StderrLine: {'line': b'      |                            \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.297748] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:323:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.297896] (sfuise) StderrLine: {'line': b'  323 |                 if (!\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe4\xb8\x8d\xe5\x8f\xaa\xe4\xbd\xbf\xe7\x94\xa8UWB\n'}
+[7.297972] (sfuise) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.298051] (sfuise) StderrLine: {'line': b'      |                      \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.304636] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:325:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.304829] (sfuise) StderrLine: {'line': b'  325 |                         \x1b[01;31m\x1b[Klast_imu_t_ns\x1b[m\x1b[K = bag_start_time; // \xe8\xae\xbe\xe7\xbd\xae\xe6\x9c\x80\xe5\x90\x8eIMU\xe6\x97\xb6\xe9\x97\xb4\xe4\xb8\xba\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.304895] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.304960] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\n'}
+[7.311655] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:325:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.311822] (sfuise) StderrLine: {'line': b'  325 |                         last_imu_t_ns = \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K; // \xe8\xae\xbe\xe7\xbd\xae\xe6\x9c\x80\xe5\x90\x8eIMU\xe6\x97\xb6\xe9\x97\xb4\xe4\xb8\xba\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.311895] (sfuise) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.311970] (sfuise) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.319418] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:327:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.319575] (sfuise) StderrLine: {'line': b'  327 |                         \x1b[01;31m\x1b[Klast_imu_t_ns\x1b[m\x1b[K = imu_window.back().time_ns; // \xe8\x8e\xb7\xe5\x8f\x96IMU\xe7\xaa\x97\xe5\x8f\xa3\xe7\x9a\x84\xe6\x9c\x80\xe5\x90\x8e\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.319645] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.319702] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\n'}
+[7.326550] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:327:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.326705] (sfuise) StderrLine: {'line': b'  327 |                         last_imu_t_ns = \x1b[01;31m\x1b[Kimu_window\x1b[m\x1b[K.back().time_ns; // \xe8\x8e\xb7\xe5\x8f\x96IMU\xe7\xaa\x97\xe5\x8f\xa3\xe7\x9a\x84\xe6\x9c\x80\xe5\x90\x8e\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.326781] (sfuise) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.326839] (sfuise) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Kimu_window_\x1b[m\x1b[K\n'}
+[7.334637] (-) TimerEvent: {}
+[7.339017] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:329:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.339198] (sfuise) StderrLine: {'line': b'  329 |                     integration(\x1b[01;31m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K, q_ini, pos_ini); // \xe6\x89\xa7\xe8\xa1\x8c\xe7\xa7\xaf\xe5\x88\x86\n'}
+[7.339268] (sfuise) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.339331] (sfuise) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\n'}
+[7.345861] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:331:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_tdoa\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_tdoa_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.346039] (sfuise) StderrLine: {'line': b'  331 |                     if (\x1b[01;31m\x1b[Kif_tdoa\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe4\xbd\xbf\xe7\x94\xa8TDOA\n'}
+[7.346113] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.346173] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kif_tdoa_\x1b[m\x1b[K\n'}
+[7.358579] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:332:55:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.358728] (sfuise) StderrLine: {'line': b'  332 |                         pos_ini = tdoaMultilateration(\x1b[01;31m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K * NS_TO_S); // \xe6\x89\xa7\xe8\xa1\x8cTDOA\xe5\xa4\x9a\xe8\xbe\xb9\xe5\xae\x9a\xe4\xbd\x8d\n'}
+[7.358791] (sfuise) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.358843] (sfuise) StderrLine: {'line': b'      |                                                       \x1b[32m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\n'}
+[7.358892] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[7.358951] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[7.359232] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[7.359317] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[7.359384] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[7.359434] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[7.359480] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[7.359525] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[7.359583] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.359628] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.359684] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1\x1b[m\x1b[K:\n'}
+[7.359735] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.359786] (sfuise) StderrLine: {'line': b'  335 |                         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.359835] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.359882] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.359938] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.359992] (sfuise) StderrLine: {'line': b'  335 |                         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.360039] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.360085] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.360133] (sfuise) StderrLine: {'line': b'  335 |                         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.360182] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.360227] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.360272] (sfuise) StderrLine: {'line': b'  335 |                         \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.360320] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.360364] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[7.360410] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[7.360458] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[7.360506] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[7.360551] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[7.360597] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[7.360643] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[7.360689] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[7.360734] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[7.360779] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.360823] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.360869] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1\x1b[m\x1b[K:\n'}
+[7.360915] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.360969] (sfuise) StderrLine: {'line': b'  335 |                         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.361016] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.361061] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.361108] (sfuise) StderrLine: {'line': b'  335 |                         RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "UWB-only tracking only supported for TDOA data!"); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.361154] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.373736] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:341:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.374002] (sfuise) StderrLine: {'line': b'  341 |                 \x1b[01;31m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K += dt_ns; // \xe6\x9b\xb4\xe6\x96\xb0\xe4\xb8\x8b\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8a\x82\xe7\x82\xb9\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.374102] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.374174] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\n'}
+[7.381980] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:341:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdt_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kdt_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.382235] (sfuise) StderrLine: {'line': b'  341 |                 next_knot_TimeNs += \x1b[01;31m\x1b[Kdt_ns\x1b[m\x1b[K; // \xe6\x9b\xb4\xe6\x96\xb0\xe4\xb8\x8b\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8a\x82\xe7\x82\xb9\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.382366] (sfuise) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.382477] (sfuise) StderrLine: {'line': b'      |                                     \x1b[32m\x1b[Kdt_ns_\x1b[m\x1b[K\n'}
+[7.391000] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:350:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.391184] (sfuise) StderrLine: {'line': b'  350 |                 start_time.data = \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K; // \xe8\xae\xbe\xe7\xbd\xae\xe5\x90\xaf\xe5\x8a\xa8\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.391260] (sfuise) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.391320] (sfuise) StderrLine: {'line': b'      |                                   \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.398882] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:353:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.399108] (sfuise) StderrLine: {'line': b'  353 |             if (param_set && \x1b[01;31m\x1b[Kif_anchor_ini\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe5\x8f\x82\xe6\x95\xb0\xe5\xb7\xb2\xe8\xae\xbe\xe7\xbd\xae\xe4\xb8\x94\xe9\x94\x9a\xe7\x82\xb9\xe5\xb7\xb2\xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\n'}
+[7.399219] (sfuise) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.399293] (sfuise) StderrLine: {'line': b'      |                              \x1b[32m\x1b[Kif_anchor_ini_\x1b[m\x1b[K\n'}
+[7.406810] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.407032] (sfuise) StderrLine: {'line': b'  354 |                 \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.init(dt_ns, 0, bag_start_time); // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xa0\xb7\xe6\x9d\xa1\n'}
+[7.407111] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.407177] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.414071] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdt_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kdt_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.414253] (sfuise) StderrLine: {'line': b'  354 |                 spline_local.init(\x1b[01;31m\x1b[Kdt_ns\x1b[m\x1b[K, 0, bag_start_time); // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xa0\xb7\xe6\x9d\xa1\n'}
+[7.414350] (sfuise) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.414415] (sfuise) StderrLine: {'line': b'      |                                   \x1b[32m\x1b[Kdt_ns_\x1b[m\x1b[K\n'}
+[7.422028] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.422201] (sfuise) StderrLine: {'line': b'  354 |                 spline_local.init(dt_ns, 0, \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K); // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xa0\xb7\xe6\x9d\xa1\n'}
+[7.422270] (sfuise) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.422326] (sfuise) StderrLine: {'line': b'      |                                             \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.429169] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:355:22:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.429335] (sfuise) StderrLine: {'line': b'  355 |                 if (!\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe4\xb8\x8d\xe5\x8f\xaa\xe4\xbd\xbf\xe7\x94\xa8UWB\n'}
+[7.429404] (sfuise) StderrLine: {'line': b'      |                      \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.429462] (sfuise) StderrLine: {'line': b'      |                      \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.434825] (-) TimerEvent: {}
+[7.436191] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:357:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.436343] (sfuise) StderrLine: {'line': b'  357 |                     size_t n_imu = \x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.size(); // \xe8\x8e\xb7\xe5\x8f\x96IMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[7.436413] (sfuise) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.436470] (sfuise) StderrLine: {'line': b'      |                                    \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.443478] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:363:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.443625] (sfuise) StderrLine: {'line': b'  363 |                     \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.gravity = gravity_ave; // \xe8\xae\xbe\xe7\xbd\xae\xe6\xa0\xa1\xe5\x87\x86\xe9\x87\x8d\xe5\x8a\x9b\n'}
+[7.443701] (sfuise) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.443756] (sfuise) StderrLine: {'line': b'      |                     \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.450268] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:365:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.450431] (sfuise) StderrLine: {'line': b'  365 |                 \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.q_nav_uwb = param.q_nav_uwb_init; // \xe8\xae\xbe\xe7\xbd\xae\xe5\xaf\xbc\xe8\x88\xaa\xe5\x9b\x9b\xe5\x85\x83\xe6\x95\xb0\n'}
+[7.450501] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.450556] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.456546] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:365:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.456699] (sfuise) StderrLine: {'line': b'  365 |                 calib_param.q_nav_uwb = \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.q_nav_uwb_init; // \xe8\xae\xbe\xe7\xbd\xae\xe5\xaf\xbc\xe8\x88\xaa\xe5\x9b\x9b\xe5\x85\x83\xe6\x95\xb0\n'}
+[7.456765] (sfuise) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.456820] (sfuise) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.469103] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:374:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.469306] (sfuise) StderrLine: {'line': b'  374 |                     \x1b[01;31m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K += dt_ns; // \xe6\x9b\xb4\xe6\x96\xb0\xe4\xb8\x8b\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8a\x82\xe7\x82\xb9\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.469391] (sfuise) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.469474] (sfuise) StderrLine: {'line': b'      |                     \x1b[32m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\n'}
+[7.477073] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[KEigen::Vector3d SplineFusion::tdoaMultilateration(double) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.477239] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:390:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.477311] (sfuise) StderrLine: {'line': b'  390 |         Eigen::Vector3d anchor0 = \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.anchor_list.at(0); // \xe8\x8e\xb7\xe5\x8f\x96\xe7\xac\xac\xe4\xb8\x80\xe4\xb8\xaa\xe9\x94\x9a\xe7\x82\xb9\n'}
+[7.477366] (sfuise) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.477420] (sfuise) StderrLine: {'line': b'      |                                   \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.484403] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:392:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.484566] (sfuise) StderrLine: {'line': b'  392 |         range.push_back(\x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K.at(idx[0]).data); // \xe6\xb7\xbb\xe5\x8a\xa0\xe7\xac\xac\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8c\x83\xe5\x9b\xb4\n'}
+[7.484638] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.484715] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.535046] (-) TimerEvent: {}
+[7.582962] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:406:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kset_origin\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksetlogin\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.583186] (sfuise) StderrLine: {'line': b'  406 |         if (!\x1b[01;31m\x1b[Kset_origin\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe6\x9c\xaa\xe8\xae\xbe\xe7\xbd\xae\xe5\x8e\x9f\xe7\x82\xb9\n'}
+[7.583253] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.583310] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Ksetlogin\x1b[m\x1b[K\n'}
+[7.590338] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:410:19:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.590495] (sfuise) StderrLine: {'line': b'  410 |             pos = \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.q_nav_uwb.inverse() * (pos - calib_param.t_nav_uwb); // \xe8\xae\xa1\xe7\xae\x97\xe6\x9c\x80\xe7\xbb\x88\xe4\xbd\x8d\xe7\xbd\xae\n'}
+[7.590570] (sfuise) StderrLine: {'line': b'      |                   \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.590633] (sfuise) StderrLine: {'line': b'      |                   \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.601059] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::findClosestNWithOrderedID(double, int, size_t*) const\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.601267] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:418:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.601338] (sfuise) StderrLine: {'line': b'  418 |         for (auto it = \x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K.begin(); it != tdoa_buff.end(); it++) { // \xe9\x81\x8d\xe5\x8e\x86TDOA\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\n'}
+[7.601396] (sfuise) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.601470] (sfuise) StderrLine: {'line': b'      |                        \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.614236] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::optimization()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.614393] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:443:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.614457] (sfuise) StderrLine: {'line': b'  443 |         if (\x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.numKnots() < 2) return false; // \xe5\xa6\x82\xe6\x9e\x9c\xe6\xa0\xb7\xe6\x9d\xa1\xe8\x8a\x82\xe7\x82\xb9\xe6\x95\xb0\xe5\xb0\x8f\xe4\xba\x8e2\xef\xbc\x8c\xe8\xbf\x94\xe5\x9b\x9e\xe5\xa4\xb1\xe8\xb4\xa5\n'}
+[7.614510] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.614559] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.620267] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:445:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.620438] (sfuise) StderrLine: {'line': b'  445 |         if (\x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_reject_uwb) { // \xe5\xa6\x82\xe6\x9e\x9c\xe9\x9c\x80\xe8\xa6\x81\xe6\x8b\x92\xe7\xbb\x9dUWB\n'}
+[7.620504] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.620559] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.627205] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksolver_flag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksolver_flag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.627360] (sfuise) StderrLine: {'line': b'  446 |             if (\x1b[01;31m\x1b[Ksolver_flag\x1b[m\x1b[K == INITIAL && spline_local.numKnots() < int(param.reject_uwb_window_width * window_size))\n'}
+[7.627438] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.627496] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Ksolver_flag_\x1b[m\x1b[K\n'}
+[7.635125] (-) TimerEvent: {}
+[7.635669] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KINITIAL\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.635814] (sfuise) StderrLine: {'line': b'  446 |             if (solver_flag == \x1b[01;31m\x1b[KINITIAL\x1b[m\x1b[K && spline_local.numKnots() < int(param.reject_uwb_window_width * window_size))\n'}
+[7.635878] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.642635] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.642775] (sfuise) StderrLine: {'line': b'  446 |             if (solver_flag == INITIAL && \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.numKnots() < int(param.reject_uwb_window_width * window_size))\n'}
+[7.642836] (sfuise) StderrLine: {'line': b'      |                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.642887] (sfuise) StderrLine: {'line': b'      |                                           \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.649282] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:105:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.649430] (sfuise) StderrLine: {'line': b'  446 |             if (solver_flag == INITIAL && spline_local.numKnots() < int(param.reject_uwb_window_width * \x1b[01;31m\x1b[Kwindow_size\x1b[m\x1b[K))\n'}
+[7.649493] (sfuise) StderrLine: {'line': b'      |                                                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.649544] (sfuise) StderrLine: {'line': b'      |                                                                                                         \x1b[32m\x1b[Kwindow_size_\x1b[m\x1b[K\n'}
+[7.656102] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:454:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwindow_count\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwindow_count_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.656265] (sfuise) StderrLine: {'line': b'  454 |         if ((int)\x1b[01;31m\x1b[Kwindow_count\x1b[m\x1b[K >= n_window_calib) { // \xe5\xa6\x82\xe6\x9e\x9c\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\xe8\xbe\xbe\xe5\x88\xb0\xe6\xa0\xa1\xe5\x87\x86\xe7\xaa\x97\xe5\x8f\xa3\xe6\x95\xb0\n'}
+[7.656337] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.656390] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kwindow_count_\x1b[m\x1b[K\n'}
+[7.662852] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:454:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kn_window_calib\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kn_window_calib_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.663048] (sfuise) StderrLine: {'line': b'  454 |         if ((int)window_count >= \x1b[01;31m\x1b[Kn_window_calib\x1b[m\x1b[K) { // \xe5\xa6\x82\xe6\x9e\x9c\xe7\xaa\x97\xe5\x8f\xa3\xe8\xae\xa1\xe6\x95\xb0\xe8\xbe\xbe\xe5\x88\xb0\xe6\xa0\xa1\xe5\x87\x86\xe7\xaa\x97\xe5\x8f\xa3\xe6\x95\xb0\n'}
+[7.663120] (sfuise) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.663173] (sfuise) StderrLine: {'line': b'      |                                  \x1b[32m\x1b[Kn_window_calib_\x1b[m\x1b[K\n'}
+[7.669249] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:455:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.669431] (sfuise) StderrLine: {'line': b'  455 |             \x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_opt_g = false; // \xe4\xb8\x8d\xe4\xbc\x98\xe5\x8c\x96\xe9\x87\x8d\xe5\x8a\x9b\n'}
+[7.669500] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[7.669558] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[7.676331] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.676474] (sfuise) StderrLine: {'line': b'  459 |         if (!\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) updateMeasurements(imu_window, imu_buff); // \xe6\x9b\xb4\xe6\x96\xb0IMU\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.676539] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.676596] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.683461] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.683662] (sfuise) StderrLine: {'line': b'  459 |         if (!if_uwb_only) updateMeasurements(\x1b[01;31m\x1b[Kimu_window\x1b[m\x1b[K, imu_buff); // \xe6\x9b\xb4\xe6\x96\xb0IMU\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.683731] (sfuise) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.683799] (sfuise) StderrLine: {'line': b'      |                                              \x1b[32m\x1b[Kimu_window_\x1b[m\x1b[K\n'}
+[7.690461] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:58:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.690628] (sfuise) StderrLine: {'line': b'  459 |         if (!if_uwb_only) updateMeasurements(imu_window, \x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K); // \xe6\x9b\xb4\xe6\x96\xb0IMU\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.690694] (sfuise) StderrLine: {'line': b'      |                                                          \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.690749] (sfuise) StderrLine: {'line': b'      |                                                          \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.697060] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:460:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_tdoa\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_tdoa_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.697204] (sfuise) StderrLine: {'line': b'  460 |         if (\x1b[01;31m\x1b[Kif_tdoa\x1b[m\x1b[K) {\n'}
+[7.697272] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.697335] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kif_tdoa_\x1b[m\x1b[K\n'}
+[7.703717] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:461:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.703868] (sfuise) StderrLine: {'line': b'  461 |             updateMeasurements(\x1b[01;31m\x1b[Ktdoa_window\x1b[m\x1b[K, tdoa_buff); // \xe6\x9b\xb4\xe6\x96\xb0TDOA\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.703952] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.704009] (sfuise) StderrLine: {'line': b'      |                                \x1b[32m\x1b[Ktdoa_window_\x1b[m\x1b[K\n'}
+[7.710435] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:461:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.710587] (sfuise) StderrLine: {'line': b'  461 |             updateMeasurements(tdoa_window, \x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K); // \xe6\x9b\xb4\xe6\x96\xb0TDOA\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.710654] (sfuise) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.710718] (sfuise) StderrLine: {'line': b'      |                                             \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.717126] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:463:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.717329] (sfuise) StderrLine: {'line': b'  463 |             updateMeasurements(\x1b[01;31m\x1b[Ktoa_window\x1b[m\x1b[K, toa_buff); // \xe6\x9b\xb4\xe6\x96\xb0TOA\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.717396] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.717451] (sfuise) StderrLine: {'line': b'      |                                \x1b[32m\x1b[Ktoa_window_\x1b[m\x1b[K\n'}
+[7.723914] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:463:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.724077] (sfuise) StderrLine: {'line': b'  463 |             updateMeasurements(toa_window, \x1b[01;31m\x1b[Ktoa_buff\x1b[m\x1b[K); // \xe6\x9b\xb4\xe6\x96\xb0TOA\xe6\xb5\x8b\xe9\x87\x8f\n'}
+[7.724150] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.724203] (sfuise) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Ktoa_buff_\x1b[m\x1b[K\n'}
+[7.730538] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:468:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_fixed\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpose_fixed_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.730684] (sfuise) StderrLine: {'line': b'  468 |         \x1b[01;31m\x1b[Kpose_fixed\x1b[m\x1b[K = false; // \xe4\xbd\x8d\xe5\xa7\xbf\xe5\x9b\xba\xe5\xae\x9a\xe6\xa0\x87\xe5\xbf\x97\n'}
+[7.730748] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.730801] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpose_fixed_\x1b[m\x1b[K\n'}
+[7.735225] (-) TimerEvent: {}
+[7.738105] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:470:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksolver_flag\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksolver_flag_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.738322] (sfuise) StderrLine: {'line': b'  470 |         if (\x1b[01;31m\x1b[Ksolver_flag\x1b[m\x1b[K == INITIAL) {\n'}
+[7.738405] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.738476] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ksolver_flag_\x1b[m\x1b[K\n'}
+[7.748919] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:470:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KINITIAL\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[7.749131] (sfuise) StderrLine: {'line': b'  470 |         if (solver_flag == \x1b[01;31m\x1b[KINITIAL\x1b[m\x1b[K) {\n'}
+[7.749230] (sfuise) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[7.749863] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:473:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klambda\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.750057] (sfuise) StderrLine: {'line': b'  473 |         \x1b[01;31m\x1b[Klambda\x1b[m\x1b[K = 1e-6; // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xad\xa5\xe9\x95\xbf\n'}
+[7.750138] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.750200] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\n'}
+[7.750263] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/mpl/aux_/na_spec.hpp:18\x1b[m\x1b[K,\n'}
+[7.750322] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/mpl/if.hpp:19\x1b[m\x1b[K,\n'}
+[7.750381] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/math/tools/precision.hpp:18\x1b[m\x1b[K,\n'}
+[7.750441] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/math/special_functions/sinc.hpp:19\x1b[m\x1b[K,\n'}
+[7.750504] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/math_tools.h:5\x1b[m\x1b[K,\n'}
+[7.750562] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:4\x1b[m\x1b[K,\n'}
+[7.750618] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[7.750676] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/mpl/lambda_fwd.hpp:36:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[7.750735] (sfuise) StderrLine: {'line': b'   36 | struct \x1b[01;36m\x1b[Klambda\x1b[m\x1b[K;\n'}
+[7.750789] (sfuise) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[7.758310] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:474:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klambda_vee\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klambda_vee_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.758490] (sfuise) StderrLine: {'line': b'  474 |         \x1b[01;31m\x1b[Klambda_vee\x1b[m\x1b[K = 2; // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\xad\xa5\xe9\x95\xbf\xe5\x80\x8d\xe5\xa2\x9e\xe5\x9b\xa0\xe5\xad\x90\n'}
+[7.758570] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.758637] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Klambda_vee_\x1b[m\x1b[K\n'}
+[7.765980] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:477:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmax_iter\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kmax_iter_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.766171] (sfuise) StderrLine: {'line': b'  477 |         while (!converged && opt_iter < \x1b[01;31m\x1b[Kmax_iter\x1b[m\x1b[K) { // \xe8\xbf\xad\xe4\xbb\xa3\xe4\xbc\x98\xe5\x8c\x96\n'}
+[7.766246] (sfuise) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.766308] (sfuise) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Kmax_iter_\x1b[m\x1b[K\n'}
+[7.774114] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::setParameters()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.774283] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:487:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.774357] (sfuise) StderrLine: {'line': b'  487 |         if (\x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.empty() && !if_uwb_only) return false; // \xe5\xa6\x82\xe6\x9e\x9cIMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe4\xb8\xba\xe7\xa9\xba\xe4\xb8\x94\xe4\xb8\x8d\xe5\x8f\xaa\xe4\xbd\xbf\xe7\x94\xa8UWB\xef\xbc\x8c\xe8\xbf\x94\xe5\x9b\x9e\xe5\xa4\xb1\xe8\xb4\xa5\n'}
+[7.774419] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.774477] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.782138] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:487:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.782329] (sfuise) StderrLine: {'line': b'  487 |         if (imu_buff.empty() && !\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) return false; // \xe5\xa6\x82\xe6\x9e\x9cIMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe4\xb8\xba\xe7\xa9\xba\xe4\xb8\x94\xe4\xb8\x8d\xe5\x8f\xaa\xe4\xbd\xbf\xe7\x94\xa8UWB\xef\xbc\x8c\xe8\xbf\x94\xe5\x9b\x9e\xe5\xa4\xb1\xe8\xb4\xa5\n'}
+[7.782410] (sfuise) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.782478] (sfuise) StderrLine: {'line': b'      |                                  \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[7.789727] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.789871] (sfuise) StderrLine: {'line': b'  488 |         if (\x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.empty() && toa_buff.empty() && tdoa_buff.empty()) { // \xe5\xa6\x82\xe6\x9e\x9c\xe6\x89\x80\xe6\x9c\x89\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe9\x83\xbd\xe4\xb8\xba\xe7\xa9\xba\n'}
+[7.789961] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.790021] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.796722] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:33:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.796876] (sfuise) StderrLine: {'line': b'  488 |         if (imu_buff.empty() && \x1b[01;31m\x1b[Ktoa_buff\x1b[m\x1b[K.empty() && tdoa_buff.empty()) { // \xe5\xa6\x82\xe6\x9e\x9c\xe6\x89\x80\xe6\x9c\x89\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe9\x83\xbd\xe4\xb8\xba\xe7\xa9\xba\n'}
+[7.796973] (sfuise) StderrLine: {'line': b'      |                                 \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.797035] (sfuise) StderrLine: {'line': b'      |                                 \x1b[32m\x1b[Ktoa_buff_\x1b[m\x1b[K\n'}
+[7.804469] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:53:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.804648] (sfuise) StderrLine: {'line': b'  488 |         if (imu_buff.empty() && toa_buff.empty() && \x1b[01;31m\x1b[Ktdoa_buff\x1b[m\x1b[K.empty()) { // \xe5\xa6\x82\xe6\x9e\x9c\xe6\x89\x80\xe6\x9c\x89\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe9\x83\xbd\xe4\xb8\xba\xe7\xa9\xba\n'}
+[7.804725] (sfuise) StderrLine: {'line': b'      |                                                     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[7.804789] (sfuise) StderrLine: {'line': b'      |                                                     \x1b[32m\x1b[Ktdoa_buff_\x1b[m\x1b[K\n'}
+[7.812961] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:492:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.813139] (sfuise) StderrLine: {'line': b'  492 |                 \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K += imu_buff.front().time_ns; // \xe6\x9b\xb4\xe6\x96\xb0\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.813244] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.813326] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.820966] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:494:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.821138] (sfuise) StderrLine: {'line': b'  494 |                 \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K += toa_buff.front().time_ns; // \xe6\x9b\xb4\xe6\x96\xb0\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.821214] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.821288] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.828991] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:496:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.829157] (sfuise) StderrLine: {'line': b'  496 |                 \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K += tdoa_buff.front().time_ns; // \xe6\x9b\xb4\xe6\x96\xb0\xe8\xa1\x8c\xe6\x9d\x8e\xe5\xbc\x80\xe5\xa7\x8b\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.829235] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.829304] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.835312] (-) TimerEvent: {}
+[7.842782] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:499:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.842922] (sfuise) StderrLine: {'line': b'  499 |         \x1b[01;31m\x1b[Knext_knot_TimeNs\x1b[m\x1b[K = bag_start_time; // \xe8\xae\xbe\xe7\xbd\xae\xe4\xb8\x8b\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8a\x82\xe7\x82\xb9\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.843004] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.843060] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Knext_knot_time_ns_\x1b[m\x1b[K\n'}
+[7.850098] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:499:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbag_start_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbag_start_time_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.850242] (sfuise) StderrLine: {'line': b'  499 |         next_knot_TimeNs = \x1b[01;31m\x1b[Kbag_start_time\x1b[m\x1b[K; // \xe8\xae\xbe\xe7\xbd\xae\xe4\xb8\x8b\xe4\xb8\x80\xe4\xb8\xaa\xe8\x8a\x82\xe7\x82\xb9\xe6\x97\xb6\xe9\x97\xb4\n'}
+[7.850307] (sfuise) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.850362] (sfuise) StderrLine: {'line': b'      |                            \x1b[32m\x1b[Kbag_start_time_\x1b[m\x1b[K\n'}
+[7.857371] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::integrateStep(int64_t, int64_t, const ImuData&, Eigen::Matrix3d&, Eigen::Vector3d&, Eigen::Vector3d&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.857507] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:517:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.857584] (sfuise) StderrLine: {'line': b'  517 |         Eigen::Vector3d g = \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.gravity; // \xe8\x8e\xb7\xe5\x8f\x96\xe9\x87\x8d\xe5\x8a\x9b\n'}
+[7.857641] (sfuise) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.857693] (sfuise) StderrLine: {'line': b'      |                             \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[7.864371] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:520:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.864545] (sfuise) StderrLine: {'line': b'  520 |         Eigen::Matrix<double, 6, 1> bias = \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.itpBias(prevTime); // \xe8\x8e\xb7\xe5\x8f\x96\xe5\x81\x8f\xe5\xb7\xae\n'}
+[7.864625] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.864685] (sfuise) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.935466] (-) TimerEvent: {}
+[7.943841] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::integration(int64_t, Eigen::Quaterniond&, Eigen::Vector3d&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.944039] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:542:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.944111] (sfuise) StderrLine: {'line': b'  542 |         getIMUInterval(\x1b[01;31m\x1b[Klast_imu_t_ns\x1b[m\x1b[K, curTime, imu_vec); // \xe8\x8e\xb7\xe5\x8f\x96IMU\xe6\x97\xb6\xe9\x97\xb4\xe5\x8c\xba\xe9\x97\xb4\xe6\x95\xb0\xe6\x8d\xae\n'}
+[7.944168] (sfuise) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.944220] (sfuise) StderrLine: {'line': b'      |                        \x1b[32m\x1b[Klast_imu_t_ns_\x1b[m\x1b[K\n'}
+[7.951447] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:546:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.951601] (sfuise) StderrLine: {'line': b'  546 |             \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.itpQuaternion(last_imu_t_ns, &qs0); // \xe8\x8e\xb7\xe5\x8f\x96\xe6\x8f\x92\xe5\x80\xbc\xe5\x9b\x9b\xe5\x85\x83\xe6\x95\xb0\n'}
+[7.951673] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.951734] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.959433] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:564:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.959582] (sfuise) StderrLine: {'line': b'  564 |             qs = \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.extrapolateOrtKnot(1); // \xe5\xa4\x96\xe6\x8e\xa8\xe5\x9b\x9b\xe5\x85\x83\xe6\x95\xb0\n'}
+[7.959662] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.959720] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.966743] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::getIMUInterval(int64_t, int64_t, std::vector<ImuData>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.966951] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:571:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.967032] (sfuise) StderrLine: {'line': b'  571 |         if (\x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.empty()) { // \xe5\xa6\x82\xe6\x9e\x9cIMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\xe4\xb8\xba\xe7\xa9\xba\n'}
+[7.967095] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.967173] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.967338] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[7.967408] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[7.967468] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[7.967526] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[7.967583] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[7.967640] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[7.967696] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[7.967751] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[7.967811] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.967866] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.967922] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1\x1b[m\x1b[K:\n'}
+[7.967990] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.968051] (sfuise) StderrLine: {'line': b'  572 |             RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.968110] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.968167] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.968238] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.968293] (sfuise) StderrLine: {'line': b'  572 |             \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.968352] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.968408] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.968464] (sfuise) StderrLine: {'line': b'  572 |             \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.968519] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.968573] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[7.968628] (sfuise) StderrLine: {'line': b'  572 |             \x1b[01;31m\x1b[KRCLCPP_ERROR\x1b[m\x1b[K(this->get_logger(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.968681] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.968733] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[7.968791] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[7.968847] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[7.968900] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[7.968967] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[7.969024] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[7.969082] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[7.969139] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[7.969195] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[7.969250] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[7.969307] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[7.969364] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1\x1b[m\x1b[K:\n'}
+[7.969421] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.969477] (sfuise) StderrLine: {'line': b'  572 |             RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.969539] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.969597] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kget_logger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.969655] (sfuise) StderrLine: {'line': b'  572 |             RCLCPP_ERROR(this->\x1b[01;31m\x1b[Kget_logger\x1b[m\x1b[K(), "No IMU available."); // \xe8\xbe\x93\xe5\x87\xba\xe9\x94\x99\xe8\xaf\xaf\xe4\xbf\xa1\xe6\x81\xaf\n'}
+[7.969710] (sfuise) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.975528] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:576:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_buff\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_buff_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.975747] (sfuise) StderrLine: {'line': b'  576 |         while (\x1b[01;31m\x1b[Kimu_buff\x1b[m\x1b[K.at(idx).time_ns <= std::min(imu_buff.back().time_ns, t1)) { // \xe9\x81\x8d\xe5\x8e\x86IMU\xe7\xbc\x93\xe5\x86\xb2\xe5\x8c\xba\n'}
+[7.975828] (sfuise) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[7.975897] (sfuise) StderrLine: {'line': b'      |                \x1b[32m\x1b[Kimu_buff_\x1b[m\x1b[K\n'}
+[7.975973] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::displayControlPoints()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.976042] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:589:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Know\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.976125] (sfuise) StderrLine: {'line': b'  589 |         points_inactive_msg.header.stamp = this->\x1b[01;31m\x1b[Know\x1b[m\x1b[K(); // \xe8\xae\xbe\xe7\xbd\xae\xe6\x97\xb6\xe9\x97\xb4\xe6\x88\xb3\n'}
+[7.976188] (sfuise) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[7.984689] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:590:58:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.984952] (sfuise) StderrLine: {'line': b'  590 |         points_inactive_msg.points.push_back(getPointMsg(\x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.getIdlePos(0))); // \xe6\xb7\xbb\xe5\x8a\xa0\xe7\xac\xac\xe4\xb8\x80\xe4\xb8\xaa\xe9\x9d\x9e\xe6\xb4\xbb\xe5\x8a\xa8\xe6\x8e\xa7\xe5\x88\xb6\xe7\x82\xb9\n'}
+[7.985055] (sfuise) StderrLine: {'line': b'      |                                                          \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.985135] (sfuise) StderrLine: {'line': b'      |                                                          \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[7.985206] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:597:48:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass SplineFusion\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Know\x1b[m\x1b[K\xe2\x80\x99\n'}
+[7.985281] (sfuise) StderrLine: {'line': b'  597 |         points_active_msg.header.stamp = this->\x1b[01;31m\x1b[Know\x1b[m\x1b[K(); // \xe8\xae\xbe\xe7\xbd\xae\xe6\x97\xb6\xe9\x97\xb4\xe6\x88\xb3\n'}
+[7.985361] (sfuise) StderrLine: {'line': b'      |                                                \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[7.994788] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:603:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_knots_inactive\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_knots_inactive_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[7.994996] (sfuise) StderrLine: {'line': b'  603 |         \x1b[01;31m\x1b[Kpub_knots_inactive\x1b[m\x1b[K->publish(points_inactive_msg);\n'}
+[7.995083] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[7.995155] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_knots_inactive_\x1b[m\x1b[K\n'}
+[8.004831] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:604:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpub_knots_active\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpub_knots_active_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.005023] (sfuise) StderrLine: {'line': b'  604 |         \x1b[01;31m\x1b[Kpub_knots_active\x1b[m\x1b[K->publish(points_active_msg);\n'}
+[8.005099] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.005164] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kpub_knots_active_\x1b[m\x1b[K\n'}
+[8.012707] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg::Point32 SplineFusion::getPointMsg(Eigen::Vector3d)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.012850] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:610:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.012936] (sfuise) StderrLine: {'line': b'  610 |         Eigen::Vector3d p_U = \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.q_nav_uwb * p + calib_param.t_nav_uwb; // \xe8\xae\xa1\xe7\xae\x97\xe6\xa0\xa1\xe5\x87\x86\xe5\x90\x8e\xe7\x9a\x84\xe7\x82\xb9\n'}
+[8.012998] (sfuise) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.013053] (sfuise) StderrLine: {'line': b'      |                               \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[8.021245] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::optimize(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.021393] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.021464] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(\x1b[01;31m\x1b[Kbias_block_offset\x1b[m\x1b[K, gravity_block_offset, hess_size, &spline_local, &calib_param, &param, pose_fixed);\n'}
+[8.021525] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.021579] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kbias_block_offset_\x1b[m\x1b[K\n'}
+[8.030256] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.030421] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, \x1b[01;31m\x1b[Kgravity_block_offset\x1b[m\x1b[K, hess_size, &spline_local, &calib_param, &param, pose_fixed);\n'}
+[8.030492] (sfuise) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.030550] (sfuise) StderrLine: {'line': b'      |                                            \x1b[32m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\n'}
+[8.035591] (-) TimerEvent: {}
+[8.037090] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:66:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khess_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Khess_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.037251] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, \x1b[01;31m\x1b[Khess_size\x1b[m\x1b[K, &spline_local, &calib_param, &param, pose_fixed);\n'}
+[8.037332] (sfuise) StderrLine: {'line': b'      |                                                                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.037392] (sfuise) StderrLine: {'line': b'      |                                                                  \x1b[32m\x1b[Khess_size_\x1b[m\x1b[K\n'}
+[8.044169] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.044322] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &\x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K, &calib_param, &param, pose_fixed);\n'}
+[8.044389] (sfuise) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.044443] (sfuise) StderrLine: {'line': b'      |                                                                              \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[8.050833] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:93:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.050996] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &\x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K, &param, pose_fixed);\n'}
+[8.051066] (sfuise) StderrLine: {'line': b'      |                                                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.051124] (sfuise) StderrLine: {'line': b'      |                                                                                             \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[8.057103] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:107:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.057240] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &calib_param, &\x1b[01;31m\x1b[Kparam\x1b[m\x1b[K, pose_fixed);\n'}
+[8.057315] (sfuise) StderrLine: {'line': b'      |                                                                                                           \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.057371] (sfuise) StderrLine: {'line': b'      |                                                                                                           \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[8.064053] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:114:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_fixed\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpose_fixed_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.064227] (sfuise) StderrLine: {'line': b'  619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &calib_param, &param, \x1b[01;31m\x1b[Kpose_fixed\x1b[m\x1b[K);\n'}
+[8.064298] (sfuise) StderrLine: {'line': b'      |                                                                                                                  \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.064360] (sfuise) StderrLine: {'line': b'      |                                                                                                                  \x1b[32m\x1b[Kpose_fixed_\x1b[m\x1b[K\n'}
+[8.072329] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:620:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.072505] (sfuise) StderrLine: {'line': b'  620 |         if (!\x1b[01;31m\x1b[Kimu_window\x1b[m\x1b[K.empty()) lopt(imu_window);\n'}
+[8.072587] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.072652] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kimu_window_\x1b[m\x1b[K\n'}
+[8.081095] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:621:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.081280] (sfuise) StderrLine: {'line': b'  621 |         if (!\x1b[01;31m\x1b[Ktdoa_window\x1b[m\x1b[K.empty()) lopt(tdoa_window);\n'}
+[8.081363] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.081436] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Ktdoa_window_\x1b[m\x1b[K\n'}
+[8.089318] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:622:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.089468] (sfuise) StderrLine: {'line': b'  622 |         if (!\x1b[01;31m\x1b[Ktoa_window\x1b[m\x1b[K.empty()) lopt(toa_window);\n'}
+[8.089546] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.089606] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Ktoa_window_\x1b[m\x1b[K\n'}
+[8.114055] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:634:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klambda\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.114256] (sfuise) StderrLine: {'line': b'  634 |             Eigen::VectorXd Hdiag_lambda = Hdiag * \x1b[01;31m\x1b[Klambda\x1b[m\x1b[K;\n'}
+[8.114327] (sfuise) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[8.114380] (sfuise) StderrLine: {'line': b'      |                                                    \x1b[32m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\n'}
+[8.114431] (sfuise) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/boost/mpl/aux_/na_spec.hpp:18\x1b[m\x1b[K,\n'}
+[8.114482] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/mpl/if.hpp:19\x1b[m\x1b[K,\n'}
+[8.114532] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/math/tools/precision.hpp:18\x1b[m\x1b[K,\n'}
+[8.114588] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/boost/math/special_functions/sinc.hpp:19\x1b[m\x1b[K,\n'}
+[8.114637] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/math_tools.h:5\x1b[m\x1b[K,\n'}
+[8.114686] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:4\x1b[m\x1b[K,\n'}
+[8.114735] (sfuise) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2\x1b[m\x1b[K:\n'}
+[8.114783] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/boost/mpl/lambda_fwd.hpp:36:8:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kboost::mpl::lambda\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[8.114830] (sfuise) StderrLine: {'line': b'   36 | struct \x1b[01;36m\x1b[Klambda\x1b[m\x1b[K;\n'}
+[8.114880] (sfuise) StderrLine: {'line': b'      |        \x1b[01;36m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[8.135131] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:649:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.135325] (sfuise) StderrLine: {'line': b'  649 |             if (!\x1b[01;31m\x1b[Ktoa_window\x1b[m\x1b[K.empty()) eopt(toa_window);\n'}
+[8.135394] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.135451] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Ktoa_window_\x1b[m\x1b[K\n'}
+[8.135650] (-) TimerEvent: {}
+[8.142408] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:650:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kimu_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.142556] (sfuise) StderrLine: {'line': b'  650 |             if (!\x1b[01;31m\x1b[Kimu_window\x1b[m\x1b[K.empty()) eopt(imu_window);\n'}
+[8.142622] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.142681] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Kimu_window_\x1b[m\x1b[K\n'}
+[8.149397] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:651:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktdoa_window\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktdoa_window_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.149541] (sfuise) StderrLine: {'line': b'  651 |             if (!\x1b[01;31m\x1b[Ktdoa_window\x1b[m\x1b[K.empty()) eopt(tdoa_window);\n'}
+[8.149610] (sfuise) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.149667] (sfuise) StderrLine: {'line': b'      |                  \x1b[32m\x1b[Ktdoa_window_\x1b[m\x1b[K\n'}
+[8.156734] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:658:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klambda_vee\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klambda_vee_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.156872] (sfuise) StderrLine: {'line': b'  658 |                 lambda = std::min(100.0, \x1b[01;31m\x1b[Klambda_vee\x1b[m\x1b[K * lambda);\n'}
+[8.156949] (sfuise) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.157006] (sfuise) StderrLine: {'line': b'      |                                          \x1b[32m\x1b[Klambda_vee_\x1b[m\x1b[K\n'}
+[8.163687] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:670:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Klambda_vee\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Klambda_vee_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.163824] (sfuise) StderrLine: {'line': b'  670 |                 \x1b[01;31m\x1b[Klambda_vee\x1b[m\x1b[K = 2;\n'}
+[8.163890] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.163960] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Klambda_vee_\x1b[m\x1b[K\n'}
+[8.171728] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::updateLinearizerSize()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.171886] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:679:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.171992] (sfuise) StderrLine: {'line': b'  679 |         int num_knots = \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.numKnots();\n'}
+[8.172057] (sfuise) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.172129] (sfuise) StderrLine: {'line': b'      |                         \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[8.180572] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:680:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.180774] (sfuise) StderrLine: {'line': b'  680 |         \x1b[01;31m\x1b[Kbias_block_offset\x1b[m\x1b[K = Linearizer::POSE_SIZE * num_knots;\n'}
+[8.180861] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.180950] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kbias_block_offset_\x1b[m\x1b[K\n'}
+[8.188426] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:681:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khess_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Khess_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.188581] (sfuise) StderrLine: {'line': b'  681 |         \x1b[01;31m\x1b[Khess_size\x1b[m\x1b[K = bias_block_offset;\n'}
+[8.188648] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.188704] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Khess_size_\x1b[m\x1b[K\n'}
+[8.195372] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:682:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.195544] (sfuise) StderrLine: {'line': b'  682 |         if (!\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) {\n'}
+[8.195617] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.195679] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[8.205665] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:686:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.205880] (sfuise) StderrLine: {'line': b'  686 |         \x1b[01;31m\x1b[Kgravity_block_offset\x1b[m\x1b[K = hess_size;\n'}
+[8.205989] (sfuise) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.206059] (sfuise) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\n'}
+[8.213557] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:688:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.213731] (sfuise) StderrLine: {'line': b'  688 |         if (\x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_opt_transform) {\n'}
+[8.213812] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.213880] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[8.222353] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SplineFusion::applyIncFull(Eigen::VectorXd&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.222522] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:696:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kspline_local\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kspline_local_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.222600] (sfuise) StderrLine: {'line': b'  696 |         size_t num_knots = \x1b[01;31m\x1b[Kspline_local\x1b[m\x1b[K.numKnots();\n'}
+[8.222664] (sfuise) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.222725] (sfuise) StderrLine: {'line': b'      |                            \x1b[32m\x1b[Kspline_local_\x1b[m\x1b[K\n'}
+[8.235781] (-) TimerEvent: {}
+[8.252417] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:703:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kif_uwb_only_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.252653] (sfuise) StderrLine: {'line': b'  703 |         if (!\x1b[01;31m\x1b[Kif_uwb_only\x1b[m\x1b[K) {\n'}
+[8.252739] (sfuise) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.252810] (sfuise) StderrLine: {'line': b'      |              \x1b[32m\x1b[Kif_uwb_only_\x1b[m\x1b[K\n'}
+[8.262523] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:705:91:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kbias_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.262710] (sfuise) StderrLine: {'line': b'  705 |                 Eigen::Matrix<double, 6, 1> inc = inc_full.segment<Linearizer::BIAS_SIZE>(\x1b[01;31m\x1b[Kbias_block_offset\x1b[m\x1b[K + Linearizer::BIAS_SIZE * i);\n'}
+[8.262789] (sfuise) StderrLine: {'line': b'      |                                                                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.262858] (sfuise) StderrLine: {'line': b'      |                                                                                           \x1b[32m\x1b[Kbias_block_offset_\x1b[m\x1b[K\n'}
+[8.270291] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:709:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.270516] (sfuise) StderrLine: {'line': b'  709 |             if (\x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_opt_g) {\n'}
+[8.270615] (sfuise) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.270685] (sfuise) StderrLine: {'line': b'      |                 \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[8.281079] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:710:75:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.281307] (sfuise) StderrLine: {'line': b'  710 |                 Eigen::VectorXd dg = inc_full.segment<Linearizer::G_SIZE>(\x1b[01;31m\x1b[Kgravity_block_offset\x1b[m\x1b[K);\n'}
+[8.281425] (sfuise) StderrLine: {'line': b'      |                                                                           \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.281524] (sfuise) StderrLine: {'line': b'      |                                                                           \x1b[32m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\n'}
+[8.289198] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:711:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.289353] (sfuise) StderrLine: {'line': b'  711 |                 Eigen::Vector3d g0 = (\x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.gravity + Sphere::TangentBasis(calib_param.gravity) * dg).normalized() * 9.81;\n'}
+[8.289422] (sfuise) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.289479] (sfuise) StderrLine: {'line': b'      |                                       \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[8.295973] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:716:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kparam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kparam_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.296116] (sfuise) StderrLine: {'line': b'  716 |         if (\x1b[01;31m\x1b[Kparam\x1b[m\x1b[K.if_opt_transform) {\n'}
+[8.296186] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[8.296244] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kparam_\x1b[m\x1b[K\n'}
+[8.303167] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:717:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcalib_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcalib_param_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.303335] (sfuise) StderrLine: {'line': b'  717 |             \x1b[01;31m\x1b[Kcalib_param\x1b[m\x1b[K.t_nav_uwb += inc_full.segment<Linearizer::OFFSET_SIZE>(gravity_block_offset + Linearizer::TRANS_OFFSET);\n'}
+[8.303405] (sfuise) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.303461] (sfuise) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kcalib_param_\x1b[m\x1b[K\n'}
+[8.312094] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:717:80:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.312239] (sfuise) StderrLine: {'line': b'  717 |             calib_param.t_nav_uwb += inc_full.segment<Linearizer::OFFSET_SIZE>(\x1b[01;31m\x1b[Kgravity_block_offset\x1b[m\x1b[K + Linearizer::TRANS_OFFSET);\n'}
+[8.312306] (sfuise) StderrLine: {'line': b'      |                                                                                \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.312362] (sfuise) StderrLine: {'line': b'      |                                                                                \x1b[32m\x1b[Kgravity_block_offset_\x1b[m\x1b[K\n'}
+[8.336049] (-) TimerEvent: {}
+[8.436440] (-) TimerEvent: {}
+[8.536853] (-) TimerEvent: {}
+[8.637292] (-) TimerEvent: {}
+[8.737725] (-) TimerEvent: {}
+[8.838244] (-) TimerEvent: {}
+[8.938698] (-) TimerEvent: {}
+[9.039128] (-) TimerEvent: {}
+[9.139541] (-) TimerEvent: {}
+[9.240095] (-) TimerEvent: {}
+[9.340594] (-) TimerEvent: {}
+[9.441124] (-) TimerEvent: {}
+[9.541675] (-) TimerEvent: {}
+[9.642190] (-) TimerEvent: {}
+[9.742650] (-) TimerEvent: {}
+[9.843154] (-) TimerEvent: {}
+[9.943671] (-) TimerEvent: {}
+[10.044152] (-) TimerEvent: {}
+[10.144643] (-) TimerEvent: {}
+[10.245064] (-) TimerEvent: {}
+[10.345528] (-) TimerEvent: {}
+[10.446069] (-) TimerEvent: {}
+[10.546539] (-) TimerEvent: {}
+[10.647060] (-) TimerEvent: {}
+[10.747443] (-) TimerEvent: {}
+[10.847905] (-) TimerEvent: {}
+[10.948281] (-) TimerEvent: {}
+[11.048706] (-) TimerEvent: {}
+[11.149085] (-) TimerEvent: {}
+[11.249597] (-) TimerEvent: {}
+[11.350082] (-) TimerEvent: {}
+[11.450452] (-) TimerEvent: {}
+[11.551001] (-) TimerEvent: {}
+[11.651452] (-) TimerEvent: {}
+[11.751939] (-) TimerEvent: {}
+[11.852294] (-) TimerEvent: {}
+[11.952756] (-) TimerEvent: {}
+[12.053246] (-) TimerEvent: {}
+[12.153705] (-) TimerEvent: {}
+[12.254200] (-) TimerEvent: {}
+[12.354695] (-) TimerEvent: {}
+[12.455168] (-) TimerEvent: {}
+[12.555609] (-) TimerEvent: {}
+[12.656091] (-) TimerEvent: {}
+[12.756496] (-) TimerEvent: {}
+[12.857014] (-) TimerEvent: {}
+[12.957483] (-) TimerEvent: {}
+[13.057995] (-) TimerEvent: {}
+[13.158510] (-) TimerEvent: {}
+[13.258959] (-) TimerEvent: {}
+[13.359449] (-) TimerEvent: {}
+[13.459939] (-) TimerEvent: {}
+[13.560407] (-) TimerEvent: {}
+[13.660891] (-) TimerEvent: {}
+[13.761268] (-) TimerEvent: {}
+[13.861657] (-) TimerEvent: {}
+[13.962149] (-) TimerEvent: {}
+[14.062563] (-) TimerEvent: {}
+[14.163015] (-) TimerEvent: {}
+[14.263416] (-) TimerEvent: {}
+[14.363797] (-) TimerEvent: {}
+[14.464274] (-) TimerEvent: {}
+[14.565158] (-) TimerEvent: {}
+[14.665570] (-) TimerEvent: {}
+[14.766060] (-) TimerEvent: {}
+[14.866431] (-) TimerEvent: {}
+[14.966846] (-) TimerEvent: {}
+[15.067179] (-) TimerEvent: {}
+[15.167572] (-) TimerEvent: {}
+[15.268050] (-) TimerEvent: {}
+[15.368411] (-) TimerEvent: {}
+[15.468831] (-) TimerEvent: {}
+[15.569166] (-) TimerEvent: {}
+[15.669529] (-) TimerEvent: {}
+[15.769974] (-) TimerEvent: {}
+[15.870317] (-) TimerEvent: {}
+[15.970776] (-) TimerEvent: {}
+[16.071292] (-) TimerEvent: {}
+[16.171745] (-) TimerEvent: {}
+[16.272108] (-) TimerEvent: {}
+[16.372560] (-) TimerEvent: {}
+[16.473016] (-) TimerEvent: {}
+[16.573474] (-) TimerEvent: {}
+[16.673988] (-) TimerEvent: {}
+[16.774492] (-) TimerEvent: {}
+[16.875005] (-) TimerEvent: {}
+[16.975374] (-) TimerEvent: {}
+[17.075854] (-) TimerEvent: {}
+[17.176213] (-) TimerEvent: {}
+[17.276653] (-) TimerEvent: {}
+[17.377077] (-) TimerEvent: {}
+[17.477497] (-) TimerEvent: {}
+[17.577951] (-) TimerEvent: {}
+[17.678317] (-) TimerEvent: {}
+[17.778747] (-) TimerEvent: {}
+[17.879096] (-) TimerEvent: {}
+[17.979443] (-) TimerEvent: {}
+[18.079916] (-) TimerEvent: {}
+[18.180254] (-) TimerEvent: {}
+[18.280669] (-) TimerEvent: {}
+[18.381090] (-) TimerEvent: {}
+[18.481423] (-) TimerEvent: {}
+[18.581782] (-) TimerEvent: {}
+[18.682109] (-) TimerEvent: {}
+[18.782491] (-) TimerEvent: {}
+[18.882974] (-) TimerEvent: {}
+[18.983317] (-) TimerEvent: {}
+[19.083767] (-) TimerEvent: {}
+[19.184117] (-) TimerEvent: {}
+[19.284518] (-) TimerEvent: {}
+[19.385001] (-) TimerEvent: {}
+[19.485344] (-) TimerEvent: {}
+[19.585778] (-) TimerEvent: {}
+[19.686259] (-) TimerEvent: {}
+[19.786695] (-) TimerEvent: {}
+[19.887108] (-) TimerEvent: {}
+[19.987480] (-) TimerEvent: {}
+[20.087909] (-) TimerEvent: {}
+[20.188335] (-) TimerEvent: {}
+[20.288834] (-) TimerEvent: {}
+[20.389135] (-) TimerEvent: {}
+[20.489468] (-) TimerEvent: {}
+[20.589865] (-) TimerEvent: {}
+[20.690276] (-) TimerEvent: {}
+[20.790675] (-) TimerEvent: {}
+[20.891074] (-) TimerEvent: {}
+[20.991512] (-) TimerEvent: {}
+[21.092009] (-) TimerEvent: {}
+[21.192342] (-) TimerEvent: {}
+[21.292774] (-) TimerEvent: {}
+[21.393113] (-) TimerEvent: {}
+[21.493460] (-) TimerEvent: {}
+[21.593842] (-) TimerEvent: {}
+[21.694160] (-) TimerEvent: {}
+[21.772475] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kbool SplineFusion::initialization()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.772796] (sfuise) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:314:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcontrol reaches end of non-void function [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type\x07-Wreturn-type\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[21.772912] (sfuise) StderrLine: {'line': b'  314 |             int64_t \x1b[01;35m\x1b[Kmin_time\x1b[m\x1b[K = 1e18; // \xe5\x88\x9d\xe5\xa7\x8b\xe5\x8c\x96\xe6\x9c\x80\xe5\xb0\x8f\xe6\x97\xb6\xe9\x97\xb4\n'}
+[21.773031] (sfuise) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[21.794249] (-) TimerEvent: {}
+[21.894563] (-) TimerEvent: {}
+[21.895761] (sfuise) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/SplineFusion.dir/build.make:76: CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o] Error 1\n'}
+[21.896090] (sfuise) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/SplineFusion.dir/all] Error 2\n'}
+[21.896222] (sfuise) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[21.898534] (sfuise) CommandEnded: {'returncode': 2}
+[21.907783] (sfuise) JobEnded: {'identifier': 'sfuise', 'rc': 2}
+[21.942304] (-) EventReactorShutdown: {}

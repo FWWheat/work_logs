@@ -1,0 +1,8 @@
+[31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:74 (message):
+  ament_package() called with unused arguments:
+  INCLUDE_DIRS;include;DEPENDS;rclcpp;std_msgs;message_runtime;cf_msgs;isas_msgs;sfuise_msgs;EIGEN3
+Call Stack (most recent call first):
+  /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package.cmake:68 (_ament_package)
+  CMakeLists.txt:31 (ament_package)
+
+[0m

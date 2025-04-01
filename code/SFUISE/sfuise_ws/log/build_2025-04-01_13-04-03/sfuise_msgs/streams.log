@@ -1,0 +1,346 @@
+[0.012s] Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise_msgs -DCMAKE_INSTALL_PREFIX=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs
+[0.077s] -- The C compiler identification is GNU 11.4.0
+[0.144s] -- The CXX compiler identification is GNU 11.4.0
+[0.153s] -- Detecting C compiler ABI info
+[0.240s] -- Detecting C compiler ABI info - done
+[0.250s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.250s] -- Detecting C compile features
+[0.250s] -- Detecting C compile features - done
+[0.255s] -- Detecting CXX compiler ABI info
+[0.363s] -- Detecting CXX compiler ABI info - done
+[0.375s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.376s] -- Detecting CXX compile features
+[0.376s] -- Detecting CXX compile features - done
+[0.380s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.640s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.735s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.817s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.853s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.858s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.866s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.879s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.896s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.936s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[1.315s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.842s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.026s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.058s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[2.060s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[2.091s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[2.091s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[2.091s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[2.091s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[2.115s] -- Found PythonExtra: .so  
+[2.196s] -- Added test 'lint_cmake' to check CMake code style
+[2.197s] -- Added test 'xmllint' to check XML markup files
+[2.201s] -- Configuring done
+[2.250s] -- Generating done
+[2.267s] -- Build files have been written to: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs
+[2.283s] Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise_msgs -DCMAKE_INSTALL_PREFIX=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs
+[2.284s] Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs -- -j20 -l20
+[2.331s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[2.346s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.358s] [  3%] Built target ament_cmake_python_copy_sfuise_msgs
+[2.695s] running egg_info
+[2.696s] creating sfuise_msgs.egg-info
+[2.696s] writing sfuise_msgs.egg-info/PKG-INFO
+[2.696s] writing dependency_links to sfuise_msgs.egg-info/dependency_links.txt
+[2.697s] writing top-level names to sfuise_msgs.egg-info/top_level.txt
+[2.697s] writing manifest file 'sfuise_msgs.egg-info/SOURCES.txt'
+[2.699s] reading manifest file 'sfuise_msgs.egg-info/SOURCES.txt'
+[2.700s] writing manifest file 'sfuise_msgs.egg-info/SOURCES.txt'
+[2.741s] [  3%] Built target ament_cmake_python_build_sfuise_msgs_egg
+[2.960s] [  3%] Built target sfuise_msgs__cpp
+[2.961s] [  4%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_c.dir/rosidl_generator_c/sfuise_msgs/msg/detail/offset__functions.c.o[0m
+[2.961s] [  6%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_c.dir/rosidl_generator_c/sfuise_msgs/msg/detail/spline__functions.c.o[0m
+[2.961s] [  7%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_c.dir/rosidl_generator_c/sfuise_msgs/msg/detail/estimate__functions.c.o[0m
+[2.962s] [  9%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_c.dir/rosidl_generator_c/sfuise_msgs/msg/detail/calib__functions.c.o[0m
+[2.962s] [ 11%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_c.dir/rosidl_generator_c/sfuise_msgs/msg/detail/knot__functions.c.o[0m
+[2.980s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.980s] [ 15%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.980s] [ 15%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[3.057s] [ 17%] [32m[1mLinking C shared library libsfuise_msgs__rosidl_generator_c.so[0m
+[3.119s] [ 17%] Built target sfuise_msgs__rosidl_generator_c
+[3.136s] [ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[3.136s] [ 20%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[3.137s] [ 22%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.470s] [ 30%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfuise_msgs/msg/knot__type_support.cpp.o[0m
+[3.470s] [ 30%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfuise_msgs/msg/calib__type_support.cpp.o[0m
+[3.471s] [ 30%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfuise_msgs/msg/estimate__type_support.cpp.o[0m
+[3.471s] [ 30%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfuise_msgs/msg/offset__type_support.cpp.o[0m
+[3.471s] [ 30%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sfuise_msgs/msg/spline__type_support.cpp.o[0m
+[3.539s] [ 31%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfuise_msgs/msg/detail/knot__type_support.cpp.o[0m
+[3.539s] [ 33%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfuise_msgs/msg/detail/offset__type_support.cpp.o[0m
+[3.540s] [ 34%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfuise_msgs/msg/detail/spline__type_support.cpp.o[0m
+[3.541s] [ 38%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfuise_msgs/msg/detail/calib__type_support.cpp.o[0m
+[3.541s] [ 38%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sfuise_msgs/msg/detail/estimate__type_support.cpp.o[0m
+[3.656s] [ 39%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfuise_msgs/msg/detail/dds_fastrtps/calib__type_support.cpp.o[0m
+[3.661s] [ 42%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfuise_msgs/msg/detail/dds_fastrtps/knot__type_support.cpp.o[0m
+[3.661s] [ 42%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfuise_msgs/msg/detail/dds_fastrtps/estimate__type_support.cpp.o[0m
+[3.662s] [ 46%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfuise_msgs/msg/detail/dds_fastrtps/spline__type_support.cpp.o[0m
+[3.662s] [ 44%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sfuise_msgs/msg/detail/dds_fastrtps/offset__type_support.cpp.o[0m
+[3.673s] [ 49%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfuise_msgs/msg/estimate__type_support.cpp.o[0m
+[3.674s] [ 49%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfuise_msgs/msg/calib__type_support.cpp.o[0m
+[3.674s] [ 50%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfuise_msgs/msg/knot__type_support.cpp.o[0m
+[3.768s] [ 53%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfuise_msgs/msg/spline__type_support.cpp.o[0m
+[3.769s] [ 53%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sfuise_msgs/msg/offset__type_support.cpp.o[0m
+[3.878s] [ 55%] [32m[1mLinking CXX shared library libsfuise_msgs__rosidl_typesupport_c.so[0m
+[3.942s] [ 57%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfuise_msgs/msg/detail/calib__type_support.c.o[0m
+[3.964s] [ 58%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfuise_msgs/msg/detail/estimate__type_support.c.o[0m
+[4.015s] [ 58%] Built target sfuise_msgs__rosidl_typesupport_c
+[4.020s] [ 60%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfuise_msgs/msg/detail/knot__type_support.c.o[0m
+[4.044s] [ 61%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfuise_msgs/msg/detail/offset__type_support.c.o[0m
+[4.061s] [ 63%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfuise_msgs/msg/detail/calib__type_support_c.cpp.o[0m
+[4.078s] [ 65%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfuise_msgs/msg/detail/estimate__type_support_c.cpp.o[0m
+[4.107s] [ 66%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfuise_msgs/msg/detail/knot__type_support_c.cpp.o[0m
+[4.158s] [ 68%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfuise_msgs/msg/detail/offset__type_support_c.cpp.o[0m
+[4.179s] [ 69%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sfuise_msgs/msg/detail/spline__type_support.c.o[0m
+[4.247s] [ 71%] [32mBuilding CXX object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sfuise_msgs/msg/detail/spline__type_support_c.cpp.o[0m
+[4.315s] [ 73%] [32m[1mLinking C shared library libsfuise_msgs__rosidl_typesupport_introspection_c.so[0m
+[4.337s] [ 74%] [32m[1mLinking CXX shared library libsfuise_msgs__rosidl_typesupport_cpp.so[0m
+[4.422s] [ 74%] Built target sfuise_msgs__rosidl_typesupport_introspection_c
+[4.439s] [ 74%] Built target sfuise_msgs__rosidl_typesupport_cpp
+[4.890s] [ 76%] [32m[1mLinking CXX shared library libsfuise_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.967s] [ 77%] [32m[1mLinking CXX shared library libsfuise_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[5.016s] [ 77%] Built target sfuise_msgs__rosidl_typesupport_introspection_cpp
+[5.048s] [ 79%] [32m[1mLinking CXX shared library libsfuise_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[5.088s] [ 79%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_cpp
+[5.143s] [ 79%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_c
+[5.169s] [ 79%] Built target sfuise_msgs
+[5.194s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[5.819s] [ 80%] Built target sfuise_msgs__py
+[5.851s] [ 82%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_py.dir/rosidl_generator_py/sfuise_msgs/msg/_calib_s.c.o[0m
+[5.853s] [ 84%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_py.dir/rosidl_generator_py/sfuise_msgs/msg/_offset_s.c.o[0m
+[5.853s] [ 85%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_py.dir/rosidl_generator_py/sfuise_msgs/msg/_estimate_s.c.o[0m
+[5.854s] [ 87%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_py.dir/rosidl_generator_py/sfuise_msgs/msg/_knot_s.c.o[0m
+[5.854s] [ 88%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_generator_py.dir/rosidl_generator_py/sfuise_msgs/msg/_spline_s.c.o[0m
+[6.023s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/sfuise_msgs/libsfuise_msgs__rosidl_generator_py.so[0m
+[6.087s] [ 90%] Built target sfuise_msgs__rosidl_generator_py
+[6.120s] [ 92%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[6.120s] [ 95%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[6.120s] [ 95%] [32mBuilding C object CMakeFiles/sfuise_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[6.275s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.276s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.278s] [100%] [32m[1mLinking C shared library rosidl_generator_py/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[6.336s] [100%] Built target sfuise_msgs__rosidl_typesupport_c__pyext
+[6.336s] [100%] Built target sfuise_msgs__rosidl_typesupport_introspection_c__pyext
+[6.338s] [100%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_c__pyext
+[6.355s] Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs -- -j20 -l20
+[6.370s] Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs
+[6.383s] -- Install configuration: ""
+[6.383s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/rosidl_interfaces/sfuise_msgs
+[6.383s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.383s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.383s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/offset.h
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/knot.h
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__functions.c
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__functions.h
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__functions.c
+[6.384s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__functions.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__struct.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__functions.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__functions.c
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__functions.h
+[6.385s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__struct.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__functions.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__functions.c
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__struct.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.h
+[6.386s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.h
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__functions.c
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.h
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_generator_c__visibility_control.h
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/estimate.h
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/calib.h
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/library_path.sh
+[6.387s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/library_path.dsv
+[6.388s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_c.so
+[6.388s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_c.so" to ""
+[6.388s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.388s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.388s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.388s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.388s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_fastrtps_c.h
+[6.389s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_fastrtps_c.h
+[6.389s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_fastrtps_c.h
+[6.389s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_fastrtps_c.h
+[6.389s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_fastrtps_c.h
+[6.389s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_c.so
+[6.389s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[6.390s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.390s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.390s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/knot.hpp
+[6.390s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.390s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__builder.hpp
+[6.390s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.hpp
+[6.390s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__builder.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__traits.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__traits.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__traits.hpp
+[6.391s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__builder.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__struct.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__builder.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__struct.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__traits.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__traits.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp
+[6.392s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__builder.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__struct.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/calib.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/estimate.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/offset.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.393s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.393s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.393s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_fastrtps_cpp.hpp
+[6.393s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/dds_fastrtps
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_fastrtps_cpp.hpp
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_fastrtps_cpp.hpp
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_fastrtps_cpp.hpp
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_fastrtps_cpp.hpp
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_cpp.so
+[6.394s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[6.394s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.394s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.394s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_introspection_c.h
+[6.394s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_introspection_c.h
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_introspection_c.h
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.c
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_introspection_c.h
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.c
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.c
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.c
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.c
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_introspection_c.h
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_c.so
+[6.395s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_c.so" to ""
+[6.395s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_c.so
+[6.396s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_c.so" to ""
+[6.396s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs
+[6.396s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg
+[6.396s] -- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_introspection_cpp.hpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_introspection_cpp.hpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.cpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_introspection_cpp.hpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.cpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_introspection_cpp.hpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.cpp
+[6.396s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.cpp
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_introspection_cpp.hpp
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.cpp
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_cpp.so
+[6.397s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_cpp.so
+[6.397s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_cpp.so" to ""
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/pythonpath.sh
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/pythonpath.dsv
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[6.397s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_c.c
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/libsfuise_msgs__rosidl_generator_py.so
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/__init__.py
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_offset_s.c
+[6.398s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_estimate.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_spline_s.c
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_spline.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_calib_s.c
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/__init__.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_offset.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_calib.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_knot.py
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_knot_s.c
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_estimate_s.c
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.399s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[6.457s] Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs'...
+[6.457s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/__init__.py'...
+[6.457s] Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg'...
+[6.457s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/__init__.py'...
+[6.457s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_calib.py'...
+[6.457s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_estimate.py'...
+[6.458s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_knot.py'...
+[6.458s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_offset.py'...
+[6.458s] Compiling '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_spline.py'...
+[6.465s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.465s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.465s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.466s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.466s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.467s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[6.467s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_py.so
+[6.468s] -- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_py.so" to ""
+[6.468s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Calib.idl
+[6.468s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Estimate.idl
+[6.468s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Knot.idl
+[6.468s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Offset.idl
+[6.468s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Spline.idl
+[6.469s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Calib.msg
+[6.469s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Estimate.msg
+[6.469s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Knot.msg
+[6.469s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Offset.msg
+[6.469s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Spline.msg
+[6.470s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/package_run_dependencies/sfuise_msgs
+[6.470s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/parent_prefix_path/sfuise_msgs
+[6.470s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/ament_prefix_path.sh
+[6.470s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/ament_prefix_path.dsv
+[6.470s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/path.sh
+[6.471s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/path.dsv
+[6.471s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.bash
+[6.471s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.sh
+[6.471s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.zsh
+[6.472s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.dsv
+[6.472s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.dsv
+[6.472s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/packages/sfuise_msgs
+[6.472s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cExport.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cExport-noconfig.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cppExport.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.473s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cExport.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cExport.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cppExport.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_pyExport.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_pyExport-noconfig.cmake
+[6.474s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgsConfig.cmake
+[6.475s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgsConfig-version.cmake
+[6.476s] -- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.xml
+[6.479s] Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs

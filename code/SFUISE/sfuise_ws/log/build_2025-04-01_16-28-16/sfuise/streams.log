@@ -1,0 +1,849 @@
+[0.026s] Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise': AMENT_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise -- -j20 -l20
+[0.112s] [ 25%] [32mBuilding CXX object CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o[0m
+[0.112s] [ 50%] [32mBuilding CXX object CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o[0m
+[1.043s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:4[m[K:
+[1.043s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/PoseVisualization.h:5:10:[m[K [01;31m[Kfatal error: [m[Kvisualization_msgs/msg/marker.hpp: No such file or directory
+[1.043s]     5 | #include [01;31m[K<visualization_msgs/msg/marker.hpp>[m[K
+[1.044s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.044s] compilation terminated.
+[1.055s] gmake[2]: *** [CMakeFiles/EstimationInterface.dir/build.make:76: CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o] Error 1
+[1.055s] gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/EstimationInterface.dir/all] Error 2
+[1.055s] gmake[1]: *** Waiting for unfinished jobs....
+[5.472s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6[m[K,
+[5.472s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[5.472s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:387:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ksfuise_msgs::Spline[m[K’ has not been declared
+[5.472s]   387 |     void getSplineMsg([01;31m[Ksfuise_msgs[m[K::Spline& spline_msg)
+[5.473s]       |                       [01;31m[K^~~~~~~~~~~[m[K
+[5.776s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:[m[K In member function ‘[01m[Kvoid SplineState::getSplineMsg(int&)[m[K’:
+[5.776s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:389:20:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kdt[m[K’ in ‘[01m[Kspline_msg[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[5.776s]   389 |         spline_msg.[01;31m[Kdt[m[K = dt_ns;
+[5.776s]       |                    [01;31m[K^~[m[K
+[5.776s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:390:20:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kstart_t[m[K’ in ‘[01m[Kspline_msg[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[5.776s]   390 |         spline_msg.[01;31m[Kstart_t[m[K = start_t_ns;
+[5.776s]       |                    [01;31m[K^~~~~~~[m[K
+[5.776s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:391:20:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kstart_idx[m[K’ in ‘[01m[Kspline_msg[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[5.776s]   391 |         spline_msg.[01;31m[Kstart_idx[m[K = start_i;
+[5.777s]       |                    [01;31m[K^~~~~~~~~[m[K
+[5.777s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:393:26:[m[K [01;31m[Kerror: [m[K‘[01m[KKnot[m[K’ is not a member of ‘[01m[Ksfuise_msgs[m[K’; did you mean ‘[01m[Ksfuise_msgs::msg::Knot[m[K’?
+[5.777s]   393 |             sfuise_msgs::[01;31m[KKnot[m[K knot_msg;
+[5.777s]       |                          [01;31m[K^~~~[m[K
+[5.777s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp:21[m[K,
+[5.777s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp:7[m[K,
+[5.777s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:5[m[K,
+[5.777s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6[m[K,
+[5.777s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[5.777s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp:165:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksfuise_msgs::msg::Knot[m[K’ declared here
+[5.777s]   165 | using [01;36m[KKnot[m[K =
+[5.777s]       |       [01;36m[K^~~~[m[K
+[5.790s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6[m[K,
+[5.790s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[5.790s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:394:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kknot_msg[m[K’ was not declared in this scope
+[5.790s]   394 |             [01;31m[Kknot_msg[m[K.position.x = t_knots[i].x();
+[5.791s]       |             [01;31m[K^~~~~~~~[m[K
+[5.791s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:408:24:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kknots[m[K’ in ‘[01m[Kspline_msg[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[5.791s]   408 |             spline_msg.[01;31m[Kknots[m[K.push_back(knot_msg);
+[5.791s]       |                        [01;31m[K^~~~~[m[K
+[5.791s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:411:26:[m[K [01;31m[Kerror: [m[K‘[01m[KKnot[m[K’ is not a member of ‘[01m[Ksfuise_msgs[m[K’; did you mean ‘[01m[Ksfuise_msgs::msg::Knot[m[K’?
+[5.791s]   411 |             sfuise_msgs::[01;31m[KKnot[m[K idle_msg;
+[5.791s]       |                          [01;31m[K^~~~[m[K
+[5.792s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp:21[m[K,
+[5.792s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp:7[m[K,
+[5.792s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:5[m[K,
+[5.792s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6[m[K,
+[5.792s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[5.792s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp:165:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksfuise_msgs::msg::Knot[m[K’ declared here
+[5.792s]   165 | using [01;36m[KKnot[m[K =
+[5.792s]       |       [01;36m[K^~~~[m[K
+[5.804s] In file included from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:6[m[K,
+[5.804s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[5.804s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:412:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kidle_msg[m[K’ was not declared in this scope
+[5.804s]   412 |             [01;31m[Kidle_msg[m[K.position.x = t_idle[i].x();
+[5.804s]       |             [01;31m[K^~~~~~~~[m[K
+[5.804s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/SplineState.h:426:24:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kidles[m[K’ in ‘[01m[Kspline_msg[m[K’, which is of non-class type ‘[01m[Kint[m[K’
+[5.804s]   426 |             spline_msg.[01;31m[Kidles[m[K.push_back(idle_msg);
+[5.805s]       |                        [01;31m[K^~~~~[m[K
+[6.818s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In constructor ‘[01m[KSplineFusion::SplineFusion(std::shared_ptr<rclcpp::Node>)[m[K’:
+[6.818s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:26:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_anchor_ini[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_anchor_ini_[m[K’?
+[6.818s]    26 |         [01;31m[Kif_anchor_ini[m[K = false;  // 初始化锚点标志
+[6.818s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[6.818s]       |         [32m[Kif_anchor_ini_[m[K
+[6.826s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaverage_runtime[m[K’ was not declared in this scope; did you mean ‘[01m[Kaverage_runtime_[m[K’?
+[6.826s]    27 |         [01;31m[Kaverage_runtime[m[K = 0;  // 初始化平均运行时间
+[6.826s]       |         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[6.826s]       |         [32m[Kaverage_runtime_[m[K
+[6.833s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:28:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_count[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_count_[m[K’?
+[6.833s]    28 |         [01;31m[Kwindow_count[m[K = 0;  // 初始化窗口计数
+[6.833s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[6.833s]       |         [32m[Kwindow_count_[m[K
+[6.840s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:29:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_flag[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolver_flag_[m[K’?
+[6.840s]    29 |         [01;31m[Ksolver_flag[m[K = INITIAL;  // 初始化求解器标志
+[6.840s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[6.840s]       |         [32m[Ksolver_flag_[m[K
+[6.849s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:29:23:[m[K [01;31m[Kerror: [m[K‘[01m[KINITIAL[m[K’ was not declared in this scope
+[6.849s]    29 |         solver_flag = [01;31m[KINITIAL[m[K;  // 初始化求解器标志
+[6.849s]       |                       [01;31m[K^~~~~~~[m[K
+[6.857s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:33:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_imu[m[K’ was not declared in this scope; did you mean ‘[01m[Ksub_imu_[m[K’?
+[6.857s]    33 |         [01;31m[Ksub_imu[m[K = node->create_subscription<sensor_msgs::msg::Imu>(
+[6.857s]       |         [01;31m[K^~~~~~~[m[K
+[6.857s]       |         [32m[Ksub_imu_[m[K
+[6.874s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:36:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_anchor[m[K’ was not declared in this scope; did you mean ‘[01m[Ksub_anchor_[m[K’?
+[6.874s]    36 |         [01;31m[Ksub_anchor[m[K = node->create_subscription<isas_msgs::msg::Anchorlist>(
+[6.874s]       |         [01;31m[K^~~~~~~~~~[m[K
+[6.874s]       |         [32m[Ksub_anchor_[m[K
+[6.884s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:40:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_tdoa[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_tdoa_[m[K’?
+[6.884s]    40 |         if ([01;31m[Kif_tdoa[m[K) {
+[6.884s]       |             [01;31m[K^~~~~~~[m[K
+[6.884s]       |             [32m[Kif_tdoa_[m[K
+[6.891s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:41:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_uwb[m[K’ was not declared in this scope; did you mean ‘[01m[Ksub_uwb_[m[K’?
+[6.891s]    41 |             [01;31m[Ksub_uwb[m[K = node->create_subscription<cf_msgs::msg::Tdoa>(
+[6.891s]       |             [01;31m[K^~~~~~~[m[K
+[6.891s]       |             [32m[Ksub_uwb_[m[K
+[6.900s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_uwb[m[K’ was not declared in this scope; did you mean ‘[01m[Ksub_uwb_[m[K’?
+[6.900s]    44 |             [01;31m[Ksub_uwb[m[K = node->create_subscription<cf_msgs::msg::Toa>(
+[6.900s]       |             [01;31m[K^~~~~~~[m[K
+[6.900s]       |             [32m[Ksub_uwb_[m[K
+[6.900s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:63:[m[K [01;31m[Kerror: [m[K‘[01m[KToa[m[K’ is not a member of ‘[01m[Kcf_msgs::msg[m[K’; did you mean ‘[01m[KTdoa[m[K’?
+[6.900s]    44 |             sub_uwb = node->create_subscription<cf_msgs::msg::[01;31m[KToa[m[K>(
+[6.900s]       |                                                               [01;31m[K^~~[m[K
+[6.901s]       |                                                               [32m[KTdoa[m[K
+[6.902s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:67:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_subscription<<expression error> >(const char [28], rclcpp::QoS, std::_Bind_helper<false, void (SplineFusion::*)(std::shared_ptr<isas_msgs::msg::RTLSStick_<std::allocator<void> > >), SplineFusion*, const std::_Placeholder<1>&>::type)[m[K’
+[6.902s]    44 |             sub_uwb = [01;31m[Knode->create_subscription<cf_msgs::msg::Toa>([m[K
+[6.902s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[6.902s]    45 | [01;31m[K                "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1))[m[K;
+[6.902s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.902s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[6.902s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[6.902s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[6.902s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.903s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1[m[K:
+[6.903s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[6.903s]    92 | [01;36m[KNode[m[K::create_subscription(
+[6.903s]       | [01;36m[K^~~~[m[K
+[6.903s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:92:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.903s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:44:67:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[6.903s]    44 |             sub_uwb = [01;31m[Knode->create_subscription<cf_msgs::msg::Toa>([m[K
+[6.903s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[6.903s]    45 | [01;31m[K                "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1))[m[K;
+[6.903s]       |                 [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.911s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:49:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_knots_active[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_knots_active_[m[K’?
+[6.911s]    49 |         [01;31m[Kpub_knots_active[m[K = node->create_publisher<sensor_msgs::msg::PointCloud>(
+[6.911s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[6.911s]       |         [32m[Kpub_knots_active_[m[K
+[6.920s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:52:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_knots_inactive[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_knots_inactive_[m[K’?
+[6.920s]    52 |         [01;31m[Kpub_knots_inactive[m[K = node->create_publisher<sensor_msgs::msg::PointCloud>(
+[6.920s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[6.921s]       |         [32m[Kpub_knots_inactive_[m[K
+[6.929s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:55:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_calib[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_calib_[m[K’?
+[6.929s]    55 |         [01;31m[Kpub_calib[m[K = node->create_publisher<sfuise_msgs::msg::Calib>(
+[6.929s]       |         [01;31m[K^~~~~~~~~[m[K
+[6.929s]       |         [32m[Kpub_calib_[m[K
+[6.938s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:58:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_est[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_est_[m[K’?
+[6.938s]    58 |         [01;31m[Kpub_est[m[K = node->create_publisher<sfuise_msgs::msg::Estimate>(
+[6.938s]       |         [01;31m[K^~~~~~~[m[K
+[6.938s]       |         [32m[Kpub_est_[m[K
+[6.948s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:61:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_start_time_[m[K’?
+[6.948s]    61 |         [01;31m[Kpub_start_time[m[K = node->create_publisher<std_msgs::msg::Int64>(
+[6.948s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.948s]       |         [32m[Kpub_start_time_[m[K
+[6.957s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::run()[m[K’:
+[6.958s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:68:39:[m[K [01;31m[Kerror: [m[K‘[01m[Knode_[m[K’ was not declared in this scope; did you mean ‘[01m[Kmode_t[m[K’?
+[6.958s]    68 |         rclcpp::Time t_window_start = [01;31m[Knode_[m[K->get_clock()->now();  // 获取当前时间
+[6.958s]       |                                       [01;31m[K^~~~~[m[K
+[6.958s]       |                                       [32m[Kmode_t[m[K
+[6.968s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:75:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kaverage_runtime[m[K’ was not declared in this scope; did you mean ‘[01m[Kaverage_runtime_[m[K’?
+[6.968s]    75 |             [01;31m[Kaverage_runtime[m[K = (t_consum + double(num_window) * average_runtime) / double(num_window + 1);  // 更新平均运行时间
+[6.968s]       |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[6.968s]       |             [32m[Kaverage_runtime_[m[K
+[6.976s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:78:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_count[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_count_[m[K’?
+[6.976s]    78 |             if ((int)[01;31m[Kwindow_count[m[K <= n_window_calib) {  // 如果窗口计数小于等于校准窗口数
+[6.976s]       |                      [01;31m[K^~~~~~~~~~~~[m[K
+[6.976s]       |                      [32m[Kwindow_count_[m[K
+[6.984s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:78:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_window_calib[m[K’ was not declared in this scope; did you mean ‘[01m[Kn_window_calib_[m[K’?
+[6.984s]    78 |             if ((int)window_count <= [01;31m[Kn_window_calib[m[K) {  // 如果窗口计数小于等于校准窗口数
+[6.984s]       |                                      [01;31m[K^~~~~~~~~~~~~~[m[K
+[6.984s]       |                                      [32m[Kn_window_calib_[m[K
+[6.992s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:81:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[6.992s]    81 |                 calib_msg.q_nav_uwb.w = [01;31m[Kcalib_param[m[K.q_nav_uwb.w();
+[6.992s]       |                                         [01;31m[K^~~~~~~~~~~[m[K
+[6.992s]       |                                         [32m[Kcalib_param_[m[K
+[7.000s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:98:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.000s]    98 |             if ([01;31m[Kspline_local[m[K.numKnots() >= (size_t)window_size) {  // 如果样条节点数达到窗口大小
+[7.000s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[7.000s]       |                 [32m[Kspline_local_[m[K
+[7.007s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:98:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_size[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_size_[m[K’?
+[7.007s]    98 |             if (spline_local.numKnots() >= (size_t)[01;31m[Kwindow_size[m[K) {  // 如果样条节点数达到窗口大小
+[7.007s]       |                                                    [01;31m[K^~~~~~~~~~~[m[K
+[7.007s]       |                                                    [32m[Kwindow_size_[m[K
+[7.014s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:99:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_count[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_count_[m[K’?
+[7.014s]    99 |                 [01;31m[Kwindow_count[m[K++;  // 增加窗口计数
+[7.014s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[7.015s]       |                 [32m[Kwindow_count_[m[K
+[7.022s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:100:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_flag[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolver_flag_[m[K’?
+[7.022s]   100 |                 if ([01;31m[Ksolver_flag[m[K == INITIAL) {  // 如果求解器标志为初始状态
+[7.022s]       |                     [01;31m[K^~~~~~~~~~~[m[K
+[7.022s]       |                     [32m[Ksolver_flag_[m[K
+[7.030s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:100:36:[m[K [01;31m[Kerror: [m[K‘[01m[KINITIAL[m[K’ was not declared in this scope
+[7.031s]   100 |                 if (solver_flag == [01;31m[KINITIAL[m[K) {  // 如果求解器标志为初始状态
+[7.031s]       |                                    [01;31m[K^~~~~~~[m[K
+[7.040s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:101:35:[m[K [01;31m[Kerror: [m[K‘[01m[KFULLSIZE[m[K’ was not declared in this scope
+[7.040s]   101 |                     solver_flag = [01;31m[KFULLSIZE[m[K;  // 设置为全尺寸状态
+[7.040s]       |                                   [01;31m[K^~~~~~~~[m[K
+[7.046s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:106:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.046s]   106 |             [01;31m[Kspline_local[m[K.getSplineMsg(spline_msg);  // 获取样条消息
+[7.046s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.046s]       |             [32m[Kspline_local_[m[K
+[7.053s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:110:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_flag[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolver_flag_[m[K’?
+[7.053s]   110 |             est_msg.if_full_window.data = ([01;31m[Ksolver_flag[m[K != INITIAL);  // 设置是否为全窗口
+[7.053s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[7.053s]       |                                            [32m[Ksolver_flag_[m[K
+[7.061s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:110:59:[m[K [01;31m[Kerror: [m[K‘[01m[KINITIAL[m[K’ was not declared in this scope
+[7.062s]   110 |             est_msg.if_full_window.data = (solver_flag != [01;31m[KINITIAL[m[K);  // 设置是否为全窗口
+[7.062s]       |                                                           [01;31m[K^~~~~~~[m[K
+[7.072s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:116:32:[m[K [01;31m[Kerror: [m[K‘[01m[KFULLSIZE[m[K’ was not declared in this scope
+[7.072s]   116 |             if (solver_flag == [01;31m[KFULLSIZE[m[K) {
+[7.072s]       |                                [01;31m[K^~~~~~~~[m[K
+[7.079s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::readParameters(rclcpp::Node::SharedPtr)[m[K’:
+[7.079s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:182:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.079s]   182 |             [01;31m[Kif_uwb_only[m[K = true; // 如果系数为0，则仅使用UWB
+[7.079s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[7.079s]       |             [32m[Kif_uwb_only_[m[K
+[7.086s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:184:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.086s]   184 |             [01;31m[Kif_uwb_only[m[K = false; // 否则不只使用UWB
+[7.086s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[7.086s]       |             [32m[Kif_uwb_only_[m[K
+[7.093s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:187:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.094s]   187 |         [01;31m[Kparam[m[K.if_opt_g = true; // 设置优化重力标志
+[7.094s]       |         [01;31m[K^~~~~[m[K
+[7.094s]       |         [32m[Kparam_[m[K
+[7.102s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:190:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmax_iter[m[K’ was not declared in this scope; did you mean ‘[01m[Kmax_iter_[m[K’?
+[7.102s]   190 |         [01;31m[Kmax_iter[m[K = CommonUtils::readParam<int>(node, "max_iter"); // 读取最大迭代次数
+[7.102s]       |         [01;31m[K^~~~~~~~[m[K
+[7.102s]       |         [32m[Kmax_iter_[m[K
+[7.110s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:191:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Kdt_ns_[m[K’?
+[7.110s]   191 |         [01;31m[Kdt_ns[m[K = 1e9 / CommonUtils::readParam<int>(node, "control_point_fps"); // 计算时间间隔
+[7.110s]       |         [01;31m[K^~~~~[m[K
+[7.110s]       |         [32m[Kdt_ns_[m[K
+[7.119s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:192:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_tdoa[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_tdoa_[m[K’?
+[7.119s]   192 |         [01;31m[Kif_tdoa[m[K = CommonUtils::readParam<bool>(node, "if_tdoa"); // 读取是否使用TDOA标志
+[7.119s]       |         [01;31m[K^~~~~~~[m[K
+[7.119s]       |         [32m[Kif_tdoa_[m[K
+[7.127s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:193:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.127s]   193 |         [01;31m[Kbag_start_time[m[K = 0; // 初始化行李开始时间
+[7.127s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.127s]       |         [32m[Kbag_start_time_[m[K
+[7.135s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:194:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_window_calib[m[K’ was not declared in this scope; did you mean ‘[01m[Kn_window_calib_[m[K’?
+[7.135s]   194 |         [01;31m[Kn_window_calib[m[K = CommonUtils::readParam<int>(node, "n_window_calib"); // 读取校准窗口数
+[7.135s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.135s]       |         [32m[Kn_window_calib_[m[K
+[7.142s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:195:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_size[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_size_[m[K’?
+[7.142s]   195 |         [01;31m[Kwindow_size[m[K = CommonUtils::readParam<int>(node, "window_size"); // 读取窗口大小
+[7.142s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[7.142s]       |         [32m[Kwindow_size_[m[K
+[7.151s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:232:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[7.151s]   232 |         [01;31m[Kcalib_param[m[K.offset = Eigen::Vector3d(v_offset.at(0), v_offset.at(1), v_offset.at(2)); // 设置校准偏移
+[7.151s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[7.151s]       |         [32m[Kcalib_param_[m[K
+[7.158s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:235:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kv_toa_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kv_toa_offset_[m[K’?
+[7.158s]   235 |             [01;31m[Kv_toa_offset[m[K = CommonUtils::readParam<std::vector<double>>(node, "toa_offset"); // 读取TOA偏移量
+[7.159s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.159s]       |             [32m[Kv_toa_offset_[m[K
+[7.170s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::getImuCallback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.170s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:246:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.170s]   246 |         [01;31m[Kimu_buff[m[K.push_back(imu); // 将IMU数据添加到缓冲区
+[7.170s]       |         [01;31m[K^~~~~~~~[m[K
+[7.170s]       |         [32m[Kimu_buff_[m[K
+[7.173s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::getTdoaCallback(cf_msgs::msg::Tdoa_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.173s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:252:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct cf_msgs::msg::Tdoa_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct cf_msgs::msg::Tdoa_<std::allocator<void> >[m[K’} has no member named ‘[01m[KidA[m[K’
+[7.173s]   252 |         TDOAData uwb(msg->header.stamp.nanosec, msg->[01;31m[KidA[m[K, msg->idB, msg->data); // 创建TDOA数据对象
+[7.173s]       |                                                      [01;31m[K^~~[m[K
+[7.173s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:252:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct cf_msgs::msg::Tdoa_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct cf_msgs::msg::Tdoa_<std::allocator<void> >[m[K’} has no member named ‘[01m[KidB[m[K’
+[7.173s]   252 |         TDOAData uwb(msg->header.stamp.nanosec, msg->idA, msg->[01;31m[KidB[m[K, msg->data); // 创建TDOA数据对象
+[7.173s]       |                                                                [01;31m[K^~~[m[K
+[7.181s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:253:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.182s]   253 |         [01;31m[Ktdoa_buff[m[K.push_back(uwb); // 将TDOA数据添加到缓冲区
+[7.182s]       |         [01;31m[K^~~~~~~~~[m[K
+[7.182s]       |         [32m[Ktdoa_buff_[m[K
+[7.194s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::getToaCallback(isas_msgs::msg::RTLSStick_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.194s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:263:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_buff_[m[K’?
+[7.194s]   263 |             [01;31m[Ktoa_buff[m[K.push_back(uwb); // 将TOA数据添加到缓冲区
+[7.195s]       |             [01;31m[K^~~~~~~~[m[K
+[7.195s]       |             [32m[Ktoa_buff_[m[K
+[7.207s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::getAnchorCallback(isas_msgs::msg::Anchorlist_<std::allocator<void> >::SharedPtr)[m[K’:
+[7.207s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:270:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_anchor_ini[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_anchor_ini_[m[K’?
+[7.208s]   270 |         if ([01;31m[Kif_anchor_ini[m[K) return; // 如果锚点已初始化，返回
+[7.208s]       |             [01;31m[K^~~~~~~~~~~~~[m[K
+[7.208s]       |             [32m[Kif_anchor_ini_[m[K
+[7.216s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:272:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.216s]   272 |             [01;31m[Kparam[m[K.anchor_list[anchor.id] = Eigen::Vector3d(anchor.position.x, anchor.position.y, anchor.position.z); // 添加锚点到列表
+[7.216s]       |             [01;31m[K^~~~~[m[K
+[7.216s]       |             [32m[Kparam_[m[K
+[7.224s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:274:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_anchor_ini[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_anchor_ini_[m[K’?
+[7.224s]   274 |         [01;31m[Kif_anchor_ini[m[K = true; // 设置锚点初始化标志
+[7.225s]       |         [01;31m[K^~~~~~~~~~~~~[m[K
+[7.225s]       |         [32m[Kif_anchor_ini_[m[K
+[7.231s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:275:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_tdoa[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_tdoa_[m[K’?
+[7.232s]   275 |         if (![01;31m[Kif_tdoa[m[K) { // 如果不使用TDOA
+[7.232s]       |              [01;31m[K^~~~~~~[m[K
+[7.232s]       |              [32m[Kif_tdoa_[m[K
+[7.239s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:277:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.239s]   277 |             for (auto it = [01;31m[Kparam[m[K.anchor_list.begin(); it != param.anchor_list.end(); it++) { // 遍历锚点列表
+[7.239s]       |                            [01;31m[K^~~~~[m[K
+[7.240s]       |                            [32m[Kparam_[m[K
+[7.248s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:278:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kv_toa_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kv_toa_offset_[m[K’?
+[7.248s]   278 |                 param.toa_offset[it->first] = [01;31m[Kv_toa_offset[m[K[i]; // 设置TOA偏移
+[7.248s]       |                                               [01;31m[K^~~~~~~~~~~~[m[K
+[7.248s]       |                                               [32m[Kv_toa_offset_[m[K
+[7.257s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::updateMeasurements(Eigen::aligned_deque<_KnotT>&, Eigen::aligned_deque<_KnotT>&)[m[K’:
+[7.257s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:288:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.257s]   288 |         int64_t t_window_l = [01;31m[Kspline_local[m[K.minTimeNs(); // 获取窗口左边界
+[7.257s]       |                              [01;31m[K^~~~~~~~~~~~[m[K
+[7.257s]       |                              [32m[Kspline_local_[m[K
+[7.265s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::initialization()[m[K’:
+[7.265s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:315:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.265s]   315 |             if (![01;31m[Kimu_buff[m[K.empty()) min_time = imu_buff.back().time_ns; // 获取IMU缓冲区的时间
+[7.265s]       |                  [01;31m[K^~~~~~~~[m[K
+[7.265s]       |                  [32m[Kimu_buff_[m[K
+[7.273s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:316:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_buff_[m[K’?
+[7.273s]   316 |             if (![01;31m[Ktoa_buff[m[K.empty()) min_time = std::min(toa_buff.back().time_ns, min_time); // 获取TOA缓冲区的时间
+[7.273s]       |                  [01;31m[K^~~~~~~~[m[K
+[7.273s]       |                  [32m[Ktoa_buff_[m[K
+[7.281s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:317:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.281s]   317 |             if (![01;31m[Ktdoa_buff[m[K.empty()) min_time = std::min(tdoa_buff.back().time_ns, min_time); // 获取TDOA缓冲区的时间
+[7.281s]       |                  [01;31m[K^~~~~~~~~[m[K
+[7.281s]       |                  [32m[Ktdoa_buff_[m[K
+[7.289s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:318:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.289s]   318 |             if (min_time > [01;31m[Kspline_local[m[K.nextMaxTimeNs()) { // 如果最小时间大于样条的最大时间
+[7.289s]       |                            [01;31m[K^~~~~~~~~~~~[m[K
+[7.289s]       |                            [32m[Kspline_local_[m[K
+[7.296s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:323:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.297s]   323 |                 if (![01;31m[Kif_uwb_only[m[K) { // 如果不只使用UWB
+[7.297s]       |                      [01;31m[K^~~~~~~~~~~[m[K
+[7.297s]       |                      [32m[Kif_uwb_only_[m[K
+[7.303s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:325:25:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_imu_t_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Klast_imu_t_ns_[m[K’?
+[7.303s]   325 |                         [01;31m[Klast_imu_t_ns[m[K = bag_start_time; // 设置最后IMU时间为行李开始时间
+[7.304s]       |                         [01;31m[K^~~~~~~~~~~~~[m[K
+[7.304s]       |                         [32m[Klast_imu_t_ns_[m[K
+[7.310s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:325:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.310s]   325 |                         last_imu_t_ns = [01;31m[Kbag_start_time[m[K; // 设置最后IMU时间为行李开始时间
+[7.311s]       |                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.311s]       |                                         [32m[Kbag_start_time_[m[K
+[7.318s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:327:25:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_imu_t_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Klast_imu_t_ns_[m[K’?
+[7.318s]   327 |                         [01;31m[Klast_imu_t_ns[m[K = imu_window.back().time_ns; // 获取IMU窗口的最后时间
+[7.318s]       |                         [01;31m[K^~~~~~~~~~~~~[m[K
+[7.318s]       |                         [32m[Klast_imu_t_ns_[m[K
+[7.325s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:327:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_window[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_window_[m[K’?
+[7.325s]   327 |                         last_imu_t_ns = [01;31m[Kimu_window[m[K.back().time_ns; // 获取IMU窗口的最后时间
+[7.325s]       |                                         [01;31m[K^~~~~~~~~~[m[K
+[7.325s]       |                                         [32m[Kimu_window_[m[K
+[7.338s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:329:33:[m[K [01;31m[Kerror: [m[K‘[01m[Knext_knot_TimeNs[m[K’ was not declared in this scope; did you mean ‘[01m[Knext_knot_time_ns_[m[K’?
+[7.338s]   329 |                     integration([01;31m[Knext_knot_TimeNs[m[K, q_ini, pos_ini); // 执行积分
+[7.338s]       |                                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[7.338s]       |                                 [32m[Knext_knot_time_ns_[m[K
+[7.345s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:331:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_tdoa[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_tdoa_[m[K’?
+[7.345s]   331 |                     if ([01;31m[Kif_tdoa[m[K) { // 如果使用TDOA
+[7.345s]       |                         [01;31m[K^~~~~~~[m[K
+[7.345s]       |                         [32m[Kif_tdoa_[m[K
+[7.357s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:332:55:[m[K [01;31m[Kerror: [m[K‘[01m[Knext_knot_TimeNs[m[K’ was not declared in this scope; did you mean ‘[01m[Knext_knot_time_ns_[m[K’?
+[7.357s]   332 |                         pos_ini = tdoaMultilateration([01;31m[Knext_knot_TimeNs[m[K * NS_TO_S); // 执行TDOA多边定位
+[7.357s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[7.357s]       |                                                       [32m[Knext_knot_time_ns_[m[K
+[7.358s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.358s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.358s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1[m[K:
+[7.358s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.358s]   335 |                         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.358s]       |                                            [01;31m[K^~~~~~~~~~[m[K
+[7.358s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.359s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.359s]   335 |                         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.359s]       |                         [01;31m[K^~~~~~~~~~~~[m[K
+[7.359s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.359s]   335 |                         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.359s]       |                         [01;31m[K^~~~~~~~~~~~[m[K
+[7.359s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.359s]   335 |                         [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.359s]       |                         [01;31m[K^~~~~~~~~~~~[m[K
+[7.359s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.359s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.359s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1[m[K:
+[7.360s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.360s]   335 |                         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.360s]       |                                            [01;31m[K^~~~~~~~~~[m[K
+[7.360s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:335:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.360s]   335 |                         RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
+[7.360s]       |                                            [01;31m[K^~~~~~~~~~[m[K
+[7.373s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:341:17:[m[K [01;31m[Kerror: [m[K‘[01m[Knext_knot_TimeNs[m[K’ was not declared in this scope; did you mean ‘[01m[Knext_knot_time_ns_[m[K’?
+[7.373s]   341 |                 [01;31m[Knext_knot_TimeNs[m[K += dt_ns; // 更新下一个节点时间
+[7.373s]       |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[7.373s]       |                 [32m[Knext_knot_time_ns_[m[K
+[7.381s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:341:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Kdt_ns_[m[K’?
+[7.381s]   341 |                 next_knot_TimeNs += [01;31m[Kdt_ns[m[K; // 更新下一个节点时间
+[7.381s]       |                                     [01;31m[K^~~~~[m[K
+[7.381s]       |                                     [32m[Kdt_ns_[m[K
+[7.390s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:350:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.390s]   350 |                 start_time.data = [01;31m[Kbag_start_time[m[K; // 设置启动时间
+[7.390s]       |                                   [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.390s]       |                                   [32m[Kbag_start_time_[m[K
+[7.398s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:353:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_anchor_ini[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_anchor_ini_[m[K’?
+[7.398s]   353 |             if (param_set && [01;31m[Kif_anchor_ini[m[K) { // 如果参数已设置且锚点已初始化
+[7.398s]       |                              [01;31m[K^~~~~~~~~~~~~[m[K
+[7.398s]       |                              [32m[Kif_anchor_ini_[m[K
+[7.406s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.406s]   354 |                 [01;31m[Kspline_local[m[K.init(dt_ns, 0, bag_start_time); // 初始化样条
+[7.406s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[7.406s]       |                 [32m[Kspline_local_[m[K
+[7.413s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kdt_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Kdt_ns_[m[K’?
+[7.413s]   354 |                 spline_local.init([01;31m[Kdt_ns[m[K, 0, bag_start_time); // 初始化样条
+[7.413s]       |                                   [01;31m[K^~~~~[m[K
+[7.413s]       |                                   [32m[Kdt_ns_[m[K
+[7.421s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:354:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.421s]   354 |                 spline_local.init(dt_ns, 0, [01;31m[Kbag_start_time[m[K); // 初始化样条
+[7.421s]       |                                             [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.421s]       |                                             [32m[Kbag_start_time_[m[K
+[7.428s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:355:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.428s]   355 |                 if (![01;31m[Kif_uwb_only[m[K) { // 如果不只使用UWB
+[7.428s]       |                      [01;31m[K^~~~~~~~~~~[m[K
+[7.428s]       |                      [32m[Kif_uwb_only_[m[K
+[7.435s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:357:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.435s]   357 |                     size_t n_imu = [01;31m[Kimu_buff[m[K.size(); // 获取IMU缓冲区大小
+[7.435s]       |                                    [01;31m[K^~~~~~~~[m[K
+[7.435s]       |                                    [32m[Kimu_buff_[m[K
+[7.442s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:363:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[7.442s]   363 |                     [01;31m[Kcalib_param[m[K.gravity = gravity_ave; // 设置校准重力
+[7.442s]       |                     [01;31m[K^~~~~~~~~~~[m[K
+[7.442s]       |                     [32m[Kcalib_param_[m[K
+[7.449s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:365:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[7.449s]   365 |                 [01;31m[Kcalib_param[m[K.q_nav_uwb = param.q_nav_uwb_init; // 设置导航四元数
+[7.449s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[7.449s]       |                 [32m[Kcalib_param_[m[K
+[7.455s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:365:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.455s]   365 |                 calib_param.q_nav_uwb = [01;31m[Kparam[m[K.q_nav_uwb_init; // 设置导航四元数
+[7.455s]       |                                         [01;31m[K^~~~~[m[K
+[7.455s]       |                                         [32m[Kparam_[m[K
+[7.468s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:374:21:[m[K [01;31m[Kerror: [m[K‘[01m[Knext_knot_TimeNs[m[K’ was not declared in this scope; did you mean ‘[01m[Knext_knot_time_ns_[m[K’?
+[7.468s]   374 |                     [01;31m[Knext_knot_TimeNs[m[K += dt_ns; // 更新下一个节点时间
+[7.468s]       |                     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[7.468s]       |                     [32m[Knext_knot_time_ns_[m[K
+[7.476s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[KEigen::Vector3d SplineFusion::tdoaMultilateration(double) const[m[K’:
+[7.476s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:390:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.476s]   390 |         Eigen::Vector3d anchor0 = [01;31m[Kparam[m[K.anchor_list.at(0); // 获取第一个锚点
+[7.476s]       |                                   [01;31m[K^~~~~[m[K
+[7.476s]       |                                   [32m[Kparam_[m[K
+[7.483s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:392:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.483s]   392 |         range.push_back([01;31m[Ktdoa_buff[m[K.at(idx[0]).data); // 添加第一个范围
+[7.483s]       |                         [01;31m[K^~~~~~~~~[m[K
+[7.483s]       |                         [32m[Ktdoa_buff_[m[K
+[7.582s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:406:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kset_origin[m[K’ was not declared in this scope; did you mean ‘[01m[Ksetlogin[m[K’?
+[7.582s]   406 |         if (![01;31m[Kset_origin[m[K) { // 如果未设置原点
+[7.582s]       |              [01;31m[K^~~~~~~~~~[m[K
+[7.582s]       |              [32m[Ksetlogin[m[K
+[7.589s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:410:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[7.589s]   410 |             pos = [01;31m[Kcalib_param[m[K.q_nav_uwb.inverse() * (pos - calib_param.t_nav_uwb); // 计算最终位置
+[7.589s]       |                   [01;31m[K^~~~~~~~~~~[m[K
+[7.589s]       |                   [32m[Kcalib_param_[m[K
+[7.600s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::findClosestNWithOrderedID(double, int, size_t*) const[m[K’:
+[7.600s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:418:24:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.600s]   418 |         for (auto it = [01;31m[Ktdoa_buff[m[K.begin(); it != tdoa_buff.end(); it++) { // 遍历TDOA缓冲区
+[7.600s]       |                        [01;31m[K^~~~~~~~~[m[K
+[7.600s]       |                        [32m[Ktdoa_buff_[m[K
+[7.613s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::optimization()[m[K’:
+[7.613s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:443:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.613s]   443 |         if ([01;31m[Kspline_local[m[K.numKnots() < 2) return false; // 如果样条节点数小于2，返回失败
+[7.613s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.613s]       |             [32m[Kspline_local_[m[K
+[7.619s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:445:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.619s]   445 |         if ([01;31m[Kparam[m[K.if_reject_uwb) { // 如果需要拒绝UWB
+[7.619s]       |             [01;31m[K^~~~~[m[K
+[7.619s]       |             [32m[Kparam_[m[K
+[7.626s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_flag[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolver_flag_[m[K’?
+[7.626s]   446 |             if ([01;31m[Ksolver_flag[m[K == INITIAL && spline_local.numKnots() < int(param.reject_uwb_window_width * window_size))
+[7.626s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[7.626s]       |                 [32m[Ksolver_flag_[m[K
+[7.634s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:32:[m[K [01;31m[Kerror: [m[K‘[01m[KINITIAL[m[K’ was not declared in this scope
+[7.634s]   446 |             if (solver_flag == [01;31m[KINITIAL[m[K && spline_local.numKnots() < int(param.reject_uwb_window_width * window_size))
+[7.634s]       |                                [01;31m[K^~~~~~~[m[K
+[7.641s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.641s]   446 |             if (solver_flag == INITIAL && [01;31m[Kspline_local[m[K.numKnots() < int(param.reject_uwb_window_width * window_size))
+[7.641s]       |                                           [01;31m[K^~~~~~~~~~~~[m[K
+[7.641s]       |                                           [32m[Kspline_local_[m[K
+[7.648s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:446:105:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_size[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_size_[m[K’?
+[7.648s]   446 |             if (solver_flag == INITIAL && spline_local.numKnots() < int(param.reject_uwb_window_width * [01;31m[Kwindow_size[m[K))
+[7.648s]       |                                                                                                         [01;31m[K^~~~~~~~~~~[m[K
+[7.648s]       |                                                                                                         [32m[Kwindow_size_[m[K
+[7.655s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:454:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kwindow_count[m[K’ was not declared in this scope; did you mean ‘[01m[Kwindow_count_[m[K’?
+[7.655s]   454 |         if ((int)[01;31m[Kwindow_count[m[K >= n_window_calib) { // 如果窗口计数达到校准窗口数
+[7.655s]       |                  [01;31m[K^~~~~~~~~~~~[m[K
+[7.655s]       |                  [32m[Kwindow_count_[m[K
+[7.662s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:454:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kn_window_calib[m[K’ was not declared in this scope; did you mean ‘[01m[Kn_window_calib_[m[K’?
+[7.662s]   454 |         if ((int)window_count >= [01;31m[Kn_window_calib[m[K) { // 如果窗口计数达到校准窗口数
+[7.662s]       |                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.662s]       |                                  [32m[Kn_window_calib_[m[K
+[7.668s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:455:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[7.668s]   455 |             [01;31m[Kparam[m[K.if_opt_g = false; // 不优化重力
+[7.668s]       |             [01;31m[K^~~~~[m[K
+[7.668s]       |             [32m[Kparam_[m[K
+[7.675s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.675s]   459 |         if (![01;31m[Kif_uwb_only[m[K) updateMeasurements(imu_window, imu_buff); // 更新IMU测量
+[7.675s]       |              [01;31m[K^~~~~~~~~~~[m[K
+[7.675s]       |              [32m[Kif_uwb_only_[m[K
+[7.682s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_window[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_window_[m[K’?
+[7.682s]   459 |         if (!if_uwb_only) updateMeasurements([01;31m[Kimu_window[m[K, imu_buff); // 更新IMU测量
+[7.682s]       |                                              [01;31m[K^~~~~~~~~~[m[K
+[7.682s]       |                                              [32m[Kimu_window_[m[K
+[7.689s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:459:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.689s]   459 |         if (!if_uwb_only) updateMeasurements(imu_window, [01;31m[Kimu_buff[m[K); // 更新IMU测量
+[7.689s]       |                                                          [01;31m[K^~~~~~~~[m[K
+[7.689s]       |                                                          [32m[Kimu_buff_[m[K
+[7.696s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:460:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_tdoa[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_tdoa_[m[K’?
+[7.696s]   460 |         if ([01;31m[Kif_tdoa[m[K) {
+[7.696s]       |             [01;31m[K^~~~~~~[m[K
+[7.696s]       |             [32m[Kif_tdoa_[m[K
+[7.702s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:461:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_window_[m[K’?
+[7.702s]   461 |             updateMeasurements([01;31m[Ktdoa_window[m[K, tdoa_buff); // 更新TDOA测量
+[7.703s]       |                                [01;31m[K^~~~~~~~~~~[m[K
+[7.703s]       |                                [32m[Ktdoa_window_[m[K
+[7.709s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:461:45:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.709s]   461 |             updateMeasurements(tdoa_window, [01;31m[Ktdoa_buff[m[K); // 更新TDOA测量
+[7.709s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[7.709s]       |                                             [32m[Ktdoa_buff_[m[K
+[7.716s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:463:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_window_[m[K’?
+[7.716s]   463 |             updateMeasurements([01;31m[Ktoa_window[m[K, toa_buff); // 更新TOA测量
+[7.716s]       |                                [01;31m[K^~~~~~~~~~[m[K
+[7.716s]       |                                [32m[Ktoa_window_[m[K
+[7.723s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:463:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_buff_[m[K’?
+[7.723s]   463 |             updateMeasurements(toa_window, [01;31m[Ktoa_buff[m[K); // 更新TOA测量
+[7.723s]       |                                            [01;31m[K^~~~~~~~[m[K
+[7.723s]       |                                            [32m[Ktoa_buff_[m[K
+[7.729s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:468:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_fixed[m[K’ was not declared in this scope; did you mean ‘[01m[Kpose_fixed_[m[K’?
+[7.729s]   468 |         [01;31m[Kpose_fixed[m[K = false; // 位姿固定标志
+[7.729s]       |         [01;31m[K^~~~~~~~~~[m[K
+[7.729s]       |         [32m[Kpose_fixed_[m[K
+[7.737s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:470:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolver_flag[m[K’ was not declared in this scope; did you mean ‘[01m[Ksolver_flag_[m[K’?
+[7.737s]   470 |         if ([01;31m[Ksolver_flag[m[K == INITIAL) {
+[7.737s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[7.737s]       |             [32m[Ksolver_flag_[m[K
+[7.748s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:470:28:[m[K [01;31m[Kerror: [m[K‘[01m[KINITIAL[m[K’ was not declared in this scope
+[7.748s]   470 |         if (solver_flag == [01;31m[KINITIAL[m[K) {
+[7.748s]       |                            [01;31m[K^~~~~~~[m[K
+[7.749s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:473:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klambda[m[K’ was not declared in this scope; did you mean ‘[01m[Kboost::mpl::lambda[m[K’?
+[7.749s]   473 |         [01;31m[Klambda[m[K = 1e-6; // 初始化步长
+[7.749s]       |         [01;31m[K^~~~~~[m[K
+[7.749s]       |         [32m[Kboost::mpl::lambda[m[K
+[7.749s] In file included from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:18[m[K,
+[7.749s]                  from [01m[K/usr/include/boost/mpl/if.hpp:19[m[K,
+[7.749s]                  from [01m[K/usr/include/boost/math/tools/precision.hpp:18[m[K,
+[7.749s]                  from [01m[K/usr/include/boost/math/special_functions/sinc.hpp:19[m[K,
+[7.749s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/math_tools.h:5[m[K,
+[7.749s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:4[m[K,
+[7.749s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[7.749s] [01m[K/usr/include/boost/mpl/lambda_fwd.hpp:36:8:[m[K [01;36m[Knote: [m[K‘[01m[Kboost::mpl::lambda[m[K’ declared here
+[7.749s]    36 | struct [01;36m[Klambda[m[K;
+[7.749s]       |        [01;36m[K^~~~~~[m[K
+[7.757s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:474:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klambda_vee[m[K’ was not declared in this scope; did you mean ‘[01m[Klambda_vee_[m[K’?
+[7.757s]   474 |         [01;31m[Klambda_vee[m[K = 2; // 初始化步长倍增因子
+[7.757s]       |         [01;31m[K^~~~~~~~~~[m[K
+[7.757s]       |         [32m[Klambda_vee_[m[K
+[7.765s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:477:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kmax_iter[m[K’ was not declared in this scope; did you mean ‘[01m[Kmax_iter_[m[K’?
+[7.765s]   477 |         while (!converged && opt_iter < [01;31m[Kmax_iter[m[K) { // 迭代优化
+[7.765s]       |                                         [01;31m[K^~~~~~~~[m[K
+[7.765s]       |                                         [32m[Kmax_iter_[m[K
+[7.773s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::setParameters()[m[K’:
+[7.773s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:487:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.773s]   487 |         if ([01;31m[Kimu_buff[m[K.empty() && !if_uwb_only) return false; // 如果IMU缓冲区为空且不只使用UWB，返回失败
+[7.773s]       |             [01;31m[K^~~~~~~~[m[K
+[7.773s]       |             [32m[Kimu_buff_[m[K
+[7.781s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:487:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[7.781s]   487 |         if (imu_buff.empty() && ![01;31m[Kif_uwb_only[m[K) return false; // 如果IMU缓冲区为空且不只使用UWB，返回失败
+[7.781s]       |                                  [01;31m[K^~~~~~~~~~~[m[K
+[7.781s]       |                                  [32m[Kif_uwb_only_[m[K
+[7.788s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.789s]   488 |         if ([01;31m[Kimu_buff[m[K.empty() && toa_buff.empty() && tdoa_buff.empty()) { // 如果所有缓冲区都为空
+[7.789s]       |             [01;31m[K^~~~~~~~[m[K
+[7.789s]       |             [32m[Kimu_buff_[m[K
+[7.795s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_buff_[m[K’?
+[7.796s]   488 |         if (imu_buff.empty() && [01;31m[Ktoa_buff[m[K.empty() && tdoa_buff.empty()) { // 如果所有缓冲区都为空
+[7.796s]       |                                 [01;31m[K^~~~~~~~[m[K
+[7.796s]       |                                 [32m[Ktoa_buff_[m[K
+[7.803s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:488:53:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_buff_[m[K’?
+[7.803s]   488 |         if (imu_buff.empty() && toa_buff.empty() && [01;31m[Ktdoa_buff[m[K.empty()) { // 如果所有缓冲区都为空
+[7.803s]       |                                                     [01;31m[K^~~~~~~~~[m[K
+[7.803s]       |                                                     [32m[Ktdoa_buff_[m[K
+[7.812s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:492:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.812s]   492 |                 [01;31m[Kbag_start_time[m[K += imu_buff.front().time_ns; // 更新行李开始时间
+[7.812s]       |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.812s]       |                 [32m[Kbag_start_time_[m[K
+[7.820s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:494:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.820s]   494 |                 [01;31m[Kbag_start_time[m[K += toa_buff.front().time_ns; // 更新行李开始时间
+[7.820s]       |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.820s]       |                 [32m[Kbag_start_time_[m[K
+[7.828s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:496:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.828s]   496 |                 [01;31m[Kbag_start_time[m[K += tdoa_buff.front().time_ns; // 更新行李开始时间
+[7.828s]       |                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.828s]       |                 [32m[Kbag_start_time_[m[K
+[7.841s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:499:9:[m[K [01;31m[Kerror: [m[K‘[01m[Knext_knot_TimeNs[m[K’ was not declared in this scope; did you mean ‘[01m[Knext_knot_time_ns_[m[K’?
+[7.842s]   499 |         [01;31m[Knext_knot_TimeNs[m[K = bag_start_time; // 设置下一个节点时间
+[7.842s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[7.842s]       |         [32m[Knext_knot_time_ns_[m[K
+[7.849s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:499:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kbag_start_time[m[K’ was not declared in this scope; did you mean ‘[01m[Kbag_start_time_[m[K’?
+[7.849s]   499 |         next_knot_TimeNs = [01;31m[Kbag_start_time[m[K; // 设置下一个节点时间
+[7.849s]       |                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[7.849s]       |                            [32m[Kbag_start_time_[m[K
+[7.856s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::integrateStep(int64_t, int64_t, const ImuData&, Eigen::Matrix3d&, Eigen::Vector3d&, Eigen::Vector3d&)[m[K’:
+[7.856s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:517:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[7.856s]   517 |         Eigen::Vector3d g = [01;31m[Kcalib_param[m[K.gravity; // 获取重力
+[7.856s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[7.856s]       |                             [32m[Kcalib_param_[m[K
+[7.863s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:520:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.863s]   520 |         Eigen::Matrix<double, 6, 1> bias = [01;31m[Kspline_local[m[K.itpBias(prevTime); // 获取偏差
+[7.863s]       |                                            [01;31m[K^~~~~~~~~~~~[m[K
+[7.863s]       |                                            [32m[Kspline_local_[m[K
+[7.943s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::integration(int64_t, Eigen::Quaterniond&, Eigen::Vector3d&)[m[K’:
+[7.943s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:542:24:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_imu_t_ns[m[K’ was not declared in this scope; did you mean ‘[01m[Klast_imu_t_ns_[m[K’?
+[7.943s]   542 |         getIMUInterval([01;31m[Klast_imu_t_ns[m[K, curTime, imu_vec); // 获取IMU时间区间数据
+[7.943s]       |                        [01;31m[K^~~~~~~~~~~~~[m[K
+[7.943s]       |                        [32m[Klast_imu_t_ns_[m[K
+[7.950s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:546:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.950s]   546 |             [01;31m[Kspline_local[m[K.itpQuaternion(last_imu_t_ns, &qs0); // 获取插值四元数
+[7.950s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.950s]       |             [32m[Kspline_local_[m[K
+[7.958s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:564:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.958s]   564 |             qs = [01;31m[Kspline_local[m[K.extrapolateOrtKnot(1); // 外推四元数
+[7.958s]       |                  [01;31m[K^~~~~~~~~~~~[m[K
+[7.958s]       |                  [32m[Kspline_local_[m[K
+[7.965s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::getIMUInterval(int64_t, int64_t, std::vector<ImuData>&)[m[K’:
+[7.966s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:571:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.966s]   571 |         if ([01;31m[Kimu_buff[m[K.empty()) { // 如果IMU缓冲区为空
+[7.966s]       |             [01;31m[K^~~~~~~~[m[K
+[7.966s]       |             [32m[Kimu_buff_[m[K
+[7.966s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.966s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.967s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1[m[K:
+[7.967s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.967s]   572 |             RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "No IMU available."); // 输出错误信息
+[7.967s]       |                                [01;31m[K^~~~~~~~~~[m[K
+[7.967s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.967s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.967s]   572 |             [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "No IMU available."); // 输出错误信息
+[7.967s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.967s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.967s]   572 |             [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "No IMU available."); // 输出错误信息
+[7.967s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.967s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[7.967s]   572 |             [01;31m[KRCLCPP_ERROR[m[K(this->get_logger(), "No IMU available."); // 输出错误信息
+[7.967s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[7.967s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[7.967s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[7.967s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[7.968s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[7.968s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:1[m[K:
+[7.968s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.968s]   572 |             RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "No IMU available."); // 输出错误信息
+[7.968s]       |                                [01;31m[K^~~~~~~~~~[m[K
+[7.968s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:572:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Kget_logger[m[K’
+[7.968s]   572 |             RCLCPP_ERROR(this->[01;31m[Kget_logger[m[K(), "No IMU available."); // 输出错误信息
+[7.968s]       |                                [01;31m[K^~~~~~~~~~[m[K
+[7.974s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:576:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_buff[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_buff_[m[K’?
+[7.974s]   576 |         while ([01;31m[Kimu_buff[m[K.at(idx).time_ns <= std::min(imu_buff.back().time_ns, t1)) { // 遍历IMU缓冲区
+[7.974s]       |                [01;31m[K^~~~~~~~[m[K
+[7.975s]       |                [32m[Kimu_buff_[m[K
+[7.975s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::displayControlPoints()[m[K’:
+[7.975s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:589:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Know[m[K’
+[7.975s]   589 |         points_inactive_msg.header.stamp = this->[01;31m[Know[m[K(); // 设置时间戳
+[7.975s]       |                                                  [01;31m[K^~~[m[K
+[7.983s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:590:58:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[7.984s]   590 |         points_inactive_msg.points.push_back(getPointMsg([01;31m[Kspline_local[m[K.getIdlePos(0))); // 添加第一个非活动控制点
+[7.984s]       |                                                          [01;31m[K^~~~~~~~~~~~[m[K
+[7.984s]       |                                                          [32m[Kspline_local_[m[K
+[7.984s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:597:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass SplineFusion[m[K’ has no member named ‘[01m[Know[m[K’
+[7.984s]   597 |         points_active_msg.header.stamp = this->[01;31m[Know[m[K(); // 设置时间戳
+[7.984s]       |                                                [01;31m[K^~~[m[K
+[7.994s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:603:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_knots_inactive[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_knots_inactive_[m[K’?
+[7.994s]   603 |         [01;31m[Kpub_knots_inactive[m[K->publish(points_inactive_msg);
+[7.994s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[7.994s]       |         [32m[Kpub_knots_inactive_[m[K
+[8.004s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:604:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpub_knots_active[m[K’ was not declared in this scope; did you mean ‘[01m[Kpub_knots_active_[m[K’?
+[8.004s]   604 |         [01;31m[Kpub_knots_active[m[K->publish(points_active_msg);
+[8.004s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.004s]       |         [32m[Kpub_knots_active_[m[K
+[8.011s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Point32 SplineFusion::getPointMsg(Eigen::Vector3d)[m[K’:
+[8.011s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:610:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[8.012s]   610 |         Eigen::Vector3d p_U = [01;31m[Kcalib_param[m[K.q_nav_uwb * p + calib_param.t_nav_uwb; // 计算校准后的点
+[8.012s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[8.012s]       |                               [32m[Kcalib_param_[m[K
+[8.020s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::optimize(int)[m[K’:
+[8.020s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kbias_block_offset_[m[K’?
+[8.020s]   619 |         Linearizer lopt([01;31m[Kbias_block_offset[m[K, gravity_block_offset, hess_size, &spline_local, &calib_param, &param, pose_fixed);
+[8.020s]       |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[8.020s]       |                         [32m[Kbias_block_offset_[m[K
+[8.029s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kgravity_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kgravity_block_offset_[m[K’?
+[8.029s]   619 |         Linearizer lopt(bias_block_offset, [01;31m[Kgravity_block_offset[m[K, hess_size, &spline_local, &calib_param, &param, pose_fixed);
+[8.029s]       |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[8.029s]       |                                            [32m[Kgravity_block_offset_[m[K
+[8.036s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:66:[m[K [01;31m[Kerror: [m[K‘[01m[Khess_size[m[K’ was not declared in this scope; did you mean ‘[01m[Khess_size_[m[K’?
+[8.036s]   619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, [01;31m[Khess_size[m[K, &spline_local, &calib_param, &param, pose_fixed);
+[8.036s]       |                                                                  [01;31m[K^~~~~~~~~[m[K
+[8.036s]       |                                                                  [32m[Khess_size_[m[K
+[8.043s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[8.043s]   619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &[01;31m[Kspline_local[m[K, &calib_param, &param, pose_fixed);
+[8.043s]       |                                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[8.043s]       |                                                                              [32m[Kspline_local_[m[K
+[8.050s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:93:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[8.050s]   619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &[01;31m[Kcalib_param[m[K, &param, pose_fixed);
+[8.050s]       |                                                                                             [01;31m[K^~~~~~~~~~~[m[K
+[8.050s]       |                                                                                             [32m[Kcalib_param_[m[K
+[8.056s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:107:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[8.056s]   619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &calib_param, &[01;31m[Kparam[m[K, pose_fixed);
+[8.056s]       |                                                                                                           [01;31m[K^~~~~[m[K
+[8.056s]       |                                                                                                           [32m[Kparam_[m[K
+[8.063s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:619:114:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_fixed[m[K’ was not declared in this scope; did you mean ‘[01m[Kpose_fixed_[m[K’?
+[8.063s]   619 |         Linearizer lopt(bias_block_offset, gravity_block_offset, hess_size, &spline_local, &calib_param, &param, [01;31m[Kpose_fixed[m[K);
+[8.063s]       |                                                                                                                  [01;31m[K^~~~~~~~~~[m[K
+[8.063s]       |                                                                                                                  [32m[Kpose_fixed_[m[K
+[8.071s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:620:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_window[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_window_[m[K’?
+[8.071s]   620 |         if (![01;31m[Kimu_window[m[K.empty()) lopt(imu_window);
+[8.071s]       |              [01;31m[K^~~~~~~~~~[m[K
+[8.071s]       |              [32m[Kimu_window_[m[K
+[8.080s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:621:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_window_[m[K’?
+[8.080s]   621 |         if (![01;31m[Ktdoa_window[m[K.empty()) lopt(tdoa_window);
+[8.080s]       |              [01;31m[K^~~~~~~~~~~[m[K
+[8.080s]       |              [32m[Ktdoa_window_[m[K
+[8.088s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:622:14:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_window_[m[K’?
+[8.088s]   622 |         if (![01;31m[Ktoa_window[m[K.empty()) lopt(toa_window);
+[8.088s]       |              [01;31m[K^~~~~~~~~~[m[K
+[8.088s]       |              [32m[Ktoa_window_[m[K
+[8.113s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:634:52:[m[K [01;31m[Kerror: [m[K‘[01m[Klambda[m[K’ was not declared in this scope; did you mean ‘[01m[Kboost::mpl::lambda[m[K’?
+[8.113s]   634 |             Eigen::VectorXd Hdiag_lambda = Hdiag * [01;31m[Klambda[m[K;
+[8.113s]       |                                                    [01;31m[K^~~~~~[m[K
+[8.113s]       |                                                    [32m[Kboost::mpl::lambda[m[K
+[8.113s] In file included from [01m[K/usr/include/boost/mpl/aux_/na_spec.hpp:18[m[K,
+[8.113s]                  from [01m[K/usr/include/boost/mpl/if.hpp:19[m[K,
+[8.113s]                  from [01m[K/usr/include/boost/math/tools/precision.hpp:18[m[K,
+[8.113s]                  from [01m[K/usr/include/boost/math/special_functions/sinc.hpp:19[m[K,
+[8.113s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/utils/math_tools.h:5[m[K,
+[8.113s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/../include/Linearizer.h:4[m[K,
+[8.113s]                  from [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:2[m[K:
+[8.113s] [01m[K/usr/include/boost/mpl/lambda_fwd.hpp:36:8:[m[K [01;36m[Knote: [m[K‘[01m[Kboost::mpl::lambda[m[K’ declared here
+[8.113s]    36 | struct [01;36m[Klambda[m[K;
+[8.113s]       |        [01;36m[K^~~~~~[m[K
+[8.134s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:649:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktoa_window_[m[K’?
+[8.134s]   649 |             if (![01;31m[Ktoa_window[m[K.empty()) eopt(toa_window);
+[8.134s]       |                  [01;31m[K^~~~~~~~~~[m[K
+[8.134s]       |                  [32m[Ktoa_window_[m[K
+[8.141s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:650:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_window[m[K’ was not declared in this scope; did you mean ‘[01m[Kimu_window_[m[K’?
+[8.141s]   650 |             if (![01;31m[Kimu_window[m[K.empty()) eopt(imu_window);
+[8.141s]       |                  [01;31m[K^~~~~~~~~~[m[K
+[8.141s]       |                  [32m[Kimu_window_[m[K
+[8.148s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:651:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktdoa_window[m[K’ was not declared in this scope; did you mean ‘[01m[Ktdoa_window_[m[K’?
+[8.148s]   651 |             if (![01;31m[Ktdoa_window[m[K.empty()) eopt(tdoa_window);
+[8.148s]       |                  [01;31m[K^~~~~~~~~~~[m[K
+[8.148s]       |                  [32m[Ktdoa_window_[m[K
+[8.155s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:658:42:[m[K [01;31m[Kerror: [m[K‘[01m[Klambda_vee[m[K’ was not declared in this scope; did you mean ‘[01m[Klambda_vee_[m[K’?
+[8.155s]   658 |                 lambda = std::min(100.0, [01;31m[Klambda_vee[m[K * lambda);
+[8.156s]       |                                          [01;31m[K^~~~~~~~~~[m[K
+[8.156s]       |                                          [32m[Klambda_vee_[m[K
+[8.162s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:670:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klambda_vee[m[K’ was not declared in this scope; did you mean ‘[01m[Klambda_vee_[m[K’?
+[8.162s]   670 |                 [01;31m[Klambda_vee[m[K = 2;
+[8.163s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[8.163s]       |                 [32m[Klambda_vee_[m[K
+[8.170s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::updateLinearizerSize()[m[K’:
+[8.171s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:679:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[8.171s]   679 |         int num_knots = [01;31m[Kspline_local[m[K.numKnots();
+[8.171s]       |                         [01;31m[K^~~~~~~~~~~~[m[K
+[8.171s]       |                         [32m[Kspline_local_[m[K
+[8.179s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:680:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kbias_block_offset_[m[K’?
+[8.179s]   680 |         [01;31m[Kbias_block_offset[m[K = Linearizer::POSE_SIZE * num_knots;
+[8.179s]       |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[8.180s]       |         [32m[Kbias_block_offset_[m[K
+[8.187s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:681:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khess_size[m[K’ was not declared in this scope; did you mean ‘[01m[Khess_size_[m[K’?
+[8.187s]   681 |         [01;31m[Khess_size[m[K = bias_block_offset;
+[8.187s]       |         [01;31m[K^~~~~~~~~[m[K
+[8.187s]       |         [32m[Khess_size_[m[K
+[8.194s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:682:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[8.194s]   682 |         if (![01;31m[Kif_uwb_only[m[K) {
+[8.194s]       |              [01;31m[K^~~~~~~~~~~[m[K
+[8.194s]       |              [32m[Kif_uwb_only_[m[K
+[8.204s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:686:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgravity_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kgravity_block_offset_[m[K’?
+[8.205s]   686 |         [01;31m[Kgravity_block_offset[m[K = hess_size;
+[8.205s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[8.205s]       |         [32m[Kgravity_block_offset_[m[K
+[8.212s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:688:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[8.212s]   688 |         if ([01;31m[Kparam[m[K.if_opt_transform) {
+[8.212s]       |             [01;31m[K^~~~~[m[K
+[8.213s]       |             [32m[Kparam_[m[K
+[8.221s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::applyIncFull(Eigen::VectorXd&)[m[K’:
+[8.221s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:696:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kspline_local[m[K’ was not declared in this scope; did you mean ‘[01m[Kspline_local_[m[K’?
+[8.221s]   696 |         size_t num_knots = [01;31m[Kspline_local[m[K.numKnots();
+[8.221s]       |                            [01;31m[K^~~~~~~~~~~~[m[K
+[8.221s]       |                            [32m[Kspline_local_[m[K
+[8.251s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:703:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kif_uwb_only[m[K’ was not declared in this scope; did you mean ‘[01m[Kif_uwb_only_[m[K’?
+[8.251s]   703 |         if (![01;31m[Kif_uwb_only[m[K) {
+[8.251s]       |              [01;31m[K^~~~~~~~~~~[m[K
+[8.251s]       |              [32m[Kif_uwb_only_[m[K
+[8.261s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:705:91:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kbias_block_offset_[m[K’?
+[8.261s]   705 |                 Eigen::Matrix<double, 6, 1> inc = inc_full.segment<Linearizer::BIAS_SIZE>([01;31m[Kbias_block_offset[m[K + Linearizer::BIAS_SIZE * i);
+[8.261s]       |                                                                                           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[8.261s]       |                                                                                           [32m[Kbias_block_offset_[m[K
+[8.269s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:709:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[8.269s]   709 |             if ([01;31m[Kparam[m[K.if_opt_g) {
+[8.269s]       |                 [01;31m[K^~~~~[m[K
+[8.269s]       |                 [32m[Kparam_[m[K
+[8.280s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:710:75:[m[K [01;31m[Kerror: [m[K‘[01m[Kgravity_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kgravity_block_offset_[m[K’?
+[8.280s]   710 |                 Eigen::VectorXd dg = inc_full.segment<Linearizer::G_SIZE>([01;31m[Kgravity_block_offset[m[K);
+[8.280s]       |                                                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[8.280s]       |                                                                           [32m[Kgravity_block_offset_[m[K
+[8.288s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:711:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[8.288s]   711 |                 Eigen::Vector3d g0 = ([01;31m[Kcalib_param[m[K.gravity + Sphere::TangentBasis(calib_param.gravity) * dg).normalized() * 9.81;
+[8.288s]       |                                       [01;31m[K^~~~~~~~~~~[m[K
+[8.288s]       |                                       [32m[Kcalib_param_[m[K
+[8.295s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:716:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kparam[m[K’ was not declared in this scope; did you mean ‘[01m[Kparam_[m[K’?
+[8.295s]   716 |         if ([01;31m[Kparam[m[K.if_opt_transform) {
+[8.295s]       |             [01;31m[K^~~~~[m[K
+[8.295s]       |             [32m[Kparam_[m[K
+[8.302s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:717:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcalib_param[m[K’ was not declared in this scope; did you mean ‘[01m[Kcalib_param_[m[K’?
+[8.302s]   717 |             [01;31m[Kcalib_param[m[K.t_nav_uwb += inc_full.segment<Linearizer::OFFSET_SIZE>(gravity_block_offset + Linearizer::TRANS_OFFSET);
+[8.302s]       |             [01;31m[K^~~~~~~~~~~[m[K
+[8.302s]       |             [32m[Kcalib_param_[m[K
+[8.311s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:717:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kgravity_block_offset[m[K’ was not declared in this scope; did you mean ‘[01m[Kgravity_block_offset_[m[K’?
+[8.311s]   717 |             calib_param.t_nav_uwb += inc_full.segment<Linearizer::OFFSET_SIZE>([01;31m[Kgravity_block_offset[m[K + Linearizer::TRANS_OFFSET);
+[8.311s]       |                                                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[8.311s]       |                                                                                [32m[Kgravity_block_offset_[m[K
+[21.771s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kbool SplineFusion::initialization()[m[K’:
+[21.771s] [01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:314:21:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[21.772s]   314 |             int64_t [01;35m[Kmin_time[m[K = 1e18; // 初始化最小时间
+[21.772s]       |                     [01;35m[K^~~~~~~~[m[K
+[21.894s] gmake[2]: *** [CMakeFiles/SplineFusion.dir/build.make:76: CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o] Error 1
+[21.895s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/SplineFusion.dir/all] Error 2
+[21.895s] gmake: *** [Makefile:146: all] Error 2
+[21.897s] Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise' returned '2': AMENT_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise -- -j20 -l20

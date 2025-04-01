@@ -1,0 +1,5 @@
+source;share/sfuise/local_setup.bash
+source;share/sfuise/local_setup.dsv
+source;share/sfuise/local_setup.ps1
+source;share/sfuise/local_setup.sh
+source;share/sfuise/local_setup.zsh

@@ -1,0 +1,53 @@
+[0.013s] Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/cf_msgs -DCMAKE_INSTALL_PREFIX=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs
+[0.029s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.199s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.285s] -- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)
+[0.319s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.323s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.332s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.346s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.365s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.403s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.688s] [31mCMake Error at /opt/ros/humble/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:59 (message):
+[0.689s]   execute_process(/usr/bin/python3 -m rosidl_adapter --package-name cf_msgs
+[0.689s]   --arguments-file
+[0.689s]   /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs/rosidl_adapter__arguments__cf_msgs.json
+[0.689s]   --output-dir
+[0.689s]   /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs/rosidl_adapter/cf_msgs
+[0.689s]   --output-file
+[0.689s]   /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs/rosidl_adapter/cf_msgs.idls)
+[0.689s]   returned error code 1:
+[0.689s] 
+[0.690s]   Error processing 'int32 idA' of 'cf_msgs/Tdoa': ''idA' is an invalid field
+[0.690s]   name.  It should have the pattern '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$''
+[0.690s] 
+[0.690s]   Traceback (most recent call last):
+[0.690s] 
+[0.690s]     File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[0.690s]       return _run_code(code, main_globals, None,
+[0.690s]     File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+[0.690s]       exec(code, run_globals)
+[0.691s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.691s]       sys.exit(main())
+[0.691s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/main.py", line 53, in main
+[0.691s]       abs_idl_file = convert_to_idl(
+[0.691s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/__init__.py", line 19, in convert_to_idl
+[0.691s]       return convert_msg_to_idl(
+[0.691s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/msg/__init__.py", line 28, in convert_msg_to_idl
+[0.691s]       msg = parse_message_string(package_name, input_file.stem, content)
+[0.691s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 519, in parse_message_string
+[0.692s]       fields.append(Field(
+[0.692s]     File "/opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_adapter/parser.py", line 354, in __init__
+[0.692s]       raise NameError(
+[0.692s] 
+[0.692s]   NameError: 'idA' is an invalid field name.  It should have the pattern
+[0.692s]   '^(?!.*__)(?!.*_$)[a-z][a-z0-9_]*$'
+[0.692s] 
+[0.692s] Call Stack (most recent call first):
+[0.692s]   /opt/ros/humble/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.693s]   CMakeLists.txt:29 (rosidl_generate_interfaces)
+[0.693s] 
+[0.693s] [0m
+[0.693s] -- Configuring incomplete, errors occurred!
+[0.693s] See also "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs/CMakeFiles/CMakeOutput.log".
+[0.698s] Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs' returned '1': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/cf_msgs -DCMAKE_INSTALL_PREFIX=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs
