@@ -16,8 +16,12 @@ class QrcodePosePublisher(Node):
         super().__init__('qr_code_pose_publisher')
 
         # 创建发布器
-        self.pose_publisher = self.create_publisher(PoseStamped, '/qr_code_pose', 10)
-
+        # 预定义命名空间列表
+        self.number_robots=6
+        self.namespaces = [f'robot_{i}' for i in range(self.number_robots)]
+        self.publishers = {
+            ns: self.create_publisher(PoseStamped, f'{ns}/current_pose', 10) for ns in self.namespaces
+        }
 
         # 定时器：周期性地发布图像和位置信息
         self.timer = self.create_timer(0.1, self.publish_pose)  # 每 100ms 发布一次
@@ -26,7 +30,10 @@ class QrcodePosePublisher(Node):
         self.pose=(0,0)
         # 二维码编码内容
         self.decode=None
-
+        # 6 个二维码的信息
+        self.qr_codes = {
+            f'robot_{i}': {'pose': (0, 0), 'decode': None} for i in range(self.number_robots)
+        }
 
         self.get_logger().info("Qr code pose publisher node has been started.")
 
@@ -105,10 +112,7 @@ class QrcodePosePublisher(Node):
                         f"Published pose: x={pose_msg.pose.position.x}, y={pose_msg.pose.position.y}, z={pose_msg.pose.position.z}"
                     )
 
-            # cv2.imshow('QR Code Detection', cv_img)  # 显示图像
-            # cv2.imwrite('output_image.png', cv_img)  # 保存最后的图片
-            # cv2.waitKey(0)
-            # cv2.destroyAllWindows()
+
 
         except Exception as exc:
             print('Error: %s' % exc)  # 错误日志

@@ -82,19 +82,19 @@ public:
         // 订阅 Ground Truth 数据
         std::string gt_type = this->declare_parameter<std::string>("topic_ground_truth", "/vive/transform/tracker_1_ref");
         if (gt_type == "/vive/transform/tracker_1_ref") {
-            sub_gt = this->create_subscription<geometry_msgs::msg::PoseStamped>(
+            sub_gt = this->create_subscription<geometry_msgs::msg::TransformStamped>(
                 gt_type, 1000, std::bind(&EstimationInterface::getGtFromISASCallback, this, std::placeholders::_1));
         } else if (gt_type == "/pose_data") {
-            sub_gt = this->create_subscription<geometry_msgs::msg::PoseStamped>(
+            sub_gt = this->create_subscription<geometry_msgs::msg::PoseWithCovarianceStamped>(
                 gt_type, 1000, std::bind(&EstimationInterface::getGtFromUTILCallback, this, std::placeholders::_1));
         }
 
         // 其他订阅和发布
         int control_point_fps = this->declare_parameter<int>("control_point_fps", 100);// 读取控制点帧率
         dt_ns = 1e9 / control_point_fps;
-        sub_calib = this->create_subscription<std_msgs::msg::Bool>(
+        sub_calib = this->create_subscription<sfuise_msgs::msg::Calib>(
             "/SplineFusion/sys_calib", 100, std::bind(&EstimationInterface::getCalibCallback, this, std::placeholders::_1));// 订阅系统标定数据
-        sub_est = this->create_subscription<nav_msgs::msg::Path>(
+        sub_est = this->create_subscription<sfuise_msgs::msg::Estimate>(
             "/SplineFusion/est_window", 100, std::bind(&EstimationInterface::getEstCallback, this, std::placeholders::_1));// 订阅估计窗口数据
 
         pub_opt_old = this->create_publisher<nav_msgs::msg::Path>("bspline_optimization_old", 1000);// 发布旧的B样条优化路径
