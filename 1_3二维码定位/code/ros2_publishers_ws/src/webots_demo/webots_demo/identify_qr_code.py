@@ -15,12 +15,18 @@ class QrcodePosePublisher(Node):
     def __init__(self):
         super().__init__('qr_code_pose_publisher')
 
-        # 创建发布器
-        self.number_robots=6
-        self.namespaces = [f'robot_{i}' for i in range(self.number_robots)]
-        self.publishers = {
-            ns: self.create_publisher(PoseStamped, f'{ns}/current_pose', 10) for ns in self.namespaces
-        }
+        # 定义机器人数量
+        self.number_robots = 6
+        
+        # 创建一个字典来存储每个发布器
+        self.publishers_dict = {}
+        
+        # 为每个机器人创建一个发布器
+        for i in range(self.number_robots):
+            namespace = f'robot_{i}'
+            topic_name = f'{namespace}/current_pose'  # 定义每个机器人的话题名
+            self.publishers_dict[namespace] = self.create_publisher(PoseStamped, topic_name, 10)
+
 
         # 定时器：周期性地发布图像和位置信息
         self.timer = self.create_timer(0.1, self.publish_pose)  # 每 100ms 发布一次
@@ -34,7 +40,7 @@ class QrcodePosePublisher(Node):
 
 
     def publish_pose(self):
-        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test.png'
+        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test6.png'
         try:
             pil_img = Image.open(image_path)  # 获取PIL图像
             cv_img = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)  # 转换为OpenCV格式
@@ -124,8 +130,8 @@ class QrcodePosePublisher(Node):
                             pose_msg.pose.orientation.z = 0.0
                             pose_msg.pose.orientation.w = 1.0  
 
-                            if namespace in self.publishers:
-                                self.publishers[namespace].publish(pose_msg)
+                            if namespace in self.publishers_dict:
+                                self.publishers_dict[namespace].publish(pose_msg)
                                 self.get_logger().info(f'Published pose to {topic_name}: {self.pose}')
                             else:
                                 self.get_logger().warn(f"没有找到 {namespace} 的发布者！")

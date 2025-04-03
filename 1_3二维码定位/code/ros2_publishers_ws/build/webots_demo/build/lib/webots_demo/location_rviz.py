@@ -21,7 +21,7 @@ class PathPublisher(Node):
         )
 
         self.path = Path()
-        self.path.header.frame_id = 'map'  # 可以选择其他坐标系，如 'odom'
+        self.path.header.frame_id = 'odom'
         self.location = None
      
     def location_callback(self,msg):

@@ -15,8 +15,17 @@ class QrcodePosePublisher(Node):
     def __init__(self):
         super().__init__('qr_code_pose_publisher')
 
-        # 创建发布器
-        self.pose_publisher = self.create_publisher(PoseStamped, '/qr_code_pose', 10)
+        # 定义机器人数量
+        self.number_robots = 6
+        
+        # 创建一个字典来存储每个发布器
+        self.publishers_dict = {}
+        
+        # 为每个机器人创建一个发布器
+        for i in range(self.number_robots):
+            namespace = f'robot_{i}'
+            topic_name = f'{namespace}/current_pose'  # 定义每个机器人的话题名
+            self.publishers_dict[namespace] = self.create_publisher(PoseStamped, topic_name, 10)
 
 
         # 定时器：周期性地发布图像和位置信息
@@ -27,12 +36,11 @@ class QrcodePosePublisher(Node):
         # 二维码编码内容
         self.decode=None
 
-
         self.get_logger().info("Qr code pose publisher node has been started.")
 
 
     def publish_pose(self):
-        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test.png'
+        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test6.png'
         try:
             pil_img = Image.open(image_path)  # 获取PIL图像
             cv_img = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)  # 转换为OpenCV格式
@@ -84,32 +92,55 @@ class QrcodePosePublisher(Node):
                     cv2.putText(cv_img, '(0,0)', (int(centerpoint[0] + 10), int(centerpoint[1] - 10)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 2)
                     print(f'{count}二维码位置: {match_cp}, 编码: {match.data.decode("utf-8")}')  # 同时打印出结果
 
+                    
+                    # # 创建并发布 PoseStamped 消息
+                    # pose_msg = PoseStamped()
+                    # pose_msg.header.stamp = self.get_clock().now().to_msg()
+                    # pose_msg.header.frame_id = 'odom'
+                    # pose_msg.pose.position.x = self.pose[0]
+                    # pose_msg.pose.position.y = self.pose[1]
+                    # pose_msg.pose.position.z = 0.0
+                    # pose_msg.pose.orientation.x = 0.0
+                    # pose_msg.pose.orientation.y = 0.0
+                    # pose_msg.pose.orientation.z = 0.0
+                    # pose_msg.pose.orientation.w = 0.0
+
+                    # self.pose_publisher.publish(pose_msg)
+
                     # 参数传递
                     self.pose = match_cp
                     self.decode = match.data.decode("utf-8")
-                    # 创建并发布 PoseStamped 消息
-                    pose_msg = PoseStamped()
-                    pose_msg.header.stamp = self.get_clock().now().to_msg()
-                    pose_msg.header.frame_id = 'odom'
-                    pose_msg.pose.position.x = self.pose[0]
-                    pose_msg.pose.position.y = self.pose[1]
-                    pose_msg.pose.position.z = 0.0
-                    pose_msg.pose.orientation.x = 0.0
-                    pose_msg.pose.orientation.y = 0.0
-                    pose_msg.pose.orientation.z = 0.0
-                    pose_msg.pose.orientation.w = 0.0
 
-                    self.pose_publisher.publish(pose_msg)
+                    # 确保二维码内容是 0-self.number_robots-1 的整数
+                    try:
+                        robot_index = int(self.decode)
+                        if 0 <= robot_index < self.number_robots:
+                            namespace = f'robot_{robot_index}'  # 使其匹配 robot_0 - robot_5
+                            topic_name = f'{namespace}/current_pose'
 
-                    self.get_logger().info(
-                        f"Published pose: x={pose_msg.pose.position.x}, y={pose_msg.pose.position.y}, z={pose_msg.pose.position.z}"
-                    )
+                            # 创建并发布 PoseStamped 消息
+                            pose_msg = PoseStamped()
+                            pose_msg.header.stamp = self.get_clock().now().to_msg()
+                            pose_msg.header.frame_id = 'odom'
+                            pose_msg.pose.position.x = self.pose[0]
+                            pose_msg.pose.position.y = self.pose[1]
+                            pose_msg.pose.position.z = 0.0
+                            pose_msg.pose.orientation.x = 0.0
+                            pose_msg.pose.orientation.y = 0.0
+                            pose_msg.pose.orientation.z = 0.0
+                            pose_msg.pose.orientation.w = 1.0  
 
-            # cv2.imshow('QR Code Detection', cv_img)  # 显示图像
-            # cv2.imwrite('output_image.png', cv_img)  # 保存最后的图片
-            # cv2.waitKey(0)
-            # cv2.destroyAllWindows()
-
+                            if namespace in self.publishers_dict:
+                                self.publishers_dict[namespace].publish(pose_msg)
+                                self.get_logger().info(f'Published pose to {topic_name}: {self.pose}')
+                            else:
+                                self.get_logger().warn(f"没有找到 {namespace} 的发布者！")
+                        else:
+                            self.get_logger().warn(f"二维码内容无效: {self.decode}")
+                
+                    except ValueError:
+                        self.get_logger().warn(f"无效的二维码内容: {self.decode}")
+                
         except Exception as exc:
             print('Error: %s' % exc)  # 错误日志
 
