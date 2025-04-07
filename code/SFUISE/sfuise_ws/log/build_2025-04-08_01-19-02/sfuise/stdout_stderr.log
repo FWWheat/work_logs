@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target EstimationInterface[0m
+[35m[1mConsolidate compiler generated dependencies of target SplineFusion[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o[0m
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:[m[K In member function ‘[01m[Kvoid EstimationInterface::getToaISASCallback(isas_msgs::msg::RTLSStick_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:309:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::PublisherBase[m[K’ {aka ‘[01m[Kclass rclcpp::PublisherBase[m[K’} has no member named ‘[01m[Kpublish[m[K’
+  309 |             pub_uwb->[01;31m[Kpublish[m[K(*uwb_msg); // 发布UWB数据
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:[m[K In member function ‘[01m[Kvoid EstimationInterface::getTdoaUTILCallback(cf_msgs::msg::Tdoa_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/EstimationInterface.cpp:322:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::PublisherBase[m[K’ {aka ‘[01m[Kclass rclcpp::PublisherBase[m[K’} has no member named ‘[01m[Kpublish[m[K’
+  322 |             if (pub_uwb) pub_uwb->[01;31m[Kpublish[m[K(*msg); // 发布TDOA数据
+      |                                   [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/EstimationInterface.dir/build.make:76: CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/EstimationInterface.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 75%] [32m[1mLinking CXX executable SplineFusion[0m
+/usr/bin/ld: CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o: in function `Eigen::CholmodBase<Eigen::SparseMatrix<double, 0, int>, 1, Eigen::CholmodSupernodalLLT<Eigen::SparseMatrix<double, 0, int>, 1> >::~CholmodBase()':
+SplineFusion.cpp:(.text._ZN5Eigen11CholmodBaseINS_12SparseMatrixIdLi0EiEELi1ENS_20CholmodSupernodalLLTIS2_Li1EEEED2Ev[_ZN5Eigen11CholmodBaseINS_12SparseMatrixIdLi0EiEELi1ENS_20CholmodSupernodalLLTIS2_Li1EEEED5Ev]+0x1e): undefined reference to `cholmod_free_factor'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN5Eigen11CholmodBaseINS_12SparseMatrixIdLi0EiEELi1ENS_20CholmodSupernodalLLTIS2_Li1EEEED2Ev[_ZN5Eigen11CholmodBaseINS_12SparseMatrixIdLi0EiEELi1ENS_20CholmodSupernodalLLTIS2_Li1EEEED5Ev]+0x26): undefined reference to `cholmod_finish'
+/usr/bin/ld: CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o: in function `SplineFusion::optimize(int)':
+SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0x7d8): undefined reference to `cholmod_start'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0x80f): undefined reference to `cholmod_free_factor'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0x864): undefined reference to `cholmod_analyze'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0x8dc): undefined reference to `cholmod_factorize_p'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0x9ea): undefined reference to `cholmod_solve'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0xa49): undefined reference to `cholmod_free_dense'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0xa69): undefined reference to `cholmod_free_factor'
+/usr/bin/ld: SplineFusion.cpp:(.text._ZN12SplineFusion8optimizeEi[_ZN12SplineFusion8optimizeEi]+0xa71): undefined reference to `cholmod_finish'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/SplineFusion.dir/build.make:215: SplineFusion] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/SplineFusion.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -21,7 +21,7 @@
 
 class SplineFusion : public rclcpp::Node {
 public:
-    SplineFusion(std::shared_ptr<rclcpp::Node> node)  // 构造函数，接收ROS 2节点句柄
+    SplineFusion(std::shared_ptr<rclcpp::Node> node): Node("SplineFusion")  // 构造函数，接收ROS 2节点句柄
     {
         if_anchor_ini = false;  // 初始化锚点标志
         average_runtime = 0;  // 初始化平均运行时间
@@ -65,13 +65,13 @@ public:
     void run()
     {
         static int num_window = 0;  // 窗口计数
-        rclcpp::Time t_window_start = node->get_clock()->now();  // 获取当前时间
+        rclcpp::Time t_window_start = this->get_clock()->now();  // 获取当前时间
 
         if (initialization()) {  // 如果初始化成功
             displayControlPoints();  // 显示控制点
             optimization();  // 执行优化
 
-            double t_consum = (node->get_clock()->now() - t_window_start).seconds();  // 计算消耗时间
+            double t_consum = (this->get_clock()->now() - t_window_start).seconds();  // 计算消耗时间
             average_runtime = (t_consum + double(num_window) * average_runtime) / double(num_window + 1);  // 更新平均运行时间
             num_window++;  // 增加窗口计数
 
@@ -92,7 +92,7 @@ public:
                 offset_msg.z = calib_param.offset.z();
                 calib_msg.t_tag_body_set = offset_msg;  // 设置标签体偏移
 
-                pub_calib_->publish(calib_msg);  // 发布校准消息
+                pub_calib->publish(calib_msg);  // 发布校准消息
             }
 
             if (spline_local.numKnots() >= (size_t)window_size) {  // 如果样条节点数达到窗口大小
@@ -110,7 +110,7 @@ public:
             est_msg.if_full_window.data = (solver_flag != INITIAL);  // 设置是否为全窗口
             est_msg.runtime.data = average_runtime;  // 设置运行时间
 
-            pub_est_->publish(est_msg);  // 发布估计消息
+            pub_est->publish(est_msg);  // 发布估计消息
             displayControlPoints();  // 显示控制点
 
             if (solver_flag == FULLSIZE) {
@@ -127,7 +127,7 @@ private:
     // ROS 2订阅者和发布者
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr sub_imu;  // IMU订阅者
     rclcpp::Subscription<isas_msgs::msg::Anchorlist>::SharedPtr sub_anchor;  // 锚点订阅者
-    rclcpp::Subscription<cf_msgs::msg::Tdoa>::SharedPtr sub_uwb;  // UWB订阅者
+    rclcpp::SubscriptionBase::SharedPtr sub_uwb;  // UWB订阅者
     rclcpp::Publisher<sensor_msgs::msg::PointCloud>::SharedPtr pub_knots_active;  // 活动控制点发布者
     rclcpp::Publisher<sensor_msgs::msg::PointCloud>::SharedPtr pub_knots_inactive;  // 非活动控制点发布者
     rclcpp::Publisher<sfuise_msgs::msg::Calib>::SharedPtr pub_calib;  // 校准发布者
@@ -161,7 +161,7 @@ private:
     int64_t next_knot_time_ns;  // 下一个节点时间（纳秒）
 
     // 求解器状态枚举
-    enum class SolverFlag { INITIAL, FULLSIZE };
+    enum SolverFlag { INITIAL, FULLSIZE };
     SolverFlag solver_flag;  // 求解器状态
     SplineState spline_local;  // 本地样条状态
 
@@ -326,10 +326,10 @@ private:
                     } else {
                         last_imu_t_ns = imu_window.back().time_ns; // 获取IMU窗口的最后时间
                     }
-                    integration(next_knot_TimeNs, q_ini, pos_ini); // 执行积分
+                    integration(next_knot_time_ns, q_ini, pos_ini); // 执行积分
                 } else {
                     if (if_tdoa) { // 如果使用TDOA
-                        pos_ini = tdoaMultilateration(next_knot_TimeNs * NS_TO_S); // 执行TDOA多边定位
+                        pos_ini = tdoaMultilateration(next_knot_time_ns * NS_TO_S); // 执行TDOA多边定位
                         q_ini  = Eigen::Quaterniond::Identity(); // 设置初始四元数为单位四元数
                     } else {
                         RCLCPP_ERROR(this->get_logger(), "UWB-only tracking only supported for TDOA data!"); // 输出错误信息
@@ -338,7 +338,7 @@ private:
                 }
                 if (q_ini_backup.dot(q_ini) < 0) q_ini = Eigen::Quaterniond(-q_ini.w(), -q_ini.x(), -q_ini.y(), -q_ini.z()); // 确保四元数方向一致
                 spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
-                next_knot_TimeNs += dt_ns; // 更新下一个节点时间
+                next_knot_time_ns += dt_ns; // 更新下一个节点时间
                 return true; // 返回成功
             } else {
                 return false; // 返回失败
@@ -348,7 +348,7 @@ private:
                 param_set = setParameters(); // 设置参数
                 std_msgs::msg::Int64 start_time; // 创建启动时间消息
                 start_time.data = bag_start_time; // 设置启动时间
-                pub_start_time_->publish(start_time); // 发布启动时间
+                pub_start_time->publish(start_time); // 发布启动时间
             }
             if (param_set && if_anchor_ini) { // 如果参数已设置且锚点已初始化
                 spline_local.init(dt_ns, 0, bag_start_time); // 初始化样条
@@ -371,7 +371,7 @@ private:
                     Eigen::Vector3d pos_ini = Eigen::Vector3d::Zero(); // 创建零位置
                     Eigen::Matrix<double, 6, 1> bias_ini = Eigen::Matrix<double, 6, 1>::Zero(); // 创建零偏差
                     spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
-                    next_knot_TimeNs += dt_ns; // 更新下一个节点时间
+                    next_knot_time_ns += dt_ns; // 更新下一个节点时间
                 }
             }
             return false; // 返回失败
@@ -381,6 +381,7 @@ private:
     Eigen::Vector3d tdoaMultilateration(double t_s) const // TDOA多边定位函数
     {
         static Eigen::Vector3d last_knot(0, 0, 0); // 上一个节点位置
+        static bool set_origin = true; // 原点设置标志
         int num_data = 7; // 数据数量
         size_t idx[num_data]; // 索引数组
         findClosestNWithOrderedID(t_s, num_data, idx); // 查找最近的N个数据
@@ -496,7 +497,7 @@ private:
                 bag_start_time += tdoa_buff.front().time_ns; // 更新行李开始时间
             }
         }
-        next_knot_TimeNs = bag_start_time; // 设置下一个节点时间
+        next_knot_time_ns = bag_start_time; // 设置下一个节点时间
         return true; // 返回成功
     }
 

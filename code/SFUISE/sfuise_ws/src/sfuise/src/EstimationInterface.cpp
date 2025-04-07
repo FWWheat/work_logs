@@ -51,13 +51,13 @@ public:
         // 订阅 UWB 数据
         std::string uwb_type = this->declare_parameter<std::string>("topic_uwb", "/tdoa_data");// 读取UWB话题类型
         if (uwb_type == "/tdoa_data") {
+            pub_uwb = this->create_publisher<cf_msgs::msg::Tdoa>("tdoa_ds", 400);
             sub_uwb = this->create_subscription<cf_msgs::msg::Tdoa>(
                 uwb_type, 400, std::bind(&EstimationInterface::getTdoaUTILCallback, this, std::placeholders::_1));
-            pub_uwb = this->create_publisher<cf_msgs::msg::Tdoa>("tdoa_ds", 400);
         } else if (uwb_type == "/rtls_flares") {
+            pub_uwb = this->create_publisher<isas_msgs::msg::RTLSStick>("toa_ds", 400);
             sub_uwb = this->create_subscription<isas_msgs::msg::RTLSStick>(
                 uwb_type, 400, std::bind(&EstimationInterface::getToaISASCallback, this, std::placeholders::_1));
-            pub_uwb = this->create_publisher<isas_msgs::msg::RTLSStick>("toa_ds", 400);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Wrong UWB format!");
         }
@@ -132,18 +132,18 @@ private:
 
     // ROS 2 订阅者
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr sub_imu; 
-    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_uwb;
-    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_anchor; 
-    rclcpp::Subscription<geometry_msgs::msg::PoseStamped>::SharedPtr sub_gt; 
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_calib; 
-    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_est; 
-    rclcpp::Subscription<std_msgs::msg::Bool>::SharedPtr sub_start; 
+    rclcpp::SubscriptionBase::SharedPtr sub_uwb;
+    rclcpp::Subscription<isas_msgs::msg::Anchorlist>::SharedPtr sub_anchor; 
+    rclcpp::SubscriptionBase::SharedPtr sub_gt; 
+    rclcpp::Subscription<sfuise_msgs::msg::Calib>::SharedPtr sub_calib; 
+    rclcpp::Subscription<sfuise_msgs::msg::Estimate>::SharedPtr sub_est; 
+    rclcpp::Subscription<std_msgs::msg::Int64>::SharedPtr sub_start; 
 
     // ROS 2 发布者
     rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr pub_imu; 
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_uwb;
+    rclcpp::PublisherBase::SharedPtr pub_uwb;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud>::SharedPtr anchor_pos_pub; 
-    rclcpp::Publisher<std_msgs::msg::String>::SharedPtr anchor_pub; 
+    rclcpp::Publisher<isas_msgs::msg::Anchorlist>::SharedPtr anchor_pub; 
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pub_opt_old; 
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pub_opt_window; 
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_opt_pose; 
@@ -305,7 +305,13 @@ private:
             for (const auto& rg : uwb_msg->ranges) { 
                 if (rg.ra == 0) continue; // 过滤无效数据
             }
-            pub_uwb->publish(*uwb_msg); // 发布UWB数据
+            // 动态转换为具体类型指针
+            auto pub_rtls = dynamic_cast<rclcpp::Publisher<isas_msgs::msg::RTLSStick>*>(pub_uwb.get());
+            if (pub_rtls) {
+                pub_rtls->publish(*uwb_msg);
+            } else {
+                RCLCPP_ERROR(get_logger(), "pub_uwb is not RTLSStick publisher!");
+            }
             last_uwb = t_ns; // 更新时间戳
         }
     }
@@ -318,7 +324,12 @@ private:
         if (sampleData(t_ns, last_uwb, uwb_sample_coeff, uwb_frequency)) { // 采样检查
             int idA = msg->id_a; // 获取ID A
             int idB = msg->id_b; // 获取ID B
-            if (pub_uwb) pub_uwb->publish(*msg); // 发布TDOA数据
+            auto pub_tdoa = dynamic_cast<rclcpp::Publisher<cf_msgs::msg::Tdoa>*>(pub_uwb.get());
+            if (pub_tdoa) {
+                pub_tdoa->publish(*msg);
+            } else {
+                RCLCPP_ERROR(get_logger(), "pub_uwb is not TDOA publisher!");
+            }
             last_uwb = t_ns; // 更新时间戳
         }
     }

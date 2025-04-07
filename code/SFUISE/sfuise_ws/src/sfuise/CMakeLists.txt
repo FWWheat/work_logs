@@ -68,4 +68,15 @@ install(TARGETS
   SplineFusion
   DESTINATION lib/${PROJECT_NAME})
 
+# 查找 SuiteSparse 库
+find_package(SuiteSparse REQUIRED COMPONENTS cholmod)
+
+# 添加头文件路径
+include_directories(${SUITESPARSE_INCLUDE_DIRS})
+
+# 链接到目标（如 SplineFusion）
+target_link_libraries(SplineFusion
+  ${SUITESPARSE_LIBRARIES}
+)
+
 ament_package()
