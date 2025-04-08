@@ -131,4 +131,8 @@
 - 数据集
 
 
-文心快码
+
+## ros2数据集获取
+- 参考：https://gitlab.com/ternaris/rosbags
+- 将.bag转换为.db3：`rosbags-convert --src ros1.bag --dst ros2bag/`
+- 播放：`ros2 bag play ros2-walk1`

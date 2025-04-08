@@ -5,7 +5,7 @@ set(sfuise_BUILD_DEPENDS "rclcpp" "std_msgs" "nav_msgs" "sensor_msgs" "geometry_
 set(sfuise_BUILDTOOL_DEPENDS "ament_cmake" "rosidl_default_generators")
 set(sfuise_BUILD_EXPORT_DEPENDS "rclcpp" "std_msgs" "nav_msgs" "sensor_msgs" "geometry_msgs" "cf_msgs" "isas_msgs" "sfuise_msgs" "eigen" "suitesparse")
 set(sfuise_BUILDTOOL_EXPORT_DEPENDS )
-set(sfuise_EXEC_DEPENDS "rosidl_default_runtime" "rclcpp" "std_msgs" "nav_msgs" "sensor_msgs" "geometry_msgs" "cf_msgs" "isas_msgs" "sfuise_msgs" "eigen" "suitesparse")
+set(sfuise_EXEC_DEPENDS "ros2launch" "rosidl_default_runtime" "rclcpp" "std_msgs" "nav_msgs" "sensor_msgs" "geometry_msgs" "cf_msgs" "isas_msgs" "sfuise_msgs" "eigen" "suitesparse")
 set(sfuise_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(sfuise_GROUP_DEPENDS )
 set(sfuise_MEMBER_OF_GROUPS "rosidl_interface_packages")

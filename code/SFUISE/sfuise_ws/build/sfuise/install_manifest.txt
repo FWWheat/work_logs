@@ -1,5 +1,9 @@
 /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/sfuise/EstimationInterface
 /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/sfuise/SplineFusion
+/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk1.launch
+/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk3.launch
+/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk2.launch
+/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_util.launch
 /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/ament_index/resource_index/package_run_dependencies/sfuise
 /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/ament_index/resource_index/parent_prefix_path/sfuise
 /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/environment/ament_prefix_path.sh

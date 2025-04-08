@@ -21,44 +21,44 @@
 
 class SplineFusion : public rclcpp::Node {
 public:
-    SplineFusion(std::shared_ptr<rclcpp::Node> node): Node("SplineFusion")  // 构造函数，接收ROS 2节点句柄
+    SplineFusion(): Node("SplineFusion")  // 构造函数，接收ROS 2节点句柄
     {
         if_anchor_ini = false;  // 初始化锚点标志
         average_runtime = 0;  // 初始化平均运行时间
         window_count = 0;  // 初始化窗口计数
         solver_flag = INITIAL;  // 初始化求解器标志
-        readParameters(node);  // 读取参数
+        readParameters();  // 读取参数
 
         // 订阅IMU和锚点数据
-        sub_imu = node->create_subscription<sensor_msgs::msg::Imu>(
+        sub_imu = this->create_subscription<sensor_msgs::msg::Imu>(
             "/EstimationInterface/imu_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getImuCallback, this, std::placeholders::_1));
         
-        sub_anchor = node->create_subscription<isas_msgs::msg::Anchorlist>(
+        sub_anchor = this->create_subscription<isas_msgs::msg::Anchorlist>(
             "/EstimationInterface/anchor_list", rclcpp::QoS(1000), std::bind(&SplineFusion::getAnchorCallback, this, std::placeholders::_1));
         
         // 根据是否使用TDOA选择订阅的主题
         if (if_tdoa) {
-            sub_uwb = node->create_subscription<cf_msgs::msg::Tdoa>(
+            sub_uwb = this->create_subscription<cf_msgs::msg::Tdoa>(
                 "/EstimationInterface/tdoa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getTdoaCallback, this, std::placeholders::_1));
         } else {
-            sub_uwb = node->create_subscription<isas_msgs::msg::RTLSStick>(
+            sub_uwb = this->create_subscription<isas_msgs::msg::RTLSStick>(
                 "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1));
         }
 
         // 创建发布者
-        pub_knots_active = node->create_publisher<sensor_msgs::msg::PointCloud>(
+        pub_knots_active = this->create_publisher<sensor_msgs::msg::PointCloud>(
             "active_control_points", rclcpp::QoS(1000));
         
-        pub_knots_inactive = node->create_publisher<sensor_msgs::msg::PointCloud>(
+        pub_knots_inactive = this->create_publisher<sensor_msgs::msg::PointCloud>(
             "inactive_control_points", rclcpp::QoS(1000));
         
-        pub_calib = node->create_publisher<sfuise_msgs::msg::Calib>(
+        pub_calib = this->create_publisher<sfuise_msgs::msg::Calib>(
             "sys_calib", rclcpp::QoS(100));
 
-        pub_est = node->create_publisher<sfuise_msgs::msg::Estimate>(
+        pub_est = this->create_publisher<sfuise_msgs::msg::Estimate>(
             "est_window", rclcpp::QoS(1000));
 
-        pub_start_time = node->create_publisher<std_msgs::msg::Int64>(
+        pub_start_time = this->create_publisher<std_msgs::msg::Int64>(
             "start_time", rclcpp::QoS(1000));
     }
 
@@ -176,63 +176,61 @@ private:
     double average_runtime;  // 平均运行时间
     std::vector<double> v_toa_offset;  // TOA偏移量
 
-    void readParameters(rclcpp::Node::SharedPtr node) // 读取参数函数
+    void readParameters() // 读取参数函数
     {
-        if (CommonUtils::readParam<double>(node, "imu_sample_coeff") == 0) { // 读取IMU采样系数
-            if_uwb_only = true; // 如果系数为0，则仅使用UWB
-        } else {
-            if_uwb_only = false; // 否则不只使用UWB
-        }
+        double imu_sample_coeff = this->declare_parameter("imu_sample_coeff", 1.0);
+        if_uwb_only = (imu_sample_coeff == 0);
 
         param.if_opt_g = true; // 设置优化重力标志
         param.if_opt_transform = true; // 设置优化变换标志
-        param.w_uwb = CommonUtils::readParam<double>(node, "w_uwb"); // 读取UWB权重
-        max_iter = CommonUtils::readParam<int>(node, "max_iter"); // 读取最大迭代次数
-        dt_ns = 1e9 / CommonUtils::readParam<int>(node, "control_point_fps"); // 计算时间间隔
-        if_tdoa = CommonUtils::readParam<bool>(node, "if_tdoa"); // 读取是否使用TDOA标志
-        bag_start_time = 0; // 初始化行李开始时间
-        n_window_calib = CommonUtils::readParam<int>(node, "n_window_calib"); // 读取校准窗口数
-        window_size = CommonUtils::readParam<int>(node, "window_size"); // 读取窗口大小
 
-        if (n_window_calib == 0) { // 如果校准窗口数为0
-            RCLCPP_ERROR(node->get_logger(), "n_window_calib cannot be set 0."); // 输出错误信息
-            rclcpp::shutdown(); // 退出程序
+        param.w_uwb = this->declare_parameter("w_uwb", 1.0);
+        max_iter = this->declare_parameter("max_iter", 10);
+        int control_point_fps = this->declare_parameter("control_point_fps", 30);
+        dt_ns = 1e9 / control_point_fps;
+
+        if_tdoa = this->declare_parameter("if_tdoa", false);
+        bag_start_time = 0;
+        n_window_calib = this->declare_parameter("n_window_calib", 1);
+        window_size = this->declare_parameter("window_size", 10);
+
+        if (n_window_calib == 0) {
+            RCLCPP_ERROR(this->get_logger(), "n_window_calib cannot be set 0.");
+            rclcpp::shutdown();
         } else {
-            param.q_nav_uwb_init.setIdentity(); // 初始化导航四元数
-            param.t_nav_uwb_init.setZero(); // 初始化导航平移
+            param.q_nav_uwb_init.setIdentity();
+            param.t_nav_uwb_init.setZero();
         }
-
         // 读取加速度和陀螺仪的方差倒数
-        std::vector<double> accel_var_inv = CommonUtils::readParam<std::vector<double>>(node, "accel_var_inv");
-        param.accel_var_inv << accel_var_inv.at(0), accel_var_inv.at(1), accel_var_inv.at(2);
+        std::vector<double> accel_var_inv = this->declare_parameter("accel_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        param.accel_var_inv << accel_var_inv[0], accel_var_inv[1], accel_var_inv[2];
 
-        std::vector<double> bias_accel_var_inv = CommonUtils::readParam<std::vector<double>>(node, "bias_accel_var_inv");
-        param.bias_accel_var_inv << bias_accel_var_inv.at(0), bias_accel_var_inv.at(1), bias_accel_var_inv.at(2);
+        std::vector<double> bias_accel_var_inv = this->declare_parameter("bias_accel_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        param.bias_accel_var_inv << bias_accel_var_inv[0], bias_accel_var_inv[1], bias_accel_var_inv[2];
 
-        param.w_acc = CommonUtils::readParam<double>(node, "w_accel"); // 读取加速度权重
-        param.w_bias_acc = CommonUtils::readParam<double>(node, "w_bias_accel"); // 读取加速度偏差权重
+        param.w_acc = this->declare_parameter("w_accel", 1.0);
+        param.w_bias_acc = this->declare_parameter("w_bias_accel", 1.0);
 
-        std::vector<double> gyro_var_inv = CommonUtils::readParam<std::vector<double>>(node, "gyro_var_inv");
-        param.gyro_var_inv << gyro_var_inv.at(0), gyro_var_inv.at(1), gyro_var_inv.at(2);
+        std::vector<double> gyro_var_inv = this->declare_parameter("gyro_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        param.gyro_var_inv << gyro_var_inv[0], gyro_var_inv[1], gyro_var_inv[2];
 
-        std::vector<double> bias_gyro_var_inv = CommonUtils::readParam<std::vector<double>>(node, "bias_gyro_var_inv");
-        param.bias_gyro_var_inv << bias_gyro_var_inv.at(0), bias_gyro_var_inv.at(1), bias_gyro_var_inv.at(2);
+        std::vector<double> bias_gyro_var_inv = this->declare_parameter("bias_gyro_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        param.bias_gyro_var_inv << bias_gyro_var_inv[0], bias_gyro_var_inv[1], bias_gyro_var_inv[2];
 
-        param.w_gyro = CommonUtils::readParam<double>(node, "w_gyro"); // 读取陀螺仪权重
-        param.w_bias_gyro = CommonUtils::readParam<double>(node, "w_bias_gyro"); // 读取陀螺仪偏差权重
+        param.w_gyro = this->declare_parameter("w_gyro", 1.0);
+        param.w_bias_gyro = this->declare_parameter("w_bias_gyro", 1.0);
 
-        param.if_reject_uwb = CommonUtils::readParam<bool>(node, "if_reject_uwb"); // 读取是否拒绝UWB标志
-        if (param.if_reject_uwb) { // 如果拒绝UWB标志为真
-            param.reject_uwb_thresh = CommonUtils::readParam<double>(node, "reject_uwb_thresh"); // 读取拒绝阈值
-            param.reject_uwb_window_width = CommonUtils::readParam<double>(node, "reject_uwb_window_width"); // 读取拒绝窗口宽度
+        param.if_reject_uwb = this->declare_parameter("if_reject_uwb", false);
+        if (param.if_reject_uwb) {
+            param.reject_uwb_thresh = this->declare_parameter("reject_uwb_thresh", 0.5);
+            param.reject_uwb_window_width = this->declare_parameter("reject_uwb_window_width", 0.5);
         }
 
-        std::vector<double> v_offset; // 偏移量向量
-        node->get_parameter("offset", v_offset); // 获取偏移量参数
-        calib_param.offset = Eigen::Vector3d(v_offset.at(0), v_offset.at(1), v_offset.at(2)); // 设置校准偏移
+        std::vector<double> v_offset = this->declare_parameter("offset", std::vector<double>{0.0, 0.0, 0.0});
+        calib_param.offset = Eigen::Vector3d(v_offset[0], v_offset[1], v_offset[2]);
 
-        if (!if_tdoa) { // 如果不使用TDOA
-            v_toa_offset = CommonUtils::readParam<std::vector<double>>(node, "toa_offset"); // 读取TOA偏移量
+        if (!if_tdoa) {
+            v_toa_offset = this->declare_parameter("toa_offset", std::vector<double>{0.0, 0.0, 0.0});
         }
     }
 
@@ -731,21 +729,16 @@ private:
 
 int main(int argc, char *argv[])  // 主函数
 {
-    rclcpp::init(argc, argv);  // 初始化ROS 2节点
-    RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "\033[1;32m---->\033[0m Starting SplineFusion.");  // 输出启动信息
-    
-    auto nh = rclcpp::Node::make_shared("sfuise");  // 创建ROS 2节点句柄
-    
-    SplineFusion estimator(nh);  // 创建样条融合对象
-    
-    rclcpp::Rate rate(1000);  // 设置循环频率
-    
-    while (rclcpp::ok()) {  // 当ROS 2正常运行时
-        rclcpp::spin_some(nh);  // 处理回调
-        estimator.run();  // 执行样条融合
-        rate.sleep();  // 睡眠以保持频率
+    rclcpp::init(argc, argv);
+    auto node = std::make_shared<SplineFusion>();
+    RCLCPP_INFO(node->get_logger(), "\033[1;32m---->\033[0m Starting SplineFusion.");
+
+    rclcpp::Rate rate(1000);
+    while (rclcpp::ok()) {
+        rclcpp::spin_some(node);
+        rate.sleep();
     }
-    
-    rclcpp::shutdown();  // 关闭ROS 2
-    return 0;  // 返回0，正常退出
+
+    rclcpp::shutdown();
+    return 0;
 }

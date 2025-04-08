@@ -24,7 +24,7 @@
   <depend>eigen</depend>          <!-- 通过rosdep映射到Eigen3 -->
   <depend>suitesparse</depend>    <!-- 通过rosdep或系统包管理安装 -->
 
-
+  <exec_depend>ros2launch</exec_depend>
 
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
   <exec_depend>rosidl_default_runtime</exec_depend>

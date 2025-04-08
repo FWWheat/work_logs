@@ -78,5 +78,10 @@ include_directories(${SUITESPARSE_INCLUDE_DIRS})
 target_link_libraries(SplineFusion
   ${SUITESPARSE_LIBRARIES}
 )
+# Install launch files.
+install(DIRECTORY
+  launch
+  DESTINATION share/${PROJECT_NAME}/
+)
 
 ament_package()

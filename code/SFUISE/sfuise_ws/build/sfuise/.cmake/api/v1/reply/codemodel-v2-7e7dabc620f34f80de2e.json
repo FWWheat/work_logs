@@ -1,0 +1,88 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-b75e79d5bff905d1adec.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sfuise",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "EstimationInterface::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-EstimationInterface-1a7ea5c5af8b20388879.json",
+					"name" : "EstimationInterface",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SplineFusion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SplineFusion-a1fbbcce9a2c0dcd7bf2.json",
+					"name" : "SplineFusion",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sfuise_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sfuise_uninstall-14b3993ffd375bfcc0a3.json",
+					"name" : "sfuise_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-bc0612fc934ba1d059dd.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise",
+		"source" : "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

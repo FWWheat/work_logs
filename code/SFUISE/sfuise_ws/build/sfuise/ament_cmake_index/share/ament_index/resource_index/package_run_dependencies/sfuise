@@ -1,1 +1,1 @@
-rclcpp;std_msgs;nav_msgs;sensor_msgs;geometry_msgs;cf_msgs;isas_msgs;sfuise_msgs;eigen;suitesparse;rosidl_default_runtime;ament_lint_auto;ament_lint_common
+rclcpp;std_msgs;nav_msgs;sensor_msgs;geometry_msgs;cf_msgs;isas_msgs;sfuise_msgs;eigen;suitesparse;ros2launch;rosidl_default_runtime;ament_lint_auto;ament_lint_common
