@@ -1,0 +1,413 @@
+[0.140s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.141s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x71004a304e50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x71004a304940>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x71004a304940>>)
+[0.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.335s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.336s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.336s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.336s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extension 'ignore'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extension 'ignore_ament_install'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extensions ['colcon_pkg']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extension 'colcon_pkg'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extensions ['colcon_meta']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extension 'colcon_meta'
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extensions ['ros']
+[0.352s] Level 1:colcon.colcon_core.package_identification:_identify(src/cf_msgs) by extension 'ros'
+[0.355s] DEBUG:colcon.colcon_core.package_identification:Package 'src/cf_msgs' with type 'ros.ament_cmake' and name 'cf_msgs'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'ros'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['cmake', 'python']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'cmake'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'python'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extensions ['python_setup_py']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset) by extension 'python_setup_py'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'ros'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['cmake', 'python']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'cmake'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'python'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extensions ['python_setup_py']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk1) by extension 'python_setup_py'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'ignore_ament_install'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['colcon_pkg']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'colcon_pkg'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['colcon_meta']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'colcon_meta'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['ros']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'ros'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['cmake', 'python']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'cmake'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'python'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extensions ['python_setup_py']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk2) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'ros'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['cmake', 'python']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'cmake'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'python'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extensions ['python_setup_py']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/dataset/ros2-walk3) by extension 'python_setup_py'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extension 'ignore'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extension 'colcon_pkg'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extensions ['colcon_meta']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extension 'colcon_meta'
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extensions ['ros']
+[0.359s] Level 1:colcon.colcon_core.package_identification:_identify(src/isas_msgs) by extension 'ros'
+[0.360s] DEBUG:colcon.colcon_core.package_identification:Package 'src/isas_msgs' with type 'ros.ament_cmake' and name 'isas_msgs'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extensions ['ignore', 'ignore_ament_install']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extension 'ignore'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extension 'ignore_ament_install'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extensions ['colcon_pkg']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extension 'colcon_pkg'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extensions ['colcon_meta']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extension 'colcon_meta'
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extensions ['ros']
+[0.360s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise) by extension 'ros'
+[0.362s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sfuise' with type 'ros.ament_cmake' and name 'sfuise'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extension 'ignore'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extension 'ignore_ament_install'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extensions ['colcon_pkg']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extension 'colcon_pkg'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extensions ['colcon_meta']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extension 'colcon_meta'
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extensions ['ros']
+[0.362s] Level 1:colcon.colcon_core.package_identification:_identify(src/sfuise_msgs) by extension 'ros'
+[0.363s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sfuise_msgs' with type 'ros.ament_cmake' and name 'sfuise_msgs'
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.363s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.415s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.418s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install
+[0.421s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 362 installed packages in /opt/ros/humble
+[0.424s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.508s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_args' from command line to 'None'
+[0.508s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_target' from command line to 'None'
+[0.508s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.508s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'cf_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.509s] DEBUG:colcon.colcon_core.verb:Building package 'cf_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs', 'merge_install': False, 'path': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/cf_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_args' from command line to 'None'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_target' from command line to 'None'
+[0.509s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'isas_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.510s] DEBUG:colcon.colcon_core.verb:Building package 'isas_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs', 'merge_install': False, 'path': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/isas_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_args' from command line to 'None'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_target' from command line to 'None'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.510s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.511s] DEBUG:colcon.colcon_core.verb:Building package 'sfuise_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs', 'merge_install': False, 'path': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_args' from command line to 'None'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_target' from command line to 'None'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_clean_cache' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_clean_first' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'cmake_force_configure' from command line to 'False'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'ament_cmake_args' from command line to 'None'
+[0.511s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'catkin_cmake_args' from command line to 'None'
+[0.512s] Level 5:colcon.colcon_core.verb:set package 'sfuise' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.512s] DEBUG:colcon.colcon_core.verb:Building package 'sfuise' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise', 'merge_install': False, 'path': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise', 'symlink_install': False, 'test_result_base': None}
+[0.512s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.514s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.515s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/cf_msgs' with build type 'ament_cmake'
+[0.515s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/cf_msgs'
+[0.519s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.519s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.519s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.525s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/isas_msgs' with build type 'ament_cmake'
+[0.526s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/isas_msgs'
+[0.526s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.526s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.531s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise_msgs' with build type 'ament_cmake'
+[0.532s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise_msgs'
+[0.532s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.532s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.548s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs -- -j20 -l20
+[0.556s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs -- -j20 -l20
+[0.563s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs -- -j20 -l20
+[1.295s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs -- -j20 -l20
+[1.313s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs
+[1.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs -- -j20 -l20
+[1.324s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs
+[1.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs -- -j20 -l20
+[1.389s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs
+[1.447s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfuise_msgs)
+[1.450s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs
+[1.456s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs' for CMake module files
+[1.458s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs' for CMake config files
+[1.458s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise_msgs', 'cmake_prefix_path')
+[1.459s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.ps1'
+[1.460s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.dsv'
+[1.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.sh'
+[1.463s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib'
+[1.463s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise_msgs', 'ld_library_path_lib')
+[1.464s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.ps1'
+[1.465s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.dsv'
+[1.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.sh'
+[1.467s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/bin'
+[1.467s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/pkgconfig/sfuise_msgs.pc'
+[1.468s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/python3.10/site-packages'
+[1.468s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/bin'
+[1.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.ps1'
+[1.472s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.dsv'
+[1.473s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.sh'
+[1.474s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.bash'
+[1.477s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.zsh'
+[1.479s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/colcon-core/packages/sfuise_msgs)
+[1.481s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfuise_msgs)
+[1.481s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs' for CMake module files
+[1.482s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs' for CMake config files
+[1.483s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise_msgs', 'cmake_prefix_path')
+[1.483s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.ps1'
+[1.484s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.dsv'
+[1.485s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/cmake_prefix_path.sh'
+[1.487s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib'
+[1.487s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise_msgs', 'ld_library_path_lib')
+[1.487s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.ps1'
+[1.488s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.dsv'
+[1.489s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/hook/ld_library_path_lib.sh'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/bin'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/pkgconfig/sfuise_msgs.pc'
+[1.490s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/python3.10/site-packages'
+[1.491s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/bin'
+[1.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.ps1'
+[1.494s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.dsv'
+[1.495s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.sh'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.bash'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.zsh'
+[1.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/colcon-core/packages/sfuise_msgs)
+[1.502s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cf_msgs)
+[1.503s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs' for CMake module files
+[1.507s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs' for CMake config files
+[1.515s] Level 1:colcon.colcon_core.shell:create_environment_hook('cf_msgs', 'cmake_prefix_path')
+[1.516s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.ps1'
+[1.518s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.dsv'
+[1.520s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs
+[1.520s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.sh'
+[1.521s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib'
+[1.522s] Level 1:colcon.colcon_core.shell:create_environment_hook('cf_msgs', 'ld_library_path_lib')
+[1.522s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.ps1'
+[1.523s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.dsv'
+[1.523s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.sh'
+[1.524s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/bin'
+[1.525s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/pkgconfig/cf_msgs.pc'
+[1.525s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/python3.10/site-packages'
+[1.525s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/bin'
+[1.526s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.ps1'
+[1.527s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.dsv'
+[1.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.sh'
+[1.528s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.bash'
+[1.529s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.zsh'
+[1.529s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/colcon-core/packages/cf_msgs)
+[1.530s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(cf_msgs)
+[1.531s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs' for CMake module files
+[1.532s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs' for CMake config files
+[1.533s] Level 1:colcon.colcon_core.shell:create_environment_hook('cf_msgs', 'cmake_prefix_path')
+[1.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.ps1'
+[1.535s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.dsv'
+[1.536s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/cmake_prefix_path.sh'
+[1.537s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib'
+[1.537s] Level 1:colcon.colcon_core.shell:create_environment_hook('cf_msgs', 'ld_library_path_lib')
+[1.538s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.ps1'
+[1.539s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.dsv'
+[1.540s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/hook/ld_library_path_lib.sh'
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/bin'
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/pkgconfig/cf_msgs.pc'
+[1.541s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/python3.10/site-packages'
+[1.542s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/bin'
+[1.542s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.ps1'
+[1.543s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.dsv'
+[1.544s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.sh'
+[1.545s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.bash'
+[1.546s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.zsh'
+[1.546s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/colcon-core/packages/cf_msgs)
+[1.549s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isas_msgs)
+[1.550s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs' for CMake module files
+[1.551s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs
+[1.552s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs' for CMake config files
+[1.553s] Level 1:colcon.colcon_core.shell:create_environment_hook('isas_msgs', 'cmake_prefix_path')
+[1.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.ps1'
+[1.554s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.dsv'
+[1.555s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.sh'
+[1.556s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib'
+[1.556s] Level 1:colcon.colcon_core.shell:create_environment_hook('isas_msgs', 'ld_library_path_lib')
+[1.557s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.ps1'
+[1.557s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.dsv'
+[1.558s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.sh'
+[1.558s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/bin'
+[1.559s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/pkgconfig/isas_msgs.pc'
+[1.559s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/python3.10/site-packages'
+[1.559s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/bin'
+[1.560s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.ps1'
+[1.561s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.dsv'
+[1.561s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.sh'
+[1.562s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.bash'
+[1.563s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.zsh'
+[1.563s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/colcon-core/packages/isas_msgs)
+[1.564s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(isas_msgs)
+[1.565s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs' for CMake module files
+[1.566s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs' for CMake config files
+[1.566s] Level 1:colcon.colcon_core.shell:create_environment_hook('isas_msgs', 'cmake_prefix_path')
+[1.567s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.ps1'
+[1.568s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.dsv'
+[1.569s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/cmake_prefix_path.sh'
+[1.570s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib'
+[1.570s] Level 1:colcon.colcon_core.shell:create_environment_hook('isas_msgs', 'ld_library_path_lib')
+[1.570s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.ps1'
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.dsv'
+[1.571s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/hook/ld_library_path_lib.sh'
+[1.572s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/bin'
+[1.572s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/pkgconfig/isas_msgs.pc'
+[1.573s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/python3.10/site-packages'
+[1.573s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/bin'
+[1.573s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.ps1'
+[1.574s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.dsv'
+[1.575s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.sh'
+[1.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.bash'
+[1.576s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.zsh'
+[1.577s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/colcon-core/packages/isas_msgs)
+[1.578s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise' with build type 'ament_cmake'
+[1.578s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise'
+[1.578s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.578s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise': CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise -- -j20 -l20
+[55.119s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise' returned '0': CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble /usr/bin/cmake --build /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise -- -j20 -l20
+[55.124s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise': CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise
+[55.153s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfuise)
+[55.154s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise' for CMake module files
+[55.155s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise' returned '0': CMAKE_PREFIX_PATH=/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble /usr/bin/cmake --install /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise
+[55.156s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise' for CMake config files
+[55.156s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise', 'cmake_prefix_path')
+[55.157s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.ps1'
+[55.158s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.dsv'
+[55.159s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.sh'
+[55.160s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib'
+[55.161s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/bin'
+[55.161s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/pkgconfig/sfuise.pc'
+[55.161s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/python3.10/site-packages'
+[55.162s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/bin'
+[55.162s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.ps1'
+[55.164s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.dsv'
+[55.166s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.sh'
+[55.167s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.bash'
+[55.168s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.zsh'
+[55.169s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/colcon-core/packages/sfuise)
+[55.170s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sfuise)
+[55.170s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise' for CMake module files
+[55.171s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise' for CMake config files
+[55.172s] Level 1:colcon.colcon_core.shell:create_environment_hook('sfuise', 'cmake_prefix_path')
+[55.172s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.ps1'
+[55.173s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.dsv'
+[55.174s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/hook/cmake_prefix_path.sh'
+[55.176s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib'
+[55.176s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/bin'
+[55.176s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/pkgconfig/sfuise.pc'
+[55.177s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/python3.10/site-packages'
+[55.177s] Level 1:colcon.colcon_core.environment:checking '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/bin'
+[55.178s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.ps1'
+[55.179s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.dsv'
+[55.180s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.sh'
+[55.181s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.bash'
+[55.182s] INFO:colcon.colcon_core.shell:Creating package script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.zsh'
+[55.183s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/colcon-core/packages/sfuise)
+[55.183s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[55.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[55.184s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[55.184s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[55.196s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[55.196s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[55.197s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[55.225s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[55.226s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/local_setup.ps1'
+[55.228s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/_local_setup_util_ps1.py'
+[55.230s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/setup.ps1'
+[55.232s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/local_setup.sh'
+[55.233s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/_local_setup_util_sh.py'
+[55.234s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/setup.sh'
+[55.236s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/local_setup.bash'
+[55.237s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/setup.bash'
+[55.240s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/local_setup.zsh'
+[55.241s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/setup.zsh'

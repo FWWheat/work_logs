@@ -1,0 +1,1301 @@
+[0.000000] (-) TimerEvent: {}
+[0.001260] (cf_msgs) JobQueued: {'identifier': 'cf_msgs', 'dependencies': OrderedDict()}
+[0.001564] (isas_msgs) JobQueued: {'identifier': 'isas_msgs', 'dependencies': OrderedDict()}
+[0.001723] (sfuise_msgs) JobQueued: {'identifier': 'sfuise_msgs', 'dependencies': OrderedDict()}
+[0.001762] (sfuise) JobQueued: {'identifier': 'sfuise', 'dependencies': OrderedDict([('cf_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs'), ('isas_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs'), ('sfuise_msgs', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs')])}
+[0.001873] (cf_msgs) JobStarted: {'identifier': 'cf_msgs'}
+[0.009035] (isas_msgs) JobStarted: {'identifier': 'isas_msgs'}
+[0.013117] (sfuise_msgs) JobStarted: {'identifier': 'sfuise_msgs'}
+[0.020053] (cf_msgs) JobProgress: {'identifier': 'cf_msgs', 'progress': 'cmake'}
+[0.021070] (cf_msgs) JobProgress: {'identifier': 'cf_msgs', 'progress': 'build'}
+[0.021994] (cf_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs', '--', '-j20', '-l20'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.026244] (isas_msgs) JobProgress: {'identifier': 'isas_msgs', 'progress': 'cmake'}
+[0.026897] (isas_msgs) JobProgress: {'identifier': 'isas_msgs', 'progress': 'build'}
+[0.027907] (isas_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs', '--', '-j20', '-l20'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.032403] (sfuise_msgs) JobProgress: {'identifier': 'sfuise_msgs', 'progress': 'cmake'}
+[0.033313] (sfuise_msgs) JobProgress: {'identifier': 'sfuise_msgs', 'progress': 'build'}
+[0.033991] (sfuise_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs', '--', '-j20', '-l20'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.099427] (-) TimerEvent: {}
+[0.115448] (isas_msgs) StdoutLine: {'line': b'[  1%] Built target isas_msgs__cpp\n'}
+[0.116797] (cf_msgs) StdoutLine: {'line': b'[ 11%] Built target cf_msgs__rosidl_generator_c\n'}
+[0.117329] (cf_msgs) StdoutLine: {'line': b'[ 12%] Built target cf_msgs__cpp\n'}
+[0.118803] (isas_msgs) StdoutLine: {'line': b'[ 12%] Built target isas_msgs__rosidl_generator_c\n'}
+[0.135694] (sfuise_msgs) StdoutLine: {'line': b'[  1%] Built target sfuise_msgs__cpp\n'}
+[0.138729] (sfuise_msgs) StdoutLine: {'line': b'[ 12%] Built target sfuise_msgs__rosidl_generator_c\n'}
+[0.139042] (cf_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_cf_msgs\n'}
+[0.139280] (isas_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_isas_msgs\n'}
+[0.155592] (sfuise_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_sfuise_msgs\n'}
+[0.184639] (cf_msgs) StdoutLine: {'line': b'[ 24%] Built target cf_msgs__rosidl_typesupport_introspection_c\n'}
+[0.186738] (isas_msgs) StdoutLine: {'line': b'[ 23%] Built target isas_msgs__rosidl_typesupport_cpp\n'}
+[0.187170] (isas_msgs) StdoutLine: {'line': b'[ 34%] Built target isas_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.187432] (isas_msgs) StdoutLine: {'line': b'[ 45%] Built target isas_msgs__rosidl_typesupport_c\n'}
+[0.187652] (cf_msgs) StdoutLine: {'line': b'[ 35%] Built target cf_msgs__rosidl_typesupport_c\n'}
+[0.187903] (isas_msgs) StdoutLine: {'line': b'[ 56%] Built target isas_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.188128] (isas_msgs) StdoutLine: {'line': b'[ 67%] Built target isas_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.188829] (isas_msgs) StdoutLine: {'line': b'[ 78%] Built target isas_msgs__rosidl_typesupport_introspection_c\n'}
+[0.192544] (cf_msgs) StdoutLine: {'line': b'[ 46%] Built target cf_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.195420] (cf_msgs) StdoutLine: {'line': b'[ 58%] Built target cf_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.199590] (-) TimerEvent: {}
+[0.205723] (sfuise_msgs) StdoutLine: {'line': b'[ 23%] Built target sfuise_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.206591] (cf_msgs) StdoutLine: {'line': b'[ 69%] Built target cf_msgs__rosidl_typesupport_cpp\n'}
+[0.209662] (sfuise_msgs) StdoutLine: {'line': b'[ 34%] Built target sfuise_msgs__rosidl_typesupport_cpp\n'}
+[0.210642] (cf_msgs) StdoutLine: {'line': b'[ 81%] Built target cf_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.215711] (sfuise_msgs) StdoutLine: {'line': b'[ 46%] Built target sfuise_msgs__rosidl_typesupport_introspection_c\n'}
+[0.217968] (sfuise_msgs) StdoutLine: {'line': b'[ 57%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.219984] (sfuise_msgs) StdoutLine: {'line': b'[ 68%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.224532] (sfuise_msgs) StdoutLine: {'line': b'[ 79%] Built target sfuise_msgs__rosidl_typesupport_c\n'}
+[0.243017] (isas_msgs) StdoutLine: {'line': b'[ 78%] Built target isas_msgs\n'}
+[0.254233] (cf_msgs) StdoutLine: {'line': b'[ 81%] Built target cf_msgs\n'}
+[0.266615] (sfuise_msgs) StdoutLine: {'line': b'[ 79%] Built target sfuise_msgs\n'}
+[0.292491] (isas_msgs) StdoutLine: {'line': b'[ 80%] Built target isas_msgs__py\n'}
+[0.299828] (-) TimerEvent: {}
+[0.303091] (cf_msgs) StdoutLine: {'line': b'[ 82%] Built target cf_msgs__py\n'}
+[0.309241] (sfuise_msgs) StdoutLine: {'line': b'[ 80%] Built target sfuise_msgs__py\n'}
+[0.344915] (isas_msgs) StdoutLine: {'line': b'[ 89%] Built target isas_msgs__rosidl_generator_py\n'}
+[0.359434] (sfuise_msgs) StdoutLine: {'line': b'[ 90%] Built target sfuise_msgs__rosidl_generator_py\n'}
+[0.361691] (cf_msgs) StdoutLine: {'line': b'[ 92%] Built target cf_msgs__rosidl_generator_py\n'}
+[0.395439] (isas_msgs) StdoutLine: {'line': b'[ 92%] Built target isas_msgs__rosidl_typesupport_c__pyext\n'}
+[0.399949] (-) TimerEvent: {}
+[0.400518] (isas_msgs) StdoutLine: {'line': b'[ 96%] Built target isas_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.400864] (isas_msgs) StdoutLine: {'line': b'[100%] Built target isas_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.408155] (sfuise_msgs) StdoutLine: {'line': b'[ 93%] Built target sfuise_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.410282] (cf_msgs) StdoutLine: {'line': b'[ 94%] Built target cf_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.412904] (sfuise_msgs) StdoutLine: {'line': b'[ 96%] Built target sfuise_msgs__rosidl_typesupport_c__pyext\n'}
+[0.413327] (cf_msgs) StdoutLine: {'line': b'[ 97%] Built target cf_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.418076] (cf_msgs) StdoutLine: {'line': b'[100%] Built target cf_msgs__rosidl_typesupport_c__pyext\n'}
+[0.419225] (sfuise_msgs) StdoutLine: {'line': b'[100%] Built target sfuise_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.500095] (-) TimerEvent: {}
+[0.600730] (-) TimerEvent: {}
+[0.651643] (isas_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.653405] (isas_msgs) StdoutLine: {'line': b'writing isas_msgs.egg-info/PKG-INFO\n'}
+[0.653941] (isas_msgs) StdoutLine: {'line': b'writing dependency_links to isas_msgs.egg-info/dependency_links.txt\n'}
+[0.654440] (isas_msgs) StdoutLine: {'line': b'writing top-level names to isas_msgs.egg-info/top_level.txt\n'}
+[0.658431] (sfuise_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.659187] (isas_msgs) StdoutLine: {'line': b"reading manifest file 'isas_msgs.egg-info/SOURCES.txt'\n"}
+[0.660084] (sfuise_msgs) StdoutLine: {'line': b'writing sfuise_msgs.egg-info/PKG-INFO\n'}
+[0.660539] (isas_msgs) StdoutLine: {'line': b"writing manifest file 'isas_msgs.egg-info/SOURCES.txt'\n"}
+[0.660798] (sfuise_msgs) StdoutLine: {'line': b'writing dependency_links to sfuise_msgs.egg-info/dependency_links.txt\n'}
+[0.660973] (sfuise_msgs) StdoutLine: {'line': b'writing top-level names to sfuise_msgs.egg-info/top_level.txt\n'}
+[0.666132] (sfuise_msgs) StdoutLine: {'line': b"reading manifest file 'sfuise_msgs.egg-info/SOURCES.txt'\n"}
+[0.667501] (sfuise_msgs) StdoutLine: {'line': b"writing manifest file 'sfuise_msgs.egg-info/SOURCES.txt'\n"}
+[0.697544] (cf_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.699170] (cf_msgs) StdoutLine: {'line': b'writing cf_msgs.egg-info/PKG-INFO\n'}
+[0.699475] (cf_msgs) StdoutLine: {'line': b'writing dependency_links to cf_msgs.egg-info/dependency_links.txt\n'}
+[0.699730] (cf_msgs) StdoutLine: {'line': b'writing top-level names to cf_msgs.egg-info/top_level.txt\n'}
+[0.700802] (-) TimerEvent: {}
+[0.705004] (cf_msgs) StdoutLine: {'line': b"reading manifest file 'cf_msgs.egg-info/SOURCES.txt'\n"}
+[0.706204] (cf_msgs) StdoutLine: {'line': b"writing manifest file 'cf_msgs.egg-info/SOURCES.txt'\n"}
+[0.723893] (isas_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_isas_msgs_egg\n'}
+[0.729237] (sfuise_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_sfuise_msgs_egg\n'}
+[0.749436] (isas_msgs) CommandEnded: {'returncode': 0}
+[0.751386] (isas_msgs) JobProgress: {'identifier': 'isas_msgs', 'progress': 'install'}
+[0.767332] (cf_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_cf_msgs_egg\n'}
+[0.771387] (isas_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/isas_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.774584] (sfuise_msgs) CommandEnded: {'returncode': 0}
+[0.775846] (sfuise_msgs) JobProgress: {'identifier': 'sfuise_msgs', 'progress': 'install'}
+[0.776680] (sfuise_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.786081] (isas_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.786633] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/ament_index/resource_index/rosidl_interfaces/isas_msgs\n'}
+[0.786768] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.786891] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.786983] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.787074] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__type_support.h\n'}
+[0.787164] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__functions.c\n'}
+[0.787372] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__functions.c\n'}
+[0.787466] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__type_support.h\n'}
+[0.787563] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__type_support.h\n'}
+[0.787657] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__type_support.h\n'}
+[0.787744] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__struct.h\n'}
+[0.787856] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__functions.h\n'}
+[0.788142] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__functions.c\n'}
+[0.788345] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__struct.h\n'}
+[0.788427] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__functions.h\n'}
+[0.788517] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__functions.h\n'}
+[0.788606] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__functions.h\n'}
+[0.788692] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__struct.h\n'}
+[0.788788] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__struct.h\n'}
+[0.788879] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__functions.c\n'}
+[0.788963] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/anchor_position.h\n'}
+[0.790219] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rtls_stick.h\n'}
+[0.790381] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rtls_range.h\n'}
+[0.790475] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.790565] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/anchorlist.h\n'}
+[0.790649] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/library_path.sh\n'}
+[0.790733] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/library_path.dsv\n'}
+[0.790837] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_generator_c.so\n'}
+[0.790926] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.791009] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.791089] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.791172] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.791253] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__rosidl_typesupport_fastrtps_c.h\n'}
+[0.791598] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__rosidl_typesupport_fastrtps_c.h\n'}
+[0.791686] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__rosidl_typesupport_fastrtps_c.h\n'}
+[0.791770] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__rosidl_typesupport_fastrtps_c.h\n'}
+[0.791858] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.791941] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.792020] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.792099] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.792175] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__type_support.hpp\n'}
+[0.792501] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__struct.hpp\n'}
+[0.792588] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__traits.hpp\n'}
+[0.792666] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__traits.hpp\n'}
+[0.792747] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__builder.hpp\n'}
+[0.792842] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__builder.hpp\n'}
+[0.792926] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__struct.hpp\n'}
+[0.793005] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__struct.hpp\n'}
+[0.793085] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__builder.hpp\n'}
+[0.793163] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__struct.hpp\n'}
+[0.793619] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__traits.hpp\n'}
+[0.793734] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__builder.hpp\n'}
+[0.793834] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__type_support.hpp\n'}
+[0.793924] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__type_support.hpp\n'}
+[0.794781] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__traits.hpp\n'}
+[0.794886] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__type_support.hpp\n'}
+[0.794971] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/anchor_position.hpp\n'}
+[0.795067] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/anchorlist.hpp\n'}
+[0.795157] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rtls_range.hpp\n'}
+[0.795238] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rtls_stick.hpp\n'}
+[0.795317] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.795405] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.795489] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.795570] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.795656] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.795743] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/dds_fastrtps\n'}
+[0.795834] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.796101] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.796200] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.796285] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.796370] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.796456] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.796537] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.796620] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.796704] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__type_support.c\n'}
+[0.797416] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__type_support.c\n'}
+[0.797551] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__rosidl_typesupport_introspection_c.h\n'}
+[0.797646] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__rosidl_typesupport_introspection_c.h\n'}
+[0.797912] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__rosidl_typesupport_introspection_c.h\n'}
+[0.798006] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__type_support.c\n'}
+[0.798093] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__type_support.c\n'}
+[0.798177] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__rosidl_typesupport_introspection_c.h\n'}
+[0.798257] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.798338] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.798417] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_c.so\n'}
+[0.798601] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs\n'}
+[0.798691] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg\n'}
+[0.798774] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail\n'}
+[0.798873] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.798955] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.799042] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.799128] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_range__type_support.cpp\n'}
+[0.799361] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchorlist__type_support.cpp\n'}
+[0.799453] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/anchor_position__type_support.cpp\n'}
+[0.799538] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.799869] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/include/isas_msgs/isas_msgs/msg/detail/rtls_stick__type_support.cpp\n'}
+[0.799962] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.800049] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_typesupport_cpp.so\n'}
+[0.800134] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/pythonpath.sh\n'}
+[0.800217] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/pythonpath.dsv\n'}
+[0.800297] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs-0.0.0-py3.10.egg-info\n'}
+[0.800382] (isas_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.800469] (isas_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.800553] (isas_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.801041] (-) TimerEvent: {}
+[0.801421] (isas_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.801702] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs\n'}
+[0.801845] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/libisas_msgs__rosidl_generator_py.so\n'}
+[0.801957] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.802062] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/_isas_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.802166] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/__init__.py\n'}
+[0.802261] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/_isas_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.802357] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg\n'}
+[0.802452] (sfuise_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.802878] (cf_msgs) CommandEnded: {'returncode': 0}
+[0.803496] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_rtls_range_s.c\n'}
+[0.803644] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_anchorlist_s.c\n'}
+[0.804144] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/__init__.py\n'}
+[0.804243] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_rtls_range.py\n'}
+[0.804338] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_anchor_position_s.c\n'}
+[0.804429] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_anchor_position.py\n'}
+[0.804572] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_rtls_stick.py\n'}
+[0.804664] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_rtls_stick_s.c\n'}
+[0.804751] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg/_anchorlist.py\n'}
+[0.804851] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.804940] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/_isas_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.805026] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.805118] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/rosidl_interfaces/sfuise_msgs\n'}
+[0.805210] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.805294] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.805379] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/offset.h\n'}
+[0.805461] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/knot.h\n'}
+[0.805543] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.805624] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__functions.c\n'}
+[0.805708] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__functions.h\n'}
+[0.805799] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__functions.c\n'}
+[0.805891] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__functions.h\n'}
+[0.805977] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__struct.h\n'}
+[0.806164] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__functions.h\n'}
+[0.806243] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.h\n'}
+[0.806682] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.h\n'}
+[0.806771] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.h\n'}
+[0.806865] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__functions.c\n'}
+[0.806943] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__functions.h\n'}
+[0.807021] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.h\n'}
+[0.807100] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.h\n'}
+[0.807177] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__struct.h\n'}
+[0.809015] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__functions.h\n'}
+[0.809109] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__functions.c\n'}
+[0.809588] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__struct.h\n'}
+[0.809883] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.h\n'}
+[0.809960] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.h\n'}
+[0.810031] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__functions.c\n'}
+[0.810104] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.h\n'}
+[0.810173] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.810241] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/estimate.h\n'}
+[0.810309] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/calib.h\n'}
+[0.810395] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/library_path.sh\n'}
+[0.810471] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/library_path.dsv\n'}
+[0.810537] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_c.so\n'}
+[0.810603] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.810670] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.810737] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.810817] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.810885] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_fastrtps_c.h\n'}
+[0.810950] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_fastrtps_c.h\n'}
+[0.811024] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_fastrtps_c.h\n'}
+[0.811090] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_fastrtps_c.h\n'}
+[0.811160] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_fastrtps_c.h\n'}
+[0.811234] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.811310] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.811379] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.811444] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/knot.hpp\n'}
+[0.811517] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.811589] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__builder.hpp\n'}
+[0.811658] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.hpp\n'}
+[0.811744] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__struct.hpp\n'}
+[0.811831] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__builder.hpp\n'}
+[0.811900] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.hpp\n'}
+[0.812006] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__traits.hpp\n'}
+[0.812095] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__traits.hpp\n'}
+[0.812169] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__traits.hpp\n'}
+[0.812242] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__builder.hpp\n'}
+[0.812313] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__struct.hpp\n'}
+[0.812386] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__builder.hpp\n'}
+[0.812461] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__struct.hpp\n'}
+[0.812536] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.hpp\n'}
+[0.812609] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__traits.hpp\n'}
+[0.812686] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.hpp\n'}
+[0.812759] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__traits.hpp\n'}
+[0.812849] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.hpp\n'}
+[0.812927] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__struct.hpp\n'}
+[0.813010] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__builder.hpp\n'}
+[0.813087] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__struct.hpp\n'}
+[0.813168] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/spline.hpp\n'}
+[0.813249] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/calib.hpp\n'}
+[0.813329] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/estimate.hpp\n'}
+[0.813408] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/offset.hpp\n'}
+[0.813486] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.813581] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.813662] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.813744] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.813838] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.813919] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/dds_fastrtps\n'}
+[0.814014] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.814096] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.814174] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.814257] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.814343] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.814430] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.814513] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.814597] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.814678] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.814762] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_introspection_c.h\n'}
+[0.814866] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_introspection_c.h\n'}
+[0.814955] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_introspection_c.h\n'}
+[0.815040] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.c\n'}
+[0.815124] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_introspection_c.h\n'}
+[0.815215] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.c\n'}
+[0.815302] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.c\n'}
+[0.815428] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.c\n'}
+[0.815511] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.c\n'}
+[0.815588] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_introspection_c.h\n'}
+[0.815664] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.815743] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.815842] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_c.so\n'}
+[0.815922] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs\n'}
+[0.816005] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg\n'}
+[0.816087] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail\n'}
+[0.816169] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.816267] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.816350] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__type_support.cpp\n'}
+[0.816433] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.816519] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__type_support.cpp\n'}
+[0.816602] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/knot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.816687] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/estimate__type_support.cpp\n'}
+[0.816773] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/offset__type_support.cpp\n'}
+[0.816900] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/calib__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.816991] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/include/sfuise_msgs/sfuise_msgs/msg/detail/spline__type_support.cpp\n'}
+[0.817090] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.817181] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_typesupport_cpp.so\n'}
+[0.817273] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/pythonpath.sh\n'}
+[0.817363] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/pythonpath.dsv\n'}
+[0.817463] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info\n'}
+[0.817558] (sfuise_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.817656] (sfuise_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.817751] (sfuise_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.817856] (sfuise_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.817951] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs\n'}
+[0.818043] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.818128] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/libsfuise_msgs__rosidl_generator_py.so\n'}
+[0.818213] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.818298] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/__init__.py\n'}
+[0.818381] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.818465] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.818567] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg\n'}
+[0.818650] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_offset_s.c\n'}
+[0.818734] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_estimate.py\n'}
+[0.818831] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_spline_s.c\n'}
+[0.818917] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_spline.py\n'}
+[0.818995] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_calib_s.c\n'}
+[0.819069] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/__init__.py\n'}
+[0.819144] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_offset.py\n'}
+[0.819217] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_calib.py\n'}
+[0.819295] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_knot.py\n'}
+[0.819375] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_knot_s.c\n'}
+[0.819453] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg/_estimate_s.c\n'}
+[0.819541] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.819618] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/_sfuise_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.819698] (cf_msgs) JobProgress: {'identifier': 'cf_msgs', 'progress': 'install'}
+[0.819736] (cf_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/cf_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble')]), 'shell': False}
+[0.825372] (cf_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.825612] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/ament_index/resource_index/rosidl_interfaces/cf_msgs\n'}
+[0.825706] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.825794] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.825918] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/flow.h\n'}
+[0.826085] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/tdoa.h\n'}
+[0.826166] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/accel.h\n'}
+[0.826246] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.826325] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__type_support.h\n'}
+[0.826404] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__struct.h\n'}
+[0.826481] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__struct.h\n'}
+[0.826641] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__functions.c\n'}
+[0.826719] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__type_support.h\n'}
+[0.826803] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__struct.h\n'}
+[0.826884] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__functions.h\n'}
+[0.826958] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__functions.c\n'}
+[0.827086] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__functions.h\n'}
+[0.827165] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__struct.h\n'}
+[0.827240] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__type_support.h\n'}
+[0.827314] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__functions.h\n'}
+[0.827387] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__functions.h\n'}
+[0.827460] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__functions.h\n'}
+[0.827642] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__functions.h\n'}
+[0.827721] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__type_support.h\n'}
+[0.827838] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__functions.c\n'}
+[0.827914] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__functions.c\n'}
+[0.827995] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__struct.h\n'}
+[0.828070] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__type_support.h\n'}
+[0.828147] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__functions.h\n'}
+[0.828223] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__functions.c\n'}
+[0.828298] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__type_support.h\n'}
+[0.828376] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__functions.c\n'}
+[0.828451] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__struct.h\n'}
+[0.828531] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__type_support.h\n'}
+[0.828614] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__functions.c\n'}
+[0.828718] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__struct.h\n'}
+[0.828808] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/tof.h\n'}
+[0.828973] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/gyro.h\n'}
+[0.829057] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/twr.h\n'}
+[0.829133] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.829213] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/baro.h\n'}
+[0.829290] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/library_path.sh\n'}
+[0.829368] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/library_path.dsv\n'}
+[0.829448] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_generator_c.so\n'}
+[0.829668] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.829840] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.829926] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.830004] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.830079] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__rosidl_typesupport_fastrtps_c.h\n'}
+[0.830154] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__rosidl_typesupport_fastrtps_c.h\n'}
+[0.830230] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__rosidl_typesupport_fastrtps_c.h\n'}
+[0.830306] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__rosidl_typesupport_fastrtps_c.h\n'}
+[0.830383] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__rosidl_typesupport_fastrtps_c.h\n'}
+[0.830462] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__rosidl_typesupport_fastrtps_c.h\n'}
+[0.831057] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__rosidl_typesupport_fastrtps_c.h\n'}
+[0.831235] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.831339] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.831433] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.831526] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.831614] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__traits.hpp\n'}
+[0.831703] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__struct.hpp\n'}
+[0.831800] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__traits.hpp\n'}
+[0.831898] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__struct.hpp\n'}
+[0.831983] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__type_support.hpp\n'}
+[0.832067] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__builder.hpp\n'}
+[0.832151] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__traits.hpp\n'}
+[0.832231] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__builder.hpp\n'}
+[0.832374] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__struct.hpp\n'}
+[0.832461] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__builder.hpp\n'}
+[0.832543] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__builder.hpp\n'}
+[0.832625] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__type_support.hpp\n'}
+[0.832704] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__type_support.hpp\n'}
+[0.832800] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__type_support.hpp\n'}
+[0.833072] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__struct.hpp\n'}
+[0.833157] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__builder.hpp\n'}
+[0.833242] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__builder.hpp\n'}
+[0.833402] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__traits.hpp\n'}
+[0.833492] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__struct.hpp\n'}
+[0.833576] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__struct.hpp\n'}
+[0.833661] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__traits.hpp\n'}
+[0.833743] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__type_support.hpp\n'}
+[0.833855] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__type_support.hpp\n'}
+[0.833944] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__builder.hpp\n'}
+[0.834025] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__traits.hpp\n'}
+[0.834106] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__struct.hpp\n'}
+[0.834340] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__traits.hpp\n'}
+[0.834428] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__type_support.hpp\n'}
+[0.834519] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/accel.hpp\n'}
+[0.834611] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/gyro.hpp\n'}
+[0.834702] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/twr.hpp\n'}
+[0.834863] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/tdoa.hpp\n'}
+[0.834951] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/baro.hpp\n'}
+[0.835032] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/flow.hpp\n'}
+[0.835120] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.835210] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/tof.hpp\n'}
+[0.835296] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.835387] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.835475] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.835564] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.835650] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.835759] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.835870] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.836015] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.836211] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.836302] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/dds_fastrtps\n'}
+[0.836389] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.836477] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.836565] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.836652] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.836739] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.836846] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.836933] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__type_support.c\n'}
+[0.837125] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__rosidl_typesupport_introspection_c.h\n'}
+[0.837200] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__rosidl_typesupport_introspection_c.h\n'}
+[0.837283] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__type_support.c\n'}
+[0.837412] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__type_support.c\n'}
+[0.837487] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__rosidl_typesupport_introspection_c.h\n'}
+[0.837567] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__type_support.c\n'}
+[0.837649] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__rosidl_typesupport_introspection_c.h\n'}
+[0.837729] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__type_support.c\n'}
+[0.837819] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__type_support.c\n'}
+[0.837908] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__rosidl_typesupport_introspection_c.h\n'}
+[0.837990] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__type_support.c\n'}
+[0.838067] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__rosidl_typesupport_introspection_c.h\n'}
+[0.838149] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__rosidl_typesupport_introspection_c.h\n'}
+[0.838229] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.838308] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.838389] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_c.so\n'}
+[0.838520] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs\n'}
+[0.838608] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg\n'}
+[0.838694] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail\n'}
+[0.838774] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__type_support.cpp\n'}
+[0.838875] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839037] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839114] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tdoa__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839236] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__type_support.cpp\n'}
+[0.839319] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839403] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/tof__type_support.cpp\n'}
+[0.839483] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/gyro__type_support.cpp\n'}
+[0.839560] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/baro__type_support.cpp\n'}
+[0.839638] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839721] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.839825] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/twr__type_support.cpp\n'}
+[0.840091] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/accel__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.840176] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/include/cf_msgs/cf_msgs/msg/detail/flow__type_support.cpp\n'}
+[0.840256] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.840337] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_typesupport_cpp.so\n'}
+[0.840419] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/pythonpath.sh\n'}
+[0.840499] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/pythonpath.dsv\n'}
+[0.840580] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs-0.0.0-py3.10.egg-info\n'}
+[0.840664] (cf_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.840750] (cf_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.840857] (cf_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.840942] (cf_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.841074] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs\n'}
+[0.841225] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/__init__.py\n'}
+[0.841300] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/libcf_msgs__rosidl_generator_py.so\n'}
+[0.841376] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/_cf_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.841452] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg\n'}
+[0.841527] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_flow.py\n'}
+[0.841599] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_flow_s.c\n'}
+[0.841667] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_accel.py\n'}
+[0.841735] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_gyro.py\n'}
+[0.841818] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_tdoa.py\n'}
+[0.841887] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/__init__.py\n'}
+[0.841954] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_twr.py\n'}
+[0.842021] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_gyro_s.c\n'}
+[0.842089] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_baro_s.c\n'}
+[0.842152] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_tof.py\n'}
+[0.842215] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_twr_s.c\n'}
+[0.842280] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_tdoa_s.c\n'}
+[0.842360] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_accel_s.c\n'}
+[0.842428] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_baro.py\n'}
+[0.842495] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg/_tof_s.c\n'}
+[0.842561] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/_cf_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.842626] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.842696] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.842761] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/_cf_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.842842] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.854959] (isas_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs'...\n"}
+[0.855262] (isas_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/msg'...\n"}
+[0.863303] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.863677] (sfuise_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs'...\n"}
+[0.863906] (sfuise_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/msg'...\n"}
+[0.864005] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.864200] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages/isas_msgs/isas_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.864491] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib/libisas_msgs__rosidl_generator_py.so\n'}
+[0.864679] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/Anchorlist.idl\n'}
+[0.864837] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/AnchorPosition.idl\n'}
+[0.864983] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/RTLSRange.idl\n'}
+[0.865185] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/RTLSStick.idl\n'}
+[0.865277] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/Anchorlist.msg\n'}
+[0.865362] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/AnchorPosition.msg\n'}
+[0.865451] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/RTLSRange.msg\n'}
+[0.865537] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/msg/RTLSStick.msg\n'}
+[0.865620] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/ament_index/resource_index/package_run_dependencies/isas_msgs\n'}
+[0.865768] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/ament_index/resource_index/parent_prefix_path/isas_msgs\n'}
+[0.865868] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/ament_prefix_path.sh\n'}
+[0.866082] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/ament_prefix_path.dsv\n'}
+[0.866181] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/path.sh\n'}
+[0.866275] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/environment/path.dsv\n'}
+[0.866451] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/local_setup.bash\n'}
+[0.866538] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/local_setup.sh\n'}
+[0.866625] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/local_setup.zsh\n'}
+[0.866712] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/local_setup.dsv\n'}
+[0.866808] (isas_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.dsv\n'}
+[0.866922] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/ament_index/resource_index/packages/isas_msgs\n'}
+[0.867011] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_generator_cExport.cmake\n'}
+[0.867099] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.867186] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.867274] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.868012] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.868449] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.868631] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.868947] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.869102] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.869218] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.869305] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.869380] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.869451] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.869521] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.869590] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.869658] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.869726] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/export_isas_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.869806] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.869881] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.869956] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.870024] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.870089] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.870155] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.870221] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.870285] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgsConfig.cmake\n'}
+[0.870349] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/cmake/isas_msgsConfig-version.cmake\n'}
+[0.870415] (isas_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/share/isas_msgs/package.xml\n'}
+[0.872064] (isas_msgs) CommandEnded: {'returncode': 0}
+[0.873584] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.873740] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.873842] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages/sfuise_msgs/sfuise_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.874152] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib/libsfuise_msgs__rosidl_generator_py.so\n'}
+[0.874413] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Calib.idl\n'}
+[0.874527] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Estimate.idl\n'}
+[0.874609] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Knot.idl\n'}
+[0.874689] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Offset.idl\n'}
+[0.874768] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Spline.idl\n'}
+[0.874857] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Calib.msg\n'}
+[0.874936] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Estimate.msg\n'}
+[0.875089] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Knot.msg\n'}
+[0.875166] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Offset.msg\n'}
+[0.875242] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/msg/Spline.msg\n'}
+[0.875318] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/package_run_dependencies/sfuise_msgs\n'}
+[0.875393] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/parent_prefix_path/sfuise_msgs\n'}
+[0.875463] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/ament_prefix_path.sh\n'}
+[0.875534] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/ament_prefix_path.dsv\n'}
+[0.875604] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/path.sh\n'}
+[0.875675] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/environment/path.dsv\n'}
+[0.875749] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.bash\n'}
+[0.875829] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.sh\n'}
+[0.875904] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.zsh\n'}
+[0.876092] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/local_setup.dsv\n'}
+[0.876362] (sfuise_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.dsv\n'}
+[0.876699] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/ament_index/resource_index/packages/sfuise_msgs\n'}
+[0.876784] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cExport.cmake\n'}
+[0.876862] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.876939] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.877015] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.877093] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.877174] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.877248] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.877322] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.877398] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.877469] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.877627] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.877705] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.877784] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.878298] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.878523] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.878675] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.878830] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/export_sfuise_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.879005] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.879115] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.879199] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.879281] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.879362] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.879607] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.879710] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.879843] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgsConfig.cmake\n'}
+[0.879933] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/cmake/sfuise_msgsConfig-version.cmake\n'}
+[0.880014] (sfuise_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/share/sfuise_msgs/package.xml\n'}
+[0.901245] (-) TimerEvent: {}
+[0.906050] (cf_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs'...\n"}
+[0.906917] (cf_msgs) StdoutLine: {'line': b"Listing '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/msg'...\n"}
+[0.913306] (isas_msgs) JobEnded: {'identifier': 'isas_msgs', 'rc': 0}
+[0.915253] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.915900] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.916012] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages/cf_msgs/cf_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.916237] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib/libcf_msgs__rosidl_generator_py.so\n'}
+[0.916332] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Accel.idl\n'}
+[0.916426] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Baro.idl\n'}
+[0.916518] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Flow.idl\n'}
+[0.916605] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Gyro.idl\n'}
+[0.916691] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Tdoa.idl\n'}
+[0.916790] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Tof.idl\n'}
+[0.917217] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Twr.idl\n'}
+[0.917317] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Accel.msg\n'}
+[0.917444] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Baro.msg\n'}
+[0.917540] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Flow.msg\n'}
+[0.917673] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Gyro.msg\n'}
+[0.917923] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Tdoa.msg\n'}
+[0.918044] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Tof.msg\n'}
+[0.918161] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/msg/Twr.msg\n'}
+[0.918272] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/ament_index/resource_index/package_run_dependencies/cf_msgs\n'}
+[0.918401] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/ament_index/resource_index/parent_prefix_path/cf_msgs\n'}
+[0.919997] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/ament_prefix_path.sh\n'}
+[0.920121] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/ament_prefix_path.dsv\n'}
+[0.920216] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/path.sh\n'}
+[0.920344] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/environment/path.dsv\n'}
+[0.920471] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/local_setup.bash\n'}
+[0.920564] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/local_setup.sh\n'}
+[0.920655] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/local_setup.zsh\n'}
+[0.920745] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/local_setup.dsv\n'}
+[0.921487] (cf_msgs) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.dsv\n'}
+[0.921593] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/ament_index/resource_index/packages/cf_msgs\n'}
+[0.921812] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_generator_cExport.cmake\n'}
+[0.921918] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.922011] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.922099] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.922344] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.922434] (sfuise_msgs) CommandEnded: {'returncode': 0}
+[0.923021] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.923135] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.923221] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.923303] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.923386] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.923466] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.923543] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.923621] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.923698] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.923783] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.923870] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.923948] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/export_cf_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.924029] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.924108] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.924203] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.924286] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.924363] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.924439] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.924521] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.924599] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgsConfig.cmake\n'}
+[0.924701] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/cmake/cf_msgsConfig-version.cmake\n'}
+[0.924788] (cf_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/share/cf_msgs/package.xml\n'}
+[0.949122] (sfuise_msgs) JobEnded: {'identifier': 'sfuise_msgs', 'rc': 0}
+[0.951071] (cf_msgs) CommandEnded: {'returncode': 0}
+[0.976006] (cf_msgs) JobEnded: {'identifier': 'cf_msgs', 'rc': 0}
+[0.977725] (sfuise) JobStarted: {'identifier': 'sfuise'}
+[0.999053] (sfuise) JobProgress: {'identifier': 'sfuise', 'progress': 'cmake'}
+[1.000368] (sfuise) JobProgress: {'identifier': 'sfuise', 'progress': 'build'}
+[1.001936] (sfuise) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', '--', '-j20', '-l20'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble')]), 'shell': False}
+[1.004149] (-) TimerEvent: {}
+[1.081202] (sfuise) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target EstimationInterface\x1b[0m\n'}
+[1.104344] (-) TimerEvent: {}
+[1.108474] (sfuise) StdoutLine: {'line': b'[ 50%] Built target SplineFusion\n'}
+[1.122279] (sfuise) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o\x1b[0m\n'}
+[1.204606] (-) TimerEvent: {}
+[1.305227] (-) TimerEvent: {}
+[1.405771] (-) TimerEvent: {}
+[1.506342] (-) TimerEvent: {}
+[1.606994] (-) TimerEvent: {}
+[1.707616] (-) TimerEvent: {}
+[1.808185] (-) TimerEvent: {}
+[1.908830] (-) TimerEvent: {}
+[2.009465] (-) TimerEvent: {}
+[2.110006] (-) TimerEvent: {}
+[2.210631] (-) TimerEvent: {}
+[2.311172] (-) TimerEvent: {}
+[2.411660] (-) TimerEvent: {}
+[2.512119] (-) TimerEvent: {}
+[2.612590] (-) TimerEvent: {}
+[2.713060] (-) TimerEvent: {}
+[2.813649] (-) TimerEvent: {}
+[2.914212] (-) TimerEvent: {}
+[3.014672] (-) TimerEvent: {}
+[3.115390] (-) TimerEvent: {}
+[3.215973] (-) TimerEvent: {}
+[3.316483] (-) TimerEvent: {}
+[3.416895] (-) TimerEvent: {}
+[3.517451] (-) TimerEvent: {}
+[3.617961] (-) TimerEvent: {}
+[3.718485] (-) TimerEvent: {}
+[3.818904] (-) TimerEvent: {}
+[3.919324] (-) TimerEvent: {}
+[4.019718] (-) TimerEvent: {}
+[4.120129] (-) TimerEvent: {}
+[4.220550] (-) TimerEvent: {}
+[4.320992] (-) TimerEvent: {}
+[4.421424] (-) TimerEvent: {}
+[4.522020] (-) TimerEvent: {}
+[4.622546] (-) TimerEvent: {}
+[4.722981] (-) TimerEvent: {}
+[4.823476] (-) TimerEvent: {}
+[4.923944] (-) TimerEvent: {}
+[5.024308] (-) TimerEvent: {}
+[5.124800] (-) TimerEvent: {}
+[5.225300] (-) TimerEvent: {}
+[5.325732] (-) TimerEvent: {}
+[5.426173] (-) TimerEvent: {}
+[5.526646] (-) TimerEvent: {}
+[5.627038] (-) TimerEvent: {}
+[5.727493] (-) TimerEvent: {}
+[5.828004] (-) TimerEvent: {}
+[5.928417] (-) TimerEvent: {}
+[6.028851] (-) TimerEvent: {}
+[6.129315] (-) TimerEvent: {}
+[6.229864] (-) TimerEvent: {}
+[6.330365] (-) TimerEvent: {}
+[6.430866] (-) TimerEvent: {}
+[6.531258] (-) TimerEvent: {}
+[6.631759] (-) TimerEvent: {}
+[6.732164] (-) TimerEvent: {}
+[6.832654] (-) TimerEvent: {}
+[6.933078] (-) TimerEvent: {}
+[7.033548] (-) TimerEvent: {}
+[7.133988] (-) TimerEvent: {}
+[7.234477] (-) TimerEvent: {}
+[7.334967] (-) TimerEvent: {}
+[7.435449] (-) TimerEvent: {}
+[7.535928] (-) TimerEvent: {}
+[7.636397] (-) TimerEvent: {}
+[7.736890] (-) TimerEvent: {}
+[7.837297] (-) TimerEvent: {}
+[7.937810] (-) TimerEvent: {}
+[8.038226] (-) TimerEvent: {}
+[8.138719] (-) TimerEvent: {}
+[8.239250] (-) TimerEvent: {}
+[8.339717] (-) TimerEvent: {}
+[8.440188] (-) TimerEvent: {}
+[8.540667] (-) TimerEvent: {}
+[8.641081] (-) TimerEvent: {}
+[8.741556] (-) TimerEvent: {}
+[8.841974] (-) TimerEvent: {}
+[8.942418] (-) TimerEvent: {}
+[9.042909] (-) TimerEvent: {}
+[9.143333] (-) TimerEvent: {}
+[9.243724] (-) TimerEvent: {}
+[9.344185] (-) TimerEvent: {}
+[9.444596] (-) TimerEvent: {}
+[9.544973] (-) TimerEvent: {}
+[9.645450] (-) TimerEvent: {}
+[9.745971] (-) TimerEvent: {}
+[9.846489] (-) TimerEvent: {}
+[9.947022] (-) TimerEvent: {}
+[10.047465] (-) TimerEvent: {}
+[10.147960] (-) TimerEvent: {}
+[10.248409] (-) TimerEvent: {}
+[10.348951] (-) TimerEvent: {}
+[10.449439] (-) TimerEvent: {}
+[10.549878] (-) TimerEvent: {}
+[10.650340] (-) TimerEvent: {}
+[10.750844] (-) TimerEvent: {}
+[10.851255] (-) TimerEvent: {}
+[10.951771] (-) TimerEvent: {}
+[11.052172] (-) TimerEvent: {}
+[11.152640] (-) TimerEvent: {}
+[11.253065] (-) TimerEvent: {}
+[11.353476] (-) TimerEvent: {}
+[11.453939] (-) TimerEvent: {}
+[11.554342] (-) TimerEvent: {}
+[11.654872] (-) TimerEvent: {}
+[11.755284] (-) TimerEvent: {}
+[11.855812] (-) TimerEvent: {}
+[11.956226] (-) TimerEvent: {}
+[12.056650] (-) TimerEvent: {}
+[12.157073] (-) TimerEvent: {}
+[12.257564] (-) TimerEvent: {}
+[12.358133] (-) TimerEvent: {}
+[12.458665] (-) TimerEvent: {}
+[12.559129] (-) TimerEvent: {}
+[12.659600] (-) TimerEvent: {}
+[12.760007] (-) TimerEvent: {}
+[12.860349] (-) TimerEvent: {}
+[12.960829] (-) TimerEvent: {}
+[13.061239] (-) TimerEvent: {}
+[13.161670] (-) TimerEvent: {}
+[13.262137] (-) TimerEvent: {}
+[13.362717] (-) TimerEvent: {}
+[13.463186] (-) TimerEvent: {}
+[13.563677] (-) TimerEvent: {}
+[13.664174] (-) TimerEvent: {}
+[13.764651] (-) TimerEvent: {}
+[13.865165] (-) TimerEvent: {}
+[13.965730] (-) TimerEvent: {}
+[14.066192] (-) TimerEvent: {}
+[14.166763] (-) TimerEvent: {}
+[14.267326] (-) TimerEvent: {}
+[14.367878] (-) TimerEvent: {}
+[14.468417] (-) TimerEvent: {}
+[14.568947] (-) TimerEvent: {}
+[14.669397] (-) TimerEvent: {}
+[14.769933] (-) TimerEvent: {}
+[14.870466] (-) TimerEvent: {}
+[14.971022] (-) TimerEvent: {}
+[15.071483] (-) TimerEvent: {}
+[15.172070] (-) TimerEvent: {}
+[15.272617] (-) TimerEvent: {}
+[15.373181] (-) TimerEvent: {}
+[15.473691] (-) TimerEvent: {}
+[15.574136] (-) TimerEvent: {}
+[15.674528] (-) TimerEvent: {}
+[15.774937] (-) TimerEvent: {}
+[15.875307] (-) TimerEvent: {}
+[15.975621] (-) TimerEvent: {}
+[16.075946] (-) TimerEvent: {}
+[16.176291] (-) TimerEvent: {}
+[16.276750] (-) TimerEvent: {}
+[16.377140] (-) TimerEvent: {}
+[16.477524] (-) TimerEvent: {}
+[16.577981] (-) TimerEvent: {}
+[16.678416] (-) TimerEvent: {}
+[16.778876] (-) TimerEvent: {}
+[16.879367] (-) TimerEvent: {}
+[16.979880] (-) TimerEvent: {}
+[17.080369] (-) TimerEvent: {}
+[17.180870] (-) TimerEvent: {}
+[17.281268] (-) TimerEvent: {}
+[17.381656] (-) TimerEvent: {}
+[17.482123] (-) TimerEvent: {}
+[17.582431] (-) TimerEvent: {}
+[17.682728] (-) TimerEvent: {}
+[17.783135] (-) TimerEvent: {}
+[17.883533] (-) TimerEvent: {}
+[17.983934] (-) TimerEvent: {}
+[18.084346] (-) TimerEvent: {}
+[18.184744] (-) TimerEvent: {}
+[18.285048] (-) TimerEvent: {}
+[18.385447] (-) TimerEvent: {}
+[18.485852] (-) TimerEvent: {}
+[18.586273] (-) TimerEvent: {}
+[18.686676] (-) TimerEvent: {}
+[18.787087] (-) TimerEvent: {}
+[18.887493] (-) TimerEvent: {}
+[18.987907] (-) TimerEvent: {}
+[19.088214] (-) TimerEvent: {}
+[19.188518] (-) TimerEvent: {}
+[19.288935] (-) TimerEvent: {}
+[19.389293] (-) TimerEvent: {}
+[19.489681] (-) TimerEvent: {}
+[19.590137] (-) TimerEvent: {}
+[19.690556] (-) TimerEvent: {}
+[19.790959] (-) TimerEvent: {}
+[19.891370] (-) TimerEvent: {}
+[19.991770] (-) TimerEvent: {}
+[20.092178] (-) TimerEvent: {}
+[20.192565] (-) TimerEvent: {}
+[20.292972] (-) TimerEvent: {}
+[20.393367] (-) TimerEvent: {}
+[20.493811] (-) TimerEvent: {}
+[20.594308] (-) TimerEvent: {}
+[20.694775] (-) TimerEvent: {}
+[20.795267] (-) TimerEvent: {}
+[20.895678] (-) TimerEvent: {}
+[20.996085] (-) TimerEvent: {}
+[21.096485] (-) TimerEvent: {}
+[21.196908] (-) TimerEvent: {}
+[21.297345] (-) TimerEvent: {}
+[21.397768] (-) TimerEvent: {}
+[21.498147] (-) TimerEvent: {}
+[21.598543] (-) TimerEvent: {}
+[21.698949] (-) TimerEvent: {}
+[21.799361] (-) TimerEvent: {}
+[21.899754] (-) TimerEvent: {}
+[22.000187] (-) TimerEvent: {}
+[22.100511] (-) TimerEvent: {}
+[22.200918] (-) TimerEvent: {}
+[22.301328] (-) TimerEvent: {}
+[22.401659] (-) TimerEvent: {}
+[22.502070] (-) TimerEvent: {}
+[22.602533] (-) TimerEvent: {}
+[22.702984] (-) TimerEvent: {}
+[22.803472] (-) TimerEvent: {}
+[22.903977] (-) TimerEvent: {}
+[23.004461] (-) TimerEvent: {}
+[23.104869] (-) TimerEvent: {}
+[23.205274] (-) TimerEvent: {}
+[23.305699] (-) TimerEvent: {}
+[23.406195] (-) TimerEvent: {}
+[23.506594] (-) TimerEvent: {}
+[23.606982] (-) TimerEvent: {}
+[23.707379] (-) TimerEvent: {}
+[23.807768] (-) TimerEvent: {}
+[23.908163] (-) TimerEvent: {}
+[24.008579] (-) TimerEvent: {}
+[24.108975] (-) TimerEvent: {}
+[24.209385] (-) TimerEvent: {}
+[24.309811] (-) TimerEvent: {}
+[24.410230] (-) TimerEvent: {}
+[24.510628] (-) TimerEvent: {}
+[24.611040] (-) TimerEvent: {}
+[24.711456] (-) TimerEvent: {}
+[24.811759] (-) TimerEvent: {}
+[24.912106] (-) TimerEvent: {}
+[25.012483] (-) TimerEvent: {}
+[25.112886] (-) TimerEvent: {}
+[25.213350] (-) TimerEvent: {}
+[25.313809] (-) TimerEvent: {}
+[25.414209] (-) TimerEvent: {}
+[25.514602] (-) TimerEvent: {}
+[25.614942] (-) TimerEvent: {}
+[25.715334] (-) TimerEvent: {}
+[25.815725] (-) TimerEvent: {}
+[25.916046] (-) TimerEvent: {}
+[26.016447] (-) TimerEvent: {}
+[26.116845] (-) TimerEvent: {}
+[26.217134] (-) TimerEvent: {}
+[26.317550] (-) TimerEvent: {}
+[26.417948] (-) TimerEvent: {}
+[26.518268] (-) TimerEvent: {}
+[26.618595] (-) TimerEvent: {}
+[26.719025] (-) TimerEvent: {}
+[26.819338] (-) TimerEvent: {}
+[26.919809] (-) TimerEvent: {}
+[27.020289] (-) TimerEvent: {}
+[27.120741] (-) TimerEvent: {}
+[27.221228] (-) TimerEvent: {}
+[27.321577] (-) TimerEvent: {}
+[27.422066] (-) TimerEvent: {}
+[27.522551] (-) TimerEvent: {}
+[27.623047] (-) TimerEvent: {}
+[27.723505] (-) TimerEvent: {}
+[27.823969] (-) TimerEvent: {}
+[27.924464] (-) TimerEvent: {}
+[28.024975] (-) TimerEvent: {}
+[28.125476] (-) TimerEvent: {}
+[28.226016] (-) TimerEvent: {}
+[28.326541] (-) TimerEvent: {}
+[28.427066] (-) TimerEvent: {}
+[28.527458] (-) TimerEvent: {}
+[28.627887] (-) TimerEvent: {}
+[28.728290] (-) TimerEvent: {}
+[28.828680] (-) TimerEvent: {}
+[28.928977] (-) TimerEvent: {}
+[29.029282] (-) TimerEvent: {}
+[29.129673] (-) TimerEvent: {}
+[29.230101] (-) TimerEvent: {}
+[29.330502] (-) TimerEvent: {}
+[29.430902] (-) TimerEvent: {}
+[29.531236] (-) TimerEvent: {}
+[29.631625] (-) TimerEvent: {}
+[29.732034] (-) TimerEvent: {}
+[29.832428] (-) TimerEvent: {}
+[29.932845] (-) TimerEvent: {}
+[30.033299] (-) TimerEvent: {}
+[30.133702] (-) TimerEvent: {}
+[30.234093] (-) TimerEvent: {}
+[30.334413] (-) TimerEvent: {}
+[30.434816] (-) TimerEvent: {}
+[30.535209] (-) TimerEvent: {}
+[30.635610] (-) TimerEvent: {}
+[30.736037] (-) TimerEvent: {}
+[30.836429] (-) TimerEvent: {}
+[30.936840] (-) TimerEvent: {}
+[31.037144] (-) TimerEvent: {}
+[31.137528] (-) TimerEvent: {}
+[31.237926] (-) TimerEvent: {}
+[31.338349] (-) TimerEvent: {}
+[31.438758] (-) TimerEvent: {}
+[31.539206] (-) TimerEvent: {}
+[31.639589] (-) TimerEvent: {}
+[31.739998] (-) TimerEvent: {}
+[31.840472] (-) TimerEvent: {}
+[31.940926] (-) TimerEvent: {}
+[32.041366] (-) TimerEvent: {}
+[32.141769] (-) TimerEvent: {}
+[32.242193] (-) TimerEvent: {}
+[32.342639] (-) TimerEvent: {}
+[32.443152] (-) TimerEvent: {}
+[32.543601] (-) TimerEvent: {}
+[32.644064] (-) TimerEvent: {}
+[32.744722] (-) TimerEvent: {}
+[32.845196] (-) TimerEvent: {}
+[32.945637] (-) TimerEvent: {}
+[33.046116] (-) TimerEvent: {}
+[33.146606] (-) TimerEvent: {}
+[33.247038] (-) TimerEvent: {}
+[33.347441] (-) TimerEvent: {}
+[33.447847] (-) TimerEvent: {}
+[33.548274] (-) TimerEvent: {}
+[33.648661] (-) TimerEvent: {}
+[33.749079] (-) TimerEvent: {}
+[33.849478] (-) TimerEvent: {}
+[33.949851] (-) TimerEvent: {}
+[34.050243] (-) TimerEvent: {}
+[34.150633] (-) TimerEvent: {}
+[34.251033] (-) TimerEvent: {}
+[34.351414] (-) TimerEvent: {}
+[34.451833] (-) TimerEvent: {}
+[34.552222] (-) TimerEvent: {}
+[34.652656] (-) TimerEvent: {}
+[34.753083] (-) TimerEvent: {}
+[34.853465] (-) TimerEvent: {}
+[34.953862] (-) TimerEvent: {}
+[35.054268] (-) TimerEvent: {}
+[35.154671] (-) TimerEvent: {}
+[35.255137] (-) TimerEvent: {}
+[35.355550] (-) TimerEvent: {}
+[35.455957] (-) TimerEvent: {}
+[35.556295] (-) TimerEvent: {}
+[35.656715] (-) TimerEvent: {}
+[35.757118] (-) TimerEvent: {}
+[35.857529] (-) TimerEvent: {}
+[35.957952] (-) TimerEvent: {}
+[36.058438] (-) TimerEvent: {}
+[36.158904] (-) TimerEvent: {}
+[36.259302] (-) TimerEvent: {}
+[36.359697] (-) TimerEvent: {}
+[36.460013] (-) TimerEvent: {}
+[36.560487] (-) TimerEvent: {}
+[36.660953] (-) TimerEvent: {}
+[36.761411] (-) TimerEvent: {}
+[36.861798] (-) TimerEvent: {}
+[36.962192] (-) TimerEvent: {}
+[37.062606] (-) TimerEvent: {}
+[37.162991] (-) TimerEvent: {}
+[37.263421] (-) TimerEvent: {}
+[37.363819] (-) TimerEvent: {}
+[37.464213] (-) TimerEvent: {}
+[37.564606] (-) TimerEvent: {}
+[37.665005] (-) TimerEvent: {}
+[37.765411] (-) TimerEvent: {}
+[37.865832] (-) TimerEvent: {}
+[37.966181] (-) TimerEvent: {}
+[38.066579] (-) TimerEvent: {}
+[38.166979] (-) TimerEvent: {}
+[38.267408] (-) TimerEvent: {}
+[38.367839] (-) TimerEvent: {}
+[38.468268] (-) TimerEvent: {}
+[38.568729] (-) TimerEvent: {}
+[38.669130] (-) TimerEvent: {}
+[38.769562] (-) TimerEvent: {}
+[38.870045] (-) TimerEvent: {}
+[38.970447] (-) TimerEvent: {}
+[39.070841] (-) TimerEvent: {}
+[39.171261] (-) TimerEvent: {}
+[39.271710] (-) TimerEvent: {}
+[39.372143] (-) TimerEvent: {}
+[39.472544] (-) TimerEvent: {}
+[39.572946] (-) TimerEvent: {}
+[39.673246] (-) TimerEvent: {}
+[39.773636] (-) TimerEvent: {}
+[39.874053] (-) TimerEvent: {}
+[39.974452] (-) TimerEvent: {}
+[40.074841] (-) TimerEvent: {}
+[40.175243] (-) TimerEvent: {}
+[40.275632] (-) TimerEvent: {}
+[40.376030] (-) TimerEvent: {}
+[40.476415] (-) TimerEvent: {}
+[40.576804] (-) TimerEvent: {}
+[40.677089] (-) TimerEvent: {}
+[40.777399] (-) TimerEvent: {}
+[40.877820] (-) TimerEvent: {}
+[40.978295] (-) TimerEvent: {}
+[41.078731] (-) TimerEvent: {}
+[41.179126] (-) TimerEvent: {}
+[41.279511] (-) TimerEvent: {}
+[41.379901] (-) TimerEvent: {}
+[41.480290] (-) TimerEvent: {}
+[41.580678] (-) TimerEvent: {}
+[41.681088] (-) TimerEvent: {}
+[41.781466] (-) TimerEvent: {}
+[41.881811] (-) TimerEvent: {}
+[41.982093] (-) TimerEvent: {}
+[42.082397] (-) TimerEvent: {}
+[42.182687] (-) TimerEvent: {}
+[42.283077] (-) TimerEvent: {}
+[42.383462] (-) TimerEvent: {}
+[42.483846] (-) TimerEvent: {}
+[42.584224] (-) TimerEvent: {}
+[42.684627] (-) TimerEvent: {}
+[42.784949] (-) TimerEvent: {}
+[42.885331] (-) TimerEvent: {}
+[42.985707] (-) TimerEvent: {}
+[43.086118] (-) TimerEvent: {}
+[43.186504] (-) TimerEvent: {}
+[43.286890] (-) TimerEvent: {}
+[43.387283] (-) TimerEvent: {}
+[43.487658] (-) TimerEvent: {}
+[43.587977] (-) TimerEvent: {}
+[43.688388] (-) TimerEvent: {}
+[43.788787] (-) TimerEvent: {}
+[43.889161] (-) TimerEvent: {}
+[43.989473] (-) TimerEvent: {}
+[44.089762] (-) TimerEvent: {}
+[44.190163] (-) TimerEvent: {}
+[44.290642] (-) TimerEvent: {}
+[44.391134] (-) TimerEvent: {}
+[44.491484] (-) TimerEvent: {}
+[44.591849] (-) TimerEvent: {}
+[44.692223] (-) TimerEvent: {}
+[44.792636] (-) TimerEvent: {}
+[44.893112] (-) TimerEvent: {}
+[44.993548] (-) TimerEvent: {}
+[45.093979] (-) TimerEvent: {}
+[45.194415] (-) TimerEvent: {}
+[45.294818] (-) TimerEvent: {}
+[45.395237] (-) TimerEvent: {}
+[45.495671] (-) TimerEvent: {}
+[45.596071] (-) TimerEvent: {}
+[45.696474] (-) TimerEvent: {}
+[45.796858] (-) TimerEvent: {}
+[45.897232] (-) TimerEvent: {}
+[45.997647] (-) TimerEvent: {}
+[46.098112] (-) TimerEvent: {}
+[46.198506] (-) TimerEvent: {}
+[46.298918] (-) TimerEvent: {}
+[46.399359] (-) TimerEvent: {}
+[46.499666] (-) TimerEvent: {}
+[46.599968] (-) TimerEvent: {}
+[46.700306] (-) TimerEvent: {}
+[46.800678] (-) TimerEvent: {}
+[46.901007] (-) TimerEvent: {}
+[47.001493] (-) TimerEvent: {}
+[47.101997] (-) TimerEvent: {}
+[47.202378] (-) TimerEvent: {}
+[47.302757] (-) TimerEvent: {}
+[47.403162] (-) TimerEvent: {}
+[47.503603] (-) TimerEvent: {}
+[47.604011] (-) TimerEvent: {}
+[47.704404] (-) TimerEvent: {}
+[47.804815] (-) TimerEvent: {}
+[47.905187] (-) TimerEvent: {}
+[48.005593] (-) TimerEvent: {}
+[48.106015] (-) TimerEvent: {}
+[48.206331] (-) TimerEvent: {}
+[48.306707] (-) TimerEvent: {}
+[48.407026] (-) TimerEvent: {}
+[48.507326] (-) TimerEvent: {}
+[48.607690] (-) TimerEvent: {}
+[48.708015] (-) TimerEvent: {}
+[48.808435] (-) TimerEvent: {}
+[48.908861] (-) TimerEvent: {}
+[49.009340] (-) TimerEvent: {}
+[49.109836] (-) TimerEvent: {}
+[49.210298] (-) TimerEvent: {}
+[49.310722] (-) TimerEvent: {}
+[49.411148] (-) TimerEvent: {}
+[49.511610] (-) TimerEvent: {}
+[49.612076] (-) TimerEvent: {}
+[49.712479] (-) TimerEvent: {}
+[49.812951] (-) TimerEvent: {}
+[49.913431] (-) TimerEvent: {}
+[50.013936] (-) TimerEvent: {}
+[50.114390] (-) TimerEvent: {}
+[50.214797] (-) TimerEvent: {}
+[50.315183] (-) TimerEvent: {}
+[50.415616] (-) TimerEvent: {}
+[50.516080] (-) TimerEvent: {}
+[50.616480] (-) TimerEvent: {}
+[50.716896] (-) TimerEvent: {}
+[50.817382] (-) TimerEvent: {}
+[50.917835] (-) TimerEvent: {}
+[51.018245] (-) TimerEvent: {}
+[51.118689] (-) TimerEvent: {}
+[51.219106] (-) TimerEvent: {}
+[51.319506] (-) TimerEvent: {}
+[51.419920] (-) TimerEvent: {}
+[51.520358] (-) TimerEvent: {}
+[51.620790] (-) TimerEvent: {}
+[51.721221] (-) TimerEvent: {}
+[51.821552] (-) TimerEvent: {}
+[51.921998] (-) TimerEvent: {}
+[52.022414] (-) TimerEvent: {}
+[52.122857] (-) TimerEvent: {}
+[52.223252] (-) TimerEvent: {}
+[52.323671] (-) TimerEvent: {}
+[52.424147] (-) TimerEvent: {}
+[52.524565] (-) TimerEvent: {}
+[52.625007] (-) TimerEvent: {}
+[52.725423] (-) TimerEvent: {}
+[52.825895] (-) TimerEvent: {}
+[52.926377] (-) TimerEvent: {}
+[53.026836] (-) TimerEvent: {}
+[53.127287] (-) TimerEvent: {}
+[53.227724] (-) TimerEvent: {}
+[53.328113] (-) TimerEvent: {}
+[53.428508] (-) TimerEvent: {}
+[53.528902] (-) TimerEvent: {}
+[53.629319] (-) TimerEvent: {}
+[53.729797] (-) TimerEvent: {}
+[53.830284] (-) TimerEvent: {}
+[53.930738] (-) TimerEvent: {}
+[54.031160] (-) TimerEvent: {}
+[54.131646] (-) TimerEvent: {}
+[54.232106] (-) TimerEvent: {}
+[54.332557] (-) TimerEvent: {}
+[54.432963] (-) TimerEvent: {}
+[54.533353] (-) TimerEvent: {}
+[54.633772] (-) TimerEvent: {}
+[54.734209] (-) TimerEvent: {}
+[54.737460] (sfuise) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable EstimationInterface\x1b[0m\n'}
+[54.834345] (-) TimerEvent: {}
+[54.934704] (-) TimerEvent: {}
+[55.035033] (-) TimerEvent: {}
+[55.135394] (-) TimerEvent: {}
+[55.235839] (-) TimerEvent: {}
+[55.274218] (sfuise) StdoutLine: {'line': b'[100%] Built target EstimationInterface\n'}
+[55.289934] (sfuise) CommandEnded: {'returncode': 0}
+[55.291149] (sfuise) JobProgress: {'identifier': 'sfuise', 'progress': 'install'}
+[55.291815] (sfuise) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise'], 'cwd': '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('HTTPS_PROXY', 'http://127.0.0.1:7890/'), ('no_proxy', 'localhost,127.0.0.0/8,::1'), ('LANGUAGE', 'en_US:en'), ('USER', 'dsh'), ('all_proxy', 'socks://127.0.0.1:7890/'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/lib:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dsh'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('NO_PROXY', 'localhost,127.0.0.0/8,::1'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '2181'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('IM_CONFIG_PHASE', '1'), ('https_proxy', 'http://127.0.0.1:7890/'), ('COLCON_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'dsh'), ('ALL_PROXY', 'socks://127.0.0.1:7890/'), ('http_proxy', 'http://127.0.0.1:7890/'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dsh'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/dsh/anaconda3/condabin:/home/dsh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dsh-Precision-5680:@/tmp/.ICE-unix/2181,unix/dsh-Precision-5680:/tmp/.ICE-unix/2181'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/e1cfbf52_e97b_43a2_ac92_5f03d02b5862'), ('XDG_RUNTIME_DIR', '/run/user/1001'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1001/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.110'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1001/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/dsh/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1001/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/build/sfuise'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/dsh/anaconda3/bin/conda'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1001/bus,guid=5f02a03320321acdf66f1d3f67fd28ac'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs/local/lib/python3.10/dist-packages:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('HTTP_PROXY', 'http://127.0.0.1:7890/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/isas_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/cf_msgs:/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise:/opt/ros/humble')]), 'shell': False}
+[55.304125] (sfuise) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[55.304483] (sfuise) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/sfuise/EstimationInterface\n'}
+[55.310332] (sfuise) StdoutLine: {'line': b'-- Set runtime path of "/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/sfuise/EstimationInterface" to ""\n'}
+[55.310576] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/lib/sfuise/SplineFusion\n'}
+[55.310939] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch\n'}
+[55.311292] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk1.launch\n'}
+[55.311515] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk3.launch\n'}
+[55.311651] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_isas-walk2.launch\n'}
+[55.311784] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise//launch/sfuise_test_util.launch\n'}
+[55.311918] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/ament_index/resource_index/package_run_dependencies/sfuise\n'}
+[55.312042] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/ament_index/resource_index/parent_prefix_path/sfuise\n'}
+[55.312164] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/environment/ament_prefix_path.sh\n'}
+[55.312287] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/environment/ament_prefix_path.dsv\n'}
+[55.312408] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/environment/path.sh\n'}
+[55.312551] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/environment/path.dsv\n'}
+[55.312674] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/local_setup.bash\n'}
+[55.312812] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/local_setup.sh\n'}
+[55.312948] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/local_setup.zsh\n'}
+[55.313091] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/local_setup.dsv\n'}
+[55.313218] (sfuise) StdoutLine: {'line': b'-- Installing: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.dsv\n'}
+[55.313443] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/ament_index/resource_index/packages/sfuise\n'}
+[55.313690] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/cmake/sfuiseConfig.cmake\n'}
+[55.314099] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/cmake/sfuiseConfig-version.cmake\n'}
+[55.314501] (sfuise) StdoutLine: {'line': b'-- Up-to-date: /home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/install/sfuise/share/sfuise/package.xml\n'}
+[55.315125] (sfuise) CommandEnded: {'returncode': 0}
+[55.331788] (sfuise) JobEnded: {'identifier': 'sfuise', 'rc': 0}
+[55.333209] (-) EventReactorShutdown: {}

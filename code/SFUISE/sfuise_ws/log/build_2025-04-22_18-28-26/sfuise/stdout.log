@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target SplineFusion[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable SplineFusion[0m
+[ 75%] Built target SplineFusion

@@ -39,25 +39,25 @@ public:
 
         //订阅启动时间话题
         sub_start = this->create_subscription<std_msgs::msg::Int64>(
-        "/SplineFusion/start_time", 1000, std::bind(&EstimationInterface::startCallBack, this, std::placeholders::_1));
+        "/start_time", 1000, std::bind(&EstimationInterface::startCallBack, this, std::placeholders::_1));
 
         // 订阅 IMU 数据,发布
-        std::string imu_type = this->declare_parameter<std::string>("topic_imu", "/default_imu_topic"); // 读取IMU话题类型
+        std::string imu_type = this->declare_parameter<std::string>("topic_imu", "/waveshare_sense_hat_b"); // 读取IMU话题类型
         sub_imu = this->create_subscription<sensor_msgs::msg::Imu>(
             imu_type, 400, std::bind(&EstimationInterface::getImuCallback, this, std::placeholders::_1));
 
-        pub_imu = this->create_publisher<sensor_msgs::msg::Imu>("imu_ds", 400);
+        pub_imu = this->create_publisher<sensor_msgs::msg::Imu>("/imu_ds", 400);
 
         // 订阅 UWB 数据
-        std::string uwb_type = this->declare_parameter<std::string>("topic_uwb", "/tdoa_data");// 读取UWB话题类型
+        std::string uwb_type = this->declare_parameter<std::string>("topic_uwb", "/rtls_flares");// 读取UWB话题类型
         if (uwb_type == "/tdoa_data") {
-            pub_uwb = this->create_publisher<cf_msgs::msg::Tdoa>("tdoa_ds", 400);
             sub_uwb = this->create_subscription<cf_msgs::msg::Tdoa>(
                 uwb_type, 400, std::bind(&EstimationInterface::getTdoaUTILCallback, this, std::placeholders::_1));
+            pub_uwb = this->create_publisher<cf_msgs::msg::Tdoa>("/tdoa_ds", 400);
         } else if (uwb_type == "/rtls_flares") {
-            pub_uwb = this->create_publisher<isas_msgs::msg::RTLSStick>("toa_ds", 400);
             sub_uwb = this->create_subscription<isas_msgs::msg::RTLSStick>(
                 uwb_type, 400, std::bind(&EstimationInterface::getToaISASCallback, this, std::placeholders::_1));
+            pub_uwb = this->create_publisher<isas_msgs::msg::RTLSStick>("/toa_ds", 400);
         } else {
             RCLCPP_ERROR(this->get_logger(), "Wrong UWB format!");
         }
@@ -72,8 +72,8 @@ public:
         }
 
         // 发布 Anchor 可视化数据
-        anchor_pos_pub = this->create_publisher<sensor_msgs::msg::PointCloud>("visualization_anchor", 1000);
-        anchor_pub = this->create_publisher<isas_msgs::msg::Anchorlist>("anchor_list", 1000);
+        anchor_pos_pub = this->create_publisher<sensor_msgs::msg::PointCloud>("/visualization_anchor", 1000);
+        anchor_pub = this->create_publisher<isas_msgs::msg::Anchorlist>("/anchor_list", 1000);
 
         // 定时器
         timer_anchor = this->create_wall_timer(
@@ -90,18 +90,18 @@ public:
         }
 
         // 其他订阅和发布
-        int control_point_fps = this->declare_parameter<int>("control_point_fps", 100);// 读取控制点帧率
-        dt_ns = 1e9 / control_point_fps;
+        int control_point_fps = this->declare_parameter<int>("control_point_fps", 10);// 10 读取控制点帧率
+        dt_ns = 1e9 / control_point_fps; // 计算时间间隔（纳秒）
         sub_calib = this->create_subscription<sfuise_msgs::msg::Calib>(
-            "/SplineFusion/sys_calib", 100, std::bind(&EstimationInterface::getCalibCallback, this, std::placeholders::_1));// 订阅系统标定数据
+            "/sys_calib", 100, std::bind(&EstimationInterface::getCalibCallback, this, std::placeholders::_1));// 订阅系统标定数据
         sub_est = this->create_subscription<sfuise_msgs::msg::Estimate>(
-            "/SplineFusion/est_window", 100, std::bind(&EstimationInterface::getEstCallback, this, std::placeholders::_1));// 订阅估计窗口数据
+            "/est_window", 100, std::bind(&EstimationInterface::getEstCallback, this, std::placeholders::_1));// 订阅估计窗口数据
 
-        pub_opt_old = this->create_publisher<nav_msgs::msg::Path>("bspline_optimization_old", 1000);// 发布旧的B样条优化路径
-        pub_opt_window = this->create_publisher<nav_msgs::msg::Path>("bspline_optimization_window", 1000);// 发布当前B样条优化窗口
+        pub_opt_old = this->create_publisher<nav_msgs::msg::Path>("/bspline_optimization_old", 1000);// 发布旧的B样条优化路径
+        pub_opt_window = this->create_publisher<nav_msgs::msg::Path>("/bspline_optimization_window", 1000);// 发布当前B样条优化窗口
         opt_old_path.header.frame_id = "map";// 设置旧路径的坐标系为地图
 
-        pub_opt_pose = this->create_publisher<visualization_msgs::msg::Marker>("opt_pose", 1000);// 发布优化位姿的可视化标记
+        pub_opt_pose = this->create_publisher<visualization_msgs::msg::Marker>("/opt_pose", 1000);// 发布优化位姿的可视化标记
         opt_pose_vis.setColor(85.0 / 255.0, 164.0 / 255.0, 104.0 / 255.0); // 设置优化位姿可视化的颜色
 
         RCLCPP_INFO(this->get_logger(), "EstimationInterface Initialized.");
@@ -156,13 +156,13 @@ private:
    
     void readParamsInterface() { 
         // 读取参数
-        if_tdoa = this->declare_parameter<bool>("if_tdoa", false);
-        imu_sample_coeff = this->declare_parameter<double>("imu_sample_coeff", 1.0);
-        uwb_sample_coeff = this->declare_parameter<double>("uwb_sample_coeff", 1.0);
-        imu_frequency = this->declare_parameter<double>("imu_frequency", 100.0);
-        uwb_frequency = this->declare_parameter<double>("uwb_frequency", 100.0);
-        gyro_unit = this->declare_parameter<bool>("gyro_unit", true);
-        acc_ratio = this->declare_parameter<bool>("acc_ratio", true);
+        if_tdoa = this->declare_parameter<bool>("if_tdoa", false); // false
+        imu_sample_coeff = this->declare_parameter<double>("imu_sample_coeff", 1.0); // 1
+        uwb_sample_coeff = this->declare_parameter<double>("uwb_sample_coeff", 1.0); // 1
+        imu_frequency = this->declare_parameter<double>("imu_frequency", 16.0); // 16
+        uwb_frequency = this->declare_parameter<double>("uwb_frequency", 84.0); // 84
+        gyro_unit = this->declare_parameter<bool>("gyro_unit", false); // false
+        acc_ratio = this->declare_parameter<bool>("acc_ratio", false); // false
 
         // 错误检查
         if (uwb_sample_coeff == 0) {
@@ -205,9 +205,11 @@ private:
         }
 
         spline_global.updateKnots(&spline_w); // 更新全局样条节点
+        std::cout << "spline_global_numknots:" << spline_global.numKnots() << std::endl;
 
         // 如果启用导航UWB，则发布优化
         if (if_nav_uwb) {
+            // std::cout << "true_uwb" << std::endl;
             pubOpt(spline_w, !est_msg->if_full_window.data);
         }
 
@@ -238,6 +240,11 @@ private:
 
         for (size_t i = cnt; i < gt.size(); i++) { // 遍历地面真实数据
             int64_t t_ns = gt.at(i).time_ns; // 获取时间戳
+            // std::cout << "gt.size:" << gt.size() << std::endl;
+            // std::cout << "gt.time:" << t_ns << std::endl;
+            // std::cout << "spline_local.minTimeNs():" << min_t << std::endl;
+            // std::cout << "spline_local.maxTimeNs():" << max_t << std::endl;
+            // std::cout << "cnt:" << cnt <<std::endl; 
             if (t_ns < min_t) { // 如果时间小于最小时间
                 cnt = i; // 更新计数器
                 continue;
@@ -246,6 +253,9 @@ private:
             }
 
             PoseData pose_tf = getPoseInUWB(spline_local, t_ns); // 获取UWB中的位姿
+            // std::cout << "pose_tf:" << pose_tf.pos.x() << "   "
+            //                         << pose_tf.pos.y() << "   "
+            //                         << pose_tf.pos.z() << std::endl;
             opt_window.push_back(pose_tf); // 添加到优化窗口
             opt_window_path.poses.push_back(CommonUtils::pose2msg(t_ns, pose_tf.pos, pose_tf.orient)); // 添加到优化窗口路径
         }
@@ -262,6 +272,7 @@ private:
     {
         static int64_t last_imu = 0; // 上一个IMU时间戳
         int64_t t_ns = rclcpp::Time(imu_msg->header.stamp).nanoseconds(); // 获取当前时间戳
+        // std::cout << "--------------->imu_time:" << t_ns << std::endl;
 
         if (sampleData(t_ns, last_imu, imu_sample_coeff, imu_frequency)) { // 检查是否需要采样
             Eigen::Vector3d acc(imu_msg->linear_acceleration.x, imu_msg->linear_acceleration.y, imu_msg->linear_acceleration.z); // 获取加速度
@@ -289,6 +300,7 @@ private:
 
     void getCalibCallback(const sfuise_msgs::msg::Calib::SharedPtr calib_msg) // 标定回调函数
     {
+        RCLCPP_INFO_STREAM(this->get_logger(), "sys_calib: @@@@@@@@ ");
         if_nav_uwb = true; // 启用导航UWB
         calib_param.q_nav_uwb = Eigen::Quaterniond(calib_msg->q_nav_uwb.w, calib_msg->q_nav_uwb.x, calib_msg->q_nav_uwb.y, calib_msg->q_nav_uwb.z); // 设置四元数
         calib_param.t_nav_uwb = Eigen::Vector3d(calib_msg->t_nav_uwb.x, calib_msg->t_nav_uwb.y, calib_msg->t_nav_uwb.z); // 设置平移向量
@@ -298,6 +310,7 @@ private:
 
     void getToaISASCallback(const isas_msgs::msg::RTLSStick::SharedPtr uwb_msg) // RTLS Stick回调
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 11111111111111 ");
         static int64_t last_uwb = 0; // 上一个UWB时间戳
         int64_t t_ns = rclcpp::Time(uwb_msg->header.stamp).nanoseconds(); // 获取当前时间戳
 
@@ -308,6 +321,7 @@ private:
             // 动态转换为具体类型指针
             auto pub_rtls = dynamic_cast<rclcpp::Publisher<isas_msgs::msg::RTLSStick>*>(pub_uwb.get());
             if (pub_rtls) {
+                // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 333333333333333 ");
                 pub_rtls->publish(*uwb_msg);
             } else {
                 RCLCPP_ERROR(get_logger(), "pub_uwb is not RTLSStick publisher!");
@@ -336,12 +350,14 @@ private:
 
     void getGtFromISASCallback(const geometry_msgs::msg::TransformStamped::SharedPtr gt_msg) // 从ISAS获取地面真实数据
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 222222222222222 ");
         Eigen::Quaterniond q(gt_msg->transform.rotation.w, gt_msg->transform.rotation.x,
                              gt_msg->transform.rotation.y, gt_msg->transform.rotation.z); // 获取四元数
         Eigen::Vector3d pos(gt_msg->transform.translation.x, gt_msg->transform.translation.y, gt_msg->transform.translation.z); // 获取位置
 
         PoseData pose(rclcpp::Time(gt_msg->header.stamp).nanoseconds(), q, pos); // 创建位姿数据
         gt.push_back(pose); // 添加到地面真实数据
+        // std::cout << "gt:" <<gt.back().time_ns << std::endl;
     }
 
     void getGtFromUTILCallback(const geometry_msgs::msg::PoseWithCovarianceStamped::SharedPtr gt_msg) // 从UTIL获取地面真实数据
@@ -356,12 +372,14 @@ private:
 
     void getAnchorListFromISASCallback(const isas_msgs::msg::Anchorlist::SharedPtr anchor_msg) // 从ISAS获取锚点列表
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 44444444444444 ");
         if (initialized_anchor) return; // 如果已初始化，直接返回
 
         int num_sum = 20; // 设定锚点累积次数
         static int cnt = 0; // 计数器
 
         for (const auto& anchor : anchor_msg->anchor) { // 遍历锚点
+            // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 44444444444444 ");
             Eigen::Vector3d anchor_pos(anchor.position.x, anchor.position.y, anchor.position.z); // 获取锚点位置
             uint16_t anchor_id = anchor.id; // 获取锚点ID
 
@@ -370,6 +388,7 @@ private:
             } else { 
                 Eigen::Vector3d ave_pos = anchor_list[anchor_id]; // 计算平均位置
                 anchor_list[anchor_id] = (ave_pos * cnt + anchor_pos) / (cnt + 1); 
+                anchor_pos = anchor_list[anchor_id]; // 更新锚点位置
             }
         }
 
@@ -403,24 +422,32 @@ private:
         initialized_anchor = true;
     }
 
-    bool sampleData(int64_t t_ns, int64_t last_t_ns, double coeff, double frequency) const // 数据采样函数
+    bool sampleData(const int64_t t_ns, const int64_t last_t_ns, const double coeff, const double frequency) const // 数据采样函数
     {
-        if (coeff == 0) return false;
-        int64_t dt = 1e9 / (coeff * frequency);
-        return (coeff == 1) || (t_ns - last_t_ns > dt - 1e5);
+        if (coeff == 0)  return false; // 如果系数为0，返回false
+        int64_t dt = 1e9 / (coeff * frequency); // 计算采样间隔
+        if (coeff == 1) { // 如果系数为1
+            return true; // 直接返回true
+        } else if (t_ns - last_t_ns > dt - 1e5) { // 如果时间差大于采样间隔
+            return true; // 返回true
+        } else {
+            return false; // 否则返回false
+        }
     }
 
     void publishAnchor() // 发布锚点的函数
     {
-        if (!initialized_anchor) return;
-
+        if (!initialized_anchor) return; // 初始化没成功，则直接返回
+        
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: aaaaaaaaaaaaaaaaa ");
         auto anchor_list_msg = isas_msgs::msg::Anchorlist();
-        for (const auto& [anchor_id, pos] : anchor_list) {
+        for (auto it = anchor_list.begin(); it != anchor_list.end(); it++) { // 遍历锚点列表
             isas_msgs::msg::AnchorPosition anchor;
+            Eigen::Vector3d pos = it->second; // 获取锚点位置
             anchor.position.x = pos[0];
             anchor.position.y = pos[1];
             anchor.position.z = pos[2];
-            anchor.id = anchor_id;
+            anchor.id = it->first; // 设置锚点ID
             anchor_list_msg.anchor.push_back(anchor);
         }
         anchor_pub->publish(anchor_list_msg);
@@ -429,7 +456,8 @@ private:
         anchors.header.frame_id = "map";
         anchors.header.stamp = rclcpp::Clock().now();
 
-        for (const auto& [_, pos] : anchor_list) {
+        for (auto it = anchor_list.begin(); it != anchor_list.end(); it++) { // 遍历锚点列表
+            Eigen::Matrix<double, 3, 1> pos = it->second; // 获取锚点位置
             geometry_msgs::msg::Point32 p;
             p.x = pos[0];
             p.y = pos[1];
@@ -447,11 +475,17 @@ private:
 
     PoseData getPoseInUWB(SplineState& spline, int64_t t_ns) // 获取UWB中的位姿的函数
     {
-        Eigen::Quaterniond orient_interp;
-        Eigen::Vector3d t_interp = spline.itpPosition(t_ns);
-        spline.itpQuaternion(t_ns, &orient_interp);
-        Eigen::Quaterniond q = calib_param.q_nav_uwb * orient_interp;
-        Eigen::Vector3d t = calib_param.q_nav_uwb * (orient_interp * calib_param.offset + t_interp) + calib_param.t_nav_uwb;
+        Eigen::Quaterniond orient_interp;// 创建四元数
+        Eigen::Vector3d t_interp = spline.itpPosition(t_ns);// 获取插值位置
+        spline.itpQuaternion(t_ns, &orient_interp);// 获取插值方向
+        Eigen::Quaterniond q = calib_param.q_nav_uwb * orient_interp;// 计算最终方向
+        Eigen::Vector3d t = calib_param.q_nav_uwb * (orient_interp * calib_param.offset + t_interp) + calib_param.t_nav_uwb;// 计算最终位置
+        // std::cout << "orient_interp:"<<orient_interp.x <<"   "
+        //                             <<orient_interp.y<<"   " 
+        //                             <<orient_interp.z<<"   "
+        //                             <<orient_interp.w<<std::endl;
+        // std::cout << "t_interp:" << t_interp << std::endl;
+        // std::cout << "calib_param:" << calib_param.q_nav_uwb << std::endl;
         return PoseData(t_ns, q, t);
     }
 
@@ -466,9 +500,15 @@ int main(int argc, char *argv[])
     auto node = std::make_shared<EstimationInterface>();
     RCLCPP_INFO(node->get_logger(), "\033[1;32m---->\033[0m Starting EstimationInterface.");
 
-    rclcpp::Rate rate(1000);
+    // rclcpp::spin(node);
+    rclcpp::Rate rate(1000); 
+    rclcpp::executors::SingleThreadedExecutor executor;
+    executor.add_node(node);
+
     while (rclcpp::ok()) {
-        rclcpp::spin_some(node);
+        executor.spin_some(); // 处理回调
+        // 其他任务（如发布消息、控制逻辑）
+        // RCLCPP_INFO(node->get_logger(), "Running EstimationInterface loop...");
         rate.sleep();
     }
 

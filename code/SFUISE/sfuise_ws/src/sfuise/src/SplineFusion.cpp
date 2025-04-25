@@ -26,56 +26,63 @@ public:
         if_anchor_ini = false;  // 初始化锚点标志
         average_runtime = 0;  // 初始化平均运行时间
         window_count = 0;  // 初始化窗口计数
+        imu_count = 0;
+        uwb_count = 0;
         solver_flag = INITIAL;  // 初始化求解器标志
         readParameters();  // 读取参数
 
         // 订阅IMU和锚点数据
         sub_imu = this->create_subscription<sensor_msgs::msg::Imu>(
-            "/EstimationInterface/imu_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getImuCallback, this, std::placeholders::_1));
+            "/imu_ds", 1000, std::bind(&SplineFusion::getImuCallback, this, std::placeholders::_1));
         
         sub_anchor = this->create_subscription<isas_msgs::msg::Anchorlist>(
-            "/EstimationInterface/anchor_list", rclcpp::QoS(1000), std::bind(&SplineFusion::getAnchorCallback, this, std::placeholders::_1));
+            "/anchor_list", 1000, std::bind(&SplineFusion::getAnchorCallback, this, std::placeholders::_1));
         
         // 根据是否使用TDOA选择订阅的主题
         if (if_tdoa) {
             sub_uwb = this->create_subscription<cf_msgs::msg::Tdoa>(
-                "/EstimationInterface/tdoa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getTdoaCallback, this, std::placeholders::_1));
-        } else {
+                "/tdoa_ds", 1000, std::bind(&SplineFusion::getTdoaCallback, this, std::placeholders::_1));
+        } else { //进入
             sub_uwb = this->create_subscription<isas_msgs::msg::RTLSStick>(
-                "/EstimationInterface/toa_ds", rclcpp::QoS(1000), std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1));
+                "/toa_ds", 1000, std::bind(&SplineFusion::getToaCallback, this, std::placeholders::_1));
         }
 
         // 创建发布者
         pub_knots_active = this->create_publisher<sensor_msgs::msg::PointCloud>(
-            "active_control_points", rclcpp::QoS(1000));
+            "/active_control_points", 1000);
         
         pub_knots_inactive = this->create_publisher<sensor_msgs::msg::PointCloud>(
-            "inactive_control_points", rclcpp::QoS(1000));
+            "/inactive_control_points", 1000);
         
         pub_calib = this->create_publisher<sfuise_msgs::msg::Calib>(
-            "sys_calib", rclcpp::QoS(100));
+            "/sys_calib", 100);
 
         pub_est = this->create_publisher<sfuise_msgs::msg::Estimate>(
-            "est_window", rclcpp::QoS(1000));
+            "/est_window", 1000);
 
         pub_start_time = this->create_publisher<std_msgs::msg::Int64>(
-            "start_time", rclcpp::QoS(1000));
+            "/start_time", 1000);
+        // timer_ = this->create_wall_timer(
+            // std::chrono::milliseconds(1000), std::bind(&SplineFusion::run, this));
+        RCLCPP_INFO(this->get_logger(), "SplineFusion Initialized.");
     }
 
     void run()
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 111111111111111 ");
         static int num_window = 0;  // 窗口计数
         rclcpp::Time t_window_start = this->get_clock()->now();  // 获取当前时间
 
         if (initialization()) {  // 如果初始化成功
             displayControlPoints();  // 显示控制点
             optimization();  // 执行优化
-
+            // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 111111111111111 ");
             double t_consum = (this->get_clock()->now() - t_window_start).seconds();  // 计算消耗时间
             average_runtime = (t_consum + double(num_window) * average_runtime) / double(num_window + 1);  // 更新平均运行时间
             num_window++;  // 增加窗口计数
 
             if ((int)window_count <= n_window_calib) {  // 如果窗口计数小于等于校准窗口数
+                // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: ssssssssssssssss ");
                 sfuise_msgs::msg::Calib calib_msg;  // 创建校准消息
                 // 设置校准参数
                 calib_msg.q_nav_uwb.w = calib_param.q_nav_uwb.w();
@@ -125,6 +132,7 @@ private:
     static constexpr double NS_TO_S = 1e-9;  // 纳秒转秒的常量
 
     // ROS 2订阅者和发布者
+    rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr sub_imu;  // IMU订阅者
     rclcpp::Subscription<isas_msgs::msg::Anchorlist>::SharedPtr sub_anchor;  // 锚点订阅者
     rclcpp::SubscriptionBase::SharedPtr sub_uwb;  // UWB订阅者
@@ -160,6 +168,9 @@ private:
     int64_t last_imu_t_ns;  // 上一个IMU时间（纳秒）
     int64_t next_knot_time_ns;  // 下一个节点时间（纳秒）
 
+    int64_t imu_count;
+    int64_t uwb_count;
+
     // 求解器状态枚举
     enum SolverFlag { INITIAL, FULLSIZE };
     SolverFlag solver_flag;  // 求解器状态
@@ -179,98 +190,112 @@ private:
     void readParameters() // 读取参数函数
     {
         double imu_sample_coeff = this->declare_parameter("imu_sample_coeff", 1.0);
-        if_uwb_only = (imu_sample_coeff == 0);
+        if_uwb_only = (imu_sample_coeff == 0); //walk1:false,使用IMU和UWB
 
         param.if_opt_g = true; // 设置优化重力标志
         param.if_opt_transform = true; // 设置优化变换标志
 
-        param.w_uwb = this->declare_parameter("w_uwb", 1.0);
-        max_iter = this->declare_parameter("max_iter", 10);
-        int control_point_fps = this->declare_parameter("control_point_fps", 30);
-        dt_ns = 1e9 / control_point_fps;
+        param.w_uwb = this->declare_parameter("w_uwb", 7.0); //7 读取UWB权重
+        max_iter = this->declare_parameter("max_iter", 5);  //5 读取最大迭代次数
+        int control_point_fps = this->declare_parameter("control_point_fps", 10);  //10 
+        dt_ns = 1e9 / control_point_fps;  // 计算时间间隔
 
-        if_tdoa = this->declare_parameter("if_tdoa", false);
+        if_tdoa = this->declare_parameter("if_tdoa", false);  // false 读取是否使用TDOA标志
         bag_start_time = 0;
-        n_window_calib = this->declare_parameter("n_window_calib", 1);
-        window_size = this->declare_parameter("window_size", 10);
+        n_window_calib = this->declare_parameter("n_window_calib", 50); // 50 读取校准窗口数
+        window_size = this->declare_parameter("window_size", 100);  // 100 读取窗口大小
 
         if (n_window_calib == 0) {
             RCLCPP_ERROR(this->get_logger(), "n_window_calib cannot be set 0.");
             rclcpp::shutdown();
         } else {
-            param.q_nav_uwb_init.setIdentity();
-            param.t_nav_uwb_init.setZero();
+            param.q_nav_uwb_init.setIdentity(); // 初始化导航四元数
+            param.t_nav_uwb_init.setZero(); // 初始化导航平移
         }
         // 读取加速度和陀螺仪的方差倒数
-        std::vector<double> accel_var_inv = this->declare_parameter("accel_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        std::vector<double> accel_var_inv = this->declare_parameter("accel_var_inv", std::vector<double>{7.8483,7.8483,7.8483}); // [7.8483, 7.8483, 7.8483]
         param.accel_var_inv << accel_var_inv[0], accel_var_inv[1], accel_var_inv[2];
 
-        std::vector<double> bias_accel_var_inv = this->declare_parameter("bias_accel_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        std::vector<double> bias_accel_var_inv = this->declare_parameter("bias_accel_var_inv", std::vector<double>{514.9887, 514.9887, 514.9887}); // [514.9887, 514.9887, 514.9887] 
         param.bias_accel_var_inv << bias_accel_var_inv[0], bias_accel_var_inv[1], bias_accel_var_inv[2];
 
-        param.w_acc = this->declare_parameter("w_accel", 1.0);
-        param.w_bias_acc = this->declare_parameter("w_bias_accel", 1.0);
+        param.w_acc = this->declare_parameter("w_accel", 1.0); // 1 读取加速度权重
+        param.w_bias_acc = this->declare_parameter("w_bias_accel", 1.0); // 1 读取加速度偏差权重
 
-        std::vector<double> gyro_var_inv = this->declare_parameter("gyro_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        std::vector<double> gyro_var_inv = this->declare_parameter("gyro_var_inv", std::vector<double>{27.5646, 27.5646, 27.5646}); // [27.5646, 27.5646, 27.5646] 读取陀螺仪
         param.gyro_var_inv << gyro_var_inv[0], gyro_var_inv[1], gyro_var_inv[2];
 
-        std::vector<double> bias_gyro_var_inv = this->declare_parameter("bias_gyro_var_inv", std::vector<double>{1.0, 1.0, 1.0});
+        std::vector<double> bias_gyro_var_inv = this->declare_parameter("bias_gyro_var_inv", std::vector<double>{2950.6680, 2950.6680, 2950.6680}); // [2950.6680, 2950.6680, 2950.6680] 读取陀螺仪偏差
         param.bias_gyro_var_inv << bias_gyro_var_inv[0], bias_gyro_var_inv[1], bias_gyro_var_inv[2];
 
-        param.w_gyro = this->declare_parameter("w_gyro", 1.0);
-        param.w_bias_gyro = this->declare_parameter("w_bias_gyro", 1.0);
+        param.w_gyro = this->declare_parameter("w_gyro", 1.0); // 1 读取陀螺仪权重
+        param.w_bias_gyro = this->declare_parameter("w_bias_gyro", 1.0); // 1 读取陀螺仪偏差权重
 
-        param.if_reject_uwb = this->declare_parameter("if_reject_uwb", false);
+        param.if_reject_uwb = this->declare_parameter("if_reject_uwb", true); // true 读取是否拒绝UWB标志
         if (param.if_reject_uwb) {
-            param.reject_uwb_thresh = this->declare_parameter("reject_uwb_thresh", 0.5);
-            param.reject_uwb_window_width = this->declare_parameter("reject_uwb_window_width", 0.5);
+            param.reject_uwb_thresh = this->declare_parameter("reject_uwb_thresh", 0.3); // 0.3 读取拒绝阈值
+            param.reject_uwb_window_width = this->declare_parameter("reject_uwb_window_width", 0.5); // 0.5 读取拒绝窗口宽度
         }
 
-        std::vector<double> v_offset = this->declare_parameter("offset", std::vector<double>{0.0, 0.0, 0.0});
+        std::vector<double> v_offset = this->declare_parameter("offset", std::vector<double>{0.1, -0.025, 0.0}); // [0.1, -0.025, 0.0] 获取偏移量参数
         calib_param.offset = Eigen::Vector3d(v_offset[0], v_offset[1], v_offset[2]);
 
-        if (!if_tdoa) {
-            v_toa_offset = this->declare_parameter("toa_offset", std::vector<double>{0.0, 0.0, 0.0});
+        if (!if_tdoa) { // 进入
+            v_toa_offset = this->declare_parameter("toa_offset", std::vector<double>{-0.0700, 0.1539, -0.0751, 0.1409, -0.0247}); // [-0.0700, 0.1539, -0.0751, 0.1409, -0.0247] 读取TOA偏移量
         }
+        RCLCPP_INFO_STREAM(this->get_logger(), " ReadParameters finished ");
     }
 
    // IMU回调函数
     void getImuCallback(const sensor_msgs::msg::Imu::SharedPtr imu_msg)
     {
-        int64_t t_ns = imu_msg->header.stamp.nanosec; // 获取时间戳
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 111111111111111 ");
+        int64_t t_ns = rclcpp::Time(imu_msg->header.stamp).nanoseconds(); // 获取当前时间戳
         Eigen::Vector3d acc(imu_msg->linear_acceleration.x, imu_msg->linear_acceleration.y, imu_msg->linear_acceleration.z); // 获取加速度
         Eigen::Vector3d gyro(imu_msg->angular_velocity.x, imu_msg->angular_velocity.y, imu_msg->angular_velocity.z); // 获取角速度
-        ImuData imu(t_ns, gyro, acc); // 创建IMU数据对象
-        imu_buff.push_back(imu); // 将IMU数据添加到缓冲区
+        imu_count++;
+        if(imu_count>0){
+            ImuData imu(t_ns, gyro, acc); // 创建IMU数据对象
+            imu_buff.push_back(imu); // 将IMU数据添加到缓冲区
+            // std::cout << "imu_buff front:" << imu_buff.front().time_ns << std::endl;
+            // std::cout << "imu_buff back:" << imu_buff.back().time_ns << std::endl;
+        }
     }
 
     // TDOA回调函数
     void getTdoaCallback(const cf_msgs::msg::Tdoa::SharedPtr msg)
     {
-        TDOAData uwb(msg->header.stamp.nanosec, msg->id_a, msg->id_b, msg->data); // 创建TDOA数据对象
+        TDOAData uwb(rclcpp::Time(msg->header.stamp).nanoseconds(), msg->id_a, msg->id_b, msg->data); // 创建TDOA数据对象
         tdoa_buff.push_back(uwb); // 将TDOA数据添加到缓冲区
     }
 
     // TOA回调函数
     void getToaCallback(const isas_msgs::msg::RTLSStick::SharedPtr uwb_msg)
     {
-        int64_t t_ns = uwb_msg->header.stamp.nanosec; // 获取时间戳
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 3333333333333333 ");
+        int64_t t_ns = rclcpp::Time(uwb_msg->header.stamp).nanoseconds(); // 获取时间戳
         for (const auto& rg : uwb_msg->ranges) { // 遍历范围数据
             if (rg.ra == 0) continue; // 如果范围为0，跳过
-            TOAData uwb(t_ns, rg.id, rg.range); // 创建TOA数据对象
-            toa_buff.push_back(uwb); // 将TOA数据添加到缓冲区
+            uwb_count++;
+            if (uwb_count>0){
+                TOAData uwb(t_ns, rg.id, rg.range); // 创建TOA数据对象
+                toa_buff.push_back(uwb); // 将TOA数据添加到缓冲区
+                // std::cout << "toa_buff front:" << toa_buff.front().time_ns << std::endl;
+                // std::cout << "toa_buff back:" << toa_buff.back().time_ns << std::endl;
+            }
         }
     }
 
     // 锚点回调函数
     void getAnchorCallback(const isas_msgs::msg::Anchorlist::SharedPtr anchor_msg)
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 22222222222222 ");
         if (if_anchor_ini) return; // 如果锚点已初始化，返回
         for (const auto& anchor : anchor_msg->anchor) { // 遍历锚点
             param.anchor_list[anchor.id] = Eigen::Vector3d(anchor.position.x, anchor.position.y, anchor.position.z); // 添加锚点到列表
         }
         if_anchor_ini = true; // 设置锚点初始化标志
-        if (!if_tdoa) { // 如果不使用TDOA
+        if (!if_tdoa) { // 进入
             int i = 0; // 初始化索引
             for (auto it = param.anchor_list.begin(); it != param.anchor_list.end(); it++) { // 遍历锚点列表
                 param.toa_offset[it->first] = v_toa_offset[i]; // 设置TOA偏移
@@ -309,18 +334,26 @@ private:
         static bool param_set = false; // 参数设置标志
         static bool initialize_control_point = false; // 控制点初始化标志
         if (initialize_control_point) { // 如果控制点已初始化
-            int64_t min_time = 1e18; // 初始化最小时间
+            int64_t min_time = 1e18; // 初始化最小时间SAS
+            // 我们只能使用时间小于 min_time 的数据来做插值或同步，因为之后的数据还没有到来。
+            // imu_buff:存储了按时间排序的 IMU 消息
+            // imu_buff.back():取缓冲区的最后一个元素（即时间上最新的IMU数据）
+            // imu_buff.back().time_ns:表示这个 IMU 数据的时间戳，单位是纳秒（ns）。
             if (!imu_buff.empty()) min_time = imu_buff.back().time_ns; // 获取IMU缓冲区的时间
             if (!toa_buff.empty()) min_time = std::min(toa_buff.back().time_ns, min_time); // 获取TOA缓冲区的时间
             if (!tdoa_buff.empty()) min_time = std::min(tdoa_buff.back().time_ns, min_time); // 获取TDOA缓冲区的时间
+            // std::cout << "min_time:" << min_time << std::endl;
+            // std::cout << "spline_local_nextmaxtime:" << spline_local.nextMaxTimeNs() << std::endl;
+            // nextMaxTimeNs()返回下一个样条段的最大时间戳，单位是纳秒（ns = nanoseconds）。它通常用于轨迹插值或预测过程中，确定当前插值是否需要“前进”到下一个样条段。
             if (min_time > spline_local.nextMaxTimeNs()) { // 如果最小时间大于样条的最大时间
+                // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: ttttttttttttttt ");
                 Eigen::Quaterniond q_ini = spline_local.getKnotOrt(spline_local.numKnots() - 1); // 获取初始四元数
-                Eigen::Quaterniond q_ini_backup = q_ini; // 备份初始四元数
+                Eigen::Quaterniond q_ini_backup = q_ini; // 备份初始四S元数
                 Eigen::Vector3d pos_ini = spline_local.getKnotPos(spline_local.numKnots() - 1); // 获取初始位置
                 Eigen::Matrix<double, 6, 1> bias_ini = spline_local.getKnotBias(spline_local.numKnots() - 1); // 获取初始偏差
                 if (!if_uwb_only) { // 如果不只使用UWB
                     if (spline_local.numKnots() <= 2) { // 如果样条节点数小于等于2
-                        last_imu_t_ns = bag_start_time; // 设置最后IMU时间为行李开始时间
+                        last_imu_t_ns = bag_start_time; // 设置最后IMU时间为bag开始时间
                     } else {
                         last_imu_t_ns = imu_window.back().time_ns; // 获取IMU窗口的最后时间
                     }
@@ -337,20 +370,27 @@ private:
                 if (q_ini_backup.dot(q_ini) < 0) q_ini = Eigen::Quaterniond(-q_ini.w(), -q_ini.x(), -q_ini.y(), -q_ini.z()); // 确保四元数方向一致
                 spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
                 next_knot_time_ns += dt_ns; // 更新下一个节点时间
+                std::cout << "spline_local_numknots:" << spline_local.numKnots() << std::endl;
                 return true; // 返回成功
             } else {
                 return false; // 返回失败
             }
         } else {
-            if (!param_set) { // 如果参数未设置
+            if (!param_set) { // 如果参数未设置，，，，多次运行，为0
+                // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: tttttttttttttttt ");
                 param_set = setParameters(); // 设置参数
                 std_msgs::msg::Int64 start_time; // 创建启动时间消息
                 start_time.data = bag_start_time; // 设置启动时间
                 pub_start_time->publish(start_time); // 发布启动时间
+                // std::cout << "2222222222222dt_ns:" << dt_ns << " bag_start_time:" << bag_start_time << std::endl;
             }
-            if (param_set && if_anchor_ini) { // 如果参数已设置且锚点已初始化
+            if (param_set && if_anchor_ini) { // 如果参数已设置且锚点已初始化，，，，运行1次
+                // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: tttttttttttttttt ");
+                // 以时间间隔 dt_ns，从时间 bag_start_time 开始，初始化一个样条轨迹，初始 knot 索引为 0
                 spline_local.init(dt_ns, 0, bag_start_time); // 初始化样条
-                if (!if_uwb_only) { // 如果不只使用UWB
+                // std::cout << "11111111111111dt_ns:" << dt_ns << " bag_start_time:" << bag_start_time << std::endl;
+                // std::cout << "111111111111111111###" << spline_local.nextMaxTimeNs() << std::endl;
+                if (!if_uwb_only) { // 如果不只使用UWB，进入
                     Eigen::Vector3d gravity_sum(0, 0, 0); // 初始化重力和
                     size_t n_imu = imu_buff.size(); // 获取IMU缓冲区大小
                     for (size_t i = 0; i < n_imu; i++) { // 遍历IMU缓冲区
@@ -360,17 +400,18 @@ private:
                     Eigen::Vector3d gravity_ave = gravity_sum.normalized() * 9.81; // 归一化重力
                     calib_param.gravity = gravity_ave; // 设置校准重力
                 }
-                calib_param.q_nav_uwb = param.q_nav_uwb_init; // 设置导航四元数
-                calib_param.t_nav_uwb = param.t_nav_uwb_init; // 设置导航平移
+                calib_param.q_nav_uwb = param.q_nav_uwb_init; // 设置导航四元数，从导航坐标系到UWB传感器坐标系的初始旋转关系
+                calib_param.t_nav_uwb = param.t_nav_uwb_init; // 设置导航平移，从导航坐标系到UWB传感器坐标系的初始位移向
                 initialize_control_point = true; // 设置控制点初始化标志
                 int num = 1; // 控制点数量
                 for (int i = 0; i < num; i++) { // 添加控制点
-                    Eigen::Quaterniond q_ini = Eigen::Quaterniond::Identity(); // 创建单位四元数
-                    Eigen::Vector3d pos_ini = Eigen::Vector3d::Zero(); // 创建零位置
-                    Eigen::Matrix<double, 6, 1> bias_ini = Eigen::Matrix<double, 6, 1>::Zero(); // 创建零偏差
+                    Eigen::Quaterniond q_ini = Eigen::Quaterniond::Identity(); // 创建单位四元数，代表“无旋转”，相当于朝向不变
+                    Eigen::Vector3d pos_ini = Eigen::Vector3d::Zero(); // 创建零位置，初始位置为零向量 [0, 0, 0]
+                    Eigen::Matrix<double, 6, 1> bias_ini = Eigen::Matrix<double, 6, 1>::Zero(); // 创建零偏差，创建一个零偏差向量（6维）
                     spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
                     next_knot_time_ns += dt_ns; // 更新下一个节点时间
                 }
+                // std::cout << "22222222222222222###" << spline_local.nextMaxTimeNs() << std::endl;
             }
             return false; // 返回失败
         }
@@ -487,10 +528,12 @@ private:
         if (imu_buff.empty() && toa_buff.empty() && tdoa_buff.empty()) { // 如果所有缓冲区都为空
             return false; // 返回失败
         } else {
+            // std::cout << "111111111111###imu_buff" << imu_buff.front().time_ns << std::endl;
+            // imu_buff.front().time_ns：imu_buff（IMU数据缓冲区）中第一个元素的 time_ns（时间戳，单位为纳秒）
             if (!imu_buff.empty()) { // 如果IMU缓冲区不为空
-                bag_start_time += imu_buff.front().time_ns; // 更新行李开始时间
+                bag_start_time += imu_buff.front().time_ns; // 更新bag开始时间
             } else if (!toa_buff.empty()) { // 如果TOA缓冲区不为空
-                bag_start_time += toa_buff.front().time_ns; // 更新行李开始时间
+                bag_start_time += toa_buff.front().time_ns; // 更新bag开始时间
             } else { // 如果TDOA缓冲区不为空
                 bag_start_time += tdoa_buff.front().time_ns; // 更新行李开始时间
             }
@@ -582,18 +625,30 @@ private:
 
     void displayControlPoints()
     {
+        // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 5555555555555 ");
         // 创建非活动控制点消息
         sensor_msgs::msg::PointCloud points_inactive_msg;
         points_inactive_msg.header.frame_id = "map"; // 设置坐标系为地图
-        points_inactive_msg.header.stamp = this->now(); // 设置时间戳
+        points_inactive_msg.header.stamp = rclcpp::Time(spline_local.minTimeNs());
         points_inactive_msg.points.push_back(getPointMsg(spline_local.getIdlePos(0))); // 添加第一个非活动控制点
         points_inactive_msg.points.push_back(getPointMsg(spline_local.getIdlePos(1))); // 添加第二个非活动控制点
         points_inactive_msg.points.push_back(getPointMsg(spline_local.getIdlePos(2))); // 添加第三个非活动控制点
 
+
+        // // 打印信息到命令行
+        // for (size_t i = 0; i < spline_local.numKnots(); i++) {
+        //     geometry_msgs::msg::Point32 point = getPointMsg(spline_local.getIdlePos(i));
+        //     std::cout << "Point"
+        //             << i << ": ["
+        //             << point.x << ", "
+        //             << point.y << ", "
+        //             << point.z << "]" << std::endl;
+        // }
+
         // 创建活动控制点消息
         sensor_msgs::msg::PointCloud points_active_msg;
         points_active_msg.header.frame_id = "map"; // 设置坐标系为地图
-        points_active_msg.header.stamp = this->now(); // 设置时间戳
+        points_active_msg.header.stamp = rclcpp::Time(spline_local.minTimeNs());
         for (size_t i = 0; i < spline_local.numKnots(); i++) { // 遍历样条节点
             points_active_msg.points.push_back(getPointMsg(spline_local.getKnotPos(i))); // 添加活动控制点
         }
@@ -733,9 +788,16 @@ int main(int argc, char *argv[])  // 主函数
     auto node = std::make_shared<SplineFusion>();
     RCLCPP_INFO(node->get_logger(), "\033[1;32m---->\033[0m Starting SplineFusion.");
 
-    rclcpp::Rate rate(1000);
+    // rclcpp::spin(node); 
+    rclcpp::Rate rate(1000); 
+    rclcpp::executors::SingleThreadedExecutor executor;
+    executor.add_node(node);
+
     while (rclcpp::ok()) {
-        rclcpp::spin_some(node);
+        executor.spin_some(); // 处理回调
+        // 其他任务（如发布消息、控制逻辑）
+        node->run();
+        // RCLCPP_INFO(node->get_logger(), "Running SplineFusion loop...");
         rate.sleep();
     }
 

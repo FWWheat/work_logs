@@ -1,0 +1,13 @@
+[35m[1mConsolidate compiler generated dependencies of target SplineFusion[0m
+[ 50%] Built target EstimationInterface
+[ 75%] [32mBuilding CXX object CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o[0m
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:[m[K In member function ‘[01m[Kvoid SplineFusion::displayControlPoints()[m[K’:
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:627:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Time[m[K’ has no member named ‘[01m[Kto_msg[m[K’
+  627 |         points_inactive_msg.header.stamp = rclcpp::Time(spline_local.minTimeNs()).[01;31m[Kto_msg[m[K();
+      |                                                                                   [01;31m[K^~~~~~[m[K
+[01m[K/home/dsh/Documents/work_logs/code/SFUISE/sfuise_ws/src/sfuise/src/SplineFusion.cpp:635:81:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Time[m[K’ has no member named ‘[01m[Kto_msg[m[K’
+  635 |         points_active_msg.header.stamp = rclcpp::Time(spline_local.minTimeNs()).[01;31m[Kto_msg[m[K();
+      |                                                                                 [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/SplineFusion.dir/build.make:76: CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/SplineFusion.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
