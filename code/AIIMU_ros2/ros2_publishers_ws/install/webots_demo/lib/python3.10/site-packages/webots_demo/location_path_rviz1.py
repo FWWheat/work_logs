@@ -17,7 +17,7 @@ class PathPublisher(Node):
         self.path = Path()
         self.path.header.frame_id = 'map'  # 你可以选择其他坐标系，如 'odom'
 
-        self.positions = self.load_positions("/home/dsh/Documents/work_logs/code/AIIMU_ros2/ai-imu-dr/temp/2011_09_30_drive_0027_extract_positions.csv")  # 从文件加载位置或其他方式
+        self.positions = self.load_positions("/home/dsh/Documents/work_logs/code/AIIMU_ros2/ai-imu-dr/imu_temp/raw_temp/imu_log_data_p_gt.csv")  # 从文件加载位置或其他方式
 
         self.index = 0  # 用于遍历真实位置数据
 

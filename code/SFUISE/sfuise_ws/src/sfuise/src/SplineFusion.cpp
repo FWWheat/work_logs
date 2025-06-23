@@ -26,8 +26,8 @@ public:
         if_anchor_ini = false;  // 初始化锚点标志
         average_runtime = 0;  // 初始化平均运行时间
         window_count = 0;  // 初始化窗口计数
-        imu_count = 0;
-        uwb_count = 0;
+        // imu_count = 0;
+        // uwb_count = 0;
         solver_flag = INITIAL;  // 初始化求解器标志
         readParameters();  // 读取参数
 
@@ -72,7 +72,9 @@ public:
         // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: 111111111111111 ");
         static int num_window = 0;  // 窗口计数
         rclcpp::Time t_window_start = this->get_clock()->now();  // 获取当前时间
-
+        if((int)window_count > n_window_calib) {
+            return;
+        }
         if (initialization()) {  // 如果初始化成功
             displayControlPoints();  // 显示控制点
             optimization();  // 执行优化
@@ -123,6 +125,15 @@ public:
             if (solver_flag == FULLSIZE) {
                 spline_local.removeOneOldState();  // 如果为全尺寸状态，移除一个旧状态
             }
+            // 输出窗口大小、样条节点数、窗口计数和求解器标志的值
+            RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 窗口情况 ===");
+            RCLCPP_INFO(this->get_logger(), "窗口大小(window_size): %d", window_size);
+            RCLCPP_INFO(this->get_logger(), "样条节点数(spline_local.numKnots()): %zu", spline_local.numKnots());
+            RCLCPP_INFO(this->get_logger(), "窗口计数(window_count): %zu", window_count);
+            RCLCPP_INFO(this->get_logger(), "求解器标志(solver_flag): %s", 
+                        solver_flag == INITIAL ? "INITIAL" : "FULLSIZE");
+
+            RCLCPP_INFO_STREAM(this->get_logger(), "\n======================");
         }
     }
 
@@ -168,8 +179,8 @@ private:
     int64_t last_imu_t_ns;  // 上一个IMU时间（纳秒）
     int64_t next_knot_time_ns;  // 下一个节点时间（纳秒）
 
-    int64_t imu_count;
-    int64_t uwb_count;
+    // int64_t imu_count;
+    // int64_t uwb_count;
 
     // 求解器状态枚举
     enum SolverFlag { INITIAL, FULLSIZE };
@@ -189,61 +200,100 @@ private:
 
     void readParameters() // 读取参数函数
     {
+        // 声明参数文件路径
+        std::string config_file;
+        this->declare_parameter("rosparam_yaml", "");
+        this->get_parameter("rosparam_yaml", config_file);
+        RCLCPP_INFO(this->get_logger(), "Loading parameters from: %s", config_file.c_str());
+
         double imu_sample_coeff = this->declare_parameter("imu_sample_coeff", 1.0);
-        if_uwb_only = (imu_sample_coeff == 0); //walk1:false,使用IMU和UWB
+        RCLCPP_INFO_STREAM(this->get_logger(), "imu_sample_coeff: " << imu_sample_coeff);
+        if_uwb_only = (imu_sample_coeff == 0);
 
-        param.if_opt_g = true; // 设置优化重力标志
-        param.if_opt_transform = true; // 设置优化变换标志
+        param.if_opt_g = true;
+        param.if_opt_transform = true;
 
-        param.w_uwb = this->declare_parameter("w_uwb", 7.0); //7 读取UWB权重
-        max_iter = this->declare_parameter("max_iter", 5);  //5 读取最大迭代次数
-        int control_point_fps = this->declare_parameter("control_point_fps", 10);  //10 
-        dt_ns = 1e9 / control_point_fps;  // 计算时间间隔
+        if (this->get_parameter("w_uwb", param.w_uwb)) {
+            RCLCPP_INFO(this->get_logger(), "Loaded w_uwb: %.2f", param.w_uwb);
+        } else {
+            param.w_uwb = 5.0;  // 默认值
+            RCLCPP_WARN(this->get_logger(), "Using default w_uwb: %.2f", param.w_uwb);
+        }
+        
+        max_iter = this->declare_parameter("max_iter", 5);
+        RCLCPP_INFO_STREAM(this->get_logger(), "max_iter: " << max_iter);
+        
+        int control_point_fps = this->declare_parameter("control_point_fps", 10);
+        RCLCPP_INFO_STREAM(this->get_logger(), "control_point_fps: " << control_point_fps);
+        
+        dt_ns = 1e9 / control_point_fps;
 
-        if_tdoa = this->declare_parameter("if_tdoa", false);  // false 读取是否使用TDOA标志
+        if_tdoa = this->declare_parameter("if_tdoa", false);
+        RCLCPP_INFO_STREAM(this->get_logger(), "if_tdoa: " << if_tdoa);
+        
         bag_start_time = 0;
-        n_window_calib = this->declare_parameter("n_window_calib", 50); // 50 读取校准窗口数
-        window_size = this->declare_parameter("window_size", 100);  // 100 读取窗口大小
+        n_window_calib = this->declare_parameter("n_window_calib", 50);
+        RCLCPP_INFO_STREAM(this->get_logger(), "n_window_calib: " << n_window_calib);
+        
+        window_size = this->declare_parameter("window_size", 100);
+        RCLCPP_INFO_STREAM(this->get_logger(), "window_size: " << window_size);
 
         if (n_window_calib == 0) {
             RCLCPP_ERROR(this->get_logger(), "n_window_calib cannot be set 0.");
             rclcpp::shutdown();
         } else {
-            param.q_nav_uwb_init.setIdentity(); // 初始化导航四元数
-            param.t_nav_uwb_init.setZero(); // 初始化导航平移
+            param.q_nav_uwb_init.setIdentity();
+            param.t_nav_uwb_init.setZero();
         }
-        // 读取加速度和陀螺仪的方差倒数
-        std::vector<double> accel_var_inv = this->declare_parameter("accel_var_inv", std::vector<double>{7.8483,7.8483,7.8483}); // [7.8483, 7.8483, 7.8483]
+
+        std::vector<double> accel_var_inv = this->declare_parameter("accel_var_inv", std::vector<double>{7.8483,7.8483,7.8483});
+        RCLCPP_INFO_STREAM(this->get_logger(), "accel_var_inv: [" << accel_var_inv[0] << ", " << accel_var_inv[1] << ", " << accel_var_inv[2] << "]");
         param.accel_var_inv << accel_var_inv[0], accel_var_inv[1], accel_var_inv[2];
 
-        std::vector<double> bias_accel_var_inv = this->declare_parameter("bias_accel_var_inv", std::vector<double>{514.9887, 514.9887, 514.9887}); // [514.9887, 514.9887, 514.9887] 
+        std::vector<double> bias_accel_var_inv = this->declare_parameter("bias_accel_var_inv", std::vector<double>{514.9887, 514.9887, 514.9887});
+        RCLCPP_INFO_STREAM(this->get_logger(), "bias_accel_var_inv: [" << bias_accel_var_inv[0] << ", " << bias_accel_var_inv[1] << ", " << bias_accel_var_inv[2] << "]");
         param.bias_accel_var_inv << bias_accel_var_inv[0], bias_accel_var_inv[1], bias_accel_var_inv[2];
 
-        param.w_acc = this->declare_parameter("w_accel", 1.0); // 1 读取加速度权重
-        param.w_bias_acc = this->declare_parameter("w_bias_accel", 1.0); // 1 读取加速度偏差权重
+        param.w_acc = this->declare_parameter("w_accel", 1.0);
+        RCLCPP_INFO_STREAM(this->get_logger(), "w_accel: " << param.w_acc);
+        
+        param.w_bias_acc = this->declare_parameter("w_bias_accel", 1.0);
+        RCLCPP_INFO_STREAM(this->get_logger(), "w_bias_accel: " << param.w_bias_acc);
 
-        std::vector<double> gyro_var_inv = this->declare_parameter("gyro_var_inv", std::vector<double>{27.5646, 27.5646, 27.5646}); // [27.5646, 27.5646, 27.5646] 读取陀螺仪
+        std::vector<double> gyro_var_inv = this->declare_parameter("gyro_var_inv", std::vector<double>{27.5646, 27.5646, 27.5646});
+        RCLCPP_INFO_STREAM(this->get_logger(), "gyro_var_inv: [" << gyro_var_inv[0] << ", " << gyro_var_inv[1] << ", " << gyro_var_inv[2] << "]");
         param.gyro_var_inv << gyro_var_inv[0], gyro_var_inv[1], gyro_var_inv[2];
 
-        std::vector<double> bias_gyro_var_inv = this->declare_parameter("bias_gyro_var_inv", std::vector<double>{2950.6680, 2950.6680, 2950.6680}); // [2950.6680, 2950.6680, 2950.6680] 读取陀螺仪偏差
+        std::vector<double> bias_gyro_var_inv = this->declare_parameter("bias_gyro_var_inv", std::vector<double>{2950.6680, 2950.6680, 2950.6680});
+        RCLCPP_INFO_STREAM(this->get_logger(), "bias_gyro_var_inv: [" << bias_gyro_var_inv[0] << ", " << bias_gyro_var_inv[1] << ", " << bias_gyro_var_inv[2] << "]");
         param.bias_gyro_var_inv << bias_gyro_var_inv[0], bias_gyro_var_inv[1], bias_gyro_var_inv[2];
 
-        param.w_gyro = this->declare_parameter("w_gyro", 1.0); // 1 读取陀螺仪权重
-        param.w_bias_gyro = this->declare_parameter("w_bias_gyro", 1.0); // 1 读取陀螺仪偏差权重
+        param.w_gyro = this->declare_parameter("w_gyro", 1.0);
+        RCLCPP_INFO_STREAM(this->get_logger(), "w_gyro: " << param.w_gyro);
+        
+        param.w_bias_gyro = this->declare_parameter("w_bias_gyro", 1.0);
+        RCLCPP_INFO_STREAM(this->get_logger(), "w_bias_gyro: " << param.w_bias_gyro);
 
-        param.if_reject_uwb = this->declare_parameter("if_reject_uwb", true); // true 读取是否拒绝UWB标志
+        param.if_reject_uwb = this->declare_parameter("if_reject_uwb", true);
+        RCLCPP_INFO_STREAM(this->get_logger(), "if_reject_uwb: " << param.if_reject_uwb);
+        
         if (param.if_reject_uwb) {
-            param.reject_uwb_thresh = this->declare_parameter("reject_uwb_thresh", 0.3); // 0.3 读取拒绝阈值
-            param.reject_uwb_window_width = this->declare_parameter("reject_uwb_window_width", 0.5); // 0.5 读取拒绝窗口宽度
+            param.reject_uwb_thresh = this->declare_parameter("reject_uwb_thresh", 0.5);
+            RCLCPP_INFO_STREAM(this->get_logger(), "reject_uwb_thresh: " << param.reject_uwb_thresh);
+            
+            param.reject_uwb_window_width = this->declare_parameter("reject_uwb_window_width", 0.8);
+            RCLCPP_INFO_STREAM(this->get_logger(), "reject_uwb_window_width: " << param.reject_uwb_window_width);
         }
 
-        std::vector<double> v_offset = this->declare_parameter("offset", std::vector<double>{0.1, -0.025, 0.0}); // [0.1, -0.025, 0.0] 获取偏移量参数
+        std::vector<double> v_offset = this->declare_parameter("offset", std::vector<double>{0.1, -0.025, 0.0});
+        RCLCPP_INFO_STREAM(this->get_logger(), "offset: [" << v_offset[0] << ", " << v_offset[1] << ", " << v_offset[2] << "]");
         calib_param.offset = Eigen::Vector3d(v_offset[0], v_offset[1], v_offset[2]);
 
-        if (!if_tdoa) { // 进入
-            v_toa_offset = this->declare_parameter("toa_offset", std::vector<double>{-0.0700, 0.1539, -0.0751, 0.1409, -0.0247}); // [-0.0700, 0.1539, -0.0751, 0.1409, -0.0247] 读取TOA偏移量
+        if (!if_tdoa) {
+            v_toa_offset = this->declare_parameter("toa_offset", std::vector<double>{-0.0700, 0.1539, -0.0751, 0.1409, -0.0247});
+            RCLCPP_INFO_STREAM(this->get_logger(), "toa_offset: [" << v_toa_offset[0] << ", " << v_toa_offset[1] << ", " << v_toa_offset[2] << ", " << v_toa_offset[3] << ", " << v_toa_offset[4] << "]");
         }
-        RCLCPP_INFO_STREAM(this->get_logger(), " ReadParameters finished ");
+        RCLCPP_INFO_STREAM(this->get_logger(), "ReadParameters finished");
     }
 
    // IMU回调函数
@@ -253,13 +303,11 @@ private:
         int64_t t_ns = rclcpp::Time(imu_msg->header.stamp).nanoseconds(); // 获取当前时间戳
         Eigen::Vector3d acc(imu_msg->linear_acceleration.x, imu_msg->linear_acceleration.y, imu_msg->linear_acceleration.z); // 获取加速度
         Eigen::Vector3d gyro(imu_msg->angular_velocity.x, imu_msg->angular_velocity.y, imu_msg->angular_velocity.z); // 获取角速度
-        imu_count++;
-        if(imu_count>0){
-            ImuData imu(t_ns, gyro, acc); // 创建IMU数据对象
-            imu_buff.push_back(imu); // 将IMU数据添加到缓冲区
-            // std::cout << "imu_buff front:" << imu_buff.front().time_ns << std::endl;
-            // std::cout << "imu_buff back:" << imu_buff.back().time_ns << std::endl;
-        }
+
+        ImuData imu(t_ns, gyro, acc); // 创建IMU数据对象
+        imu_buff.push_back(imu); // 将IMU数据添加到缓冲区
+        // std::cout << "imu_buff front:" << imu_buff.front().time_ns << std::endl;
+        // std::cout << "imu_buff back:" << imu_buff.back().time_ns << std::endl;
     }
 
     // TDOA回调函数
@@ -276,13 +324,11 @@ private:
         int64_t t_ns = rclcpp::Time(uwb_msg->header.stamp).nanoseconds(); // 获取时间戳
         for (const auto& rg : uwb_msg->ranges) { // 遍历范围数据
             if (rg.ra == 0) continue; // 如果范围为0，跳过
-            uwb_count++;
-            if (uwb_count>0){
-                TOAData uwb(t_ns, rg.id, rg.range); // 创建TOA数据对象
-                toa_buff.push_back(uwb); // 将TOA数据添加到缓冲区
-                // std::cout << "toa_buff front:" << toa_buff.front().time_ns << std::endl;
-                // std::cout << "toa_buff back:" << toa_buff.back().time_ns << std::endl;
-            }
+            
+            TOAData uwb(t_ns, rg.id, rg.range); // 创建TOA数据对象,锚点id,锚点到标签的距离
+            toa_buff.push_back(uwb); // 将TOA数据添加到缓冲区
+            // std::cout << "toa_buff front:" << toa_buff.front().time_ns << std::endl;
+            // std::cout << "toa_buff back:" << toa_buff.back().time_ns << std::endl;
         }
     }
 
@@ -344,14 +390,14 @@ private:
             if (!tdoa_buff.empty()) min_time = std::min(tdoa_buff.back().time_ns, min_time); // 获取TDOA缓冲区的时间
             // std::cout << "min_time:" << min_time << std::endl;
             // std::cout << "spline_local_nextmaxtime:" << spline_local.nextMaxTimeNs() << std::endl;
-            // nextMaxTimeNs()返回下一个样条段的最大时间戳，单位是纳秒（ns = nanoseconds）。它通常用于轨迹插值或预测过程中，确定当前插值是否需要“前进”到下一个样条段。
+            // nextMaxTimeNs()返回下一个样条段的最大时间戳，单位是纳秒（ns = nanoseconds）。它通常用于轨迹插值或预测过程中，确定当前插值是否需要"前进"到下一个样条段。
             if (min_time > spline_local.nextMaxTimeNs()) { // 如果最小时间大于样条的最大时间
                 // RCLCPP_INFO_STREAM(this->get_logger(), "Publishing: ttttttttttttttt ");
                 Eigen::Quaterniond q_ini = spline_local.getKnotOrt(spline_local.numKnots() - 1); // 获取初始四元数
                 Eigen::Quaterniond q_ini_backup = q_ini; // 备份初始四S元数
                 Eigen::Vector3d pos_ini = spline_local.getKnotPos(spline_local.numKnots() - 1); // 获取初始位置
                 Eigen::Matrix<double, 6, 1> bias_ini = spline_local.getKnotBias(spline_local.numKnots() - 1); // 获取初始偏差
-                if (!if_uwb_only) { // 如果不只使用UWB
+                if (!if_uwb_only) { // 如果不只使用UWB，进入
                     if (spline_local.numKnots() <= 2) { // 如果样条节点数小于等于2
                         last_imu_t_ns = bag_start_time; // 设置最后IMU时间为bag开始时间
                     } else {
@@ -370,7 +416,7 @@ private:
                 if (q_ini_backup.dot(q_ini) < 0) q_ini = Eigen::Quaterniond(-q_ini.w(), -q_ini.x(), -q_ini.y(), -q_ini.z()); // 确保四元数方向一致
                 spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
                 next_knot_time_ns += dt_ns; // 更新下一个节点时间
-                std::cout << "spline_local_numknots:" << spline_local.numKnots() << std::endl;
+                // std::cout << "spline_local_numknots:" << spline_local.numKnots() << std::endl;
                 return true; // 返回成功
             } else {
                 return false; // 返回失败
@@ -405,7 +451,7 @@ private:
                 initialize_control_point = true; // 设置控制点初始化标志
                 int num = 1; // 控制点数量
                 for (int i = 0; i < num; i++) { // 添加控制点
-                    Eigen::Quaterniond q_ini = Eigen::Quaterniond::Identity(); // 创建单位四元数，代表“无旋转”，相当于朝向不变
+                    Eigen::Quaterniond q_ini = Eigen::Quaterniond::Identity(); // 创建单位四元数，代表"无旋转"，相当于朝向不变
                     Eigen::Vector3d pos_ini = Eigen::Vector3d::Zero(); // 创建零位置，初始位置为零向量 [0, 0, 0]
                     Eigen::Matrix<double, 6, 1> bias_ini = Eigen::Matrix<double, 6, 1>::Zero(); // 创建零偏差，创建一个零偏差向量（6维）
                     spline_local.addOneStateKnot(q_ini, pos_ini, bias_ini); // 添加状态节点
@@ -482,7 +528,7 @@ private:
     {
         if (spline_local.numKnots() < 2) return false; // 如果样条节点数小于2，返回失败
 
-        if (param.if_reject_uwb) { // 如果需要拒绝UWB
+        if (param.if_reject_uwb) { // 如果需要拒绝UWB，进入
             if (solver_flag == INITIAL && spline_local.numKnots() < int(param.reject_uwb_window_width * window_size)) 
                 param.if_reject_uwb_in_optimization = false; // 不在优化中拒绝UWB
             else
@@ -524,7 +570,8 @@ private:
 
     bool setParameters() // 设置参数函数
     {
-        if (imu_buff.empty() && !if_uwb_only) return false; // 如果IMU缓冲区为空且不只使用UWB，返回失败
+        if (imu_buff.empty() && !if_uwb_only) 
+            return false; // 如果IMU缓冲区为空且不只使用UWB，返回失败
         if (imu_buff.empty() && toa_buff.empty() && tdoa_buff.empty()) { // 如果所有缓冲区都为空
             return false; // 返回失败
         } else {
@@ -581,7 +628,7 @@ private:
       void integration(const int64_t curTime, Eigen::Quaterniond& qs, Eigen::Vector3d& Ps)
     {
         std::vector<ImuData> imu_vec; // IMU数据向量
-        getIMUInterval(last_imu_t_ns, curTime, imu_vec); // 获取IMU时间区间数据
+        getIMUInterval(last_imu_t_ns, curTime, imu_vec); // 获取IMU样条时间间隔间数据
         
         if (!imu_vec.empty()) { // 如果IMU数据不为空
             Eigen::Quaterniond qs0; // 初始四元数

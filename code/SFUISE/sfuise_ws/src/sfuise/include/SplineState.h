@@ -30,7 +30,7 @@ class SplineState {
     void init(int64_t dt_ns_, int num_knot_, int64_t start_t_ns_, int start_i_ = 0) {
         if_first = true;  // 标记是否为第一次初始化
         dt_ns = dt_ns_;  // 设置时间间隔(纳秒)
-        start_t_ns = start_t_ns_;  // 设置起始时间
+        start_t_ns = start_t_ns_;  // 设置起始时间，imu开头ts
         num_knot = num_knot_;  // 设置节点数量
         inv_dt = 1e9 / dt_ns;  // 计算时间间隔的倒数
         start_i = start_i_;  // 设置起始索引
@@ -230,7 +230,9 @@ class SplineState {
     int64_t minTimeNs()
     {
         // 根据是否第一个节点返回最小时间
-        return start_t_ns + dt_ns * (!if_first ?  -1 : 0);
+        // 返回最小时间：如果不是第一个节点(if_first为false)，则返回起始时间减去一个时间间隔；
+        // 否则直接返回起始时间
+        return start_t_ns + dt_ns * (!if_first ? -1 : 0);
     }
 
     // 获取下一个最大时间(纳秒)

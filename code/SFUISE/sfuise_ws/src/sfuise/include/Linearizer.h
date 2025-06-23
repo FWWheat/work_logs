@@ -107,9 +107,31 @@ struct Linearizer
             Eigen::Matrix<double, 3, 2> J_g;
             int64_t t = pm.time_ns;
             Eigen::Matrix<double, 6, 1> residual;
+            
+            // Eigen::Quaterniond q;
+            // spline->itpQuaternion(t, &q);
+            // Eigen::Matrix3d R_WB = q.toRotationMatrix();
+            
+            // RCLCPP_INFO(rclcpp::get_logger("linearizer"), 
+            //     "IMU to Nav Transform at t=%ld:\n R_WB=\n%f,%f,%f\n%f,%f,%f\n%f,%f,%f", 
+            //     t,
+            //     R_WB(0,0), R_WB(0,1), R_WB(0,2),
+            //     R_WB(1,0), R_WB(1,1), R_WB(1,2),
+            //     R_WB(2,0), R_WB(2,1), R_WB(2,2));
+            
+            // RCLCPP_INFO(rclcpp::get_logger("linearizer"), 
+            //     "IMU measurements:\n accel=[%f,%f,%f]\n gyro=[%f,%f,%f]",
+            //     pm.accel[0], pm.accel[1], pm.accel[2],
+            //     pm.gyro[0], pm.gyro[1], pm.gyro[2]);
+
             residual = Residuals::imuResidualJacobian(t, spline, &pm.accel, &pm.gyro, calib_param->gravity,
                                                       &J_accel, &J_gyro, &J_bias, &J_g);
             const Eigen::Vector3d r_a = residual.segment<3>(3);
+            // RCLCPP_INFO(rclcpp::get_logger("linearizer"), 
+            //     "Accel residual=[%f,%f,%f]", r_a[0], r_a[1], r_a[2]);
+            // std::cout << "gravity: " << calib_param->gravity.transpose() << std::endl;
+            // std::cout << "accel measurement: " << pm.accel.transpose() << std::endl;
+            // std::cout << "accel residual: " << r_a.transpose() << std::endl;
             error += r_a.transpose() * accel_var_inv.asDiagonal() * r_a;
             size_t start_g = gravity_block_offset;
             size_t num_Ji = J_accel.d_val_d_knot.size();
@@ -336,6 +358,7 @@ struct Linearizer
             int anchor_idA = pm.idA;
             int anchor_idB = pm.idB;
             Eigen::Vector3d offset = calib_param->offset;
+            // UWB TDOA/TOA 残差计算 
             double residual = Residuals::tdoaResidualJacobian(t_ns, spline, pm.data, an_list.at(anchor_idA),
                                                               an_list.at(anchor_idB), offset, t_UW, q_UW, &J, &J_tUW, &J_qUW);
             size_t num_Ji = J.d_val_d_knot.size();

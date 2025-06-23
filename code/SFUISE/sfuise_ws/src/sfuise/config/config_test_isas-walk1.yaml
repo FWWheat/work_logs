@@ -23,14 +23,14 @@ gyro_var_inv: [27.5646, 27.5646, 27.5646]
 bias_accel_var_inv: [514.9887, 514.9887, 514.9887] 
 bias_gyro_var_inv: [2950.6680, 2950.6680, 2950.6680]
 
-w_uwb: 7
+w_uwb: 5
 w_accel: 1 
 w_gyro: 1 
 w_bias_accel: 1 
 w_bias_gyro: 1
 
 if_reject_uwb: true
-reject_uwb_thresh: 0.3 
-reject_uwb_window_width: 0.5 
+reject_uwb_thresh: 0.5
+reject_uwb_window_width: 0.8
 
 toa_offset: [-0.0700, 0.1539, -0.0751, 0.1409, -0.0247]

@@ -15,7 +15,7 @@
     - 重新创建`conda create -n aiimu python=3.10`
     - 安装`conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=12.1 -c pytorch -c nvidia`
 ### 安装必要软件包
-    - `conda install matplotlib numpy termcolor scipy navpy`
+    - conda install matplotlib numpy termcolor scipy navpy
 
 ### 接着按教程
 - 代码位置：documents/aiimu

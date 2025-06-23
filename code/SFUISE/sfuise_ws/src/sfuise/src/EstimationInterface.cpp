@@ -33,7 +33,12 @@ public:
     EstimationInterface() : Node("EstimationInterface") {
         initialized_anchor = false;
         if_nav_uwb = false;
-        
+        // 声明参数文件路径
+        std::string config_file;
+        this->declare_parameter("rosparam_yaml", "");
+        this->get_parameter("rosparam_yaml", config_file);
+        RCLCPP_INFO(this->get_logger(), "Loading parameters from: %s", config_file.c_str());
+
         // 读取参数
         readParamsInterface();
 
@@ -148,7 +153,7 @@ private:
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pub_opt_window; 
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr pub_opt_pose; 
 
-    // 其他数据
+    // 初始化路径消息
     nav_msgs::msg::Path opt_old_path; 
     PoseVisualization opt_pose_vis; 
 
@@ -159,8 +164,8 @@ private:
         if_tdoa = this->declare_parameter<bool>("if_tdoa", false); // false
         imu_sample_coeff = this->declare_parameter<double>("imu_sample_coeff", 1.0); // 1
         uwb_sample_coeff = this->declare_parameter<double>("uwb_sample_coeff", 1.0); // 1
-        imu_frequency = this->declare_parameter<double>("imu_frequency", 16.0); // 16
-        uwb_frequency = this->declare_parameter<double>("uwb_frequency", 84.0); // 84
+        imu_frequency = this->declare_parameter<double>("imu_frequency", 84.0); // 84
+        uwb_frequency = this->declare_parameter<double>("uwb_frequency", 16.0); // 16
         gyro_unit = this->declare_parameter<bool>("gyro_unit", false); // false
         acc_ratio = this->declare_parameter<bool>("acc_ratio", false); // false
 
@@ -205,7 +210,7 @@ private:
         }
 
         spline_global.updateKnots(&spline_w); // 更新全局样条节点
-        std::cout << "spline_global_numknots:" << spline_global.numKnots() << std::endl;
+        // std::cout << "spline_global_numknots:" << spline_global.numKnots() << std::endl;
 
         // 如果启用导航UWB，则发布优化
         if (if_nav_uwb) {
@@ -222,15 +227,16 @@ private:
         int64_t max_t = spline_local.maxTimeNs(); // 获取样条最大时间
         static int cnt = 0; // 计数器
 
-        if (!if_window_full) { // 如果窗口未满
-            for (auto v : opt_window) { // 遍历优化窗口
-                if (v.time_ns < min_t) { // 如果时间小于最小时间
-                    opt_old.push_back(v); // 添加到旧优化数据
-                    opt_old_path.poses.push_back(CommonUtils::pose2msg(v.time_ns, v.pos, v.orient)); // 添加到旧路径
+        if (!if_window_full) { // 如果滑动窗口满了
+            // 将时间戳小于当前窗口最小时间的数据点移动到历史数据中
+            for (const auto& pose_data : opt_window) {
+                if (pose_data.time_ns < min_t) {
+                    opt_old.push_back(pose_data); // 将数据点添加到历史数据队列
+                    opt_old_path.poses.push_back(CommonUtils::pose2msg(pose_data.time_ns, pose_data.pos, pose_data.orient)); // 将位姿转换为消息并添加到历史路径
                 }
             }
         } else {
-            cnt = 0; // 重置计数器
+            cnt = 0; // 当窗口满时重置计数器
         }
 
         opt_window.clear(); // 清空优化窗口
@@ -238,13 +244,10 @@ private:
         opt_window_path.header.frame_id = "map"; // 设置坐标系
         opt_window_path.header.stamp = rclcpp::Clock().now(); // 设置时间戳
 
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 优化窗口路径消息内容 ===");
         for (size_t i = cnt; i < gt.size(); i++) { // 遍历地面真实数据
             int64_t t_ns = gt.at(i).time_ns; // 获取时间戳
-            // std::cout << "gt.size:" << gt.size() << std::endl;
-            // std::cout << "gt.time:" << t_ns << std::endl;
-            // std::cout << "spline_local.minTimeNs():" << min_t << std::endl;
-            // std::cout << "spline_local.maxTimeNs():" << max_t << std::endl;
-            // std::cout << "cnt:" << cnt <<std::endl; 
+            // 只处理时间窗口内的数据点
             if (t_ns < min_t) { // 如果时间小于最小时间
                 cnt = i; // 更新计数器
                 continue;
@@ -253,15 +256,24 @@ private:
             }
 
             PoseData pose_tf = getPoseInUWB(spline_local, t_ns); // 获取UWB中的位姿
-            // std::cout << "pose_tf:" << pose_tf.pos.x() << "   "
-            //                         << pose_tf.pos.y() << "   "
-            //                         << pose_tf.pos.z() << std::endl;
+            // RCLCPP_INFO_STREAM(this->get_logger(), "pose_tf position: "
+            //     << "time_ns=" << t_ns 
+            //     << ", x=" << pose_tf.pos.x()
+            //     << ", y=" << pose_tf.pos.y()
+            //     << ", z=" << pose_tf.pos.z());
             opt_window.push_back(pose_tf); // 添加到优化窗口
             opt_window_path.poses.push_back(CommonUtils::pose2msg(t_ns, pose_tf.pos, pose_tf.orient)); // 添加到优化窗口路径
+            
         }
 
         pub_opt_old->publish(opt_old_path); // 发布旧优化路径
         pub_opt_window->publish(opt_window_path); // 发布当前优化窗口路径
+        // 输出发布的pub_opt_window的消息内容
+        // RCLCPP_INFO_STREAM(this->get_logger(), "帧ID: " << opt_window_path.header.frame_id);
+        // RCLCPP_INFO_STREAM(this->get_logger(), "时间戳: " << opt_window_path.header.stamp.nanosec);//当前时间的时间戳
+        // RCLCPP_INFO_STREAM(this->get_logger(), "路径点数量: " << opt_window_path.poses.size());
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n==========================");
+        
 
         if (!opt_window.empty()) { 
             opt_pose_vis.pubPose(opt_window.back().pos, opt_window.back().orient, pub_opt_pose, opt_window_path.header); // 发布优化位姿可视化
@@ -274,7 +286,7 @@ private:
         int64_t t_ns = rclcpp::Time(imu_msg->header.stamp).nanoseconds(); // 获取当前时间戳
         // std::cout << "--------------->imu_time:" << t_ns << std::endl;
 
-        if (sampleData(t_ns, last_imu, imu_sample_coeff, imu_frequency)) { // 检查是否需要采样
+        if (sampleData(t_ns, last_imu, imu_sample_coeff, imu_frequency)) { // 检查是否需要采样（由原始IMU-->IMU_DS）
             Eigen::Vector3d acc(imu_msg->linear_acceleration.x, imu_msg->linear_acceleration.y, imu_msg->linear_acceleration.z); // 获取加速度
             if (acc_ratio) acc *= 9.81; // 如果启用加速度比，转换为米每二次方秒
 
@@ -473,25 +485,78 @@ private:
         spline_global.init(dt_ns, 0, bag_start_time);
     }
 
-    PoseData getPoseInUWB(SplineState& spline, int64_t t_ns) // 获取UWB中的位姿的函数
+    PoseData getPoseInUWB(SplineState& spline, int64_t t_ns) 
     {
-        Eigen::Quaterniond orient_interp;// 创建四元数
-        Eigen::Vector3d t_interp = spline.itpPosition(t_ns);// 获取插值位置
-        spline.itpQuaternion(t_ns, &orient_interp);// 获取插值方向
-        Eigen::Quaterniond q = calib_param.q_nav_uwb * orient_interp;// 计算最终方向
-        Eigen::Vector3d t = calib_param.q_nav_uwb * (orient_interp * calib_param.offset + t_interp) + calib_param.t_nav_uwb;// 计算最终位置
-        // std::cout << "orient_interp:"<<orient_interp.x <<"   "
-        //                             <<orient_interp.y<<"   " 
-        //                             <<orient_interp.z<<"   "
-        //                             <<orient_interp.w<<std::endl;
-        // std::cout << "t_interp:" << t_interp << std::endl;
-        // std::cout << "calib_param:" << calib_param.q_nav_uwb << std::endl;
+        // // 1. 输出标定参数
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 标定参数调试信息 ===");
+        
+        // // 输出q_nav_uwb四元数
+        // RCLCPP_INFO_STREAM(this->get_logger(), "q_nav_uwb: w=" << calib_param.q_nav_uwb.w() 
+        //     << ", x=" << calib_param.q_nav_uwb.x()
+        //     << ", y=" << calib_param.q_nav_uwb.y()
+        //     << ", z=" << calib_param.q_nav_uwb.z());
+        
+        // // 输出t_nav_uwb平移向量
+        // RCLCPP_INFO_STREAM(this->get_logger(), "t_nav_uwb: x=" << calib_param.t_nav_uwb.x()
+        //     << ", y=" << calib_param.t_nav_uwb.y()
+        //     << ", z=" << calib_param.t_nav_uwb.z());
+        
+        // // 输出offset偏移量
+        // RCLCPP_INFO_STREAM(this->get_logger(), "offset: x=" << calib_param.offset.x()
+        //     << ", y=" << calib_param.offset.y()
+        //     << ", z=" << calib_param.offset.z());
+
+        // 2. 获取并输出插值数据
+        Eigen::Quaterniond orient_interp;
+        Eigen::Vector3d t_interp = spline.itpPosition(t_ns);
+        spline.itpQuaternion(t_ns, &orient_interp);
+        
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 插值数据 ===");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "t_interp: x=" << t_interp.x()
+        //     << ", y=" << t_interp.y()
+        //     << ", z=" << t_interp.z());
+        // RCLCPP_INFO_STREAM(this->get_logger(), "orient_interp: w=" << orient_interp.w()
+        //     << ", x=" << orient_interp.x()
+        //     << ", y=" << orient_interp.y()
+        //     << ", z=" << orient_interp.z());
+
+        // 3. 计算中间结果并输出
+        Eigen::Vector3d rotated_offset = orient_interp * calib_param.offset;
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 中间计算结果 ===");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "rotated_offset: x=" << rotated_offset.x()
+        //     << ", y=" << rotated_offset.y()
+        //     << ", z=" << rotated_offset.z());
+
+        Eigen::Vector3d pos_with_offset = rotated_offset + t_interp;
+        // RCLCPP_INFO_STREAM(this->get_logger(), "pos_with_offset: x=" << pos_with_offset.x()
+        //     << ", y=" << pos_with_offset.y()
+        //     << ", z=" << pos_with_offset.z());
+
+        // 4. 计算最终结果
+        Eigen::Quaterniond q = calib_param.q_nav_uwb * orient_interp;
+        Eigen::Vector3d t = calib_param.q_nav_uwb * pos_with_offset + calib_param.t_nav_uwb;
+
+        // // 输出最终结果
+        // RCLCPP_INFO_STREAM(this->get_logger(), "\n=== 最终结果 ===");
+        // RCLCPP_INFO_STREAM(this->get_logger(), "final_position: x=" << t.x()
+        //     << ", y=" << t.y()
+        //     << ", z=" << t.z());
+        // RCLCPP_INFO_STREAM(this->get_logger(), "final_orientation: w=" << q.w()
+        //     << ", x=" << q.x()
+        //     << ", y=" << q.y()
+        //     << ", z=" << q.z());
+
+        // // 5. 添加简单的数值范围检查
+        // const double MAX_POSITION = 1000.0; // 根据实际情况调整阈值
+        // if (t.norm() > MAX_POSITION) {
+        //     RCLCPP_WARN_STREAM(this->get_logger(), "警告：位置值超出预期范围！ norm=" << t.norm());
+        // }
+
         return PoseData(t_ns, q, t);
     }
 
 
 };
-
 
 
 int main(int argc, char *argv[])

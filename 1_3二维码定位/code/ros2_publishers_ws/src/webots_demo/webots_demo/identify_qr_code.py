@@ -16,7 +16,7 @@ class QrcodePosePublisher(Node):
         super().__init__('qr_code_pose_publisher')
 
         # 定义机器人数量
-        self.number_robots = 6
+        self.number_robots = 1
         
         # 创建一个字典来存储每个发布器
         self.publishers_dict = {}
@@ -40,7 +40,7 @@ class QrcodePosePublisher(Node):
 
 
     def publish_pose(self):
-        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/img/test6.png'
+        image_path='/home/dsh/Documents/work_logs/1_3二维码定位/test_img/1.jpeg'
         try:
             pil_img = Image.open(image_path)  # 获取PIL图像
             cv_img = cv2.cvtColor(np.array(pil_img), cv2.COLOR_RGB2BGR)  # 转换为OpenCV格式
@@ -113,7 +113,7 @@ class QrcodePosePublisher(Node):
 
                     # 确保二维码内容是 0-self.number_robots-1 的整数
                     try:
-                        robot_index = int(self.decode)
+                        robot_index = int(self.decode) -1
                         if 0 <= robot_index < self.number_robots:
                             namespace = f'robot_{robot_index}'  # 使其匹配 robot_0 - robot_5
                             topic_name = f'{namespace}/current_pose'
@@ -140,7 +140,12 @@ class QrcodePosePublisher(Node):
                 
                     except ValueError:
                         self.get_logger().warn(f"无效的二维码内容: {self.decode}")
-                
+
+            cv2.imshow('QR Code Detection', cv_img)  # 显示图像
+            cv2.imwrite('/home/dsh/Documents/work_logs/1_3二维码定位/test_img/output_image.png', cv_img)  # 保存最后的图片
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
+
         except Exception as exc:
             print('Error: %s' % exc)  # 错误日志
 

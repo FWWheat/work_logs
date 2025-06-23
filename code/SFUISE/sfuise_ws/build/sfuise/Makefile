@@ -223,6 +223,45 @@ SplineFusion/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SplineFusion.dir/build.make CMakeFiles/SplineFusion.dir/build
 .PHONY : SplineFusion/fast
 
+#=============================================================================
+# Target rules for targets named GTPathPublisher
+
+# Build rule for target.
+GTPathPublisher: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GTPathPublisher
+.PHONY : GTPathPublisher
+
+# fast build rule for target.
+GTPathPublisher/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTPathPublisher.dir/build.make CMakeFiles/GTPathPublisher.dir/build
+.PHONY : GTPathPublisher/fast
+
+#=============================================================================
+# Target rules for targets named ImuTrajectoryGenerator
+
+# Build rule for target.
+ImuTrajectoryGenerator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ImuTrajectoryGenerator
+.PHONY : ImuTrajectoryGenerator
+
+# fast build rule for target.
+ImuTrajectoryGenerator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImuTrajectoryGenerator.dir/build.make CMakeFiles/ImuTrajectoryGenerator.dir/build
+.PHONY : ImuTrajectoryGenerator/fast
+
+#=============================================================================
+# Target rules for targets named UWBTrajectoryGenerator
+
+# Build rule for target.
+UWBTrajectoryGenerator: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 UWBTrajectoryGenerator
+.PHONY : UWBTrajectoryGenerator
+
+# fast build rule for target.
+UWBTrajectoryGenerator/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UWBTrajectoryGenerator.dir/build.make CMakeFiles/UWBTrajectoryGenerator.dir/build
+.PHONY : UWBTrajectoryGenerator/fast
+
 src/EstimationInterface.o: src/EstimationInterface.cpp.o
 .PHONY : src/EstimationInterface.o
 
@@ -246,6 +285,30 @@ src/EstimationInterface.s: src/EstimationInterface.cpp.s
 src/EstimationInterface.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/EstimationInterface.dir/build.make CMakeFiles/EstimationInterface.dir/src/EstimationInterface.cpp.s
 .PHONY : src/EstimationInterface.cpp.s
+
+src/ImuTrajectoryGenerator.o: src/ImuTrajectoryGenerator.cpp.o
+.PHONY : src/ImuTrajectoryGenerator.o
+
+# target to build an object file
+src/ImuTrajectoryGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImuTrajectoryGenerator.dir/build.make CMakeFiles/ImuTrajectoryGenerator.dir/src/ImuTrajectoryGenerator.cpp.o
+.PHONY : src/ImuTrajectoryGenerator.cpp.o
+
+src/ImuTrajectoryGenerator.i: src/ImuTrajectoryGenerator.cpp.i
+.PHONY : src/ImuTrajectoryGenerator.i
+
+# target to preprocess a source file
+src/ImuTrajectoryGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImuTrajectoryGenerator.dir/build.make CMakeFiles/ImuTrajectoryGenerator.dir/src/ImuTrajectoryGenerator.cpp.i
+.PHONY : src/ImuTrajectoryGenerator.cpp.i
+
+src/ImuTrajectoryGenerator.s: src/ImuTrajectoryGenerator.cpp.s
+.PHONY : src/ImuTrajectoryGenerator.s
+
+# target to generate assembly for a file
+src/ImuTrajectoryGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ImuTrajectoryGenerator.dir/build.make CMakeFiles/ImuTrajectoryGenerator.dir/src/ImuTrajectoryGenerator.cpp.s
+.PHONY : src/ImuTrajectoryGenerator.cpp.s
 
 src/SplineFusion.o: src/SplineFusion.cpp.o
 .PHONY : src/SplineFusion.o
@@ -271,6 +334,54 @@ src/SplineFusion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SplineFusion.dir/build.make CMakeFiles/SplineFusion.dir/src/SplineFusion.cpp.s
 .PHONY : src/SplineFusion.cpp.s
 
+src/UWBTrajectoryGenerator.o: src/UWBTrajectoryGenerator.cpp.o
+.PHONY : src/UWBTrajectoryGenerator.o
+
+# target to build an object file
+src/UWBTrajectoryGenerator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UWBTrajectoryGenerator.dir/build.make CMakeFiles/UWBTrajectoryGenerator.dir/src/UWBTrajectoryGenerator.cpp.o
+.PHONY : src/UWBTrajectoryGenerator.cpp.o
+
+src/UWBTrajectoryGenerator.i: src/UWBTrajectoryGenerator.cpp.i
+.PHONY : src/UWBTrajectoryGenerator.i
+
+# target to preprocess a source file
+src/UWBTrajectoryGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UWBTrajectoryGenerator.dir/build.make CMakeFiles/UWBTrajectoryGenerator.dir/src/UWBTrajectoryGenerator.cpp.i
+.PHONY : src/UWBTrajectoryGenerator.cpp.i
+
+src/UWBTrajectoryGenerator.s: src/UWBTrajectoryGenerator.cpp.s
+.PHONY : src/UWBTrajectoryGenerator.s
+
+# target to generate assembly for a file
+src/UWBTrajectoryGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UWBTrajectoryGenerator.dir/build.make CMakeFiles/UWBTrajectoryGenerator.dir/src/UWBTrajectoryGenerator.cpp.s
+.PHONY : src/UWBTrajectoryGenerator.cpp.s
+
+src/gt_path_publisher.o: src/gt_path_publisher.cpp.o
+.PHONY : src/gt_path_publisher.o
+
+# target to build an object file
+src/gt_path_publisher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTPathPublisher.dir/build.make CMakeFiles/GTPathPublisher.dir/src/gt_path_publisher.cpp.o
+.PHONY : src/gt_path_publisher.cpp.o
+
+src/gt_path_publisher.i: src/gt_path_publisher.cpp.i
+.PHONY : src/gt_path_publisher.i
+
+# target to preprocess a source file
+src/gt_path_publisher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTPathPublisher.dir/build.make CMakeFiles/GTPathPublisher.dir/src/gt_path_publisher.cpp.i
+.PHONY : src/gt_path_publisher.cpp.i
+
+src/gt_path_publisher.s: src/gt_path_publisher.cpp.s
+.PHONY : src/gt_path_publisher.s
+
+# target to generate assembly for a file
+src/gt_path_publisher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTPathPublisher.dir/build.make CMakeFiles/GTPathPublisher.dir/src/gt_path_publisher.cpp.s
+.PHONY : src/gt_path_publisher.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -287,13 +398,25 @@ help:
 	@echo "... sfuise_uninstall"
 	@echo "... uninstall"
 	@echo "... EstimationInterface"
+	@echo "... GTPathPublisher"
+	@echo "... ImuTrajectoryGenerator"
 	@echo "... SplineFusion"
+	@echo "... UWBTrajectoryGenerator"
 	@echo "... src/EstimationInterface.o"
 	@echo "... src/EstimationInterface.i"
 	@echo "... src/EstimationInterface.s"
+	@echo "... src/ImuTrajectoryGenerator.o"
+	@echo "... src/ImuTrajectoryGenerator.i"
+	@echo "... src/ImuTrajectoryGenerator.s"
 	@echo "... src/SplineFusion.o"
 	@echo "... src/SplineFusion.i"
 	@echo "... src/SplineFusion.s"
+	@echo "... src/UWBTrajectoryGenerator.o"
+	@echo "... src/UWBTrajectoryGenerator.i"
+	@echo "... src/UWBTrajectoryGenerator.s"
+	@echo "... src/gt_path_publisher.o"
+	@echo "... src/gt_path_publisher.i"
+	@echo "... src/gt_path_publisher.s"
 .PHONY : help
 
 

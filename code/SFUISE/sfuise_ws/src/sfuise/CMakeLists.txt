@@ -18,7 +18,8 @@ find_package(nav_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(visualization_msgs REQUIRED)
-
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 # 自定义消息依赖
 find_package(cf_msgs REQUIRED)
@@ -63,9 +64,46 @@ ament_target_dependencies(SplineFusion
   visualization_msgs
 )
 
+# 添加GT路径发布器可执行文件
+add_executable(GTPathPublisher src/gt_path_publisher.cpp)
+ament_target_dependencies(GTPathPublisher
+  rclcpp
+  geometry_msgs
+  nav_msgs
+)
+
+add_executable(ImuTrajectoryGenerator src/ImuTrajectoryGenerator.cpp)
+target_link_libraries(ImuTrajectoryGenerator
+  ${SUITESPARSE_LIBRARIES}
+  ${EIGEN3_LIBRARIES}
+)
+ament_target_dependencies(ImuTrajectoryGenerator
+  rclcpp
+  sensor_msgs
+  nav_msgs
+  geometry_msgs
+  sfuise_msgs  # 添加这个依赖
+  visualization_msgs  # 添加这个依赖
+)
+
+# 添加UWB轨迹生成器节点
+add_executable(UWBTrajectoryGenerator src/UWBTrajectoryGenerator.cpp)
+ament_target_dependencies(UWBTrajectoryGenerator
+  rclcpp
+  nav_msgs
+  geometry_msgs
+  isas_msgs
+)
+target_link_libraries(UWBTrajectoryGenerator
+  ${EIGEN3_LIBRARIES}
+)
+
 install(TARGETS
   EstimationInterface
   SplineFusion
+  GTPathPublisher
+  ImuTrajectoryGenerator
+  UWBTrajectoryGenerator
   DESTINATION lib/${PROJECT_NAME})
 
 # 查找 SuiteSparse 库

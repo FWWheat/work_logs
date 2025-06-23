@@ -23,6 +23,8 @@
   <depend>sfuise_msgs</depend>
   <depend>eigen</depend>          <!-- 通过rosdep映射到Eigen3 -->
   <depend>suitesparse</depend>    <!-- 通过rosdep或系统包管理安装 -->
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
 
   <exec_depend>ros2launch</exec_depend>
 

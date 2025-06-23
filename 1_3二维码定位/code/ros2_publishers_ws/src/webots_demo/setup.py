@@ -27,6 +27,7 @@ setup(
             'camera_xyz2 = webots_demo.camera_xyz2:main',
             'identify_qr_code = webots_demo.identify_qr_code:main',
             'location_rviz = webots_demo.location_rviz:main',
+            'identify_qr_code_more = webots_demo.identify_qr_code_more:main',
         ],
     },
 )

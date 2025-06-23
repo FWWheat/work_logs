@@ -2189,3 +2189,224 @@ gt.back()
 
 
 
+[EstimationInterface-3] spline_global_numknots:142
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742725.569409167] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:143
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742725.977735181] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:144
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742726.358196810] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:145
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742726.686598102] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:146
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742726.955986009] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:147
+[EstimationInterface-3] [INFO] [1745742727.308999877] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:148
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742727.630991616] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:149
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] [INFO] [1745742727.963089951] [EstimationInterface]: sys_calib: @@@@@@@@ 
+[EstimationInterface-3] spline_global_numknots:150
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:151
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:152
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:153
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:154
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:155
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:156
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:157
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:158
+[EstimationInterface-3] spline_global_numknots:159
+[SplineFusion-4] spline_local_numknots:100
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:160
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:161
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:162
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:163
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:164
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:165
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:166
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:167
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:168
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:169
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:170
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:171
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:172
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:173
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:174
+[EstimationInterface-3] spline_global_numknots:175
+[SplineFusion-4] spline_local_numknots:100
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:176
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:177
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:178
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:179
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:180
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:181
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:182
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:183
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:184
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:185
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:186
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:187
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:188
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:189
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:190
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:191
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:192
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:193
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:194
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:195
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:196
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:197
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:198
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:199
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:200
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:201
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:202
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:203
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:204
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:205
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:206
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:207
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:208
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:209
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:210
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:211
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:212
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:213
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:214
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:215
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:216
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:217
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:218
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:219
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:220
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:221
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:222
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:223
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:224
+[SplineFusion-4] spline_local_numknots:100
+[EstimationInterface-3] spline_global_numknots:225
+[SplineFusion-4] CHOLMOD warning: matrix not positive definite. file: ../Supernodal/t_cholmod_super_numeric.c line: 911
+
+
+
+dsh@dsh-Precision-5680:~/Documents/work_logs/code/SFUISE/sfuise_ws2$ ros2 topic list 
+/accel_data
+/active_control_points
+/anchor_list
+/baro_data
+/bspline_optimization_old
+/bspline_optimization_window
+/clicked_point
+/est_window
+/events/read_split
+/flow_data
+/goal_pose
+/gyro_data
+/imu_data
+/imu_ds
+/inactive_control_points
+/initialpose
+/map
+/map_updates
+/opt_pose
+/opt_pose_array
+/parameter_events
+/path
+/path1
+/pose_data
+/robot_0/current_pose
+/robot_1/current_pose
+/robot_2/current_pose
+/robot_3/current_pose
+/robot_4/current_pose
+/robot_5/current_pose
+/rosout
+/start_time
+/sys_calib
+/tdoa_data
+/tdoa_ds
+/tf
+/tf_static
+/tof_data
+/visualization_anchor
+
+
