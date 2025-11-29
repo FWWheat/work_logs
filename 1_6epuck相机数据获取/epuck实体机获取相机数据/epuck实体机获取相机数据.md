@@ -15,6 +15,31 @@
             - 用户名：pi
             - 密码：raspberry
 
+3、设置WiFi
+- 登陆成功后输入以下指令配置
+```
+cd  /etc/wpa_supplicant/
+sudo vim wpa_supplicant.conf
+```
+添加以下代码:
+```
+network={
+    ssid="热点名称"  #别带中文，建议把手机热点和电脑热点都加上或只加手机热点
+    psk="密码"
+    priority=5              #该行可加可不加，数字越大树莓派会优先连接该热点，不加就是按顺序尝试连接
+}
+· esc，wq退出
+```
+- 若“”变为@参考链接解决：https://blog.cTFn.net/H_O_W_E/article/details/137051796
+- 配置需重启后才能生效，输入指令sudo reboot now或sudo shutdown -h now后再开机器人电源，等待一段时间查看热点是否有raspberry连接。
+
+##### 若上面符号问题无法解决继续以下步骤，上面步骤没问题可跳至4
+- 输入指令关机，拔出树莓派TF卡：sudo shutdown -h now
+- 将树莓派TF卡拔出后插入读卡器连接电脑。
+- 此时若Windows能看见两个分区，则查找wpa_suplicant文件并安装使用notepad++配置保存。
+- 若无法看见则需要通过linux虚拟机或双系统查看文件并配置
+
+
 ### 2. 相机数据获取
 - 参考epuck使用教程：
     - https://github.com/cyberbotics/webots_ros2/wiki/Tutorial-E-puck-for-ROS2-Beginners
@@ -25,7 +50,7 @@
     - 用 OpenCV 从机器人的相机捕获图像：在目录/home/pi/Pi-puck/snapshot/
     - 运行：`./snapshot -d 1 -v` or `python3 snapshot.py -d 1 -v`
         - 加上`-v`显示调试信息
-        - `-n` NUM指定捕获多少张图像（1-99），默认为1
+        - `-n` NUM指定捕获多少张图像（1-99），默认为1b 
         - `-d 1`从机器人相机获取，`-d 0`从360度相机获取（默认）
     - 运行结果：![运行结果](img/运行结果.png)
     - 拍照结果：![拍照结果](img/拍照结果.jpg)
