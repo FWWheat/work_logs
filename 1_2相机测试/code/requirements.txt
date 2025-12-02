@@ -1,0 +1,13 @@
+# ALVIUM相机图像采集程序依赖包
+# 使用前请确保已安装Vimba SDK软件
+
+# Vimba Python SDK (需要先安装Vimba软件)
+vmbpy
+
+# 图像处理
+opencv-python>=4.5.0
+numpy>=1.21.0
+
+# 图像格式转换
+Pillow>=9.0.0
+
